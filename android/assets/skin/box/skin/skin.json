@@ -1,13 +1,13 @@
 {
 
-  ImageButtonStyle: {
-    default:{ }
-    room_button: {      down:room_button_pressed,     up:room_button_enable,      disabled:room_button_disable },
-    settings_button: {  down:settings_button_pressed, up:settings_button_enable,  disabled:settings_button_disable },
-    x3_button: {        down:x3_button_pressed,       up:x3_button_enable,        disabled:x3_button_disable },
-    donat_button: {     down:donat_button_pressed,    up:donat_button_enable,     disabled:donat_button_disable },
-    shop_button: {      down:shop_button_pressed,     up:shop_button_enable,      disabled:shop_button_disable },
-    storage_button: {   down:storage_button_pressed,  up:storage_button_enable,   disabled:storage_button_disable },
+  com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle : {
+    default:{}
+    x3_button: {        down:x3_button_pressed,       up:x3_button_enable,        disabled:x3_button_disable }
+    shop_button: {      down:shop_button_pressed,     up:shop_button_enable,      disabled:shop_button_disable }
+    storage_button: {   down:storage_button_pressed,  up:storage_button_enable,   disabled:storage_button_disable }
+    donation_button: {     down:donation_button_pressed,    up:donation_button_enable,     disabled:donation_button_disable }
+    settings_button: {  down: settings_button_pressed, up:settings_button_enable,  disabled:settings_button_disable }
+    room_button: {      down:room_button_pressed,     up:room_button_enable,      disabled:room_button_disable }
   }
 
 }

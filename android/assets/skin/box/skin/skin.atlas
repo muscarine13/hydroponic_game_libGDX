@@ -66,7 +66,7 @@ room_button_pressed
   orig: 158, 158
   offset: 0, 0
   index: -1
-settings_button_enabled
+settings_button_enable
   rotate: false
   xy: 1785, 1371
   size: 158, 158
