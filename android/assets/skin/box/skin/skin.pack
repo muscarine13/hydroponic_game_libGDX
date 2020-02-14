@@ -1,0 +1,185 @@
+
+skin.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+background
+  rotate: false
+  xy: 1, 89
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+plant_empty
+  rotate: false
+  xy: 1083, 1009
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+pot_empty
+  rotate: false
+  xy: 1083, 507
+  size: 700, 500
+  orig: 700, 500
+  offset: 0, 0
+  index: -1
+lamp_empty
+  rotate: false
+  xy: 1083, 305
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+fan_empty
+  rotate: false
+  xy: 1083, 3
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+compressor_empty
+  rotate: false
+  xy: 1385, 153
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
+room_button_disable
+  rotate: false
+  xy: 1785, 1851
+  size: 158, 158
+  orig: 158, 158
+  offset: 0, 0
+  index: -1
+room_button_enable
+  rotate: false
+  xy: 1785, 1691
+  size: 158, 158
+  orig: 158, 158
+  offset: 0, 0
+  index: -1
+room_button_pressed
+  rotate: false
+  xy: 1785, 1531
+  size: 158, 158
+  orig: 158, 158
+  offset: 0, 0
+  index: -1
+settings_button_enabled
+  rotate: false
+  xy: 1785, 1371
+  size: 158, 158
+  orig: 158, 158
+  offset: 0, 0
+  index: -1
+donation_button_disable
+  rotate: false
+  xy: 1687, 153
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+donation_button_enable
+  rotate: false
+  xy: 1785, 1219
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+donation_button_pressed
+  rotate: false
+  xy: 1785, 1067
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+settings_button_disable
+  rotate: false
+  xy: 1785, 915
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+settings_button_pressed
+  rotate: false
+  xy: 1785, 763
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+shop_button_disable
+  rotate: false
+  xy: 1785, 611
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+shop_button_enable
+  rotate: false
+  xy: 1385, 1
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+shop_button_pressed
+  rotate: false
+  xy: 1537, 1
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+storage_button_disable
+  rotate: false
+  xy: 1689, 1
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+storage_button_enable
+  rotate: false
+  xy: 1839, 153
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+storage_button_pressed
+  rotate: false
+  xy: 1841, 1
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+x3_button_disable
+  rotate: false
+  xy: 1885, 459
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+x3_button_enable
+  rotate: false
+  xy: 1885, 307
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+
+skin2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+light_empty
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+x3_button_pressed
+  rotate: false
+  xy: 1083, 1771
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1

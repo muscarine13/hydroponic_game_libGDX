@@ -3,6 +3,7 @@ package com.acidcarpet.hydroponist.player;
 import com.acidcarpet.hydroponist.equipment.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Room {
@@ -16,7 +17,11 @@ public class Room {
 
     private Box current_box;
     public synchronized void select_box(int index){
-        current_box = boxes_in_grow_room.get(index);
+
+        boxes_in_grow_room.add(current_box);
+
+        Box temp = current_box;
+        current_box = boxes_in_grow_room.remove(index);
     }
     public Box get_current_box(){
         return current_box;
