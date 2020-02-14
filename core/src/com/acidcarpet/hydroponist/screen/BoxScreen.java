@@ -11,6 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 
@@ -41,7 +42,7 @@ public class BoxScreen implements Screen {
 
 
 private void lamp_click(){
-    System.out.println("Lamp click!");
+    System.err.println("Lamp click!");
 }
     private void plant_click(){
         System.err.println("Plant click!");
@@ -76,7 +77,8 @@ private void lamp_click(){
 
     @Override
     public void show() {
-        stage = new Stage(new StretchViewport(1080, 1920));
+        stage = new Stage(new ExtendViewport(1080, 1920));
+
         atlas = new TextureAtlas(Gdx.files.internal("skin/box/skin/skin.atlas"));
         skin = new Skin(Gdx.files.internal("skin/box/skin/skin.json"), atlas);
         Gdx.input.setInputProcessor(stage);
