@@ -1,22 +1,20 @@
 package com.acidcarpet.hydroponist.equipment;
 
-import javafx.scene.image.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public abstract class Compressor {
 
-    public Compressor( double energy_consumption, double oxygen_production){
+    public Compressor( double oxygen_production, Image image_on, Image image_off){
         on = true;
 
-
-
-        this.energy_consumption = energy_consumption;
+        this.image_on = image_on;
+        this.image_off = image_off;
         oxygen = oxygen_production;
         this.oxygen_production = oxygen_production;
+
     }
 
 
-
-    double energy_consumption;
 
     private boolean on;
     public synchronized void set_on(){
@@ -48,9 +46,13 @@ public abstract class Compressor {
     public abstract String name();
     public abstract String description();
 
-    public abstract Image inventory_image();
-    public abstract Image on_image();
-    public abstract Image off_image();
+    private Image image_on;
+    private Image image_off;
+
+    public Image get_image_compressor(){
+        if (isOn()) return image_on;
+        else return  image_off;
+    }
 
     public boolean isOn() {
         return on;

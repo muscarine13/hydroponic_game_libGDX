@@ -5,8 +5,21 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public abstract class Lamp {
 
-    public Lamp(double energy_consumption, double lm_production, double t_add){
+    public Lamp(
+            double energy_consumption,
+            double lm_production,
+            double t_add,
+            Image image_lamp_on,
+            Image image_lamp_off,
+            Image image_light_on,
+            Image image_light_off
+    ){
         on = true;
+
+        this.image_lamp_on = image_lamp_on;
+        this.image_lamp_off = image_lamp_off;
+        this.image_light_on = image_light_on;
+        this.image_light_off = image_light_off;
 
         this.energy_consumption = energy_consumption;
         lm = lm_production;
@@ -64,10 +77,20 @@ public abstract class Lamp {
     public abstract String name();
     public abstract String description();
 
-    public abstract Image inventory_image();
-    public abstract Image on_image();
-    public abstract Image off_image();
-    public abstract Image light_image();
+    Image image_lamp_on;
+    Image image_lamp_off;
+
+    Image image_light_on;
+    Image image_light_off;
+
+    public Image get_image_lamp(){
+        if(isOn()) return image_lamp_on;
+        else return image_lamp_off;
+    }
+    public Image get_image_light(){
+        if (isOn()) return image_light_on;
+        else return image_light_off;
+    }
 
 
 }

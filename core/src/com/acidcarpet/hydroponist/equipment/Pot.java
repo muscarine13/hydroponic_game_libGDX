@@ -5,7 +5,25 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public abstract class Pot {
 
-    public Pot(double maximum_volume, double current_volume, double current_t, double current_pH, double ELEMENT_N, double ELEMENT_K, double ELEMENT_B, double ELEMENT_Ca, double ELEMENT_Cu, double ELEMENT_Fe, double ELEMENT_Mn, double ELEMENT_Mo, double ELEMENT_Zn, double ELEMENT_P, double ELEMENT_Mg, double ELEMENT_S) {
+    public Pot(
+            double maximum_volume,
+            double current_volume,
+            double current_t,
+            double current_pH,
+            double ELEMENT_N,
+            double ELEMENT_K,
+            double ELEMENT_B,
+            double ELEMENT_Ca,
+            double ELEMENT_Cu,
+            double ELEMENT_Fe,
+            double ELEMENT_Mn,
+            double ELEMENT_Mo,
+            double ELEMENT_Zn,
+            double ELEMENT_P,
+            double ELEMENT_Mg,
+            double ELEMENT_S,
+            Image image_pot
+    ) {
 
         this.maximum_volume = maximum_volume;
         this.current_volume = current_volume;
@@ -23,6 +41,8 @@ public abstract class Pot {
         this.ELEMENT_P = ELEMENT_P;
         this.ELEMENT_Mg = ELEMENT_Mg;
         this.ELEMENT_S = ELEMENT_S;
+        
+        this.image_pot = image_pot;
     }
 
     double maximum_volume;
@@ -386,30 +406,10 @@ public abstract class Pot {
     public abstract String name();
     public abstract String description();
 
-    public abstract Image inventory_image();
-    public abstract Image on_image();
-
-    @Override
-    public String toString() {
-        return "Pot{" +
-                "Название='" + name() + '\'' +
-                ", Описание='" + description() + '\'' +
-                ", Максимальный обьем=" + maximum_volume +
-                ", Воды=" + current_volume +
-                ", Температура=" + current_t +
-                ", pH=" + current_pH +
-                ", N мл.=" + ELEMENT_N +
-                ", K мл.=" + ELEMENT_K +
-                ", B мл.=" + ELEMENT_B +
-                ", Ca мл.=" + ELEMENT_Ca +
-                ", Cu мл.=" + ELEMENT_Cu +
-                ", Fe мл.=" + ELEMENT_Fe +
-                ", Mn мл.=" + ELEMENT_Mn +
-                ", Mo мл.=" + ELEMENT_Mo +
-                ", Zn мл.=" + ELEMENT_Zn +
-                ", P мл.=" + ELEMENT_P +
-                ", Mg мл.=" + ELEMENT_Mg +
-                ", S мл.=" + ELEMENT_S +
-                '}';
+    Image image_pot;
+    public Image get_image_pot(){
+        return image_pot;
     }
+
+
 }

@@ -2,7 +2,8 @@ package com.acidcarpet.hydroponist.plant;
 
 import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.equipment.WaterPack;
-import javafx.scene.image.Image;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
+
 
 import java.util.LinkedList;
 import java.util.List;
@@ -332,11 +333,12 @@ public abstract class Plant {
     private double element_Zn_problem_points;
 
     public abstract List<PlantStage> set_stages(); // Получить все стадии растения
-    public Image current_image(){
-        if(alive) return stages.get(current_stage_index).getStage_alive_image();
-        else return stages.get(current_stage_index).getStage_dead_image();
+    public Image get_image_plant(){
+//        if(alive) return stages.get(current_stage_index).getStage_alive_image();
+//        else return stages.get(current_stage_index).getStage_dead_image();
+        return null;
     }
-    public abstract Image inventory_image();
+
 
     public abstract Leave get_new_leave(); // Получить новый обьект листочка
     public abstract Root get_new_root(); // Получить новый обьект корешочка

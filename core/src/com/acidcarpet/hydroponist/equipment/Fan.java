@@ -4,17 +4,22 @@ package com.acidcarpet.hydroponist.equipment;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public abstract class Fan {
-    public Fan(double energy_consumption, double CO2_production, double t_reduce){
+    public Fan(double energy_consumption,
+               double CO2_production,
+               double t_reduce,
+               Image image_on,
+               Image image_off
+    ){
         on = true;
 
-
+        this.image_on = image_on;
+        this.image_off = image_off;
 
         this.energy_consumption = energy_consumption;
         CO2 = CO2_production;
         this.CO2_production = CO2_production;
         this.t_reduce = t_reduce;
     }
-
 
     double energy_consumption;
     double t_reduce;
@@ -66,9 +71,13 @@ public abstract class Fan {
     public abstract String name();
     public abstract String description();
 
-    public abstract Image inventory_image();
-    public abstract Image on_image();
-    public abstract Image off_image();
+    Image image_on;
+    Image image_off;
+
+    public Image get_image_fan(){
+        if(isOn())return image_on;
+        else return image_off;
+    }
 
 
 }
