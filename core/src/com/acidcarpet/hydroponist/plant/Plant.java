@@ -334,11 +334,9 @@ public abstract class Plant {
 
     public abstract List<PlantStage> set_stages(); // Получить все стадии растения
     public Image get_image_plant(){
-//        if(alive) return stages.get(current_stage_index).getStage_alive_image();
-//        else return stages.get(current_stage_index).getStage_dead_image();
-        return null;
+        if(alive) return stages.get(current_stage_index).getStage_alive_image();
+        else return stages.get(current_stage_index).getStage_dead_image();
     }
-
 
     public abstract Leave get_new_leave(); // Получить новый обьект листочка
     public abstract Root get_new_root(); // Получить новый обьект корешочка

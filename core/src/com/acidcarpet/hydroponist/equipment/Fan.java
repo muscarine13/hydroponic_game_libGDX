@@ -4,7 +4,8 @@ package com.acidcarpet.hydroponist.equipment;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public abstract class Fan {
-    public Fan(double energy_consumption,
+    public Fan(
+
                double CO2_production,
                double t_reduce,
                Image image_on,

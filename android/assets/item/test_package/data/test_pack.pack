@@ -1,0 +1,219 @@
+
+test_pack.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+test_light_on
+  rotate: false
+  xy: 1, 203
+  size: 1081, 1820
+  orig: 1081, 1820
+  offset: 0, 0
+  index: -1
+test_lamp_off
+  rotate: false
+  xy: 1, 1
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+test_lamp_on
+  rotate: false
+  xy: 803, 1
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+test_plant_bloom_alive
+  rotate: false
+  xy: 1084, 1023
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_pot
+  rotate: false
+  xy: 1084, 521
+  size: 700, 500
+  orig: 700, 500
+  offset: 0, 0
+  index: -1
+test_fan_off
+  rotate: false
+  xy: 1605, 219
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+test_fan_on
+  rotate: false
+  xy: 1084, 219
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+test_compressor_off
+  rotate: false
+  xy: 1605, 67
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
+
+test_pack2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+test_light_off
+  rotate: false
+  xy: 1, 183
+  size: 1080, 1820
+  orig: 1080, 1820
+  offset: 0, 0
+  index: -1
+test_plant_bloom_dead
+  rotate: false
+  xy: 1083, 1003
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_plant_harvest_alive
+  rotate: false
+  xy: 1083, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_compressor_on
+  rotate: false
+  xy: 1, 31
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
+
+test_pack3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+test_plant_harvest_dead
+  rotate: false
+  xy: 1, 1003
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_plant_post_bloom_alive
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_plant_post_bloom_dead
+  rotate: false
+  xy: 703, 1003
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_plant_post_vegetation_alive
+  rotate: false
+  xy: 703, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+
+test_pack4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+test_plant_post_vegetation_dead
+  rotate: false
+  xy: 1, 1003
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_plant_pre_bloom_alive
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_plant_pre_bloom_dead
+  rotate: false
+  xy: 703, 1003
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_plant_pre_vegetation_alive
+  rotate: false
+  xy: 703, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+
+test_pack5.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+test_plant_pre_vegetation_dead
+  rotate: false
+  xy: 1, 1003
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_plant_seed_alive
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_plant_seed_dead
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_plant_soaking_alive
+  rotate: false
+  xy: 703, 1003
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_plant_soaking_dead
+  rotate: false
+  xy: 703, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+
+test_pack6.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+test_plant_vegetation_alive
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+test_plant_vegetation_dead
+  rotate: false
+  xy: 703, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1

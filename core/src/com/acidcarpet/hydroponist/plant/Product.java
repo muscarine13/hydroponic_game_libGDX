@@ -2,7 +2,10 @@ package com.acidcarpet.hydroponist.plant;
 
 import java.awt.*;
 
-public abstract class Product {
+public class Product {
+    String name;
+    String description;
+
     private int lvl;
 
     private int price;
@@ -17,15 +20,16 @@ public abstract class Product {
     public Product(
             String name,
             String description,
-
             int start_price,
             double price_multiplier,
             double light_energy_start_price,
             double dark_energy_start_price,
             double light_energy_multiplier,
             double dark_energy_multiplier
-
     ){
+
+        this.name = name;
+        this.description = description;
 
         lvl = 1;
         price = start_price;
@@ -51,9 +55,7 @@ public abstract class Product {
         }
     }
 
-    abstract String name();
-    abstract String description();
-    abstract Image inventory_image();
+
 
     public int getLvl() {
         return lvl;
@@ -77,18 +79,5 @@ public abstract class Product {
         return dark_energy_multiplier;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "name=" + name() +
-                "description=" + description() +
-                "lvl=" + lvl +
-                ", price=" + price +
-                ", price_multiplier=" + price_multiplier +
-                ", light_energy_price=" + light_energy_price +
-                ", dark_energy_price=" + dark_energy_price +
-                ", light_energy_multiplier=" + light_energy_multiplier +
-                ", dark_energy_multiplier=" + dark_energy_multiplier +
-                '}';
-    }
+
 }

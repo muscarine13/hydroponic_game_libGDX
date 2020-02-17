@@ -1,6 +1,7 @@
 package com.acidcarpet.hydroponist.screen;
 
 import com.acidcarpet.hydroponist.equipment.Box;
+import com.acidcarpet.hydroponist.genered.test_pack.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -38,20 +39,39 @@ public class BoxScreen implements Screen {
     Box box;
 
 
-private void lamp_click(){
-    System.err.println("Lamp click!");
+    private void lamp_click(){
+    try{
+        if(box.getLamp().isOn())box.getLamp().set_off();
+        else box.getLamp().set_on();
+    }catch (Exception e){
+
+    }
 }
     private void plant_click(){
         System.err.println("Plant click!");
     }
     private void fan_click(){
-        System.err.println("Fan click!");
+        try{
+            if(box.getFan().isOn())box.getFan().set_off();
+            else box.getFan().set_on();
+        }catch (Exception e){
+
+        }
     }
     private void pot_click(){
         System.err.println("Pot click!");
     }
     private void compressor_click(){
-        System.err.println("Compressor click!");
+        try{
+            if(box.getCompressor().isOn()){
+                box.getCompressor().set_off();
+            }
+            else {
+                box.getCompressor().set_on();
+            }
+        }catch (Exception e){
+        e.printStackTrace();
+        }
     }
     private void x3_button_click(){
         System.out.println("x3_button click!");
@@ -74,26 +94,27 @@ private void lamp_click(){
 
     @Override
     public void show() {
-//    box = new Box(
-//            "бокс",
-//            "jgbddfg",
-//            24,
-//            null,
-//            null,
-//            null,
-//            new TestCompressor()
-//    );
-//    new Thread(){
-//        @Override
-//        public void run() {
-//            try {
-//                Thread.sleep(4000);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//            box.getCompressor().set_off();
-//        }
-//    }.start();
+        box = Box.getInstance();
+
+
+    new Thread(){
+        @Override
+        public void run() {
+            while(true) {
+                try {
+
+
+                    Thread.sleep(1000);
+                    box.getPlant().second();
+
+
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+        }
+    }.start();
         stage = new Stage(new ExtendViewport(1080, 1920));
 
         atlas = new TextureAtlas(Gdx.files.internal("skin/box/skin/skin.atlas"));
@@ -114,7 +135,7 @@ private void lamp_click(){
 
         light_empty = new Image(atlas.findRegion("light_empty"));
         light_empty.setName("light");
-        light_empty.setBounds(0, 0, stage.getWidth(), stage.getHeight());
+        light_empty.setPosition(0, 0);
         light_empty.setTouchable(Touchable.disabled);
 
         fan_empty = new Image(atlas.findRegion("fan_empty"));
@@ -310,7 +331,7 @@ private void lamp_click(){
                 Image light_temp = box.getLamp().get_image_light();
 
                 light_temp.setName("light");
-                light_temp.setBounds(0, 0, stage.getWidth(), stage.getHeight());
+                light_temp.setPosition(0, 0);
 
                 light_temp.setTouchable(Touchable.disabled);
 

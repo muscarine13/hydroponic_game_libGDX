@@ -1,4 +1,4 @@
-package com.acidcarpet.hydroponist.screen;
+package com.acidcarpet.hydroponist.genered.test_pack;
 
 import com.acidcarpet.hydroponist.equipment.Compressor;
 import com.badlogic.gdx.Gdx;
@@ -11,9 +11,8 @@ public class TestCompressor extends Compressor {
     public TestCompressor(){
         super(
                 100,
-                new Image(new TextureAtlas(Gdx.files.internal("item/compressor/test/skin/test_compressor.pack")).findRegion("test_compressor_on")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/compressor/test/skin/test_compressor.pack")).findRegion("test_compressor_off"))
-
+                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_compressor_on")),
+                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_compressor_off"))
         );
     }
     @Override

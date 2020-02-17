@@ -9,6 +9,5 @@ public enum PlantStages {
     PRE_BLOOM,
     BLOOM,
     POST_BLOOM,
-    HARVEST,
-    PRODUCT
+    HARVEST
 }

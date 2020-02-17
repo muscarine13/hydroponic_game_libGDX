@@ -1,12 +1,10 @@
 package com.acidcarpet.hydroponist.equipment;
 
-
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public abstract class Lamp {
 
     public Lamp(
-            double energy_consumption,
             double lm_production,
             double t_add,
             Image image_lamp_on,
@@ -21,13 +19,12 @@ public abstract class Lamp {
         this.image_light_on = image_light_on;
         this.image_light_off = image_light_off;
 
-        this.energy_consumption = energy_consumption;
+
         lm = lm_production;
         this.lm_production = lm_production;
         this.t_add = t_add;
     }
 
-    double energy_consumption;
     double t_add;
 
     private boolean on;
@@ -65,9 +62,6 @@ public abstract class Lamp {
     }
     public double getLm_production() {
         return lm_production;
-    }
-    public double getEnergy_consumption() {
-        return energy_consumption;
     }
     public double getT_add() {
         if(!on) return 0;

@@ -2,7 +2,7 @@ package com.acidcarpet.hydroponist.plant;
 
 import com.acidcarpet.hydroponist.equipment.Box;
 
-public abstract class Leave {
+public class Leave {
 
     Box box;
     private boolean alive;
@@ -100,7 +100,5 @@ public abstract class Leave {
         width+= width_grow_length;
     }
 
-    abstract String name();
-    abstract String description();
 
 }

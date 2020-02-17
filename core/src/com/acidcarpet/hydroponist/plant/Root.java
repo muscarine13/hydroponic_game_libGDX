@@ -1,16 +1,13 @@
 package com.acidcarpet.hydroponist.plant;
-
-
 import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.equipment.WaterPack;
 
-public abstract class Root {
+public class Root {
     boolean alive;
 
-    Box box;
+    Box box = Box.getInstance();
 
     public Root(
-            Box box,
             int maximum_health,
             int growth_length,
 
@@ -100,9 +97,6 @@ public abstract class Root {
 
         length+= growth_length;
     }
-
-    abstract String name();
-    abstract String description();
 
     public boolean isAlive() {
         return alive;

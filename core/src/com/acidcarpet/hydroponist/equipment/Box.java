@@ -1,9 +1,16 @@
 package com.acidcarpet.hydroponist.equipment;
 
 
+import com.acidcarpet.hydroponist.genered.test_pack.*;
 import com.acidcarpet.hydroponist.plant.Plant;
 
 public class Box {
+
+    private static Box instance;
+    public static Box getInstance(){
+        if(instance==null) instance = new Box();
+        return instance;
+    }
     private String name;
     private String description;
 
@@ -17,26 +24,16 @@ public class Box {
     private Compressor compressor;
 
     public Box(
-            String name,
-            String description,
-            double box_ordinary_temperature,
-
-            Lamp lamp,
-            Fan fan,
-            Pot pot,
-            Compressor compressor
-
     ){
-        this.name = name;
-        this.description = description;
-        this.box_ordinary_temperature = box_ordinary_temperature;
-        this.lamp = lamp;
-        this.fan = fan;
-        this.pot = pot;
-        this.compressor = compressor;
+        this.name = "Гроубокс";
+        this.description = "Описание гроубокса";
+        this.box_ordinary_temperature = 24;
+        this.lamp = new TestLamp();
+        this.fan = new TestFan();
+        this.pot = new TestPot();
+        this.compressor = new TestCompressor();
 
-        plant = null;
-
+        plant = new TestPlant();
     }
 
     public double actual_t(){

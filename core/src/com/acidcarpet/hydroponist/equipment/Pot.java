@@ -10,18 +10,24 @@ public abstract class Pot {
             double current_volume,
             double current_t,
             double current_pH,
+
             double ELEMENT_N,
+            double ELEMENT_P,
             double ELEMENT_K,
-            double ELEMENT_B,
+
+            double ELEMENT_S,
+            double ELEMENT_Mg,
             double ELEMENT_Ca,
+
+            double ELEMENT_B,
             double ELEMENT_Cu,
             double ELEMENT_Fe,
             double ELEMENT_Mn,
             double ELEMENT_Mo,
             double ELEMENT_Zn,
-            double ELEMENT_P,
-            double ELEMENT_Mg,
-            double ELEMENT_S,
+
+
+
             Image image_pot
     ) {
 
@@ -41,7 +47,7 @@ public abstract class Pot {
         this.ELEMENT_P = ELEMENT_P;
         this.ELEMENT_Mg = ELEMENT_Mg;
         this.ELEMENT_S = ELEMENT_S;
-        
+
         this.image_pot = image_pot;
     }
 
@@ -399,8 +405,7 @@ public abstract class Pot {
                         element_ppm_Fe()+
                         element_ppm_Mn()+
                         element_ppm_Mo()+
-                        element_ppm_Zn()
-                ;
+                        element_ppm_Zn();
     }
 
     public abstract String name();
