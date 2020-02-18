@@ -34,6 +34,10 @@ public abstract class Lamp {
     public synchronized void set_off(){
         on = false;
     }
+    public synchronized void set_on_off(){
+        if(on) on = false;
+        else on = true;
+    }
 
     private double lm;
     private double lm_production;
@@ -71,11 +75,11 @@ public abstract class Lamp {
     public abstract String name();
     public abstract String description();
 
-    Image image_lamp_on;
-    Image image_lamp_off;
+    private Image image_lamp_on;
+    private Image image_lamp_off;
 
-    Image image_light_on;
-    Image image_light_off;
+    private Image image_light_on;
+    private Image image_light_off;
 
     public Image get_image_lamp(){
         if(isOn()) return image_lamp_on;

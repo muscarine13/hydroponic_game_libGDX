@@ -50,8 +50,8 @@ public class TestPlant extends Plant {
 
         out.add(new PlantStage( //76ppm
                 PlantStages.SEED,
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_seed_alive")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_seed_dead")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_seed_alive")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_seed_dead")),
                 10,
                 0,
                 1,
@@ -89,8 +89,8 @@ public class TestPlant extends Plant {
 
         out.add(new PlantStage( //76ppm
                 PlantStages.SOAKING,
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_soaking_alive")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_soaking_dead")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_soaking_alive")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_soaking_dead")),
                 10,
                 0,
                 1,
@@ -128,8 +128,8 @@ public class TestPlant extends Plant {
 
         out.add(new PlantStage( //76ppm
                 PlantStages.PRE_VEGETATION,
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_pre_vegetation_alive")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_pre_vegetation_dead")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_pre_vegetation_alive")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_pre_vegetation_dead")),
                 10,
                 0,
                 1,
@@ -167,8 +167,8 @@ public class TestPlant extends Plant {
 
         out.add(new PlantStage( //76ppm
                 PlantStages.VEGETATION,
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_vegetation_alive")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_vegetation_dead")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_vegetation_alive")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_vegetation_dead")),
                 10,
                 0,
                 1,
@@ -206,8 +206,8 @@ public class TestPlant extends Plant {
 
         out.add(new PlantStage( //76ppm
                 PlantStages.POST_VEGETATION,
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_post_vegetation_alive")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_post_vegetation_dead")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_post_vegetation_alive")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_post_vegetation_dead")),
                 10,
                 0,
                 1,
@@ -245,8 +245,8 @@ public class TestPlant extends Plant {
 
         out.add(new PlantStage( //76ppm
                 PlantStages.PRE_BLOOM,
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_pre_bloom_alive")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_pre_bloom_dead")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_pre_bloom_alive")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_pre_bloom_dead")),
                 10,
                 0,
                 1,
@@ -284,8 +284,8 @@ public class TestPlant extends Plant {
 
         out.add(new PlantStage( //76ppm
                 PlantStages.BLOOM,
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_bloom_alive")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_bloom_dead")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_bloom_alive")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_bloom_dead")),
                 10,
                 0,
                 1,
@@ -323,8 +323,8 @@ public class TestPlant extends Plant {
 
         out.add(new PlantStage( //76ppm
                 PlantStages.POST_BLOOM,
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_post_bloom_alive")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_post_bloom_dead")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_post_bloom_alive")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_post_bloom_dead")),
                 10,
                 0,
                 1,
@@ -362,8 +362,8 @@ public class TestPlant extends Plant {
 
         out.add(new PlantStage( //76ppm
                 PlantStages.HARVEST,
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_harvest_alive")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_plant_harvest_dead")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_harvest_alive")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_harvest_dead")),
                 10,
                 0,
                 1,

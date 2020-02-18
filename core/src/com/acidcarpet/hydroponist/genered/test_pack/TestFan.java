@@ -10,8 +10,8 @@ public class TestFan extends Fan {
         super(
                 2500,
                 2.5,
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_fan_on")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_fan_off"))
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_fan_on")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_fan_off"))
                 );
     }
     @Override

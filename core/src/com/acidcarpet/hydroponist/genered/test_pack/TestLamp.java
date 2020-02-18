@@ -10,10 +10,10 @@ public class TestLamp extends Lamp {
         super(
                 1500,
                 2.5,
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_lamp_on")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_lamp_off")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_light_on")),
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_light_off"))
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_lamp_on")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_lamp_off")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_light_on")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_light_off"))
         );
     }
 

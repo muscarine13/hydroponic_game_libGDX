@@ -40,12 +40,15 @@ public class BoxScreen implements Screen {
 
 
     private void lamp_click(){
+        System.out.println("Вошли в метод");
     try{
-        if(box.getLamp().isOn())box.getLamp().set_off();
-        else box.getLamp().set_on();
+        System.out.println("Зашли в try лампа: "+box.getLamp().isOn());
+        box.getLamp().set_on_off();
+        System.out.println("Вышли из try лампа: "+box.getLamp().isOn());
     }catch (Exception e){
-
+        e.printStackTrace();
     }
+        System.out.println("Вышли из метода");
 }
     private void plant_click(){
         System.err.println("Plant click!");
@@ -135,7 +138,7 @@ public class BoxScreen implements Screen {
 
         light_empty = new Image(atlas.findRegion("light_empty"));
         light_empty.setName("light");
-        light_empty.setPosition(0, 0);
+        light_empty.setBounds(0, 0, stage.getWidth(), light_empty.getHeight());
         light_empty.setTouchable(Touchable.disabled);
 
         fan_empty = new Image(atlas.findRegion("fan_empty"));
@@ -267,11 +270,8 @@ public class BoxScreen implements Screen {
     if(box==null){ //Если бокс пустой сам по себе и нужны заглушки
 
         if(!lamp_empty.equals(stage.getRoot().findActor("lamp"))){
-
             stage.getRoot().removeActor(stage.getRoot().findActor("lamp"));
-
             stage.getRoot().addActorAfter(stage.getRoot().findActor("light"), lamp_empty);
-
         }
         if(!light_empty.equals(stage.getRoot().findActor("light"))){
 
@@ -311,7 +311,10 @@ public class BoxScreen implements Screen {
     }else{ // Если бокс все же не пустой. Так должно быть 100% времени
         if(box.getLamp()!=null){// Если лампа есть
             if(!box.getLamp().get_image_lamp().equals(stage.getRoot().findActor("lamp"))){
-                stage.getRoot().removeActor(stage.getRoot().findActor("lamp"));
+
+                stage.getRoot().findActor("lamp").clear();
+                stage.getRoot().findActor("lamp").remove();
+
                 Image lamp_temp = box.getLamp().get_image_lamp();
 
                 lamp_temp.setName("lamp");
@@ -327,11 +330,14 @@ public class BoxScreen implements Screen {
                 stage.getRoot().addActorAfter(stage.getRoot().findActor("light"), lamp_temp);
             }
             if(!box.getLamp().get_image_light().equals(stage.getRoot().findActor("light"))){
-                stage.getRoot().removeActor(stage.getRoot().findActor("light"));
+
+                stage.getRoot().findActor("light").clear();
+                stage.getRoot().findActor("light").remove();
+
                 Image light_temp = box.getLamp().get_image_light();
 
                 light_temp.setName("light");
-                light_temp.setPosition(0, 0);
+                light_temp.setBounds(0, 0, stage.getWidth(), light_temp.getHeight());
 
                 light_temp.setTouchable(Touchable.disabled);
 
@@ -340,13 +346,24 @@ public class BoxScreen implements Screen {
         }else{ // если лампы нет должны быть заглушки как если бокса вообще нет, но только где лампа
             if(!lamp_empty.equals(stage.getRoot().findActor("lamp"))){
 
-                stage.getRoot().removeActor(stage.getRoot().findActor("lamp"));
+                stage.getRoot().findActor("lamp").clear();
+                stage.getRoot().findActor("lamp").remove();
+
+                lamp_empty.addListener(new ClickListener() {
+                    @Override
+                    public void clicked(InputEvent event, float x, float y) {
+                        lamp_click();
+                    }
+                });
                 stage.getRoot().addActorAfter(stage.getRoot().findActor("light"), lamp_empty);
 
             }
             if(!light_empty.equals(stage.getRoot().findActor("light"))){
 
-                stage.getRoot().removeActor(stage.getRoot().findActor("light"));
+                stage.getRoot().findActor("light").clear();
+                stage.getRoot().findActor("light").remove();
+
+                light_empty.setTouchable(Touchable.disabled);
                 stage.getRoot().addActorBefore(stage.getRoot().findActor("lamp"), light_empty);
 
             }
@@ -354,7 +371,8 @@ public class BoxScreen implements Screen {
 
         if(box.getFan()!=null){ // Если вентилятор в боксе есть
             if(!box.getFan().get_image_fan().equals(stage.getRoot().findActor("fan"))){
-                stage.getRoot().removeActor(stage.getRoot().findActor("fan"));
+                stage.getRoot().findActor("fan").clear();
+                stage.getRoot().findActor("fan").remove();
                 Image fan_temp = box.getFan().get_image_fan();
 
                 fan_temp.setName("fan");
@@ -373,14 +391,16 @@ public class BoxScreen implements Screen {
 
         }else{ // Если вентилятора в боксе нет должна быть заглушка как если нет всего бокса но только на вентиляторе
             if(!fan_empty.equals(stage.getRoot().findActor("fan"))){
-                stage.getRoot().removeActor(stage.getRoot().findActor("fan"));
+                stage.getRoot().findActor("fan").clear();
+                stage.getRoot().findActor("fan").remove();
                 stage.getRoot().addActorBefore(stage.getRoot().findActor("plant"), fan_empty);
             }
         }
 
         if(box.getPlant()!=null){ // Растение в боксе есть
             if(!box.getPlant().get_image_plant().equals(stage.getRoot().findActor("plant"))){
-                stage.getRoot().removeActor(stage.getRoot().findActor("plant"));
+                stage.getRoot().findActor("plant").clear();
+                stage.getRoot().findActor("plant").remove();
                 Image plant_temp = box.getPlant().get_image_plant();
 
                 plant_temp.setName("plant");
@@ -397,7 +417,8 @@ public class BoxScreen implements Screen {
         }else{// Если растения нет вместо него должна быть заглушка как вообще без бокса, но только на растение
             if(!plant_empty.equals(stage.getRoot().findActor("plant"))){
 
-                stage.getRoot().removeActor(stage.getRoot().findActor("plant"));
+                stage.getRoot().findActor("plant").clear();
+                stage.getRoot().findActor("plant").remove();
                 stage.getRoot().addActorBefore(stage.getRoot().findActor("pot"), plant_empty);
 
             }
@@ -405,7 +426,8 @@ public class BoxScreen implements Screen {
 
         if(box.getPot()!=null){ // Если горшок в боксе есть
             if(!box.getPot().get_image_pot().equals(stage.getRoot().findActor("pot"))){
-                stage.getRoot().removeActor(stage.getRoot().findActor("pot"));
+                stage.getRoot().findActor("pot").clear();
+                stage.getRoot().findActor("pot").remove();
 
                 Image pot_temp = box.getPot().get_image_pot();
 
@@ -423,14 +445,16 @@ public class BoxScreen implements Screen {
 
         }else{ // Если горшка в боксе нет должна быть заглушка как если нет всего бокса но только на горшке
             if(!pot_empty.equals(stage.getRoot().findActor("pot"))){
-                stage.getRoot().removeActor(stage.getRoot().findActor("pot"));
+                stage.getRoot().findActor("pot").clear();
+                stage.getRoot().findActor("pot").remove();
                 stage.getRoot().addActorBefore(stage.getRoot().findActor("compressor"), pot_empty);
             }
         }
 
         if(box.getCompressor()!=null){ // Если вентилятор в боксе есть
             if(!box.getCompressor().get_image_compressor().equals(stage.getRoot().findActor("compressor"))){
-                stage.getRoot().removeActor(stage.getRoot().findActor("compressor"));
+                stage.getRoot().findActor("compressor").clear();
+                stage.getRoot().findActor("compressor").remove();
                 Image compressor_temp = box.getCompressor().get_image_compressor();
 
                 compressor_temp.setName("compressor");
@@ -447,7 +471,8 @@ public class BoxScreen implements Screen {
 
         }else{ // Если вентилятора в боксе нет должна быть заглушка как если нет всего бокса но только на вентиляторе
             if(!compressor_empty.equals(stage.getRoot().findActor("compressor"))){
-                stage.getRoot().removeActor(stage.getRoot().findActor("compressor"));
+                stage.getRoot().findActor("compressor").clear();
+                stage.getRoot().findActor("compressor").remove();
                 stage.getRoot().addActorBefore(stage.getRoot().findActor("light"), compressor_empty);
             }
         }

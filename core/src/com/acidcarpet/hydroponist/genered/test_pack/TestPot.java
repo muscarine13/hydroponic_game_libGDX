@@ -24,7 +24,8 @@ public class TestPot extends Pot {
                 1,
                 1,
                 1,
-                new Image(new TextureAtlas(Gdx.files.internal("item/test_package/data/test_pack.pack")).findRegion("test_pot"))
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_pot"))
+
                 );
     }
 

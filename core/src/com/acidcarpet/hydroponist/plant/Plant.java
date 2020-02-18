@@ -11,7 +11,6 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public abstract class Plant {
-    Box box;
 
     private boolean alive;
 
@@ -26,7 +25,6 @@ public abstract class Plant {
     private List<Leave> leaves;
     private List<Root> roots;
     private List<Product> products;
-
 
     public Plant(int maximum_health){
         alive = true;
@@ -58,7 +56,6 @@ public abstract class Plant {
         element_S_problem_points = 0;
 
     }
-
 
     private void check_for_next_stage() {
         if(!alive) return;
@@ -223,21 +220,21 @@ public abstract class Plant {
         }
     }
 
-    public void roots_absorb(){
+    public synchronized void roots_absorb(){
         if(roots.isEmpty()) return;
 
         for(Root root : roots){
             root.absorb();
         }
     }
-    public void leaves_production(){
+    public synchronized void leaves_production(){
         if (leaves.isEmpty()) return;
 
         for (Leave leave : leaves){
             leave.photosynthesis();
         }
     }
-    public void try_grow_up(){
+    public synchronized void try_grow_up(){
 
         int problem = 0;
         int ok = 0;
@@ -296,7 +293,7 @@ public abstract class Plant {
         }
 
     }
-    public void try_grow_up_products(){
+    public synchronized void try_grow_up_products(){
         for (Product product : products){
             product.grow(this);
         }
