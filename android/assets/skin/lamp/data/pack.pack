@@ -1,0 +1,178 @@
+
+pack.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+background
+  rotate: false
+  xy: 1, 111
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+back_button_enable
+  rotate: false
+  xy: 1, 1
+  size: 708, 108
+  orig: 708, 108
+  offset: 0, 0
+  index: -1
+back_button_disable
+  rotate: false
+  xy: 1083, 1931
+  size: 700, 100
+  orig: 700, 100
+  offset: 0, 0
+  index: -1
+back_button_pressed
+  rotate: false
+  xy: 1083, 1829
+  size: 700, 100
+  orig: 700, 100
+  offset: 0, 0
+  index: -1
+item_empty_image
+  rotate: false
+  xy: 1083, 1487
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+delete_button_enable
+  rotate: false
+  xy: 1083, 1221
+  size: 264, 264
+  orig: 264, 264
+  offset: 0, 0
+  index: -1
+equip_button_enable
+  rotate: false
+  xy: 1425, 1563
+  size: 264, 264
+  orig: 264, 264
+  offset: 0, 0
+  index: -1
+light_icon
+  rotate: false
+  xy: 1083, 955
+  size: 264, 264
+  orig: 264, 264
+  offset: 0, 0
+  index: -1
+off_button_enable
+  rotate: false
+  xy: 1083, 689
+  size: 264, 264
+  orig: 264, 264
+  offset: 0, 0
+  index: -1
+on_button_enable
+  rotate: false
+  xy: 1083, 423
+  size: 264, 264
+  orig: 264, 264
+  offset: 0, 0
+  index: -1
+takeoff_button_enable
+  rotate: false
+  xy: 1083, 157
+  size: 264, 264
+  orig: 264, 264
+  offset: 0, 0
+  index: -1
+delete_button_disable
+  rotate: false
+  xy: 1785, 1775
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+temperature_icon
+  rotate: false
+  xy: 1691, 1509
+  size: 264, 264
+  orig: 264, 264
+  offset: 0, 0
+  index: -1
+delete_button_pressed
+  rotate: false
+  xy: 1349, 1229
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+equip_button_disable
+  rotate: false
+  xy: 1349, 971
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+equip_button_pressed
+  rotate: false
+  xy: 1349, 713
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+off_button_disable
+  rotate: false
+  xy: 1349, 455
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+off_button_pressed
+  rotate: false
+  xy: 1349, 197
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+on_button_disable
+  rotate: false
+  xy: 1607, 1251
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+on_button_pressed
+  rotate: false
+  xy: 1607, 993
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+takeoff_button_disable
+  rotate: false
+  xy: 1607, 735
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+takeoff_button_pressed
+  rotate: false
+  xy: 1607, 477
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+pack2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+infopane_bacground
+  rotate: false
+  xy: 1, 743
+  size: 1080, 810
+  orig: 1080, 810
+  offset: 0, 0
+  index: -1
+scrollpane_background
+  rotate: false
+  xy: 1, 1
+  size: 1080, 740
+  orig: 1080, 740
+  offset: 0, 0
+  index: -1
