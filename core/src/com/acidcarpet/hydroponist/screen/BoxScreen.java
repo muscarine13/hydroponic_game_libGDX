@@ -40,15 +40,15 @@ public class BoxScreen implements Screen {
 
 
     private void lamp_click(){
-        System.out.println("Вошли в метод");
+
     try{
-        System.out.println("Зашли в try лампа: "+box.getLamp().isOn());
+
         box.getLamp().set_on_off();
-        System.out.println("Вышли из try лампа: "+box.getLamp().isOn());
+
     }catch (Exception e){
         e.printStackTrace();
     }
-        System.out.println("Вышли из метода");
+
 }
     private void plant_click(){
         System.err.println("Plant click!");
@@ -123,6 +123,7 @@ public class BoxScreen implements Screen {
         atlas = new TextureAtlas(Gdx.files.internal("skin/box/skin/skin.atlas"));
         skin = new Skin(Gdx.files.internal("skin/box/skin/skin.json"), atlas);
         Gdx.input.setInputProcessor(stage);
+
         background = new Image(atlas.findRegion("background"));
         background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
 
@@ -151,7 +152,6 @@ public class BoxScreen implements Screen {
             }
         });
 
-
         plant_empty = new Image(atlas.findRegion("plant_empty"));
         plant_empty.setName("plant");
         plant_empty.setBounds(stage.getWidth()/2-plant_empty.getWidth()/2, 500, plant_empty.getWidth(), plant_empty.getHeight());
@@ -171,7 +171,6 @@ public class BoxScreen implements Screen {
                 pot_click();
             }
         });
-
 
        compressor_empty = new Image(atlas.findRegion("compressor_empty"));
        compressor_empty.setName("compressor");
