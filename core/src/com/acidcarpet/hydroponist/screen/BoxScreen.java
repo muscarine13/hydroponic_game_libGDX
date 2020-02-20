@@ -2,6 +2,7 @@ package com.acidcarpet.hydroponist.screen;
 
 import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.genered.test_pack.*;
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -15,6 +16,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
 public class BoxScreen implements Screen {
+    Game game;
 
     Skin skin;
     TextureAtlas atlas;
@@ -38,12 +40,16 @@ public class BoxScreen implements Screen {
 
     Box box;
 
+    public BoxScreen(Game game){
+        this.game = game;
+    }
 
     private void lamp_click(){
 
     try{
 
-        box.getLamp().set_on_off();
+        //box.getLamp().set_on_off();
+        game.setScreen(new LampScreen(game));
 
     }catch (Exception e){
         e.printStackTrace();
