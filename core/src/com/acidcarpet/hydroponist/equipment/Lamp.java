@@ -5,12 +5,13 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 public abstract class Lamp {
 
     public Lamp(
-            double lm_production,
+            int lm_production,
             double t_add,
             Image image_lamp_on,
             Image image_lamp_off,
             Image image_light_on,
-            Image image_light_off
+            Image image_light_off,
+            Image item_icon
     ){
         on = true;
 
@@ -18,6 +19,7 @@ public abstract class Lamp {
         this.image_lamp_off = image_lamp_off;
         this.image_light_on = image_light_on;
         this.image_light_off = image_light_off;
+        this.item_icon = item_icon;
 
 
         lm = lm_production;
@@ -39,8 +41,8 @@ public abstract class Lamp {
         else on = true;
     }
 
-    private double lm;
-    private double lm_production;
+    private int lm;
+    private int lm_production;
 
     public synchronized boolean reduce_lm(double consumption){
         if(lm>=consumption){
@@ -61,10 +63,10 @@ public abstract class Lamp {
     public boolean isOn() {
         return on;
     }
-    public double getLm() {
+    public int getLm() {
         return lm;
     }
-    public double getLm_production() {
+    public int getLm_production() {
         return lm_production;
     }
     public double getT_add() {
@@ -75,12 +77,17 @@ public abstract class Lamp {
     public abstract String name();
     public abstract String description();
 
+    private Image item_icon;
+
     private Image image_lamp_on;
     private Image image_lamp_off;
 
     private Image image_light_on;
     private Image image_light_off;
 
+    public Image get_image_item(){
+        return item_icon;
+    }
     public Image get_image_lamp(){
         if(isOn()) return image_lamp_on;
         else return image_lamp_off;
@@ -89,6 +96,7 @@ public abstract class Lamp {
         if (isOn()) return image_light_on;
         else return image_light_off;
     }
+
 
 
 }

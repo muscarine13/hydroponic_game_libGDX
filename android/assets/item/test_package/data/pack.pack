@@ -1,5 +1,5 @@
 
-test_pack.png
+pack.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -38,14 +38,14 @@ test_pot
   orig: 700, 500
   offset: 0, 0
   index: -1
-test_fan_off
+test_lamp_icon
   rotate: false
-  xy: 1605, 219
-  size: 300, 300
-  orig: 300, 300
+  xy: 1605, 179
+  size: 340, 340
+  orig: 340, 340
   offset: 0, 0
   index: -1
-test_fan_on
+test_fan_off
   rotate: false
   xy: 1084, 219
   size: 300, 300
@@ -54,13 +54,13 @@ test_fan_on
   index: -1
 test_compressor_off
   rotate: false
-  xy: 1605, 67
+  xy: 1605, 27
   size: 300, 150
   orig: 300, 150
   offset: 0, 0
   index: -1
 
-test_pack2.png
+pack2.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -93,7 +93,7 @@ test_compressor_on
   offset: 0, 0
   index: -1
 
-test_pack3.png
+pack3.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -125,8 +125,15 @@ test_plant_post_vegetation_alive
   orig: 700, 1000
   offset: 0, 0
   index: -1
+test_fan_on
+  rotate: false
+  xy: 1405, 1703
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
 
-test_pack4.png
+pack4.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -159,7 +166,7 @@ test_plant_pre_vegetation_alive
   offset: 0, 0
   index: -1
 
-test_pack5.png
+pack5.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -199,7 +206,7 @@ test_plant_soaking_dead
   offset: 0, 0
   index: -1
 
-test_pack6.png
+pack6.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none

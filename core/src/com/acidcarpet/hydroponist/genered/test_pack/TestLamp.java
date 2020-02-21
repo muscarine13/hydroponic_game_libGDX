@@ -13,17 +13,18 @@ public class TestLamp extends Lamp {
                 new Image(TestPack.getInstance().get_atlas().findRegion("test_lamp_on")),
                 new Image(TestPack.getInstance().get_atlas().findRegion("test_lamp_off")),
                 new Image(TestPack.getInstance().get_atlas().findRegion("test_light_on")),
-                new Image(TestPack.getInstance().get_atlas().findRegion("test_light_off"))
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_light_off")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_lamp_icon"))
         );
     }
 
     @Override
     public String name() {
-        return "Тестовая лампа";
+        return "GroFlo LED 500W FITO PRO Series";
     }
 
     @Override
     public String description() {
-        return "Описание тестовой лампы";
+        return "Крутейшая тестовая лампа из всех тестовых лам. Греет не сильно, а светит как пульсар. Самое то для начинающего садовода.";
     }
 }

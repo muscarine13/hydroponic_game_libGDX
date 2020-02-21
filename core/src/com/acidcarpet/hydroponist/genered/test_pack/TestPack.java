@@ -12,7 +12,7 @@ public class TestPack {
 
     private TestPack(){
         atlas = new TextureAtlas(
-                Gdx.files.internal("item/test_package/data/test_pack.pack")
+                Gdx.files.internal("item/test_package/data/pack.pack")
         );
     }
     private TextureAtlas atlas;
