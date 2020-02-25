@@ -109,8 +109,6 @@ public class BoxScreen implements Screen {
     public void show() {
         box = Box.getInstance();
 
-
-
         stage = new Stage(new ExtendViewport(1080, 1920));
 
         atlas = ScreenAtlas.getInstance().getBoxScreen_atlas();
@@ -380,10 +378,8 @@ public class BoxScreen implements Screen {
                     }
                 });
 
-
-
                 stage.getRoot().addActorBefore(stage.getRoot().findActor("plant"), fan_temp);
-                System.out.println("fan refresh");
+
             }
 
         }else{ // Если вентилятора в боксе нет должна быть заглушка как если нет всего бокса но только на вентиляторе
@@ -501,8 +497,8 @@ public class BoxScreen implements Screen {
 
     @Override
     public void dispose() {
-    skin.dispose();
-    atlas.dispose();
+    //skin.dispose();
+    //atlas.dispose();
     stage.dispose();
     }
 }

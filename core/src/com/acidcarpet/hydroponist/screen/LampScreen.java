@@ -51,13 +51,11 @@ public class LampScreen implements Screen {
 
     }
 
-
     private void takeoff_click(){
         Inventory.getInstance().takeoff_lamp();
         refresh = true;
     }
     private void off_click(){
-
         Box.getInstance().getLamp().set_off();
         refresh = true;
     }
@@ -75,7 +73,6 @@ public class LampScreen implements Screen {
     }
     private void back_button_click(){
         game.setScreen(new BoxScreen(game));
-        refresh = true;
 
     }
 
@@ -83,7 +80,7 @@ public class LampScreen implements Screen {
         Group out = new Group();
 
         Image background = new Image(atlas.findRegion("infopane_background"));
-        background.setBounds(0 , 0, stage.getWidth(), 810);
+        background.setPosition(0 , 0);
         background.setName("infopane_background");
         out.addActor(background);
 
@@ -205,7 +202,7 @@ public class LampScreen implements Screen {
 
 
         out.setName("infopane");
-        out.setBounds(0, 1070, stage.getWidth(),810);
+        out.setPosition(40, 1070);
 
         return out;
 
@@ -219,7 +216,7 @@ public class LampScreen implements Screen {
             Image item_icon = lamp.get_image_item();
             //item_icon.setTouchable(Touchable.disabled);
             item_icon.setName("item_icon");
-            item_icon.setPosition(0, 0);
+            item_icon.setBounds(0, 0, 340, 340);
             out.addActor(item_icon);
 
             ImageButton equip = new ImageButton(skin, "equip_button");
@@ -293,7 +290,7 @@ public class LampScreen implements Screen {
         Group out = new Group();
 
         Image background = new Image(atlas.findRegion("scrollpane_background"));
-        background.setBounds(0 , 0, stage.getWidth(), 740);
+        background.setPosition(0 , 0);
         background.setName("scrollpane_background");
         out.addActor(background);
 
@@ -317,7 +314,7 @@ public class LampScreen implements Screen {
         out.addActor(pane);
 
         out.setName("scrollpane");
-        out.setBounds(0, 310, stage.getWidth(), 740);
+        out.setPosition(40, 310);
 
         return out;
     }
@@ -337,10 +334,6 @@ public class LampScreen implements Screen {
         alice_25_black = ScreenAtlas.getInstance().alice_25_black;
         alice_40_black = ScreenAtlas.getInstance().alice_40_black;
         alice_28_555555 = ScreenAtlas.getInstance().alice_28_555555;
-
-
-
-
        alice_36_373737_stroke_black = ScreenAtlas.getInstance().alice_36_373737_stroke_black;
 
        Image background = new Image(atlas.findRegion("background"));
@@ -416,8 +409,8 @@ public class LampScreen implements Screen {
 
     @Override
     public void dispose() {
-        skin.dispose();
-        atlas.dispose();
+        //skin.dispose();
+        //atlas.dispose();
         stage.dispose();
     }
 
