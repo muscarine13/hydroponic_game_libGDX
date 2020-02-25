@@ -4,7 +4,17 @@ package com.acidcarpet.hydroponist.equipment;
 import com.acidcarpet.hydroponist.genered.test_pack.*;
 import com.acidcarpet.hydroponist.plant.Plant;
 
+import java.util.Date;
+
 public class Box {
+
+    private static long last_update;
+    public static synchronized void update(){
+        last_update = new Date().getTime();
+    }
+    public static long get_last_update(){
+        return last_update;
+    }
 
     private static Box instance;
     public static Box getInstance(){
@@ -34,6 +44,8 @@ public class Box {
         this.compressor = new TestCompressor();
 
         plant = new TestPlant();
+
+        last_update = new Date().getTime();
     }
 
     public double actual_t(){

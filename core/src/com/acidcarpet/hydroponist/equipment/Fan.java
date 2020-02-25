@@ -28,9 +28,11 @@ public abstract class Fan {
     private boolean on;
     public synchronized void set_on(){
         on = true;
+        Box.update();
     }
     public synchronized void set_off(){
         on = false;
+        Box.update();
     }
 
     private double CO2;

@@ -64,12 +64,12 @@ public abstract class Plant {
         if (next_stage_remain == 0) {
 
             current_stage_index++;
+
             if(current_stage_index>=stages.size()) {
 
                 //перенести результат на склад
 
                 alive=false;
-
 
 
             }else{
@@ -101,16 +101,15 @@ public abstract class Plant {
                 }catch (Exception e){
 
                 }
-
-
-
             }
+            Box.update();
 
         }
     }
     private void check_health(){
         if(current_health<=0){
            alive=false;
+            Box.update();
         }
     }
 

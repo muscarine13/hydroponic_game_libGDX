@@ -364,22 +364,17 @@ public class LampScreen implements Screen {
     public void render(float delta) {
 
         if(refresh){
+
             stage.getRoot().findActor("infopane").clearListeners();
-            //stage.getRoot().findActor("infopane").remove();
             stage.getRoot().removeActor(stage.getRoot().findActor("infopane"));
-
-
             stage.addActor(generate_infopane());
 
             stage.getRoot().findActor("scrollpane").clearListeners();
             stage.getRoot().removeActor(stage.getRoot().findActor("scrollpane"));
-
             stage.addActor(generate_scrollpane());
 
             refresh = false;
         }
-
-
 
 
 
@@ -409,8 +404,8 @@ public class LampScreen implements Screen {
 
     @Override
     public void dispose() {
-        //skin.dispose();
-        //atlas.dispose();
+        skin.dispose();
+        atlas.dispose();
         stage.dispose();
     }
 

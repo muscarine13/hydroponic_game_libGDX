@@ -19,9 +19,11 @@ public abstract class Compressor {
     private boolean on;
     public synchronized void set_on(){
         on = true;
+        Box.update();
     }
     public synchronized void set_off(){
         on = false;
+        Box.update();
     }
 
     private double oxygen;

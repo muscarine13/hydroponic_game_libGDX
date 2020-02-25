@@ -1,11 +1,11 @@
 package com.acidcarpet.hydroponist.screen;
 
 import com.acidcarpet.hydroponist.equipment.Box;
-import com.acidcarpet.hydroponist.genered.test_pack.*;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.Touchable;
@@ -15,95 +15,27 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
+import java.util.Date;
+
 public class BoxScreen implements Screen {
     Game game;
 
+    long last_update;
     Skin skin;
     TextureAtlas atlas;
 
     Stage stage;
-
-    Image background;
-
-    Image lamp_empty;
-    Image light_empty;
-    Image fan_empty;
-    Image plant_empty;
-    Image pot_empty;
-    Image compressor_empty;
-
-
-    ImageButton x3_button;
-    ImageButton shop_button;
-    ImageButton donation_button;
-    ImageButton inventory_button;
-    ImageButton settings_button;
-    ImageButton room_button;
 
     Box box;
 
     public BoxScreen(Game game){
         this.game = game;
 
+        last_update = new Date().getTime();
 
     }
 
-    private void lamp_click(){
 
-    try{
-
-        //box.getLamp().set_on_off();
-        game.setScreen(new LampScreen(game));
-
-    }catch (Exception e){
-        e.printStackTrace();
-    }
-
-}
-    private void plant_click(){
-        System.err.println("Plant click!");
-    }
-    private void fan_click(){
-        try{
-            if(box.getFan().isOn())box.getFan().set_off();
-            else box.getFan().set_on();
-        }catch (Exception e){
-
-        }
-    }
-    private void pot_click(){
-        System.err.println("Pot click!");
-    }
-    private void compressor_click(){
-        try{
-            if(box.getCompressor().isOn()){
-                box.getCompressor().set_off();
-            }
-            else {
-                box.getCompressor().set_on();
-            }
-        }catch (Exception e){
-        e.printStackTrace();
-        }
-    }
-    private void x3_button_click(){
-        System.out.println("x3_button click!");
-    }
-    private void shop_button_click(){
-        System.out.println("shop_button click!");
-    }
-    private void storage_button_click(){
-        System.out.println("storage_button click!");
-    }
-    private void donat_button_click(){
-        System.out.println("donat_button click!");
-    }
-    private void settings_button_click(){
-        System.out.println("settings_button click!");
-    }
-    private void room_button_click(){
-        System.out.println("room_button click!");
-    }
 
     @Override
     public void show() {
@@ -116,360 +48,55 @@ public class BoxScreen implements Screen {
 
         Gdx.input.setInputProcessor(stage);
 
-        background = new Image(atlas.findRegion("background"));
+        Image background = new Image(atlas.findRegion("background"));
         background.setName("background");
         background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
 
-        lamp_empty = new Image(atlas.findRegion("lamp_empty"));
-        lamp_empty.setName("lamp");
-        lamp_empty.setBounds((stage.getWidth()/2)-(800/2), stage.getHeight()-200, 800, 200);
-        lamp_empty.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                lamp_click();
-            }
-        });
-
-        light_empty = new Image(atlas.findRegion("light_empty"));
-        light_empty.setName("light");
-        light_empty.setBounds(0, 0, stage.getWidth(), stage.getHeight()-100);
-        light_empty.setTouchable(Touchable.disabled);
-
-        fan_empty = new Image(atlas.findRegion("fan_empty"));
-        fan_empty.setName("fan");
-        fan_empty.setBounds(15, stage.getHeight()-500, 300, 300);
-        fan_empty.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                fan_click();
-            }
-        });
-
-        plant_empty = new Image(atlas.findRegion("plant_empty"));
-        plant_empty.setName("plant");
-        plant_empty.setBounds(stage.getWidth()/2-plant_empty.getWidth()/2, 500, plant_empty.getWidth(), plant_empty.getHeight());
-        plant_empty.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                plant_click();
-            }
-        });
-
-        pot_empty = new Image(atlas.findRegion("pot_empty"));
-        pot_empty.setName("pot");
-        pot_empty.setBounds(stage.getWidth()/2-(pot_empty.getWidth()/2), 0, plant_empty.getWidth(), pot_empty.getHeight());
-        pot_empty.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                pot_click();
-            }
-        });
-
-       compressor_empty = new Image(atlas.findRegion("compressor_empty"));
-       compressor_empty.setName("compressor");
-       compressor_empty.setBounds(stage.getWidth()-(compressor_empty.getWidth()), 0, compressor_empty.getWidth(), compressor_empty.getHeight());
-       compressor_empty.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                compressor_click();
-            }
-        });
-
-       x3_button = new ImageButton(skin, "x3_button");
-       x3_button.addListener(new ClickListener() {
-           @Override
-           public void clicked(InputEvent event, float x, float y) {
-               x3_button_click();
-           }
-       });
-       x3_button.setPosition(stage.getWidth()-x3_button.getWidth(), stage.getHeight()-500);
-       x3_button.setName("x3_button");
-
-       shop_button = new ImageButton(skin, "shop_button");
-       shop_button.addListener(new ClickListener() {
-           @Override
-           public void clicked(InputEvent event, float x, float y) {
-               shop_button_click();
-           }
-       });
-       shop_button.setPosition(stage.getWidth()-shop_button.getWidth(), stage.getHeight()-650);
-       shop_button.setName("shop_button");
-
-       inventory_button = new ImageButton(skin, "storage_button");
-       inventory_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                storage_button_click();
-            }
-        });
-       inventory_button.setPosition(stage.getWidth()-inventory_button.getWidth(), stage.getHeight()-800);
-       inventory_button.setName("inventory_button");
-
-       donation_button = new ImageButton(skin, "donation_button");
-       donation_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                donat_button_click();
-            }
-        });
-       donation_button.setPosition(stage.getWidth()-donation_button.getWidth(), stage.getHeight()-950);
-       donation_button.setName("donation_button");
-
-       settings_button = new ImageButton(skin, "settings_button");
-       settings_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                settings_button_click();
-            }
-        });
-       settings_button.setPosition(0, stage.getHeight()-650);
-       settings_button.setName("settings_button");
-
-        room_button = new ImageButton(skin, "room_button");
-        room_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                room_button_click();
-            }
-        });
-        room_button.setPosition(0, stage.getHeight()-800);
-        room_button.setName("room_button");
-
-
         stage.addActor(background);
 
-        stage.addActor(fan_empty);
-        stage.addActor(plant_empty);
-        stage.addActor(pot_empty);
-        stage.addActor(compressor_empty);
+        stage.addActor(generate_fan());
+        stage.addActor(generate_pot());
+        stage.addActor(generate_plant());
+        stage.addActor(generate_pump());
+        stage.addActor(generate_lamp());
 
-        stage.addActor(light_empty);
-        stage.addActor(lamp_empty);
-
-        stage.addActor(x3_button);
-        stage.addActor(shop_button);
-        stage.addActor(inventory_button);
-        stage.addActor(donation_button);
-
-        stage.addActor(settings_button);
-        stage.addActor(room_button);
+        stage.addActor(generate_x3_button());
+        stage.addActor(generate_shop_button());
+        stage.addActor(generate_storage_button());
+        stage.addActor(generate_donation_button());
+        stage.addActor(generate_settings_button());
+        stage.addActor(generate_room_button());
 
     }
 
     @Override
     public void render(float delta) {
 
-    if(box==null){ //Если бокс пустой сам по себе и нужны заглушки
+        if(last_update!=Box.get_last_update()){
 
-        if(!lamp_empty.equals(stage.getRoot().findActor("lamp"))){
+            stage.getRoot().findActor("lamp").clear();
             stage.getRoot().removeActor(stage.getRoot().findActor("lamp"));
-            stage.getRoot().addActorAfter(stage.getRoot().findActor("light"), lamp_empty);
+            stage.getRoot().addActorBefore(stage.getRoot().findActor("x3_button"), generate_lamp());
 
-        }
-        if(!light_empty.equals(stage.getRoot().findActor("light"))){
+            stage.getRoot().findActor("pump").clearListeners();
+            stage.getRoot().removeActor(stage.getRoot().findActor("pump"));
+            stage.getRoot().addActorBefore(stage.getRoot().findActor("lamp"), generate_pump());
 
-            stage.getRoot().removeActor(stage.getRoot().findActor("light"));
-            stage.getRoot().addActorBefore(stage.getRoot().findActor("lamp"), light_empty);
-
-        }
-
-        if(!fan_empty.equals(stage.getRoot().findActor("fan"))){
-
-            stage.getRoot().removeActor(stage.getRoot().findActor("fan"));
-            stage.getRoot().addActorBefore(stage.getRoot().findActor("plant"), fan_empty);
-
-
-        }
-
-        if(!plant_empty.equals(stage.getRoot().findActor("plant"))){
-
+            stage.getRoot().findActor("plant").clearListeners();
             stage.getRoot().removeActor(stage.getRoot().findActor("plant"));
-            stage.getRoot().addActorBefore(stage.getRoot().findActor("pot"), plant_empty);
+            stage.getRoot().addActorBefore(stage.getRoot().findActor("pump"), generate_plant());
 
-        }
-
-        if(!pot_empty.equals(stage.getRoot().findActor("pot"))){
-
+            stage.getRoot().findActor("pot").clearListeners();
             stage.getRoot().removeActor(stage.getRoot().findActor("pot"));
-            stage.getRoot().addActorBefore(stage.getRoot().findActor("compressor"), pot_empty);
+            stage.getRoot().addActorBefore(stage.getRoot().findActor("plant"), generate_pot());
 
-        }
-        if(!compressor_empty.equals(stage.getRoot().findActor("compressor"))){
+            stage.getRoot().findActor("fan").clearListeners();
+            stage.getRoot().removeActor(stage.getRoot().findActor("fan"));
+            stage.getRoot().addActorBefore(stage.getRoot().findActor("plant"), generate_fan());
 
-            stage.getRoot().removeActor(stage.getRoot().findActor("compressor"));
-            stage.getRoot().addActorBefore(stage.getRoot().findActor("light"), compressor_empty);
-
-        }
-
-
-    }else{ // Если бокс все же не пустой. Так должно быть 100% времени
-        if(box.getLamp()!=null){// Если лампа есть
-            if(!box.getLamp().get_image_lamp().equals(stage.getRoot().findActor("lamp"))){
-
-                stage.getRoot().findActor("lamp").clear();
-                stage.getRoot().findActor("lamp").remove();
-
-                Image lamp_temp = box.getLamp().get_image_lamp();
-
-                lamp_temp.setName("lamp");
-                lamp_temp.setBounds((stage.getWidth()/2)-(lamp_empty.getWidth()/2), stage.getHeight()-lamp_empty.getHeight(), lamp_empty.getWidth(), lamp_empty.getHeight());
-
-                lamp_temp.addListener(new ClickListener() {
-                    @Override
-                    public void clicked(InputEvent event, float x, float y) {
-                        lamp_click();
-                    }
-                });
-
-                stage.getRoot().addActorAfter(stage.getRoot().findActor("light"), lamp_temp);
-            }
-            if(!box.getLamp().get_image_light().equals(stage.getRoot().findActor("light"))){
-
-                stage.getRoot().findActor("light").clear();
-                stage.getRoot().findActor("light").remove();
-
-                Image light_temp = box.getLamp().get_image_light();
-
-                light_temp.setName("light");
-                light_temp.setBounds(0, 0, stage.getWidth(), light_temp.getHeight());
-
-                light_temp.setTouchable(Touchable.disabled);
-
-                stage.getRoot().addActorBefore(stage.getRoot().findActor("lamp"), light_temp);
-            }
-        }else{ // если лампы нет должны быть заглушки как если бокса вообще нет, но только где лампа
-            if(!lamp_empty.equals(stage.getRoot().findActor("lamp"))){
-
-                stage.getRoot().findActor("lamp").clear();
-                stage.getRoot().findActor("lamp").remove();
-
-                lamp_empty.addListener(new ClickListener() {
-                    @Override
-                    public void clicked(InputEvent event, float x, float y) {
-                        lamp_click();
-                    }
-                });
-                stage.getRoot().addActorAfter(stage.getRoot().findActor("light"), lamp_empty);
-
-            }
-            if(!light_empty.equals(stage.getRoot().findActor("light"))){
-
-                stage.getRoot().findActor("light").clear();
-                stage.getRoot().findActor("light").remove();
-
-                light_empty.setTouchable(Touchable.disabled);
-                stage.getRoot().addActorBefore(stage.getRoot().findActor("lamp"), light_empty);
-
-            }
+            last_update = Box.get_last_update();
         }
 
-        if(box.getFan()!=null){ // Если вентилятор в боксе есть
-            if(!box.getFan().get_image_fan().equals(stage.getRoot().findActor("fan"))){
-                stage.getRoot().findActor("fan").clear();
-                stage.getRoot().findActor("fan").remove();
-                Image fan_temp = box.getFan().get_image_fan();
-
-                fan_temp.setName("fan");
-                fan_temp.setBounds(15, stage.getHeight()-500, fan_empty.getWidth(), fan_empty.getHeight());
-                fan_temp.addListener(new ClickListener() {
-                    @Override
-                    public void clicked(InputEvent event, float x, float y) {
-                        fan_click();
-                    }
-                });
-
-                stage.getRoot().addActorBefore(stage.getRoot().findActor("plant"), fan_temp);
-
-            }
-
-        }else{ // Если вентилятора в боксе нет должна быть заглушка как если нет всего бокса но только на вентиляторе
-            if(!fan_empty.equals(stage.getRoot().findActor("fan"))){
-                stage.getRoot().findActor("fan").clear();
-                stage.getRoot().findActor("fan").remove();
-                stage.getRoot().addActorBefore(stage.getRoot().findActor("plant"), fan_empty);
-            }
-        }
-
-        if(box.getPlant()!=null){ // Растение в боксе есть
-            if(!box.getPlant().get_image_plant().equals(stage.getRoot().findActor("plant"))){
-                stage.getRoot().findActor("plant").clear();
-                stage.getRoot().findActor("plant").remove();
-                Image plant_temp = box.getPlant().get_image_plant();
-
-                plant_temp.setName("plant");
-                plant_temp.setBounds(stage.getWidth()/2-plant_empty.getWidth()/2, 500, plant_empty.getWidth(), plant_empty.getHeight());
-                plant_temp.addListener(new ClickListener() {
-                    @Override
-                    public void clicked(InputEvent event, float x, float y) {
-                        plant_click();
-                    }
-                });
-
-                stage.getRoot().addActorBefore(stage.getRoot().findActor("pot"), plant_temp);
-            }
-        }else{// Если растения нет вместо него должна быть заглушка как вообще без бокса, но только на растение
-            if(!plant_empty.equals(stage.getRoot().findActor("plant"))){
-
-                stage.getRoot().findActor("plant").clear();
-                stage.getRoot().findActor("plant").remove();
-                stage.getRoot().addActorBefore(stage.getRoot().findActor("pot"), plant_empty);
-
-            }
-        }
-
-        if(box.getPot()!=null){ // Если горшок в боксе есть
-            if(!box.getPot().get_image_pot().equals(stage.getRoot().findActor("pot"))){
-                stage.getRoot().findActor("pot").clear();
-                stage.getRoot().findActor("pot").remove();
-
-                Image pot_temp = box.getPot().get_image_pot();
-
-                pot_temp.setName("pot");
-                pot_temp.setBounds(stage.getWidth()/2-(pot_empty.getWidth()/2), 0, plant_empty.getWidth(), pot_empty.getHeight());
-                pot_temp.addListener(new ClickListener() {
-                    @Override
-                    public void clicked(InputEvent event, float x, float y) {
-                        pot_click();
-                    }
-                });
-
-                stage.getRoot().addActorBefore(stage.getRoot().findActor("compressor"), pot_temp);
-            }
-
-        }else{ // Если горшка в боксе нет должна быть заглушка как если нет всего бокса но только на горшке
-            if(!pot_empty.equals(stage.getRoot().findActor("pot"))){
-                stage.getRoot().findActor("pot").clear();
-                stage.getRoot().findActor("pot").remove();
-                stage.getRoot().addActorBefore(stage.getRoot().findActor("compressor"), pot_empty);
-            }
-        }
-
-        if(box.getCompressor()!=null){ // Если вентилятор в боксе есть
-            if(!box.getCompressor().get_image_compressor().equals(stage.getRoot().findActor("compressor"))){
-                stage.getRoot().findActor("compressor").clear();
-                stage.getRoot().findActor("compressor").remove();
-                Image compressor_temp = box.getCompressor().get_image_compressor();
-
-                compressor_temp.setName("compressor");
-                compressor_temp.setBounds(stage.getWidth()-(compressor_empty.getWidth()), 0, compressor_empty.getWidth(), compressor_empty.getHeight());
-                compressor_temp.addListener(new ClickListener() {
-                    @Override
-                    public void clicked(InputEvent event, float x, float y) {
-                        compressor_click();
-                    }
-                });
-
-                stage.getRoot().addActorBefore(stage.getRoot().findActor("light"), compressor_temp);
-            }
-
-        }else{ // Если вентилятора в боксе нет должна быть заглушка как если нет всего бокса но только на вентиляторе
-            if(!compressor_empty.equals(stage.getRoot().findActor("compressor"))){
-                stage.getRoot().findActor("compressor").clear();
-                stage.getRoot().findActor("compressor").remove();
-                stage.getRoot().addActorBefore(stage.getRoot().findActor("light"), compressor_empty);
-            }
-        }
-    }
 
         stage.act(delta);
         stage.draw();
@@ -501,4 +128,288 @@ public class BoxScreen implements Screen {
     //atlas.dispose();
     stage.dispose();
     }
+
+
+    //
+    private void lamp_click(){
+
+        try{
+
+            //box.getLamp().set_on_off();
+            game.setScreen(new LampScreen(game));
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+    private void plant_click(){
+        System.err.println("Plant click!");
+    }
+    private void fan_click(){
+        try{
+            if(box.getFan().isOn())box.getFan().set_off();
+            else box.getFan().set_on();
+        }catch (Exception e){
+
+        }
+    }
+    private void pot_click(){
+        System.err.println("Pot click!");
+    }
+    private void compressor_click(){
+        try{
+            if(box.getCompressor().isOn()){
+                box.getCompressor().set_off();
+            }
+            else {
+                box.getCompressor().set_on();
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    private void x3_button_click(){
+        System.out.println("x3_button click!");
+    }
+    private void shop_button_click(){
+        System.out.println("shop_button click!");
+    }
+    private void storage_button_click(){
+        System.out.println("storage_button click!");
+    }
+    private void donation_button_click(){
+        System.out.println("donat_button click!");
+    }
+    private void settings_button_click(){
+        System.out.println("settings_button click!");
+    }
+    private void room_button_click(){
+        System.out.println("room_button click!");
+    }
+
+    //
+    public Group generate_lamp(){
+        Group out = new Group();
+
+        Image current_lamp;
+        Image current_light;
+
+        if(Box.getInstance().getLamp()!=null){
+            current_lamp = Box.getInstance().getLamp().get_image_lamp();
+            current_lamp.setPosition(140, 1720);
+            current_lamp.addListener(new ClickListener() {
+                @Override
+                public void clicked(InputEvent event, float x, float y) {
+                    lamp_click();
+                }
+            });
+
+            current_light = Box.getInstance().getLamp().get_image_light();
+
+
+        }else{
+            current_lamp = new Image(atlas.findRegion("lamp_empty"));
+            current_lamp.setPosition(140, 1720);
+            current_lamp.addListener(new ClickListener() {
+                @Override
+                public void clicked(InputEvent event, float x, float y) {
+                    lamp_click();
+                }
+            });
+
+            current_light = new Image(atlas.findRegion("light_empty"));
+
+        }
+        current_light.setBounds(-40, 0, stage.getWidth(), current_light.getHeight());
+        current_light.setTouchable(Touchable.disabled);
+
+
+        out.addActor(current_light);
+        out.addActor(current_lamp);
+
+        out.setPosition(0+40,0);
+        out.setName("lamp");
+
+
+        return out;
+    }
+    public Image generate_fan(){
+        Image current_fan;
+
+        if(Box.getInstance().getFan()!=null){
+            current_fan = Box.getInstance().getFan().get_image_fan();
+
+        }else{
+            current_fan = new Image(atlas.findRegion("fan_empty"));
+
+        }
+
+        current_fan.setPosition(15+40, 1420);
+        current_fan.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                fan_click();
+            }
+        });
+        current_fan.setName("fan");
+
+        return current_fan;
+    }
+    public Image generate_plant(){
+        Image current_plant;
+
+        if(Box.getInstance().getPlant()!=null){
+            current_plant = Box.getInstance().getPlant().get_image_plant();
+
+        }else{
+            current_plant = new Image(atlas.findRegion("plant_empty"));
+
+        }
+
+        current_plant.setPosition(190+40, 500);
+        current_plant.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                plant_click();
+            }
+        });
+        current_plant.setName("plant");
+
+
+        return current_plant;
+    }
+    public Image generate_pot(){
+        Image current_pot;
+
+        if(Box.getInstance().getPot()!=null){
+            current_pot = Box.getInstance().getPot().get_image_pot();
+
+        }else{
+            current_pot = new Image(atlas.findRegion("pot_empty"));
+
+        }
+
+        current_pot.setPosition(190+40, 0);
+        current_pot.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                pot_click();
+            }
+        });
+
+        current_pot.setName("pot");
+
+        return current_pot;
+    }
+    public Image generate_pump(){
+        Image current_pump;
+
+        if(Box.getInstance().getCompressor()!=null){
+            current_pump = Box.getInstance().getCompressor().get_image_compressor();
+
+        }else{
+            current_pump = new Image(atlas.findRegion("compressor_empty"));
+
+        }
+
+        current_pump.setPosition(780+40, 0);
+        current_pump.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                compressor_click();
+            }
+        });
+
+        current_pump.setName("pump");
+
+        return current_pump;
+    }
+
+    public ImageButton generate_x3_button(){
+        ImageButton out = new ImageButton(skin, "x3_button");
+
+        out.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                x3_button_click();
+            }
+        });
+        out.setPosition(930+40, 1420);
+        out.setName("x3_button");
+
+        return out;
+    }
+    public ImageButton generate_shop_button(){
+        ImageButton out = new ImageButton(skin, "shop_button");
+
+        out.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                shop_button_click();
+            }
+        });
+        out.setPosition(930+40, 1260);
+        out.setName("shop_button");
+
+        return out;
+    }
+    public ImageButton generate_storage_button(){
+        ImageButton out = new ImageButton(skin, "storage_button");
+
+        out.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                storage_button_click();
+            }
+        });
+        out.setPosition(930+40, 1100);
+        out.setName("storage_button");
+
+        return out;
+    }
+    public ImageButton generate_donation_button(){
+        ImageButton out = new ImageButton(skin, "donation_button");
+
+        out.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                donation_button_click();
+            }
+        });
+        out.setPosition(930+40, 940);
+        out.setName("donation_button");
+
+        return out;
+    }
+    public ImageButton generate_settings_button(){
+        ImageButton out = new ImageButton(skin, "settings_button");
+
+        out.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                settings_button_click();
+            }
+        });
+        out.setPosition(0+40, 1260);
+        out.setName("settings_button");
+
+        return out;
+    }
+    public ImageButton generate_room_button(){
+        ImageButton out = new ImageButton(skin, "room_button");
+
+        out.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                room_button_click();
+            }
+        });
+        out.setPosition(0+40, 1100);
+        out.setName("room_button");
+
+        return out;
+    }
+
+
 }

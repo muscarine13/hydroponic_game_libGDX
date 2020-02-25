@@ -6,6 +6,7 @@ import com.badlogic.gdx.Game;
 
 
 public class GameEngine extends Game {
+
 	
 	@Override
 	public void create () {
@@ -15,6 +16,7 @@ public class GameEngine extends Game {
 	@Override
 	public void render () {
 		super.render();
+
 	}
 	
 	@Override

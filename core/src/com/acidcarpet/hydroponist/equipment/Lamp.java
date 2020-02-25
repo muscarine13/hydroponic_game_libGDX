@@ -32,14 +32,13 @@ public abstract class Lamp {
     private boolean on;
     public synchronized void set_on(){
         on = true;
+        Box.update();
     }
     public synchronized void set_off(){
         on = false;
+        Box.update();
     }
-    public synchronized void set_on_off(){
-        if(on) on = false;
-        else on = true;
-    }
+
 
     private int lm;
     private int lm_production;
@@ -98,8 +97,4 @@ public abstract class Lamp {
         else return image_light_off;
     }
 
-    @Override
-    public String toString() {
-        return "Lamp{"+name()+"}";
-    }
 }
