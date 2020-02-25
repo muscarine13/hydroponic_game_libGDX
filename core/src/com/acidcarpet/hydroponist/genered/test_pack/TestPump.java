@@ -11,7 +11,7 @@ public class TestPump extends Pump {
                 100,
                 new Image(TestPack.getInstance().get_atlas().findRegion("test_compressor_on")),
                 new Image(TestPack.getInstance().get_atlas().findRegion("test_compressor_off")),
-                new Image(TestPack.getInstance().get_atlas().findRegion("test_compressor_icon"))
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_pump_icon"))
         );
     }
     @Override

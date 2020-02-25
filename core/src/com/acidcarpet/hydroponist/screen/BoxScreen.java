@@ -151,15 +151,11 @@ public class BoxScreen implements Screen {
     }
     private void compressor_click(){
         try{
-            if(Box.getInstance().getPump().isOn()){
-                Box.getInstance().getPump().set_off();
-            }
-            else {
-                Box.getInstance().getPump().set_on();
-            }
+            game.setScreen(new PumpScreen(game));
         }catch (Exception e){
             e.printStackTrace();
         }
+
     }
     private void x3_button_click(){
         System.out.println("x3_button click!");

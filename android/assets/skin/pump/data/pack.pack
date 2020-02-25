@@ -31,14 +31,21 @@ back_button_pressed
   orig: 700, 100
   offset: 0, 0
   index: -1
-icon_fronpane
+item_empty_image
   rotate: false
   xy: 1083, 1487
   size: 340, 340
   orig: 340, 340
   offset: 0, 0
   index: -1
-item_empty_image
+item_fronpane
+  rotate: false
+  xy: 1083, 1145
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
+item_frontpane
   rotate: false
   xy: 1083, 1145
   size: 340, 340
@@ -143,16 +150,23 @@ on_button_pressed
   orig: 256, 256
   offset: 0, 0
   index: -1
-takeoff_button_disable
+oxygen_icon
   rotate: false
   xy: 1607, 485
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
   index: -1
-takeoff_button_pressed
+takeoff_button_disable
   rotate: false
   xy: 1349, 265
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+takeoff_button_pressed
+  rotate: false
+  xy: 1607, 227
   size: 256, 256
   orig: 256, 256
   offset: 0, 0
