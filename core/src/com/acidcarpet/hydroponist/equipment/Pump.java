@@ -69,7 +69,8 @@ public abstract class Pump {
         return oxygen;
     }
     public double getOxygen_production() {
-        return oxygen_production;
+        if(on) return oxygen_production;
+        else return 0;
     }
 
 }

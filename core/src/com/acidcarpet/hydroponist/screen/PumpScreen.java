@@ -237,7 +237,7 @@ public class PumpScreen implements Screen {
             o2_label.setAlignment(Align.right);
             o2_label.setName("item_o2_label");
             o2_label.setWrap(true);
-            o2_label.setBounds(0, 250, 80, 90);
+            o2_label.setBounds(250, 250, 80, 90);
             out.addActor(o2_label);
 
             Label name_label = new Label(
