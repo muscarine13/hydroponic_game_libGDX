@@ -28,7 +28,6 @@ import static java.lang.String.*;
 public class LampScreen implements Screen {
 
     Game game;
-    private final String FONT_CHARACTERS = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789][_!$%#@|\\/?-+=()*&.;,{}\"´`'<>";
 
     Skin skin;
     TextureAtlas atlas;
@@ -329,29 +328,20 @@ public class LampScreen implements Screen {
 
         stage = new Stage(new ExtendViewport(1080, 1920));
 
-        atlas = new TextureAtlas(Gdx.files.internal("skin/lamp/data/pack.pack"));
-        skin = new Skin(Gdx.files.internal("skin/lamp/data/pack.json"), atlas);
+        atlas = ScreenAtlas.getInstance().getLampScreen_atlas();
+        skin = ScreenAtlas.getInstance().getLampScreen_skin();
         Gdx.input.setInputProcessor(stage);
 
-        alice_48_green = createFont(48, Color.GREEN);
-        alice_36_white = createFont(36, new Color().set(203, 203, 203, 1));
-        alice_25_black = createFont(25, Color.BLACK);
-        alice_40_black = createFont(40, Color.BLACK);
-        alice_28_555555 = createFont(28, new Color(55, 55, 55, 1));
+        alice_48_green = ScreenAtlas.getInstance().alice_48_green;
+        alice_36_white = ScreenAtlas.getInstance().alice_36_white;
+        alice_25_black = ScreenAtlas.getInstance().alice_25_black;
+        alice_40_black = ScreenAtlas.getInstance().alice_40_black;
+        alice_28_555555 = ScreenAtlas.getInstance().alice_28_555555;
 
 
-        FileHandle fontFile = Gdx.files.internal("Alice-Regular.ttf");
-        FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
-        FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
-        parameter.size = 36;
-        parameter.color.add(new Color(37,37,37,1));
-        parameter.characters = FONT_CHARACTERS;
-        parameter.borderStraight = true;
-        parameter.borderColor.add(Color.BLACK);
-        parameter.borderWidth = 2;
 
-       alice_36_373737_stroke_black  = generator.generateFont(parameter);
-       generator.dispose();
+
+       alice_36_373737_stroke_black = ScreenAtlas.getInstance().alice_36_373737_stroke_black;
 
        Image background = new Image(atlas.findRegion("background"));
        background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
@@ -430,19 +420,5 @@ public class LampScreen implements Screen {
         atlas.dispose();
         stage.dispose();
     }
-    private BitmapFont createFont(int size, Color color) {
 
-        FileHandle fontFile = Gdx.files.internal("Alice-Regular.ttf");
-        FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
-        FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
-        parameter.size = size;
-        parameter.color.add(color);
-        parameter.characters = FONT_CHARACTERS;
-
-
-        BitmapFont font  = generator.generateFont(parameter);
-
-        generator.dispose();
-        return font;
-    }
 }

@@ -20,6 +20,7 @@ public class BoxScreen implements Screen {
 
     Skin skin;
     TextureAtlas atlas;
+
     Stage stage;
 
     Image background;
@@ -112,8 +113,8 @@ public class BoxScreen implements Screen {
 
         stage = new Stage(new ExtendViewport(1080, 1920));
 
-        atlas = new TextureAtlas(Gdx.files.internal("skin/box/skin/skin.atlas"));
-        skin = new Skin(Gdx.files.internal("skin/box/skin/skin.json"), atlas);
+        atlas = ScreenAtlas.getInstance().getBoxScreen_atlas();
+        skin = ScreenAtlas.getInstance().getBoxScreen_skin();
 
         Gdx.input.setInputProcessor(stage);
 
