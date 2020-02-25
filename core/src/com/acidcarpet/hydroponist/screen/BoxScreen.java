@@ -144,12 +144,7 @@ public class BoxScreen implements Screen {
         System.err.println("Plant click!");
     }
     private void fan_click(){
-        try{
-            if(Box.getInstance().getFan().isOn())Box.getInstance().getFan().set_off();
-            else Box.getInstance().getFan().set_on();
-        }catch (Exception e){
-
-        }
+        game.setScreen(new FanScreen(game));
     }
     private void pot_click(){
         System.err.println("Pot click!");

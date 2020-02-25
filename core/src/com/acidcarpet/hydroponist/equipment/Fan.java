@@ -9,12 +9,14 @@ public abstract class Fan {
                double CO2_production,
                double t_reduce,
                Image image_on,
-               Image image_off
+               Image image_off,
+               Image item_icon
     ){
         on = true;
 
         this.image_on = image_on;
         this.image_off = image_off;
+        this.item_icon = item_icon;
 
         this.energy_consumption = energy_consumption;
         CO2 = CO2_production;
@@ -77,9 +79,14 @@ public abstract class Fan {
     Image image_on;
     Image image_off;
 
+    Image item_icon;
+
     public Image get_image_fan(){
         if(isOn())return image_on;
         else return image_off;
+    }
+    public Image get_image_item(){
+        return item_icon;
     }
 
 

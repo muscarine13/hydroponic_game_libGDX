@@ -8,10 +8,11 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 public class TestFan extends Fan {
     public TestFan(){
         super(
-                2500,
+                60.5,
                 2.5,
                 new Image(TestPack.getInstance().get_atlas().findRegion("test_fan_on")),
-                new Image(TestPack.getInstance().get_atlas().findRegion("test_fan_off"))
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_fan_off")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_fan_icon"))
                 );
     }
     @Override

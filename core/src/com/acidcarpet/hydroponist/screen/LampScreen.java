@@ -266,7 +266,7 @@ public class LampScreen implements Screen {
                     new LabelStyle(alice_36_373737_stroke_black, Color.BLACK)
             );
             name_label.setAlignment(Align.center);
-            name_label.setName("item_light_label");
+            name_label.setName("item_name_label");
             name_label.setWrap(true);
             name_label.setTouchable(Touchable.disabled);
             name_label.setBounds(0, 0, 340, 340);

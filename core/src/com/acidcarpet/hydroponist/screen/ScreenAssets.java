@@ -33,6 +33,12 @@ public class ScreenAssets {
     private TextureAtlas LampScreen_atlas;
     private Skin LampScreen_skin;
 
+    private TextureAtlas FanScreen_atlas;
+    private Skin FanScreen_skin;
+
+    private TextureAtlas PumpScreen_atlas;
+    private Skin PumpScreen_skin;
+
     private ScreenAssets(){
 
         BoxScreen_atlas = new TextureAtlas(Gdx.files.internal("skin/box/skin/skin.atlas"));
@@ -40,6 +46,12 @@ public class ScreenAssets {
 
         LampScreen_atlas = new TextureAtlas(Gdx.files.internal("skin/lamp/data/pack.pack"));
         LampScreen_skin = new Skin(Gdx.files.internal("skin/lamp/data/pack.json"), LampScreen_atlas);
+
+        FanScreen_atlas = new TextureAtlas(Gdx.files.internal("skin/fan/data/pack.pack"));
+        FanScreen_skin = new Skin(Gdx.files.internal("skin/fan/data/pack.json"), FanScreen_atlas);
+
+        PumpScreen_atlas = new TextureAtlas(Gdx.files.internal("skin/pump/data/pack.pack"));
+        PumpScreen_skin = new Skin(Gdx.files.internal("skin/pump/data/pack.json"), PumpScreen_atlas);
 
         alice_48_green = createFont(48, Color.GREEN);
         alice_36_white = createFont(36, new Color().set(203, 203, 203, 1));
@@ -94,6 +106,20 @@ public class ScreenAssets {
     }
     public Skin getLampScreen_skin() {
         return LampScreen_skin;
+    }
+
+    public TextureAtlas getFanScreen_atlas() {
+        return FanScreen_atlas;
+    }
+    public Skin getFanScreen_skin() {
+        return FanScreen_skin;
+    }
+
+    public TextureAtlas getPumpScreen_atlas() {
+        return PumpScreen_atlas;
+    }
+    public Skin getPumpScreen_skin() {
+        return PumpScreen_skin;
     }
 
 

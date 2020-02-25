@@ -38,7 +38,7 @@ test_pot
   orig: 700, 500
   offset: 0, 0
   index: -1
-test_lamp_icon
+test_fan_icon
   rotate: false
   xy: 1605, 179
   size: 340, 340
@@ -125,11 +125,25 @@ test_plant_post_vegetation_alive
   orig: 700, 1000
   offset: 0, 0
   index: -1
+test_lamp_icon
+  rotate: false
+  xy: 1405, 1663
+  size: 340, 340
+  orig: 340, 340
+  offset: 0, 0
+  index: -1
 test_fan_on
   rotate: false
-  xy: 1405, 1703
+  xy: 1747, 1703
   size: 300, 300
   orig: 300, 300
+  offset: 0, 0
+  index: -1
+test_pump_icon
+  rotate: false
+  xy: 1405, 1321
+  size: 340, 340
+  orig: 340, 340
   offset: 0, 0
   index: -1
 

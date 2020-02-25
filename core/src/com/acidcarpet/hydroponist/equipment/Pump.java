@@ -4,11 +4,13 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public abstract class Pump {
 
-    public Pump(double oxygen_production, Image image_on, Image image_off){
+    public Pump(double oxygen_production, Image image_on, Image image_off, Image item_icon){
         on = true;
 
         this.image_on = image_on;
         this.image_off = image_off;
+        this.item_icon = item_icon;
+
         oxygen = oxygen_production;
         this.oxygen_production = oxygen_production;
 
@@ -50,9 +52,14 @@ public abstract class Pump {
     private Image image_on;
     private Image image_off;
 
+    Image item_icon;
+
     public Image get_image_pump(){
         if (isOn()) return image_on;
         else return  image_off;
+    }
+    public Image get_image_item(){
+        return item_icon;
     }
 
     public boolean isOn() {
