@@ -9,7 +9,7 @@ public class GameEngine extends Game {
 	
 	@Override
 	public void create () {
-	setScreen(new LampScreen(this));
+	setScreen(new BoxScreen(this));
 	}
 
 	@Override

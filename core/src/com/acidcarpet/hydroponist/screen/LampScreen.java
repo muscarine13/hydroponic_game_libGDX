@@ -34,6 +34,9 @@ public class LampScreen implements Screen {
     TextureAtlas atlas;
     Stage stage;
 
+    Group infopane;
+    Group scrollpane;
+
     BitmapFont alice_48_green;
     BitmapFont alice_36_white;
     BitmapFont alice_36_373737_stroke_black;
@@ -41,8 +44,8 @@ public class LampScreen implements Screen {
     BitmapFont alice_40_black;
     BitmapFont alice_28_555555;
 
-    Group infopane_empty;
-    Group scrollpane_empty;
+    boolean refresh;
+
 
     public LampScreen(Game game){
         this.game = game;
@@ -51,27 +54,37 @@ public class LampScreen implements Screen {
 
 
     private void takeoff_click(){
-
+        Inventory.getInstance().takeoff_lamp();
+        refresh = true;
     }
     private void off_click(){
 
+        Box.getInstance().getLamp().set_off();
+        refresh = true;
     }
     private void on_click(){
-
+        Box.getInstance().getLamp().set_on();
+        refresh = true;
     }
     private void item_equip_click(Lamp lamp){
-
-        System.out.println("1123");
+        Inventory.getInstance().equip_lamp(lamp);
+        refresh = true;
     }
     private void item_delete_click(Lamp lamp){
-        System.out.println("asdasdasd");
+        Inventory.getInstance().delete_lamp(lamp);
+        refresh = true;
+    }
+    private void back_button_click(){
+        game.setScreen(new BoxScreen(game));
+        refresh = true;
+
     }
 
     private Group generate_infopane(){
         Group out = new Group();
 
         Image background = new Image(atlas.findRegion("infopane_background"));
-        background.setPosition(0 , 0);
+        background.setBounds(0 , 0, stage.getWidth(), 810);
         background.setName("infopane_background");
         out.addActor(background);
 
@@ -191,6 +204,10 @@ public class LampScreen implements Screen {
 
         }
 
+
+        out.setName("infopane");
+        out.setBounds(0, 1070, stage.getWidth(),810);
+
         return out;
 
     }
@@ -247,7 +264,7 @@ public class LampScreen implements Screen {
             out.addActor(light_label);
 
             Label temp_label = new Label(
-                    lamp.getT_add() + "",
+                    "+"+lamp.getT_add(),
                     new LabelStyle(alice_28_555555, Color.BLACK)
             );
             temp_label.setAlignment(Align.right);
@@ -277,7 +294,7 @@ public class LampScreen implements Screen {
         Group out = new Group();
 
         Image background = new Image(atlas.findRegion("scrollpane_background"));
-        background.setPosition(0 , 0);
+        background.setBounds(0 , 0, stage.getWidth(), 740);
         background.setName("scrollpane_background");
         out.addActor(background);
 
@@ -299,6 +316,9 @@ public class LampScreen implements Screen {
         pane.setScrollingDisabled(true, false);
         pane.setBounds(0 ,0 ,1080 , 740);
         out.addActor(pane);
+
+        out.setName("scrollpane");
+        out.setBounds(0, 310, stage.getWidth(), 740);
 
         return out;
     }
@@ -333,25 +353,25 @@ public class LampScreen implements Screen {
        alice_36_373737_stroke_black  = generator.generateFont(parameter);
        generator.dispose();
 
+       Image background = new Image(atlas.findRegion("background"));
+       background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
+       background.setName("background");
+       stage.addActor(background);
+
        ImageButton back_button = new ImageButton(skin, "back_button");
        back_button.setPosition((1080/2)-350, 40);
        back_button.addListener(new ClickListener() {
            @Override
            public void clicked(InputEvent event, float x, float y) {
-               System.out.println("back");
+               back_button_click();
            }
        });
        stage.addActor(back_button);
 
-        Group infopane = generate_infopane();
-        infopane.setBounds(40, 1070, 1080, 810);
-
-        Group scrollpane = generate_scrollpane();
-        scrollpane.setPosition(40, 310);
-
-
-
+        infopane = generate_infopane();
         stage.addActor(infopane);
+
+        scrollpane = generate_scrollpane();
         stage.addActor(scrollpane);
 
 
@@ -359,6 +379,26 @@ public class LampScreen implements Screen {
 
     @Override
     public void render(float delta) {
+
+        if(refresh){
+            stage.getRoot().findActor("infopane").clearListeners();
+            //stage.getRoot().findActor("infopane").remove();
+            stage.getRoot().removeActor(stage.getRoot().findActor("infopane"));
+
+
+            stage.addActor(generate_infopane());
+
+            stage.getRoot().findActor("scrollpane").clearListeners();
+            stage.getRoot().removeActor(stage.getRoot().findActor("scrollpane"));
+
+            stage.addActor(generate_scrollpane());
+
+            refresh = false;
+        }
+
+
+
+
 
         stage.act(delta);
         stage.draw();

@@ -67,7 +67,8 @@ public abstract class Lamp {
         return lm;
     }
     public int getLm_production() {
-        return lm_production;
+        if(on) return lm_production;
+        else return 0;
     }
     public double getT_add() {
         if(!on) return 0;
@@ -97,6 +98,8 @@ public abstract class Lamp {
         else return image_light_off;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Lamp{"+name()+"}";
+    }
 }

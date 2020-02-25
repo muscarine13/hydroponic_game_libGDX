@@ -31,6 +31,7 @@ public class BoxScreen implements Screen {
     Image pot_empty;
     Image compressor_empty;
 
+
     ImageButton x3_button;
     ImageButton shop_button;
     ImageButton donation_button;
@@ -42,6 +43,8 @@ public class BoxScreen implements Screen {
 
     public BoxScreen(Game game){
         this.game = game;
+
+
     }
 
     private void lamp_click(){
@@ -106,36 +109,21 @@ public class BoxScreen implements Screen {
         box = Box.getInstance();
 
 
-    new Thread(){
-        @Override
-        public void run() {
-            while(true) {
-                try {
 
-
-                    Thread.sleep(1000);
-                    box.getPlant().second();
-
-
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-
-        }
-    }.start();
         stage = new Stage(new ExtendViewport(1080, 1920));
 
         atlas = new TextureAtlas(Gdx.files.internal("skin/box/skin/skin.atlas"));
         skin = new Skin(Gdx.files.internal("skin/box/skin/skin.json"), atlas);
+
         Gdx.input.setInputProcessor(stage);
 
         background = new Image(atlas.findRegion("background"));
+        background.setName("background");
         background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
 
         lamp_empty = new Image(atlas.findRegion("lamp_empty"));
         lamp_empty.setName("lamp");
-        lamp_empty.setBounds((stage.getWidth()/2)-(lamp_empty.getWidth()/2), stage.getHeight()-lamp_empty.getHeight(), lamp_empty.getWidth(), lamp_empty.getHeight());
+        lamp_empty.setBounds((stage.getWidth()/2)-(800/2), stage.getHeight()-200, 800, 200);
         lamp_empty.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
@@ -145,12 +133,12 @@ public class BoxScreen implements Screen {
 
         light_empty = new Image(atlas.findRegion("light_empty"));
         light_empty.setName("light");
-        light_empty.setBounds(0, 0, stage.getWidth(), light_empty.getHeight());
+        light_empty.setBounds(0, 0, stage.getWidth(), stage.getHeight()-100);
         light_empty.setTouchable(Touchable.disabled);
 
         fan_empty = new Image(atlas.findRegion("fan_empty"));
         fan_empty.setName("fan");
-        fan_empty.setBounds(15, stage.getHeight()-500, fan_empty.getWidth(), fan_empty.getHeight());
+        fan_empty.setBounds(15, stage.getHeight()-500, 300, 300);
         fan_empty.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
@@ -277,6 +265,7 @@ public class BoxScreen implements Screen {
         if(!lamp_empty.equals(stage.getRoot().findActor("lamp"))){
             stage.getRoot().removeActor(stage.getRoot().findActor("lamp"));
             stage.getRoot().addActorAfter(stage.getRoot().findActor("light"), lamp_empty);
+
         }
         if(!light_empty.equals(stage.getRoot().findActor("light"))){
 
@@ -289,6 +278,7 @@ public class BoxScreen implements Screen {
 
             stage.getRoot().removeActor(stage.getRoot().findActor("fan"));
             stage.getRoot().addActorBefore(stage.getRoot().findActor("plant"), fan_empty);
+
 
         }
 
@@ -392,6 +382,7 @@ public class BoxScreen implements Screen {
 
 
                 stage.getRoot().addActorBefore(stage.getRoot().findActor("plant"), fan_temp);
+                System.out.println("fan refresh");
             }
 
         }else{ // Если вентилятора в боксе нет должна быть заглушка как если нет всего бокса но только на вентиляторе
