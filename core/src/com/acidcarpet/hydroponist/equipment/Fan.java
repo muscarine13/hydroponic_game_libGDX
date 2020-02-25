@@ -63,11 +63,10 @@ public abstract class Fan {
         return CO2;
     }
     public double getCO2_production() {
+        if(!on) return 0;
         return CO2_production;
     }
-    public double getEnergy_consumption() {
-        return energy_consumption;
-    }
+
     public double getT_reduce() {
         if(!on) return 0;
         return t_reduce;
