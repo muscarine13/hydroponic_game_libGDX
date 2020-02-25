@@ -2,9 +2,9 @@ package com.acidcarpet.hydroponist.equipment;
 
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
-public abstract class Compressor {
+public abstract class Pump {
 
-    public Compressor( double oxygen_production, Image image_on, Image image_off){
+    public Pump(double oxygen_production, Image image_on, Image image_off){
         on = true;
 
         this.image_on = image_on;
@@ -13,7 +13,6 @@ public abstract class Compressor {
         this.oxygen_production = oxygen_production;
 
     }
-
 
 
     private boolean on;
@@ -51,7 +50,7 @@ public abstract class Compressor {
     private Image image_on;
     private Image image_off;
 
-    public Image get_image_compressor(){
+    public Image get_image_pump(){
         if (isOn()) return image_on;
         else return  image_off;
     }

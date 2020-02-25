@@ -69,7 +69,7 @@ public class Root {
         if(
                         (box.getPot().getCurrent_pH()< ph_maximum &&box.getPot().getCurrent_pH()> pH_minimum)
                 &&      (box.getPot().get_all_ppm()>ppm_minimum&&box.getPot().get_all_ppm()<ppm_maximum)
-                &&       box.getCompressor().reduce_oxygen(oxygen_consumption *length)
+                &&       box.getPump().reduce_oxygen(oxygen_consumption *length)
         ){
             current_health++;
             if(current_health>maximum_health)current_health = maximum_health;

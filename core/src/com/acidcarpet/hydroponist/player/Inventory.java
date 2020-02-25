@@ -22,6 +22,9 @@ public class Inventory {
         lamp_inventory.add(new TestLamp());
         lamp_inventory.add(new TestLamp());
         lamp_inventory.add(new TestLamp());
+        lamp_inventory.add(new TestLamp());
+        lamp_inventory.add(new TestLamp());
+        lamp_inventory.add(new TestLamp());
 
 
 
@@ -29,7 +32,6 @@ public class Inventory {
     }
 
     private List<Lamp> lamp_inventory;
-
     public synchronized List<Lamp> get_lamp_inventory(){
         return lamp_inventory;
     }

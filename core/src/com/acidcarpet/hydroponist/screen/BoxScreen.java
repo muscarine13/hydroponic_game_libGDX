@@ -21,12 +21,11 @@ public class BoxScreen implements Screen {
     Game game;
 
     long last_update;
+
     Skin skin;
     TextureAtlas atlas;
 
     Stage stage;
-
-    Box box;
 
     public BoxScreen(Game game){
         this.game = game;
@@ -35,16 +34,14 @@ public class BoxScreen implements Screen {
 
     }
 
-
-
     @Override
     public void show() {
-        box = Box.getInstance();
+
 
         stage = new Stage(new ExtendViewport(1080, 1920));
 
-        atlas = ScreenAtlas.getInstance().getBoxScreen_atlas();
-        skin = ScreenAtlas.getInstance().getBoxScreen_skin();
+        atlas = ScreenAssets.getInstance().getBoxScreen_atlas();
+        skin = ScreenAssets.getInstance().getBoxScreen_skin();
 
         Gdx.input.setInputProcessor(stage);
 
@@ -148,8 +145,8 @@ public class BoxScreen implements Screen {
     }
     private void fan_click(){
         try{
-            if(box.getFan().isOn())box.getFan().set_off();
-            else box.getFan().set_on();
+            if(Box.getInstance().getFan().isOn())Box.getInstance().getFan().set_off();
+            else Box.getInstance().getFan().set_on();
         }catch (Exception e){
 
         }
@@ -159,11 +156,11 @@ public class BoxScreen implements Screen {
     }
     private void compressor_click(){
         try{
-            if(box.getCompressor().isOn()){
-                box.getCompressor().set_off();
+            if(Box.getInstance().getPump().isOn()){
+                Box.getInstance().getPump().set_off();
             }
             else {
-                box.getCompressor().set_on();
+                Box.getInstance().getPump().set_on();
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -187,7 +184,6 @@ public class BoxScreen implements Screen {
     private void room_button_click(){
         System.out.println("room_button click!");
     }
-
     //
     public Group generate_lamp(){
         Group out = new Group();
@@ -305,8 +301,8 @@ public class BoxScreen implements Screen {
     public Image generate_pump(){
         Image current_pump;
 
-        if(Box.getInstance().getCompressor()!=null){
-            current_pump = Box.getInstance().getCompressor().get_image_compressor();
+        if(Box.getInstance().getPump()!=null){
+            current_pump = Box.getInstance().getPump().get_image_pump();
 
         }else{
             current_pump = new Image(atlas.findRegion("compressor_empty"));
@@ -325,7 +321,7 @@ public class BoxScreen implements Screen {
 
         return current_pump;
     }
-
+    //
     public ImageButton generate_x3_button(){
         ImageButton out = new ImageButton(skin, "x3_button");
 

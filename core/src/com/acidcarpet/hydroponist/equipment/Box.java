@@ -31,7 +31,7 @@ public class Box {
 
     private Plant plant;
     private Pot pot;
-    private Compressor compressor;
+    private Pump pump;
 
     public Box(
     ){
@@ -41,7 +41,7 @@ public class Box {
         this.lamp = new TestLamp();
         this.fan = new TestFan();
         this.pot = new TestPot();
-        this.compressor = new TestCompressor();
+        this.pump = new TestPump();
 
         plant = new TestPlant();
 
@@ -64,8 +64,8 @@ public class Box {
     public Pot getPot() {
         return pot;
     }
-    public Compressor getCompressor() {
-        return compressor;
+    public Pump getPump() {
+        return pump;
     }
     public String getName() {
         return name;
@@ -98,8 +98,8 @@ public class Box {
     public synchronized void setPot(Pot pot) {
         this.pot = pot;
     }
-    public synchronized void setCompressor(Compressor compressor) {
-        this.compressor = compressor;
+    public synchronized void setPump(Pump pump) {
+        this.pump = pump;
     }
 
 }

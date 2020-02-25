@@ -2,16 +2,13 @@ package com.acidcarpet.hydroponist.screen;
 
 import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.equipment.Lamp;
-import com.acidcarpet.hydroponist.genered.test_pack.TestLamp;
 import com.acidcarpet.hydroponist.player.Inventory;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -21,7 +18,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
-
 
 import static java.lang.String.*;
 
@@ -33,9 +29,6 @@ public class LampScreen implements Screen {
     TextureAtlas atlas;
     Stage stage;
 
-    Group infopane;
-    Group scrollpane;
-
     BitmapFont alice_48_green;
     BitmapFont alice_36_white;
     BitmapFont alice_36_373737_stroke_black;
@@ -44,7 +37,6 @@ public class LampScreen implements Screen {
     BitmapFont alice_28_555555;
 
     boolean refresh;
-
 
     public LampScreen(Game game){
         this.game = game;
@@ -325,39 +317,34 @@ public class LampScreen implements Screen {
 
         stage = new Stage(new ExtendViewport(1080, 1920));
 
-        atlas = ScreenAtlas.getInstance().getLampScreen_atlas();
-        skin = ScreenAtlas.getInstance().getLampScreen_skin();
+        atlas = ScreenAssets.getInstance().getLampScreen_atlas();
+        skin = ScreenAssets.getInstance().getLampScreen_skin();
         Gdx.input.setInputProcessor(stage);
 
-        alice_48_green = ScreenAtlas.getInstance().alice_48_green;
-        alice_36_white = ScreenAtlas.getInstance().alice_36_white;
-        alice_25_black = ScreenAtlas.getInstance().alice_25_black;
-        alice_40_black = ScreenAtlas.getInstance().alice_40_black;
-        alice_28_555555 = ScreenAtlas.getInstance().alice_28_555555;
-       alice_36_373737_stroke_black = ScreenAtlas.getInstance().alice_36_373737_stroke_black;
+        alice_48_green = ScreenAssets.getInstance().alice_48_green;
+        alice_36_white = ScreenAssets.getInstance().alice_36_white;
+        alice_25_black = ScreenAssets.getInstance().alice_25_black;
+        alice_40_black = ScreenAssets.getInstance().alice_40_black;
+        alice_28_555555 = ScreenAssets.getInstance().alice_28_555555;
+        alice_36_373737_stroke_black = ScreenAssets.getInstance().alice_36_373737_stroke_black;
 
-       Image background = new Image(atlas.findRegion("background"));
-       background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
-       background.setName("background");
-       stage.addActor(background);
+        Image background = new Image(atlas.findRegion("background"));
+        background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
+        background.setName("background");
+        stage.addActor(background);
 
-       ImageButton back_button = new ImageButton(skin, "back_button");
-       back_button.setPosition((1080/2)-350, 40);
-       back_button.addListener(new ClickListener() {
-           @Override
-           public void clicked(InputEvent event, float x, float y) {
-               back_button_click();
-           }
-       });
-       stage.addActor(back_button);
+        ImageButton back_button = new ImageButton(skin, "back_button");
+        back_button.setPosition((1080/2)-350+40, 40);
+        back_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                back_button_click();
+            }
+        });
+        stage.addActor(back_button);
 
-        infopane = generate_infopane();
-        stage.addActor(infopane);
-
-        scrollpane = generate_scrollpane();
-        stage.addActor(scrollpane);
-
-
+        stage.addActor(generate_infopane());
+        stage.addActor(generate_scrollpane());
     }
 
     @Override

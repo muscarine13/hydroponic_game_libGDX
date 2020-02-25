@@ -1,6 +1,5 @@
 package com.acidcarpet.hydroponist.screen;
 
-import com.acidcarpet.hydroponist.genered.test_pack.TestPack;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
@@ -9,15 +8,15 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
-public class ScreenAtlas {
+public class ScreenAssets {
     private final String FONT_CHARACTERS = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789][_!$%#@|\\/?-+=()*&.;,{}\"´`'<>";
 
 
 
 
-    private static ScreenAtlas instance;
-    public static ScreenAtlas getInstance(){
-        if(instance==null) instance = new ScreenAtlas();
+    private static ScreenAssets instance;
+    public static ScreenAssets getInstance(){
+        if(instance==null) instance = new ScreenAssets();
         return instance;
     }
 
@@ -34,7 +33,7 @@ public class ScreenAtlas {
     private TextureAtlas LampScreen_atlas;
     private Skin LampScreen_skin;
 
-    private ScreenAtlas(){
+    private ScreenAssets(){
 
         BoxScreen_atlas = new TextureAtlas(Gdx.files.internal("skin/box/skin/skin.atlas"));
         BoxScreen_skin = new Skin(Gdx.files.internal("skin/box/skin/skin.json"), BoxScreen_atlas);

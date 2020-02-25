@@ -1,12 +1,12 @@
 package com.acidcarpet.hydroponist.genered.test_pack;
 
-import com.acidcarpet.hydroponist.equipment.Compressor;
+import com.acidcarpet.hydroponist.equipment.Pump;
 
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
-public class TestCompressor extends Compressor {
+public class TestPump extends Pump {
 
-    public TestCompressor(){
+    public TestPump(){
         super(
                 100,
                 new Image(TestPack.getInstance().get_atlas().findRegion("test_compressor_on")),
