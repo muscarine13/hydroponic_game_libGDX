@@ -21,6 +21,7 @@ public class ScreenAssets {
     }
 
     BitmapFont alice_48_green;
+    BitmapFont alice_48_black;
     BitmapFont alice_36_white;
     BitmapFont alice_36_373737_stroke_black;
     BitmapFont alice_25_black;
@@ -39,6 +40,9 @@ public class ScreenAssets {
     private TextureAtlas PumpScreen_atlas;
     private Skin PumpScreen_skin;
 
+    private TextureAtlas PotScreen_atlas;
+    private Skin PotScreen_skin;
+
     private ScreenAssets(){
 
         BoxScreen_atlas = new TextureAtlas(Gdx.files.internal("skin/box/skin/skin.atlas"));
@@ -53,7 +57,11 @@ public class ScreenAssets {
         PumpScreen_atlas = new TextureAtlas(Gdx.files.internal("skin/pump/data/pack.pack"));
         PumpScreen_skin = new Skin(Gdx.files.internal("skin/pump/data/pack.json"), PumpScreen_atlas);
 
+        PotScreen_atlas = new TextureAtlas(Gdx.files.internal("skin/pot/data/pot_screen.pack"));
+        PotScreen_skin = new Skin(Gdx.files.internal("skin/pump/pot/pot_screen.json"), PotScreen_atlas);
+
         alice_48_green = createFont(48, Color.GREEN);
+        alice_48_black = createFont(48, Color.BLACK);
         alice_36_white = createFont(36, new Color().set(203, 203, 203, 1));
         alice_25_black = createFont(25, Color.BLACK);
         alice_40_black = createFont(40, Color.BLACK);
@@ -93,6 +101,9 @@ public class ScreenAssets {
     public BitmapFont getAlice_28_555555() {
         return alice_28_555555;
     }
+    public BitmapFont getAlice_48_black() {
+        return alice_48_black;
+    }
 
     public TextureAtlas getBoxScreen_atlas() {
         return BoxScreen_atlas;
@@ -122,8 +133,12 @@ public class ScreenAssets {
         return PumpScreen_skin;
     }
 
-
-
+    public TextureAtlas getPotScreen_atlas() {
+        return PotScreen_atlas;
+    }
+    public Skin getPotScreen_skin() {
+        return PotScreen_skin;
+    }
 
     private BitmapFont createFont(int size, Color color) {
 

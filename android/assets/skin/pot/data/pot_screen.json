@@ -1,0 +1,21 @@
+{
+
+  com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle : {
+    default:{}
+    equip_button: { up:equip_button_enable, down:equip_button_pressed, disabled:equip_button_disable }
+    delete_button: { up:delete_button_enable, down:delete_button_pressed, disabled:delete_button_disable }
+    takeoff_button: { up:takeoff_button_enable, down:takeoff_button_pressed, disabled:takeoff_button_disable }
+    back_button: { up:back_button_enable, down:back_button_pressed, disabled:back_button_disable }
+
+    1ml_button: { up:1ml_button_enable, down:1ml_button_pressed, disabled:1ml_button_disable }
+    10ml_button: { up:10ml_button_enable, down:10ml_button_pressed, disabled:10ml_button_disable }
+    100ml_button: { up:100ml_button_enable, down:100ml_button_pressed, disabled:100ml_button_disable }
+    1l_button: { up:1l_button_enable, down:1l_button_pressed, disabled:1l_button_disable }
+    10l_button: { up:10l_button_enable, down:10l_button_pressed, disabled:10l_button_disable }
+    all_button: { up:all_button_enable, down:all_button_pressed, disabled:all_button_disable }
+    all2_button: { up:all2_button_enable, down:all2_button_pressed, disabled:all2_button_disable }
+    pro_help_button: { up:pro_help_button_enable, down:pro_help_button_pressed, disabled:pro_help_button_disable }
+
+  }
+
+}
