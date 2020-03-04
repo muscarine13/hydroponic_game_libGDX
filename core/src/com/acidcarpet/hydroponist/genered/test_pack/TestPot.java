@@ -10,32 +10,32 @@ public class TestPot extends Pot {
         super(
                 30,
                 20,
-                25,
-               6,
-                10,
-               10,
-                10,
-                18,
-                8,
-               4,
-                1,
-                1,
-                1,
-                1,
-                1,
-                1,
-                new Image(TestPack.getInstance().get_atlas().findRegion("test_pot"))
-
+                25.5,
+               5.5,
+                0.01d,
+                0.01d,
+                0.01d,
+                0.01d,
+                0.01d,
+                0.01d,
+                0.001d,
+                0.001d,
+                0.001d,
+                0.001d,
+                0.001d,
+                0.001d,
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_pot")),
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_pot_icon"))
                 );
     }
 
     @Override
     public String name() {
-        return null;
+        return "AquaPro Pot 50";
     }
 
     @Override
     public String description() {
-        return null;
+        return "Описание оного";
     }
 }

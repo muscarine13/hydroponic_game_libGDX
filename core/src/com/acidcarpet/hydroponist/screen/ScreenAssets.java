@@ -12,8 +12,6 @@ public class ScreenAssets {
     private final String FONT_CHARACTERS = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789][_!$%#@|\\/?-+=()*&.;,{}\"´`'<>";
 
 
-
-
     private static ScreenAssets instance;
     public static ScreenAssets getInstance(){
         if(instance==null) instance = new ScreenAssets();
@@ -27,6 +25,7 @@ public class ScreenAssets {
     BitmapFont alice_25_black;
     BitmapFont alice_40_black;
     BitmapFont alice_28_555555;
+    BitmapFont alice_72_8F8F8F_stroke_black;
 
     private TextureAtlas BoxScreen_atlas;
     private Skin BoxScreen_skin;
@@ -58,7 +57,7 @@ public class ScreenAssets {
         PumpScreen_skin = new Skin(Gdx.files.internal("skin/pump/data/pack.json"), PumpScreen_atlas);
 
         PotScreen_atlas = new TextureAtlas(Gdx.files.internal("skin/pot/data/pot_screen.pack"));
-        PotScreen_skin = new Skin(Gdx.files.internal("skin/pump/pot/pot_screen.json"), PotScreen_atlas);
+        PotScreen_skin = new Skin(Gdx.files.internal("skin/pot/data/pot_screen.json"), PotScreen_atlas);
 
         alice_48_green = createFont(48, Color.GREEN);
         alice_48_black = createFont(48, Color.BLACK);
@@ -66,7 +65,7 @@ public class ScreenAssets {
         alice_25_black = createFont(25, Color.BLACK);
         alice_40_black = createFont(40, Color.BLACK);
         alice_28_555555 = createFont(28, new Color(55, 55, 55, 1));
-
+        alice_72_8F8F8F_stroke_black = createFont(72, new Color(143, 143, 143 ,1));
 
         FileHandle fontFile = Gdx.files.internal("Alice-Regular.ttf");
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
@@ -103,6 +102,9 @@ public class ScreenAssets {
     }
     public BitmapFont getAlice_48_black() {
         return alice_48_black;
+    }
+    public BitmapFont getAlice_72_8F8F8F_stroke_black() {
+        return alice_72_8F8F8F_stroke_black;
     }
 
     public TextureAtlas getBoxScreen_atlas() {

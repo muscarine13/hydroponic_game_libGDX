@@ -2,196 +2,162 @@ package com.acidcarpet.hydroponist.equipment;
 
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
-public abstract class Bottle {
-    public Bottle(double maximum_volume, double t, double pH, double water_volume, double ELEMENT_N, double ELEMENT_K, double ELEMENT_B, double ELEMENT_Ca, double ELEMENT_Cu, double ELEMENT_Fe, double ELEMENT_Mn, double ELEMENT_Mo, double ELEMENT_Zn, double ELEMENT_P, double ELEMENT_Mg, double ELEMENT_S) {
+public class Bottle {
+    public Bottle(
+            String name,
+            String description,
+
+            double maximum_volume,
+            double pH,
+
+            double percent_N,
+            double percent_P,
+            double percent_K,
+
+            double percent_S,
+            double percent_Mg,
+            double percent_Ca,
+
+            double percent_B,
+            double percent_Cu,
+            double percent_Fe,
+
+            double percent_Mn,
+            double percent_Mo,
+            double percent_Zn,
+
+            Image bottle_icon
+    ) {
         this.maximum_volume = maximum_volume;
-        this.t = t;
+        this.current_volume = maximum_volume;
         this.pH = pH;
-        this.water_volume = water_volume;
 
-        this.ELEMENT_N = ELEMENT_N;
-        this.ELEMENT_P = ELEMENT_P;
-        this.ELEMENT_K = ELEMENT_K;
+        this.percent_N = percent_N;
+        this.percent_P = percent_P;
+        this.percent_K = percent_K;
 
-        this.ELEMENT_S = ELEMENT_S;
-        this.ELEMENT_Mg = ELEMENT_Mg;
-        this.ELEMENT_Ca = ELEMENT_Ca;
+        this.percent_S = percent_S;
+        this.percent_Mg = percent_Mg;
+        this.percent_Ca = percent_Ca;
 
-        this.ELEMENT_B = ELEMENT_B;
-        this.ELEMENT_Cu = ELEMENT_Cu;
-        this.ELEMENT_Fe = ELEMENT_Fe;
-        this.ELEMENT_Mn = ELEMENT_Mn;
-        this.ELEMENT_Mo = ELEMENT_Mo;
-        this.ELEMENT_Zn = ELEMENT_Zn;
+        this.percent_B = percent_B;
+        this.percent_Cu = percent_Cu;
+        this.percent_Fe = percent_Fe;
+        this.percent_Mn = percent_Mn;
+        this.percent_Mo = percent_Mo;
+        this.percent_Zn = percent_Zn;
 
+        this.bottle_icon  = bottle_icon;
 
+        this.name = name;
+        this.description = description;
 
     }
 
-    double maximum_volume;
+    public synchronized boolean may_drop(double volume){
+        if(volume<=current_volume&&Box.getInstance().getPot()!=null&&Box.getInstance().getPot().may_add(volume)){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public synchronized boolean drop(double volume){
+        if(may_drop(volume)){
 
-    private double t;
+            if(Box.getInstance().getPot().add_from_bottle(this, volume)){
+                current_volume-=volume;
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
+
+    private String name;
+    private String description;
+
+    private double maximum_volume;
+    private double current_volume;
+
     private double pH;
 
-    private double water_volume;
+    private double percent_N;
+    private double percent_P;
+    private double percent_K;
 
-    private double ELEMENT_N;
-    public double element_in_volume_N(double volume){
-        double percent = ELEMENT_N/total_volume();
-        return volume*percent;
-    }
-    private double ELEMENT_P;
-    public double element_in_volume_P(double volume){
-        double percent = ELEMENT_P/total_volume();
-        return volume*percent;
-    }
-    private double ELEMENT_K;
-    public double element_in_volume_K(double volume){
-        double percent = ELEMENT_K/total_volume();
-        return volume*percent;
-    }
+    private double percent_S;
+    private double percent_Mg;
+    private double percent_Ca;
 
+    private double percent_B;
+    private double percent_Cu;
+    private double percent_Fe;
 
-    private double ELEMENT_B;
-    public double element_in_volume_B(double volume){
-        double percent = ELEMENT_B/total_volume();
-        return volume*percent;
-    }
-    private double ELEMENT_Ca;
-    public double element_in_volume_Ca(double volume){
-        double percent = ELEMENT_Ca/total_volume();
-        return volume*percent;
-    }
-    private double ELEMENT_Cu;
-    public double element_in_volume_Cu(double volume){
-        double percent = ELEMENT_Cu/total_volume();
-        return volume*percent;
-    }
-    private double ELEMENT_Fe;
-    public double element_in_volume_Fe(double volume){
-        double percent = ELEMENT_Fe/total_volume();
-        return volume*percent;
-    }
-    private double ELEMENT_Mn;
-    public double element_in_volume_Mn(double volume){
-        double percent = ELEMENT_Mn/total_volume();
-        return volume*percent;
-    }
-    private double ELEMENT_Mo;
-    public double element_in_volume_Mo(double volume){
-        double percent = ELEMENT_Mo/total_volume();
-        return volume*percent;
-    }
-    private double ELEMENT_Zn;
-    public double element_in_volume_Zn(double volume){
-        double percent = ELEMENT_Zn/total_volume();
-        return volume*percent;
-    }
+    private double percent_Mn;
+    private double percent_Mo;
+    private double percent_Zn;
 
-    private double ELEMENT_Mg;
-    public double element_in_volume_Mg(double volume){
-        double percent = ELEMENT_Mg/total_volume();
-        return volume*percent;
+    public String getName() {
+        return name;
     }
-    private double ELEMENT_S;
-    public double element_in_volume_S(double volume){
-        double percent = ELEMENT_S/total_volume();
-        return volume*percent;
+    public String getDescription() {
+        return description;
     }
-
-    public WaterPack drain(double volume_to_pack){
-        if(volume_to_pack<=total_volume()){
-            WaterPack out = new WaterPack(
-            volume_to_pack-(
-                    element_in_volume_N(volume_to_pack)+
-                    element_in_volume_K(volume_to_pack)+
-                    element_in_volume_B(volume_to_pack)+
-                    element_in_volume_Ca(volume_to_pack)+
-                    element_in_volume_Cu(volume_to_pack)+
-                    element_in_volume_Fe(volume_to_pack)+
-                    element_in_volume_Mn(volume_to_pack)+
-                    element_in_volume_Mo(volume_to_pack)+
-                    element_in_volume_Zn(volume_to_pack)+
-                    element_in_volume_P(volume_to_pack)+
-                    element_in_volume_Mg(volume_to_pack)+
-                    element_in_volume_S(volume_to_pack)),
-            t,
-            pH,
-                    element_in_volume_N(volume_to_pack),
-                    element_in_volume_K(volume_to_pack),
-                    element_in_volume_B(volume_to_pack),
-                    element_in_volume_Ca(volume_to_pack),
-                    element_in_volume_Cu(volume_to_pack),
-                    element_in_volume_Fe(volume_to_pack),
-                    element_in_volume_Mn(volume_to_pack),
-                    element_in_volume_Mo(volume_to_pack),
-                    element_in_volume_Zn(volume_to_pack),
-                    element_in_volume_P(volume_to_pack),
-                    element_in_volume_Mg(volume_to_pack),
-                    element_in_volume_S(volume_to_pack)
-            );
-
-            water_volume-=
-                    (element_in_volume_N(volume_to_pack)+
-                    element_in_volume_K(volume_to_pack)+
-                    element_in_volume_B(volume_to_pack)+
-                    element_in_volume_Ca(volume_to_pack)+
-                    element_in_volume_Cu(volume_to_pack)+
-                    element_in_volume_Fe(volume_to_pack)+
-                    element_in_volume_Mn(volume_to_pack)+
-                    element_in_volume_Mo(volume_to_pack)+
-                    element_in_volume_Zn(volume_to_pack)+
-                    element_in_volume_P(volume_to_pack)+
-                    element_in_volume_Mg(volume_to_pack)+
-                    element_in_volume_S(volume_to_pack));
-
-            ELEMENT_N-=element_in_volume_N(volume_to_pack);
-            ELEMENT_K-=element_in_volume_K(volume_to_pack);
-            ELEMENT_B-=element_in_volume_B(volume_to_pack);
-            ELEMENT_Ca-=element_in_volume_Ca(volume_to_pack);
-            ELEMENT_Cu-=element_in_volume_Cu(volume_to_pack);
-            ELEMENT_Fe-=element_in_volume_Fe(volume_to_pack);
-            ELEMENT_Mn-=element_in_volume_Mn(volume_to_pack);
-            ELEMENT_Mo-=element_in_volume_Mo(volume_to_pack);
-            ELEMENT_Zn-=element_in_volume_Zn(volume_to_pack);
-            ELEMENT_P-=element_in_volume_P(volume_to_pack);
-            ELEMENT_Mg-=element_in_volume_Mg(volume_to_pack);
-            ELEMENT_S-=element_in_volume_S(volume_to_pack);
-
-            return out;
-        }
-        return null;
+    public double getMaximum_volume() {
+        return maximum_volume;
+    }
+    public double getCurrent_volume() {
+        return current_volume;
+    }
+    public double getpH() {
+        return pH;
+    }
+    public double getPercent_N() {
+        return percent_N;
+    }
+    public double getPercent_P() {
+        return percent_P;
+    }
+    public double getPercent_K() {
+        return percent_K;
+    }
+    public double getPercent_S() {
+        return percent_S;
+    }
+    public double getPercent_Mg() {
+        return percent_Mg;
+    }
+    public double getPercent_Ca() {
+        return percent_Ca;
+    }
+    public double getPercent_B() {
+        return percent_B;
+    }
+    public double getPercent_Cu() {
+        return percent_Cu;
+    }
+    public double getPercent_Fe() {
+        return percent_Fe;
+    }
+    public double getPercent_Mn() {
+        return percent_Mn;
+    }
+    public double getPercent_Mo() {
+        return percent_Mo;
+    }
+    public double getPercent_Zn() {
+        return percent_Zn;
     }
 
-    abstract String name();
-    abstract String description();
-    abstract Image inventory_image();
-
-    public double total_volume(){
-        double out;
-        out = water_volume+elements_volume();
-
-        return out;
+    Image bottle_icon;
+    public Image get_bottle_icon() {
+        return bottle_icon;
     }
-    public double elements_volume(){
-        double out = 0;
-        out+=
 
-                ELEMENT_N+
-                        ELEMENT_K+
-                        ELEMENT_B+
-                        ELEMENT_Ca+
-                        ELEMENT_Cu+
-                        ELEMENT_Fe+
-                        ELEMENT_Mn+
-                        ELEMENT_Mo+
-                        ELEMENT_Zn+
-                        ELEMENT_P+
-                        ELEMENT_Mg+
-                        ELEMENT_S;
-        return out;
 
-    }
+
 
 
 

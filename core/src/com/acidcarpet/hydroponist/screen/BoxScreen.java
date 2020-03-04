@@ -147,7 +147,7 @@ public class BoxScreen implements Screen {
         game.setScreen(new FanScreen(game));
     }
     private void pot_click(){
-        System.err.println("Pot click!");
+       game.setScreen(new PotScreen(game));
     }
     private void compressor_click(){
         try{

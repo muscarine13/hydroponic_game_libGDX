@@ -1,12 +1,8 @@
 package com.acidcarpet.hydroponist.player;
 
-import com.acidcarpet.hydroponist.equipment.Box;
-import com.acidcarpet.hydroponist.equipment.Fan;
-import com.acidcarpet.hydroponist.equipment.Lamp;
-import com.acidcarpet.hydroponist.equipment.Pump;
-import com.acidcarpet.hydroponist.genered.test_pack.TestFan;
-import com.acidcarpet.hydroponist.genered.test_pack.TestLamp;
-import com.acidcarpet.hydroponist.genered.test_pack.TestPump;
+import com.acidcarpet.hydroponist.equipment.*;
+import com.acidcarpet.hydroponist.genered.test_pack.*;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +39,40 @@ public class Inventory {
         pump_inventory.add(new TestPump());
         pump_inventory.add(new TestPump());
         pump_inventory.add(new TestPump());
+
+        pot_inventory = new ArrayList<>();
+        pot_inventory.add(new TestPot());
+        pot_inventory.add(new TestPot());
+        pot_inventory.add(new TestPot());
+        pot_inventory.add(new TestPot());
+        pot_inventory.add(new TestPot());
+        pot_inventory.add(new TestPot());
+        pot_inventory.add(new TestPot());
+        pot_inventory.add(new TestPot());
+        pot_inventory.add(new TestPot());
+        pot_inventory.add(new TestPot());
+        pot_inventory.add(new TestPot());
+
+        bottle_inventory = new ArrayList<>();
+        bottle_inventory.add(new Bottle(
+                "Бутылка",
+                "Описание бутылки",
+                500,
+                5.5,
+                6,
+                3,
+                7,
+                3,
+                1,
+                0.5,
+                0.05,
+                0.01,
+                0.001,
+                0.1,
+                0.01,
+                0.08,
+                new Image(TestPack.getInstance().get_atlas().findRegion("test_bottle_icon"))
+        ));
 
     }
 
@@ -223,6 +253,107 @@ public class Inventory {
 
         }
         pump_inventory = new_array;
+    }
+
+    private List<Pot> pot_inventory;
+    public synchronized List<Pot> get_pot_inventory(){
+        return pot_inventory;
+    }
+    public synchronized void equip_pot(Pot pot){
+        if(pot_inventory.contains(pot)){
+            Pot pot_from_box = Box.getInstance().getPot();
+            Pot pot_to_box = pot_inventory.get(pot_inventory.indexOf(pot));
+
+            Box.getInstance().setPot(pot_to_box);
+            pot_inventory.remove(pot_inventory.indexOf(pot));
+
+            pot_inventory.add(pot_from_box);
+
+            refresh_pot();
+        }
+    }
+    public synchronized void takeoff_pot(){
+
+        if (Box.getInstance().getPot()!=null){
+
+            Pot temp = Box.getInstance().getPot();
+            pot_inventory.add(temp);
+            Box.getInstance().setPot(null);
+        }
+
+
+        refresh_pot();
+
+    }
+    public synchronized void add_pot(Pot pot){
+        pot_inventory.add(pot);
+        refresh_pot();
+
+    }
+    public synchronized void delete_pot(Pot pot){
+
+        if(pot_inventory.contains(pot)){
+            pot_inventory.remove(pot);
+        }
+
+
+        refresh_pot();
+    }
+    public synchronized void refresh_pot(){
+        List<Pot> new_array = new ArrayList<>();
+
+        if(!pot_inventory.isEmpty()){
+
+            for (Pot pot : pot_inventory){
+                if(pot!=null){
+                    new_array.add(pot);
+                }
+            }
+
+        }
+        pot_inventory = new_array;
+    }
+
+    private List<Bottle> bottle_inventory;
+    public synchronized List<Bottle> get_bottle_inventory(){
+        return bottle_inventory;
+    }
+    public synchronized void drop_1ml_bottle(Bottle bottle){
+
+    }
+    public synchronized void drop_10ml_bottle(Bottle bottle){
+
+    }
+    public synchronized void drop_all_bottle(Bottle bottle){
+
+    }
+    public synchronized void add_bottle(Bottle bottle){
+        bottle_inventory.add(bottle);
+        refresh_bottle();
+
+    }
+    public synchronized void delete_bottle(Bottle bottle){
+
+        if(bottle_inventory.contains(bottle)){
+            bottle_inventory.remove(bottle);
+        }
+
+
+        refresh_bottle();
+    }
+    public synchronized void refresh_bottle(){
+        List<Bottle> new_array = new ArrayList<>();
+
+        if(!bottle_inventory.isEmpty()){
+
+            for (Bottle bottle : bottle_inventory){
+                if(bottle!=null){
+                    new_array.add(bottle);
+                }
+            }
+
+        }
+        bottle_inventory = new_array;
     }
 
 
