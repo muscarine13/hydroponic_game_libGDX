@@ -1,11 +1,13 @@
 package com.acidcarpet.hydroponist.equipment;
 
 
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
-public abstract class Fan {
+public class Fan implements Storable {
     public Fan(
-
+                String name,
+               String description,
                double CO2_production,
                double t_reduce,
                Image image_on,
@@ -14,6 +16,8 @@ public abstract class Fan {
     ){
         on = true;
 
+        this.name = name;
+        this.description = description;
         this.image_on = image_on;
         this.image_off = image_off;
         this.item_icon = item_icon;
@@ -26,6 +30,15 @@ public abstract class Fan {
 
     double energy_consumption;
     double t_reduce;
+
+    String name;
+    String description;
+    public String getName() {
+        return name;
+    }
+    public String getDescription() {
+        return description;
+    }
 
     private boolean on;
     public synchronized void set_on(){
@@ -72,9 +85,6 @@ public abstract class Fan {
         return t_reduce;
     }
 
-    public abstract String name();
-    public abstract String description();
-
     Image image_on;
     Image image_off;
 
@@ -86,6 +96,11 @@ public abstract class Fan {
     }
     public Image get_image_item(){
         return item_icon;
+    }
+
+    @Override
+    public String toString() {
+        return "FAN";
     }
 
 

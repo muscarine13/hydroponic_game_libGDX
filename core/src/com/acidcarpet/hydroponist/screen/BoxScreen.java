@@ -128,35 +128,12 @@ public class BoxScreen implements Screen {
 
 
     //
-    private void lamp_click(){
+    private void lamp_click(){game.setScreen(new LampScreen(game));}
+    private void plant_click(){System.err.println("Plant click!");}
+    private void fan_click(){game.setScreen(new FanScreen(game));}
+    private void pot_click(){game.setScreen(new PotScreen(game));}
+    private void compressor_click(){game.setScreen(new PumpScreen(game));}
 
-        try{
-
-            //box.getLamp().set_on_off();
-            game.setScreen(new LampScreen(game));
-
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-    }
-    private void plant_click(){
-        System.err.println("Plant click!");
-    }
-    private void fan_click(){
-        game.setScreen(new FanScreen(game));
-    }
-    private void pot_click(){
-       game.setScreen(new PotScreen(game));
-    }
-    private void compressor_click(){
-        try{
-            game.setScreen(new PumpScreen(game));
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-
-    }
     private void x3_button_click(){
         System.out.println("x3_button click!");
     }

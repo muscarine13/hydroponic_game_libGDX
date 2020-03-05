@@ -2,6 +2,7 @@ package com.acidcarpet.hydroponist.plant;
 
 import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.equipment.WaterPack;
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 
@@ -9,8 +10,38 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
-
-public abstract class Plant {
+/**
+ * вода
+ * 70-1050 Прорастание семян
+ * 1050-1400 Укоренение срезанных клонов
+ * 1400-1750 Для роста растения
+ * 1750-2100 Плодоношение
+ * 2100-3500 Редко для больших растений
+ * труп
+ *
+ *
+ * 15 15 15   13      8       4      1 1 1 1 1 1
+ * 19.7%       17.1%    10.52%   5.26%   1.31%
+ *
+ *
+ * 70--
+ * 13.3       11.9    10.64   3.682  0.917
+ * -
+ * --1050--
+ * 206        179.55  110.46  55.23  13.755
+ *
+ * --1400--
+ * 275.8      239.4   147.28  73.64  18.34
+ *
+ *--1750--
+ * 344.75    299.25   184.1 92.05 22.925
+ *
+ * --2100--
+ *
+ *
+ *
+ */
+public abstract class Plant implements Storable {
 
     private boolean alive;
 

@@ -1,10 +1,21 @@
 package com.acidcarpet.hydroponist.equipment;
 
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
-public abstract class Pump {
+public class Pump implements Storable {
 
-    public Pump(double oxygen_production, Image image_on, Image image_off, Image item_icon){
+    public Pump(
+            String name,
+            String description,
+            double oxygen_production,
+            Image image_on,
+            Image image_off,
+            Image item_icon
+    ){
+        this.name = name;
+        this.description = description;
+
         on = true;
 
         this.image_on = image_on;
@@ -27,6 +38,15 @@ public abstract class Pump {
         Box.update();
     }
 
+    private String name;
+    private String description;
+    public String getName() {
+        return name;
+    }
+    public String getDescription() {
+        return description;
+    }
+
     private double oxygen;
     private double oxygen_production;
 
@@ -45,9 +65,6 @@ public abstract class Pump {
         oxygen = oxygen_production;
 
     }
-
-    public abstract String name();
-    public abstract String description();
 
     private Image image_on;
     private Image image_off;
@@ -72,5 +89,10 @@ public abstract class Pump {
         if(on) return oxygen_production;
         else return 0;
     }
+    @Override
+    public String toString() {
+        return "PUMP";
+    }
+
 
 }

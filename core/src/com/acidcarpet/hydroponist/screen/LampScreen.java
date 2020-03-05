@@ -2,7 +2,8 @@ package com.acidcarpet.hydroponist.screen;
 
 import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.equipment.Lamp;
-import com.acidcarpet.hydroponist.player.Inventory;
+import com.acidcarpet.hydroponist.storage.Inventory;
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -44,7 +45,7 @@ public class LampScreen implements Screen {
     }
 
     private void takeoff_click(){
-        Inventory.getInstance().takeoff_lamp();
+        Box.getInstance().take_off_lamp();
         refresh = true;
     }
     private void off_click(){
@@ -56,11 +57,11 @@ public class LampScreen implements Screen {
         refresh = true;
     }
     private void item_equip_click(Lamp lamp){
-        Inventory.getInstance().equip_lamp(lamp);
+        Box.getInstance().equip(lamp);
         refresh = true;
     }
     private void item_delete_click(Lamp lamp){
-        Inventory.getInstance().delete_lamp(lamp);
+        Inventory.getInstance().delete(lamp);
         refresh = true;
     }
     private void back_button_click(){
@@ -84,7 +85,7 @@ public class LampScreen implements Screen {
             out.addActor(item_icon);
 
             Label title_label = new  Label(
-                    Box.getInstance().getLamp().name(),
+                    Box.getInstance().getLamp().getName(),
                     new LabelStyle(alice_48_green, Color.GREEN)
             );
             title_label.setWrap(true);
@@ -94,7 +95,7 @@ public class LampScreen implements Screen {
             out.addActor(title_label);
 
             Label description_label = new   Label(
-                    Box.getInstance().getLamp().description(),
+                    Box.getInstance().getLamp().getDescription(),
                     new LabelStyle(alice_36_white, Color.GREEN)
             );
             description_label.setWrap(true);
@@ -262,7 +263,7 @@ public class LampScreen implements Screen {
             out.addActor(temp_label);
 
             Label name_label = new Label(
-                    lamp.name(),
+                    lamp.getName(),
                     new LabelStyle(alice_36_373737_stroke_black, Color.BLACK)
             );
             name_label.setAlignment(Align.center);
@@ -290,12 +291,12 @@ public class LampScreen implements Screen {
         table.defaults().width(340).height(340);
 
         int i = 0;
-        for(Lamp current_lamp : Inventory.getInstance().get_lamp_inventory()){
+        for(Storable current_lamp : Inventory.getInstance().get_list(Inventory.Type.LAMP)){
             if(i>=3) {
                 i=0;
                 table.row();
             }
-            table.add(generate_item(current_lamp));
+            table.add(generate_item((Lamp)current_lamp));
             i++;
 
         }

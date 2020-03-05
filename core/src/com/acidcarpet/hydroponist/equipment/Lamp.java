@@ -1,10 +1,13 @@
 package com.acidcarpet.hydroponist.equipment;
 
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
-public abstract class Lamp {
+public class Lamp implements Storable {
 
     public Lamp(
+            String name,
+            String description,
             int lm_production,
             double t_add,
             Image image_lamp_on,
@@ -13,6 +16,9 @@ public abstract class Lamp {
             Image image_light_off,
             Image item_icon
     ){
+        this.name = name;
+        this.description = description;
+
         on = true;
 
         this.image_lamp_on = image_lamp_on;
@@ -39,6 +45,14 @@ public abstract class Lamp {
         Box.update();
     }
 
+    private String name;
+    private String description;
+    public String getName() {
+        return name;
+    }
+    public String getDescription() {
+        return description;
+    }
 
     private int lm;
     private int lm_production;
@@ -74,9 +88,6 @@ public abstract class Lamp {
         return t_add;
     }
 
-    public abstract String name();
-    public abstract String description();
-
     private Image item_icon;
 
     private Image image_lamp_on;
@@ -95,6 +106,11 @@ public abstract class Lamp {
     public Image get_image_light(){
         if (isOn()) return image_light_on;
         else return image_light_off;
+    }
+
+    @Override
+    public String toString() {
+        return "LAMP";
     }
 
 }

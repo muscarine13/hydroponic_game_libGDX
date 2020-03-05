@@ -1,9 +1,10 @@
 package com.acidcarpet.hydroponist.equipment;
 
 
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
-public abstract class Pot {
+public class Pot implements Storable {
 
     public boolean may_add(double volume){
         return true;
@@ -12,7 +13,21 @@ public abstract class Pot {
         return true;
     }
 
+    public boolean may_drain(double volume){
+        return true;
+    }
+    public boolean drain(double volume){
+        if(may_drain(volume)){
+
+        }else{
+
+        }
+        return true;
+    }
+
     public Pot(
+            String name,
+            String description,
             double maximum_volume,
             double current_volume,
             double current_t,
@@ -37,6 +52,8 @@ public abstract class Pot {
             Image icon_pot
     ) {
 
+        this.name = name;
+        this.description = description;
         this.maximum_volume = maximum_volume;
         this.current_volume = current_volume;
         this.current_t = current_t;
@@ -58,11 +75,20 @@ public abstract class Pot {
         this.icon_pot = icon_pot;
     }
 
-    double maximum_volume;
-    double current_volume;
+    private String name;
+    private String description;
+    public String getName() {
+        return name;
+    }
+    public String getDescription() {
+        return description;
+    }
 
-    double current_t;
-    double current_pH;
+    private double maximum_volume;
+    private double current_volume;
+
+    private double current_t;
+    private double current_pH;
 
     private double ELEMENT_N;
     public int element_ppm_N(){
@@ -332,9 +358,6 @@ public abstract class Pot {
                         element_ppm_Zn();
     }
 
-    public abstract String name();
-    public abstract String description();
-
     Image image_pot;
     public Image get_image_pot(){
         return image_pot;
@@ -345,5 +368,12 @@ public abstract class Pot {
         return icon_pot;
     }
 
+    @Override
+    public String toString() {
+        return "POT";
+    }
 
+    public String getInfo(){
+        return name+" --- "+getMaximum_volume();
+    }
 }

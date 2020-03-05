@@ -1,8 +1,9 @@
 package com.acidcarpet.hydroponist.equipment;
 
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
-public class Bottle {
+public class Bottle implements Storable {
     public Bottle(
             String name,
             String description,
@@ -156,9 +157,8 @@ public class Bottle {
         return bottle_icon;
     }
 
-
-
-
-
-
+    @Override
+    public String toString() {
+        return "BOTTLE";
+    }
 }

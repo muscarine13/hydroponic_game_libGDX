@@ -2,8 +2,8 @@ package com.acidcarpet.hydroponist.screen;
 
 import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.equipment.Fan;
-import com.acidcarpet.hydroponist.equipment.Lamp;
-import com.acidcarpet.hydroponist.player.Inventory;
+import com.acidcarpet.hydroponist.storage.Inventory;
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -45,7 +45,7 @@ public class FanScreen implements Screen {
     }
 
     private void takeoff_click(){
-        Inventory.getInstance().takeoff_fan();
+        Box.getInstance().take_off_fan();
         refresh = true;
     }
     private void off_click(){
@@ -57,11 +57,11 @@ public class FanScreen implements Screen {
         refresh = true;
     }
     private void item_equip_click(Fan fan){
-        Inventory.getInstance().equip_fan(fan);
+        Box.getInstance().equip(fan);
         refresh = true;
     }
     private void item_delete_click(Fan fan){
-        Inventory.getInstance().delete_fan(fan);
+        Inventory.getInstance().delete(fan);
         refresh = true;
     }
     private void back_button_click(){
@@ -85,7 +85,7 @@ public class FanScreen implements Screen {
             out.addActor(item_icon);
 
             Label title_label = new  Label(
-                    Box.getInstance().getFan().name(),
+                    Box.getInstance().getFan().getName(),
                     new LabelStyle(alice_48_green, Color.GREEN)
             );
             title_label.setWrap(true);
@@ -95,7 +95,7 @@ public class FanScreen implements Screen {
             out.addActor(title_label);
 
             Label description_label = new   Label(
-                    Box.getInstance().getFan().description(),
+                    Box.getInstance().getFan().getDescription(),
                     new LabelStyle(alice_36_white, Color.GREEN)
             );
             description_label.setWrap(true);
@@ -263,7 +263,7 @@ public class FanScreen implements Screen {
             out.addActor(temp_label);
 
             Label name_label = new Label(
-                    fan.name(),
+                    fan.getName(),
                     new LabelStyle(alice_36_373737_stroke_black, Color.BLACK)
             );
             name_label.setAlignment(Align.center);
@@ -291,12 +291,12 @@ public class FanScreen implements Screen {
         table.defaults().width(340).height(340);
 
         int i = 0;
-        for(Fan current_fan : Inventory.getInstance().get_fan_inventory()){
+        for(Storable current_fan : Inventory.getInstance().get_list(Inventory.Type.FAN)){
             if(i>=3) {
                 i=0;
                 table.row();
             }
-            table.add(generate_item(current_fan));
+            table.add(generate_item((Fan)current_fan));
             i++;
 
         }

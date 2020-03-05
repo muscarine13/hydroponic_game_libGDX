@@ -3,6 +3,8 @@ package com.acidcarpet.hydroponist.equipment;
 
 import com.acidcarpet.hydroponist.genered.test_pack.*;
 import com.acidcarpet.hydroponist.plant.Plant;
+import com.acidcarpet.hydroponist.storage.Inventory;
+
 
 import java.util.Date;
 
@@ -38,12 +40,12 @@ public class Box {
         this.name = "Гроубокс";
         this.description = "Описание гроубокса";
         this.box_ordinary_temperature = 24;
-        this.lamp = new TestLamp();
-        this.fan = new TestFan();
-        this.pot = new TestPot();
-        this.pump = new TestPump();
+        this.lamp = TestPack.getInstance().get_test_lamp();
+        this.fan = TestPack.getInstance().get_test_fan();
+        this.pot = TestPack.getInstance().get_test_pot();
+        this.pump = TestPack.getInstance().get_test_pump();
 
-        plant = new TestPlant();
+        plant = TestPack.getInstance().get_test_plant();
 
         last_update = new Date().getTime();
     }
@@ -77,6 +79,22 @@ public class Box {
         return box_ordinary_temperature;
     }
 
+    public void setLamp(Lamp lamp) {
+        this.lamp = lamp;
+    }
+    public void setFan(Fan fan) {
+        this.fan = fan;
+    }
+    public void setPlant(Plant plant) {
+        this.plant = plant;
+    }
+//    public void setPot(Pot pot) {
+//        this.pot = pot;
+//    }
+    public void setPump(Pump pump) {
+        this.pump = pump;
+    }
+
     public synchronized void setName(String name) {
         this.name = name;
     }
@@ -86,20 +104,72 @@ public class Box {
     public synchronized void setBox_ordinary_temperature(double box_ordinary_temperature) {
         this.box_ordinary_temperature = box_ordinary_temperature;
     }
-    public synchronized void setLamp(Lamp lamp) {
+
+    public synchronized void equip(Lamp lamp) {
+        if(this.lamp!=null){
+            take_off_lamp();
+        }
         this.lamp = lamp;
+        Inventory.getInstance().delete(lamp);
+
+        last_update = new Date().getTime();
     }
-    public synchronized void setFan(Fan fan) {
+    public synchronized void equip(Fan fan) {
+        if(this.fan!=null){
+            take_off_fan();
+        }
         this.fan = fan;
+        Inventory.getInstance().delete(fan);
+
+        last_update = new Date().getTime();
     }
-    public synchronized void setPlant(Plant plant) {
+    public synchronized void equip(Plant plant) {
+        kill_plant();
         this.plant = plant;
+        last_update = new Date().getTime();
     }
-    public synchronized void setPot(Pot pot) {
+    public synchronized void equip(Pot pot) {
+        if(this.pot!=null){
+            take_off_pot();
+        }
         this.pot = pot;
+        Inventory.getInstance().delete(pot);
+
+        last_update = new Date().getTime();
     }
-    public synchronized void setPump(Pump pump) {
+    public synchronized void equip(Pump pump) {
+        if(this.pump!=null){
+            take_off_pump();
+        }
         this.pump = pump;
+        Inventory.getInstance().delete(pump);
+
+        last_update = new Date().getTime();
+    }
+
+    public synchronized void take_off_lamp() {
+        if(lamp!=null)Inventory.getInstance().add(lamp);
+        lamp=null;
+        last_update = new Date().getTime();
+    }
+    public synchronized void take_off_fan() {
+        if(fan!=null)Inventory.getInstance().add(fan);
+        fan=null;
+        last_update = new Date().getTime();
+    }
+    public synchronized void kill_plant() {
+        plant=null;
+        last_update = new Date().getTime();
+    }
+    public synchronized void take_off_pot() {
+        if(pot!=null)Inventory.getInstance().add(pot);
+        pot=null;
+        last_update = new Date().getTime();
+    }
+    public synchronized void take_off_pump() {
+        if(pump!=null)Inventory.getInstance().add(pump);
+        pump=null;
+        last_update = new Date().getTime();
     }
 
 }

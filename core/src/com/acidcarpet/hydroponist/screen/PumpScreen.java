@@ -1,10 +1,9 @@
 package com.acidcarpet.hydroponist.screen;
 
 import com.acidcarpet.hydroponist.equipment.Box;
-import com.acidcarpet.hydroponist.equipment.Fan;
-import com.acidcarpet.hydroponist.equipment.Lamp;
 import com.acidcarpet.hydroponist.equipment.Pump;
-import com.acidcarpet.hydroponist.player.Inventory;
+import com.acidcarpet.hydroponist.storage.Inventory;
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -20,8 +19,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label.LabelStyle;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
-
-import static java.lang.String.*;
 
 public class PumpScreen implements Screen {
 
@@ -46,7 +43,7 @@ public class PumpScreen implements Screen {
     }
 
     private void takeoff_click(){
-        Inventory.getInstance().takeoff_pump();
+        Box.getInstance().take_off_pump();
         refresh = true;
     }
     private void off_click(){
@@ -58,11 +55,11 @@ public class PumpScreen implements Screen {
         refresh = true;
     }
     private void item_equip_click(Pump pump){
-        Inventory.getInstance().equip_pump(pump);
+        Box.getInstance().equip(pump);
         refresh = true;
     }
     private void item_delete_click(Pump pump){
-        Inventory.getInstance().delete_pump(pump);
+        Inventory.getInstance().delete(pump);
         refresh = true;
     }
     private void back_button_click(){
@@ -86,7 +83,7 @@ public class PumpScreen implements Screen {
             out.addActor(item_icon);
 
             Label title_label = new  Label(
-                    Box.getInstance().getPump().name(),
+                    Box.getInstance().getPump().getName(),
                     new LabelStyle(alice_48_green, Color.GREEN)
             );
             title_label.setWrap(true);
@@ -96,7 +93,7 @@ public class PumpScreen implements Screen {
             out.addActor(title_label);
 
             Label description_label = new   Label(
-                    Box.getInstance().getPump().description(),
+                    Box.getInstance().getPump().getDescription(),
                     new LabelStyle(alice_36_white, Color.GREEN)
             );
             description_label.setWrap(true);
@@ -241,7 +238,7 @@ public class PumpScreen implements Screen {
             out.addActor(o2_label);
 
             Label name_label = new Label(
-                    pump.name(),
+                    pump.getName(),
                     new LabelStyle(alice_36_373737_stroke_black, Color.BLACK)
             );
             name_label.setAlignment(Align.center);
@@ -269,12 +266,12 @@ public class PumpScreen implements Screen {
         table.defaults().width(340).height(340);
 
         int i = 0;
-        for(Pump current_pump : Inventory.getInstance().get_pump_inventory()){
+        for(Storable current_pump : Inventory.getInstance().get_list(Inventory.Type.PUMP)){
             if(i>=3) {
                 i=0;
                 table.row();
             }
-            table.add(generate_item(current_pump));
+            table.add(generate_item((Pump)current_pump));
             i++;
 
         }

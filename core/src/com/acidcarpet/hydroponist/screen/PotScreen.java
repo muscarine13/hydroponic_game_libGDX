@@ -2,9 +2,9 @@ package com.acidcarpet.hydroponist.screen;
 
 import com.acidcarpet.hydroponist.equipment.Bottle;
 import com.acidcarpet.hydroponist.equipment.Box;
-import com.acidcarpet.hydroponist.equipment.Fan;
 import com.acidcarpet.hydroponist.equipment.Pot;
-import com.acidcarpet.hydroponist.player.Inventory;
+import com.acidcarpet.hydroponist.storage.Inventory;
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -29,6 +29,7 @@ public class PotScreen implements Screen {
     Stage stage;
 
     boolean refresh;
+    long last_refresh;
 
     BitmapFont alice_48_green;
     BitmapFont alice_48_black;
@@ -38,18 +39,10 @@ public class PotScreen implements Screen {
         this.game = game;
     }
 
-    void back_button_click(){
-        game.setScreen(new BoxScreen(game));
-    }
 
-    public void delete_button_clicked(Pot pot){
-
-    }
-    public void equip_button_clicked(Pot pot){
-
-    }
     public void take_off_button_click(){
-
+        Box.getInstance().take_off_pot();
+        refresh=true;
     }
     public void drop_100ml_button_click(){
 
@@ -65,6 +58,33 @@ public class PotScreen implements Screen {
     }
     public void pro_help_button_click(){
 
+    }
+
+    public void delete_button_clicked(Pot pot){
+        Inventory.getInstance().delete(pot);
+        refresh = true;
+    }
+    public void equip_button_clicked(Pot pot){
+        Box.getInstance().equip(pot);
+        refresh=true;
+    }
+
+    public void drop_1ml_button_click(Bottle bottle){
+
+    }
+    public void drop_10ml_button_click(Bottle bottle){
+
+    }
+    public void drop_all_button_click(Bottle bottle){
+
+    }
+    public  void delete2_button_click(Bottle bottle){
+        Inventory.getInstance().delete(bottle);
+        refresh=true;
+    }
+
+    void back_button_click(){
+        game.setScreen(new BoxScreen(game));
     }
 
     @Override
@@ -97,16 +117,12 @@ public class PotScreen implements Screen {
         stage.addActor(back_button);
 
         Group info_pane = generate_info_pane();
-        info_pane.setPosition(0+40, 1920-40-670);
         stage.addActor(info_pane);
 
         Group pot_pane = generate_pot_pane();
-        pot_pane.setPosition(0+40, 1920-40-670-20-340);
         stage.addActor(pot_pane);
 
-
         Group bottle_pane = generate_bottle_pane();
-        bottle_pane.setPosition(0+40, 1920-40-670-20-340-20-600);
         stage.addActor(bottle_pane);
 
 
@@ -114,21 +130,22 @@ public class PotScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        if(refresh){
+        if(Box.get_last_update()!=last_refresh||refresh){
 
             stage.getRoot().findActor("info_pane").clearListeners();
             stage.getRoot().removeActor(stage.getRoot().findActor("info_pane"));
             stage.addActor(generate_info_pane());
 
-//            stage.getRoot().findActor("bottle_pane").clearListeners();
-//            stage.getRoot().removeActor(stage.getRoot().findActor("bottle_pane"));
-//            stage.addActor(generate_bottle_pane());
-//
-//            stage.getRoot().findActor("pot_pane").clearListeners();
-//            stage.getRoot().removeActor(stage.getRoot().findActor("pot_pane"));
-//            stage.addActor(generate_pot_pane());
+            stage.getRoot().findActor("bottle_pane").clearListeners();
+            stage.getRoot().removeActor(stage.getRoot().findActor("bottle_pane"));
+            stage.addActor(generate_bottle_pane());
+
+            stage.getRoot().findActor("pot_pane").clearListeners();
+            stage.getRoot().removeActor(stage.getRoot().findActor("pot_pane"));
+            stage.addActor(generate_pot_pane());
 
             refresh = false;
+            last_refresh = Box.get_last_update();
 
         }
 
@@ -174,7 +191,7 @@ public class PotScreen implements Screen {
         if(Box.getInstance().getPot()!=null){
 
             Label name_label = new Label(
-                    Box.getInstance().getPot().name() + "",
+                    Box.getInstance().getPot().getName() + "",
                     new Label.LabelStyle(alice_48_green, Color.GREEN)
             );
             name_label.setAlignment(Align.center);
@@ -215,6 +232,7 @@ public class PotScreen implements Screen {
 
 
         out.setName("info_pane");
+        out.setPosition(0+40, 1920-40-670);
         return out;
     }
 
@@ -581,7 +599,6 @@ public class PotScreen implements Screen {
         return out;
     }
 
-
     private Group generate_pot_pane() {
 
         Group out = new Group();
@@ -594,9 +611,8 @@ public class PotScreen implements Screen {
         Table table = new Table();
         table.defaults().width(340).height(340);
 
-
-        for(Pot current_pot : Inventory.getInstance().get_pot_inventory()){
-            table.add(generate_pot_item_sub_pane(current_pot));
+        for(Storable current_pot : Inventory.getInstance().get_list(Inventory.Type.POT)){
+            table.add(generate_pot_item_sub_pane((Pot)current_pot));
         }
 
         ScrollPane pane = new ScrollPane(table);
@@ -605,9 +621,11 @@ public class PotScreen implements Screen {
         out.addActor(pane);
 
         out.setName("pot_pane");
+        out.setPosition(0+40, 1920-40-670-20-340);
         return out;
     }
-    private Group generate_pot_item_sub_pane(final Pot pot){
+    private Group generate_pot_item_sub_pane(final Pot pot) {
+        System.out.println(pot.getInfo());
         Group out = new Group();
 
         Image pot_image = pot.get_icon_pot();
@@ -626,13 +644,13 @@ public class PotScreen implements Screen {
         equip_button.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-               equip_button_clicked(pot);
+                equip_button_clicked(pot);
             }
         });
         out.addActor(equip_button);
 
         final ImageButton delete_button = new ImageButton(skin, "delete_button");
-        delete_button.setBounds(340-120, 0, 120, 120);
+        delete_button.setBounds(340 - 120, 0, 120, 120);
         delete_button.setName("delete_button");
         delete_button.addListener(new ClickListener() {
             @Override
@@ -642,15 +660,18 @@ public class PotScreen implements Screen {
         });
         out.addActor(delete_button);
 
-        Label volume_label = new Label(
-                Box.getInstance().getPot().getMaximum_volume() + "",
-                new Label.LabelStyle(alice_48_black, Color.BLACK)
-        );
+
+            Label volume_label = new Label(
+                    pot.getMaximum_volume() + "",
+                    new Label.LabelStyle(alice_48_black, Color.BLACK)
+            );
+
         volume_label.setAlignment(Align.center);
         volume_label.setName("volume_label");
         volume_label.setWrap(true);
-        volume_label.setBounds(0, 340-100, 100, 100);
+        volume_label.setBounds(0, 340 - 100, 100, 100);
         out.addActor(volume_label);
+
 
 
         return out;
@@ -669,8 +690,8 @@ public class PotScreen implements Screen {
         table.defaults().width(600).height(600);
 
 
-        for(Bottle current_bottle : Inventory.getInstance().get_bottle_inventory()){
-            table.add(generate_bottle_item_sub_pane(current_bottle));
+        for(Storable current_bottle : Inventory.getInstance().get_list(Inventory.Type.BOTTLE)){
+            table.add(generate_bottle_item_sub_pane((Bottle)current_bottle));
         }
 
         ScrollPane pane = new ScrollPane(table);
@@ -679,6 +700,7 @@ public class PotScreen implements Screen {
         out.addActor(pane);
 
         out.setName("bottle_pane");
+        out.setPosition(0+40, 1920-40-670-20-340-20-600);
         return out;
     }
     private Group generate_bottle_item_sub_pane(final Bottle bottle){
@@ -700,7 +722,7 @@ public class PotScreen implements Screen {
         delete2_button.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                //////////////////////////////////////
+                delete2_button_click(bottle);
             }
         });
         out.addActor(delete2_button);
@@ -711,7 +733,7 @@ public class PotScreen implements Screen {
         drop_all_button.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                //////////////////////////////////////
+                drop_all_button_click(bottle);
             }
         });
         out.addActor(drop_all_button);
@@ -722,7 +744,7 @@ public class PotScreen implements Screen {
         drop_1ml_button.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                //////////////////////////////////////
+                drop_1ml_button_click(bottle);
             }
         });
         out.addActor(drop_1ml_button);
@@ -733,7 +755,7 @@ public class PotScreen implements Screen {
         drop_10ml_button.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                //////////////////////////////////////
+                drop_10ml_button_click(bottle);
             }
         });
         out.addActor(drop_10ml_button);

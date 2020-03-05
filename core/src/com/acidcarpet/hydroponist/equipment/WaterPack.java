@@ -1,6 +1,8 @@
 package com.acidcarpet.hydroponist.equipment;
 
-public class WaterPack {
+import com.acidcarpet.hydroponist.storage.Storable;
+
+public class WaterPack implements Storable {
 
     public WaterPack(
             double water_volume, double current_t, double current_pH, double ELEMENT_N, double ELEMENT_P, double ELEMENT_K,   double ELEMENT_S,  double ELEMENT_Mg, double ELEMENT_Ca,   double ELEMENT_B,  double ELEMENT_Cu, double ELEMENT_Fe, double ELEMENT_Mn, double ELEMENT_Mo, double ELEMENT_Zn ) {
