@@ -46,13 +46,13 @@ public class Pot implements Storable {
         this.Mo =(int) (((this.Mo*this.current_volume) + (ppm_Mo*volume)) / (current_volume+volume));
         this.Zn =(int)(((this.Zn*this.current_volume)  + (ppm_Zn*volume)) / (current_volume+volume));
 
-        current_volume=round(current_volume+volume, 2);
+        current_volume=round(current_volume+volume, 3);
         if (current_volume>maximum_volume)current_volume=maximum_volume;
         Box.update();
 
     }
     public synchronized void drain(double volume){
-        current_volume=round(current_volume-volume, 2);
+        current_volume=round(current_volume-volume, 3);
         if(current_volume<0) {
             current_volume=0;
             pH=0;

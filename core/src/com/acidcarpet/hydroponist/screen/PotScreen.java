@@ -14,6 +14,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
@@ -37,7 +38,6 @@ public class PotScreen implements Screen {
     PotScreen(Game game){
         this.game = game;
     }
-
 
     public void take_off_button_click(){
         Box.getInstance().take_off_pot();
@@ -892,9 +892,29 @@ public class PotScreen implements Screen {
         Zn_label.setBounds(500, 0, 100, 100);
         out.addActor(Zn_label);
 
+        Label remain_label = new Label(
+                (int) (bottle.getCurrent_volume()*1000)+"ml.",
+                new Label.LabelStyle(alice_72_8F8F8F_stroke_black, Color.BLACK)
+        );
+        remain_label.setAlignment(Align.center);
+        remain_label.setName("remain_label");
+        remain_label.setWrap(true);
+        remain_label.setBounds(0, 120, 600, 100);
+        remain_label.setTouchable(Touchable.disabled);
+        out.addActor(remain_label);
+
+        Label name_label = new Label(
+                bottle.getName()+"",
+                new Label.LabelStyle(alice_72_8F8F8F_stroke_black, Color.BLACK)
+        );
+        name_label.setAlignment(Align.center);
+        name_label.setName("name_label");
+        name_label.setWrap(true);
+        name_label.setBounds(0, 600-170, 600, 100);
+        name_label.setTouchable(Touchable.disabled);
+        out.addActor(name_label);
+
 
         return out;
     }
-
-
 }

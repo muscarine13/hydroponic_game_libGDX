@@ -11,21 +11,21 @@ public class Bottle implements Storable {
             double maximum_volume,
             double pH,
 
-            double percent_N,
-            double percent_P,
-            double percent_K,
+            int percent_N,
+            int percent_P,
+            int percent_K,
 
-            double percent_S,
-            double percent_Mg,
-            double percent_Ca,
+            int percent_S,
+            int percent_Mg,
+            int percent_Ca,
 
-            double percent_B,
-            double percent_Cu,
-            double percent_Fe,
+            int percent_B,
+            int percent_Cu,
+            int percent_Fe,
 
-            double percent_Mn,
-            double percent_Mo,
-            double percent_Zn,
+            int percent_Mn,
+            int percent_Mo,
+            int percent_Zn,
 
             Image bottle_icon
     ) {
@@ -63,36 +63,36 @@ public class Bottle implements Storable {
             Box.getInstance().getPot().pour(
                     volume,
                     pH,
-                    (int)(percent_N*10000),
-                    (int)(percent_P*10000),
-                    (int)(percent_K*10000),
-                    (int)(percent_S*10000),
-                    (int)(percent_Mg*10000),
-                    (int)(percent_Ca*10000),
-                    (int)(percent_B*10000),
-                    (int)(percent_Cu*10000),
-                    (int)(percent_Fe*10000),
-                    (int)(percent_Mn*10000),
-                    (int)(percent_Mo*10000),
-                    (int)(percent_Zn*10000)
+                    (percent_N*10000),
+                    (percent_P*10000),
+                    (percent_K*10000),
+                    (percent_S*10000),
+                    (percent_Mg*10000),
+                    (percent_Ca*10000),
+                    (percent_B*10000),
+                    (percent_Cu*10000),
+                    (percent_Fe*10000),
+                    (percent_Mn*10000),
+                    (percent_Mo*10000),
+                    (percent_Zn*10000)
             );
             current_volume-=volume;
         }else{
             Box.getInstance().getPot().pour(
                     current_volume,
                     pH,
-                    (int)(percent_N*10000),
-                    (int)(percent_P*10000),
-                    (int)(percent_K*10000),
-                    (int)(percent_S*10000),
-                    (int)(percent_Mg*10000),
-                    (int)(percent_Ca*10000),
-                    (int)(percent_B*10000),
-                    (int)(percent_Cu*10000),
-                    (int)(percent_Fe*10000),
-                    (int)(percent_Mn*10000),
-                    (int)(percent_Mo*10000),
-                    (int)(percent_Zn*10000)
+                    (percent_N*10000),
+                    (percent_P*10000),
+                    (percent_K*10000),
+                    (percent_S*10000),
+                    (percent_Mg*10000),
+                    (percent_Ca*10000),
+                    (percent_B*10000),
+                    (percent_Cu*10000),
+                    (percent_Fe*10000),
+                    (percent_Mn*10000),
+                    (percent_Mo*10000),
+                    (percent_Zn*10000)
             );
             current_volume=0;
         }
@@ -106,21 +106,21 @@ public class Bottle implements Storable {
 
     private double pH;
 
-    private double percent_N;
-    private double percent_P;
-    private double percent_K;
+    private int percent_N;
+    private int percent_P;
+    private int percent_K;
 
-    private double percent_S;
-    private double percent_Mg;
-    private double percent_Ca;
+    private int percent_S;
+    private int percent_Mg;
+    private int percent_Ca;
 
-    private double percent_B;
-    private double percent_Cu;
-    private double percent_Fe;
+    private int percent_B;
+    private int percent_Cu;
+    private int percent_Fe;
 
-    private double percent_Mn;
-    private double percent_Mo;
-    private double percent_Zn;
+    private int percent_Mn;
+    private int percent_Mo;
+    private int percent_Zn;
 
     public String getName() {
         return name;
@@ -137,40 +137,40 @@ public class Bottle implements Storable {
     public double getpH() {
         return pH;
     }
-    public double getPercent_N() {
+    public int getPercent_N() {
         return percent_N;
     }
-    public double getPercent_P() {
+    public int getPercent_P() {
         return percent_P;
     }
-    public double getPercent_K() {
+    public int getPercent_K() {
         return percent_K;
     }
-    public double getPercent_S() {
+    public int getPercent_S() {
         return percent_S;
     }
-    public double getPercent_Mg() {
+    public int getPercent_Mg() {
         return percent_Mg;
     }
-    public double getPercent_Ca() {
+    public int getPercent_Ca() {
         return percent_Ca;
     }
-    public double getPercent_B() {
+    public int getPercent_B() {
         return percent_B;
     }
-    public double getPercent_Cu() {
+    public int getPercent_Cu() {
         return percent_Cu;
     }
-    public double getPercent_Fe() {
+    public int getPercent_Fe() {
         return percent_Fe;
     }
-    public double getPercent_Mn() {
+    public int getPercent_Mn() {
         return percent_Mn;
     }
-    public double getPercent_Mo() {
+    public int getPercent_Mo() {
         return percent_Mo;
     }
-    public double getPercent_Zn() {
+    public int getPercent_Zn() {
         return percent_Zn;
     }
 
