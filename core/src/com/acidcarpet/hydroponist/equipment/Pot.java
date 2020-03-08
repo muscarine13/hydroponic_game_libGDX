@@ -4,25 +4,75 @@ package com.acidcarpet.hydroponist.equipment;
 import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Pot implements Storable {
 
-    public boolean may_add(double volume){
-        return true;
-    }
-    public boolean add_from_bottle(Bottle bottle, double volume){
-        return true;
-    }
+    public void pour(
+            double volume,
 
-    public boolean may_drain(double volume){
-        return true;
+            double pH,
+
+            int ppm_N,
+            int ppm_P,
+            int ppm_K,
+
+            int ppm_S,
+            int ppm_Mg,
+            int ppm_Ca,
+
+            int ppm_B,
+            int ppm_Cu,
+            int ppm_Fe,
+
+            int ppm_Mn,
+            int ppm_Mo,
+            int ppm_Zn
+    ){
+
+        this.pH = round(((this.pH*this.current_volume) +(pH*volume)) /(current_volume+volume), 1);
+
+        this.N =(int) (((this.N*this.current_volume)   + (ppm_N*volume)) / (current_volume+volume));
+        this.P =(int) (((this.P*this.current_volume)   + (ppm_P*volume)) / (current_volume+volume));
+        this.K =(int) (((this.K*this.current_volume)   + (ppm_K*volume)) / (current_volume+volume));
+        this.S =(int) (((this.S*this.current_volume)   + (ppm_S*volume)) / (current_volume+volume));
+        this.Mg =(int) (((this.Mg*this.current_volume) + (ppm_Mg*volume)) / (current_volume+volume));
+        this.Ca =(int) (((this.Ca*this.current_volume) + (ppm_Ca*volume)) / (current_volume+volume));
+        this.B =(int) (((this.B*this.current_volume)   + (ppm_B*volume))  / (current_volume+volume));
+        this.Cu =(int) (((this.Cu*this.current_volume) + (ppm_Cu*volume)) / (current_volume+volume));
+        this.Fe =(int) (((this.Fe*this.current_volume) + (ppm_Fe*volume)) / (current_volume+volume));
+        this.Mn =(int) (((this.Mn*this.current_volume) + (ppm_Mn*volume)) / (current_volume+volume));
+        this.Mo =(int) (((this.Mo*this.current_volume) + (ppm_Mo*volume)) / (current_volume+volume));
+        this.Zn =(int)(((this.Zn*this.current_volume)  + (ppm_Zn*volume)) / (current_volume+volume));
+
+        current_volume=round(current_volume+volume, 2);
+        if (current_volume>maximum_volume)current_volume=maximum_volume;
+        Box.update();
+
     }
-    public boolean drain(double volume){
-        if(may_drain(volume)){
+    public synchronized void drain(double volume){
+        current_volume=round(current_volume-volume, 2);
+        if(current_volume<0) {
+            current_volume=0;
+            pH=0;
+            N=0;
+            P=0;
+            K=0;
 
-        }else{
+            S=0;
+            Mg=0;
+            Ca=0;
 
+            B=0;
+            Cu=0;
+            Fe=0;
+
+            Mn=0;
+            Mo=0;
+            Zn=0;
         }
-        return true;
+        Box.update();
     }
 
     public Pot(
@@ -30,23 +80,22 @@ public class Pot implements Storable {
             String description,
             double maximum_volume,
             double current_volume,
-            double current_t,
             double current_pH,
 
-            double ELEMENT_N,
-            double ELEMENT_P,
-            double ELEMENT_K,
+            int ppm_N,
+            int ppm_P,
+            int ppm_K,
 
-            double ELEMENT_S,
-            double ELEMENT_Mg,
-            double ELEMENT_Ca,
+            int ppm_S,
+            int ppm_Mg,
+            int ppm_Ca,
 
-            double ELEMENT_B,
-            double ELEMENT_Cu,
-            double ELEMENT_Fe,
-            double ELEMENT_Mn,
-            double ELEMENT_Mo,
-            double ELEMENT_Zn,
+            int ppm_B,
+            int ppm_Cu,
+            int ppm_Fe,
+            int ppm_Mn,
+            int ppm_Mo,
+            int ppm_Zn,
 
             Image image_pot,
             Image icon_pot
@@ -54,22 +103,23 @@ public class Pot implements Storable {
 
         this.name = name;
         this.description = description;
+
         this.maximum_volume = maximum_volume;
         this.current_volume = current_volume;
-        this.current_t = current_t;
-        this.current_pH = current_pH;
-        this.ELEMENT_N = ELEMENT_N;
-        this.ELEMENT_K = ELEMENT_K;
-        this.ELEMENT_B = ELEMENT_B;
-        this.ELEMENT_Ca = ELEMENT_Ca;
-        this.ELEMENT_Cu = ELEMENT_Cu;
-        this.ELEMENT_Fe = ELEMENT_Fe;
-        this.ELEMENT_Mn = ELEMENT_Mn;
-        this.ELEMENT_Mo = ELEMENT_Mo;
-        this.ELEMENT_Zn = ELEMENT_Zn;
-        this.ELEMENT_P = ELEMENT_P;
-        this.ELEMENT_Mg = ELEMENT_Mg;
-        this.ELEMENT_S = ELEMENT_S;
+
+        this.pH = current_pH;
+        this.N = ppm_N;
+        this.K = ppm_K;
+        this.B = ppm_B;
+        this.Ca = ppm_Ca;
+        this.Cu = ppm_Cu;
+        this.Fe = ppm_Fe;
+        this.Mn = ppm_Mn;
+        this.Mo = ppm_Mo;
+        this.Zn = ppm_Zn;
+        this.P = ppm_P;
+        this.Mg = ppm_Mg;
+        this.S = ppm_S;
 
         this.image_pot = image_pot;
         this.icon_pot = icon_pot;
@@ -87,245 +137,55 @@ public class Pot implements Storable {
     private double maximum_volume;
     private double current_volume;
 
-    private double current_t;
-    private double current_pH;
+    private double pH;
 
-    private double ELEMENT_N;
-    public int element_ppm_N(){
-        return (int)
-                ((
-                (ELEMENT_N/current_volume)
-                *
-                100
-                )
-                *
-                10000);
+    private int N;
+    private int P;
+    private int K;
+    private int S;
+    private int Mg;
+    private int Ca;
+    private int B;
+    private int Cu;
+    private int Fe;
+    private int Mn;
+    private int Mo;
+    private int Zn;
+    public int getN() {
+        return N;
     }
-
-    private double ELEMENT_P;
-    public int element_ppm_P(){
-        return (int)
-                ((
-                        (ELEMENT_P/current_volume)
-                                *
-                                100
-                )
-                        *
-                        10000);
+    public int getP() {
+        return P;
     }
-
-    private double ELEMENT_K;
-    public int element_ppm_K(){
-        return (int)
-                ((
-                        (ELEMENT_K/current_volume)
-                                *
-                                100
-                )
-                        *
-                        10000);
+    public int getK() {
+        return K;
     }
-
-    private double ELEMENT_S;
-    public int element_ppm_S(){
-        return (int)
-                ((
-                        (ELEMENT_S/current_volume)
-                                *
-                                100
-                )
-                        *
-                        10000);
+    public int getS() {
+        return S;
     }
-
-    private double ELEMENT_Mg;
-    public int element_ppm_Mg(){
-        return (int)
-                ((
-                        (ELEMENT_Mg/current_volume)
-                                *
-                                100
-                )
-                        *
-                        10000);
+    public int getMg() {
+        return Mg;
     }
-
-    private double ELEMENT_Ca;
-    public int element_ppm_Ca(){
-        return (int)
-                ((
-                        (ELEMENT_Ca/current_volume)
-                                *
-                                100
-                )
-                        *
-                        10000);
+    public int getCa() {
+        return Ca;
     }
-
-    private double ELEMENT_B;
-    public int element_ppm_B(){
-        return (int)
-                ((
-                        (ELEMENT_B/current_volume)
-                                *
-                                100
-                )
-                        *
-                        10000);
+    public int getB() {
+        return B;
     }
-
-    private double ELEMENT_Cu;
-    public int element_ppm_Cu(){
-        return (int)
-                ((
-                        (ELEMENT_Cu/current_volume)
-                                *
-                                100
-                )
-                        *
-                        10000);
+    public int getCu() {
+        return Cu;
     }
-
-    private double ELEMENT_Fe;
-    public int element_ppm_Fe(){
-        return (int)
-                ((
-                        (ELEMENT_Fe/current_volume)
-                                *
-                                100
-                )
-                        *
-                        10000);
+    public int getFe() {
+        return Fe;
     }
-
-    private double ELEMENT_Mn;
-    public int element_ppm_Mn(){
-        return (int)
-                ((
-                        (ELEMENT_Mn/current_volume)
-                                *
-                                100
-                )
-                        *
-                        10000);
+    public int getMn() {
+        return Mn;
     }
-
-    private double ELEMENT_Mo;
-    public int element_ppm_Mo(){
-        return (int)
-                ((
-                        (ELEMENT_Mo/current_volume)
-                                *
-                                100
-                )
-                        *
-                        10000);
+    public int getMo() {
+        return Mo;
     }
-
-    private double ELEMENT_Zn;
-    public int element_ppm_Zn(){
-        return (int)
-                ((
-                        (ELEMENT_Zn/current_volume)
-                                *
-                                100
-                )
-                        *
-                        10000);
-    }
-
-    public WaterPack consume_elements_with_water(double volume){
-        if(current_volume>=volume){
-
-            WaterPack out = new WaterPack(
-                    volume,
-                    current_t,
-                    current_pH,
-                   ELEMENT_N,
-                    ELEMENT_K,
-                    ELEMENT_B,
-                    ELEMENT_Ca,
-                    ELEMENT_Cu,
-                    ELEMENT_Fe,
-                    ELEMENT_Mn,
-                    ELEMENT_Mo,
-                    ELEMENT_Zn,
-                    ELEMENT_P,
-                    ELEMENT_Mg,
-                    ELEMENT_S
-            );
-
-            ELEMENT_N-= ELEMENT_N;
-            ELEMENT_K-= ELEMENT_K;
-            ELEMENT_B-= ELEMENT_B;
-            ELEMENT_Ca-= ELEMENT_Ca;
-            ELEMENT_Cu-= ELEMENT_Cu;
-            ELEMENT_Fe-= ELEMENT_Fe;
-            ELEMENT_Mn-= ELEMENT_Mn;
-            ELEMENT_Mo-= ELEMENT_Mo;
-            ELEMENT_Zn-= ELEMENT_Zn;
-            ELEMENT_P-= ELEMENT_P;
-            ELEMENT_Mg-= ELEMENT_Mg;
-            ELEMENT_S-= ELEMENT_S;
-            current_volume-=volume;
-
-            return out;
-        }else{
-            return null;
-        }
-    }
-    public void fill(WaterPack waterPack){
-        if(current_volume+waterPack.total_volume()<=maximum_volume){
-
-            current_t = ((current_t*current_volume)+(waterPack.getCurrent_t()*waterPack.total_volume()))
-                    /
-                    (current_volume+total_volume());
-            current_pH = ((current_pH*current_volume)+(waterPack.getCurrent_pH()*waterPack.total_volume()))
-                    /
-                    (current_volume+total_volume());
-
-
-            current_volume += waterPack.getWater_volume();
-
-            ELEMENT_N+=waterPack.getELEMENT_N();
-            ELEMENT_K+=waterPack.getELEMENT_K();
-            ELEMENT_B+=waterPack.getELEMENT_B();
-            ELEMENT_Ca+=waterPack.getELEMENT_Ca();
-            ELEMENT_Cu+=waterPack.getELEMENT_Cu();
-            ELEMENT_Fe+=waterPack.getELEMENT_Fe();
-            ELEMENT_Mn+=waterPack.getELEMENT_Mn();
-            ELEMENT_Mo+=waterPack.getELEMENT_Mo();
-            ELEMENT_Zn+=waterPack.getELEMENT_Zn();
-            ELEMENT_P+=waterPack.getELEMENT_P();
-            ELEMENT_Mg+=waterPack.getELEMENT_Mg();
-            ELEMENT_S+=waterPack.getELEMENT_S();
-        }
-    }
-
-    public double total_volume(){
-        double out;
-        out = current_volume+elements_volume();
-
-        return out;
-    }
-    public double elements_volume(){
-        double out = 0;
-        out+=
-
-                ELEMENT_N+
-                        ELEMENT_K+
-                        ELEMENT_B+
-                        ELEMENT_Ca+
-                        ELEMENT_Cu+
-                        ELEMENT_Fe+
-                        ELEMENT_Mn+
-                        ELEMENT_Mo+
-                        ELEMENT_Zn+
-                        ELEMENT_P+
-                        ELEMENT_Mg+
-                        ELEMENT_S;
-        return out;
-
+    public int getZn() {
+        return Zn;
     }
 
     public double getMaximum_volume() {
@@ -334,36 +194,31 @@ public class Pot implements Storable {
     public double getCurrent_volume() {
         return current_volume;
     }
-    public double getCurrent_t() {
-        return current_t;
-    }
     public double getCurrent_pH() {
-        return current_pH;
+        return pH;
     }
-
 
     public int get_all_ppm(){
         return
-                        element_ppm_N()+
-                        element_ppm_P()+
-                        element_ppm_K()+
-                        element_ppm_S()+
-                        element_ppm_Mg()+
-                        element_ppm_Ca()+
-                        element_ppm_B()+
-                        element_ppm_Cu()+
-                        element_ppm_Fe()+
-                        element_ppm_Mn()+
-                        element_ppm_Mo()+
-                        element_ppm_Zn();
+                        N+
+                        P+
+                        K+
+                        S+
+                        Mg+
+                        Ca+
+                        B+
+                        Cu+
+                        Fe+
+                        Mn+
+                        Mo+
+                        Zn;
     }
 
     Image image_pot;
+    Image icon_pot;
     public Image get_image_pot(){
         return image_pot;
     }
-
-    Image icon_pot;
     public Image get_icon_pot(){
         return icon_pot;
     }
@@ -375,5 +230,13 @@ public class Pot implements Storable {
 
     public String getInfo(){
         return name+" --- "+getMaximum_volume();
+    }
+
+    private static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        BigDecimal bd = new BigDecimal(Double.toString(value));
+        bd = bd.setScale(places, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 }

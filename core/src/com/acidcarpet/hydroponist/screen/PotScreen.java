@@ -28,7 +28,6 @@ public class PotScreen implements Screen {
     TextureAtlas atlas;
     Stage stage;
 
-    boolean refresh;
     long last_refresh;
 
     BitmapFont alice_48_green;
@@ -42,19 +41,28 @@ public class PotScreen implements Screen {
 
     public void take_off_button_click(){
         Box.getInstance().take_off_pot();
-        refresh=true;
+
     }
     public void drop_100ml_button_click(){
+        if(Box.getInstance().getPot()!=null){
+            Box.getInstance().getPot().drain(0.1f);
+        }
 
     }
     public void drop_1l_button_click(){
-
+        if(Box.getInstance().getPot()!=null){
+            Box.getInstance().getPot().drain(1.0f);
+        }
     }
     public void drop_10l_button_click(){
-
+        if(Box.getInstance().getPot()!=null){
+            Box.getInstance().getPot().drain(10.0f);
+        }
     }
     public void drop_all2_button_click(){
-
+        if(Box.getInstance().getPot()!=null){
+            Box.getInstance().getPot().drain(Box.getInstance().getPot().getCurrent_volume());
+        }
     }
     public void pro_help_button_click(){
 
@@ -62,25 +70,26 @@ public class PotScreen implements Screen {
 
     public void delete_button_clicked(Pot pot){
         Inventory.getInstance().delete(pot);
-        refresh = true;
+        Box.update();
+
     }
     public void equip_button_clicked(Pot pot){
         Box.getInstance().equip(pot);
-        refresh=true;
+
     }
 
     public void drop_1ml_button_click(Bottle bottle){
-
+        bottle.drop(0.001f);
     }
     public void drop_10ml_button_click(Bottle bottle){
-
+        bottle.drop(0.01f);
     }
     public void drop_all_button_click(Bottle bottle){
-
+        bottle.drop(bottle.getCurrent_volume());
     }
     public  void delete2_button_click(Bottle bottle){
         Inventory.getInstance().delete(bottle);
-        refresh=true;
+        Box.update();
     }
 
     void back_button_click(){
@@ -130,7 +139,7 @@ public class PotScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        if(Box.get_last_update()!=last_refresh||refresh){
+        if(Box.get_last_update()!=last_refresh){
 
             stage.getRoot().findActor("info_pane").clearListeners();
             stage.getRoot().removeActor(stage.getRoot().findActor("info_pane"));
@@ -144,7 +153,6 @@ public class PotScreen implements Screen {
             stage.getRoot().removeActor(stage.getRoot().findActor("pot_pane"));
             stage.addActor(generate_pot_pane());
 
-            refresh = false;
             last_refresh = Box.get_last_update();
 
         }
@@ -248,7 +256,7 @@ public class PotScreen implements Screen {
         if(Box.getInstance().getPot()!=null){
 
             Label N_label = new Label(
-                    Box.getInstance().getPot().element_ppm_N() + "",
+                    Box.getInstance().getPot().getN() + "",
                     new Label.LabelStyle(alice_48_black, Color.BLACK)
             );
             N_label.setAlignment(Align.center);
@@ -258,7 +266,7 @@ public class PotScreen implements Screen {
             out.addActor(N_label);
 
             Label P_label = new Label(
-                    Box.getInstance().getPot().element_ppm_P() + "",
+                    Box.getInstance().getPot().getP() + "",
                     new Label.LabelStyle(alice_48_black, Color.BLACK)
             );
             P_label.setAlignment(Align.center);
@@ -268,7 +276,7 @@ public class PotScreen implements Screen {
             out.addActor(P_label);
 
             Label K_label = new Label(
-                    Box.getInstance().getPot().element_ppm_K() + "",
+                    Box.getInstance().getPot().getK() + "",
                     new Label.LabelStyle(alice_48_black, Color.BLACK)
             );
             K_label.setAlignment(Align.center);
@@ -278,7 +286,7 @@ public class PotScreen implements Screen {
             out.addActor(K_label);
 
             Label S_label = new Label(
-                    Box.getInstance().getPot().element_ppm_S() + "",
+                    Box.getInstance().getPot().getS() + "",
                     new Label.LabelStyle(alice_48_black, Color.BLACK)
             );
             S_label.setAlignment(Align.center);
@@ -287,7 +295,7 @@ public class PotScreen implements Screen {
             S_label.setBounds(15, 150-100, 100, 100);
             out.addActor(S_label);
             Label Mg_label = new Label(
-                    Box.getInstance().getPot().element_ppm_Mg() + "",
+                    Box.getInstance().getPot().getMg() + "",
                     new Label.LabelStyle(alice_48_black, Color.BLACK)
             );
             Mg_label.setAlignment(Align.center);
@@ -297,7 +305,7 @@ public class PotScreen implements Screen {
             out.addActor(Mg_label);
 
             Label Ca_label = new Label(
-                    Box.getInstance().getPot().element_ppm_Ca() + "",
+                    Box.getInstance().getPot().getCa() + "",
                     new Label.LabelStyle(alice_48_black, Color.BLACK)
             );
             Ca_label.setAlignment(Align.center);
@@ -322,7 +330,7 @@ public class PotScreen implements Screen {
         if(Box.getInstance().getPot()!=null){
 
             Label B_label = new Label(
-                    Box.getInstance().getPot().element_ppm_B() + "",
+                    Box.getInstance().getPot().getB() + "",
                     new Label.LabelStyle(alice_48_black, Color.BLACK)
             );
             B_label.setAlignment(Align.center);
@@ -332,7 +340,7 @@ public class PotScreen implements Screen {
             out.addActor(B_label);
 
             Label Cu_label = new Label(
-                    Box.getInstance().getPot().element_ppm_Cu() + "",
+                    Box.getInstance().getPot().getCu() + "",
                     new Label.LabelStyle(alice_48_black, Color.BLACK)
             );
             Cu_label.setAlignment(Align.center);
@@ -342,7 +350,7 @@ public class PotScreen implements Screen {
             out.addActor(Cu_label);
 
             Label Fe_label = new Label(
-                    Box.getInstance().getPot().element_ppm_Fe() + "",
+                    Box.getInstance().getPot().getFe() + "",
                     new Label.LabelStyle(alice_48_black, Color.BLACK)
             );
             Fe_label.setAlignment(Align.center);
@@ -352,7 +360,7 @@ public class PotScreen implements Screen {
             out.addActor(Fe_label);
 
             Label Mn_label = new Label(
-                    Box.getInstance().getPot().element_ppm_Mn() + "",
+                    Box.getInstance().getPot().getMn() + "",
                     new Label.LabelStyle(alice_48_black, Color.BLACK)
             );
             Mn_label.setAlignment(Align.center);
@@ -362,7 +370,7 @@ public class PotScreen implements Screen {
             out.addActor(Mn_label);
 
             Label Mo_label = new Label(
-                    Box.getInstance().getPot().element_ppm_Mo() + "",
+                    Box.getInstance().getPot().getMo() + "",
                     new Label.LabelStyle(alice_48_black, Color.BLACK)
             );
             Mo_label.setAlignment(Align.center);
@@ -372,7 +380,7 @@ public class PotScreen implements Screen {
             out.addActor(Mo_label);
 
             Label Zn_label = new Label(
-                    Box.getInstance().getPot().element_ppm_Zn() + "",
+                    Box.getInstance().getPot().getZn() + "",
                     new Label.LabelStyle(alice_48_black, Color.BLACK)
             );
             Zn_label.setAlignment(Align.center);

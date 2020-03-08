@@ -55,24 +55,46 @@ public class Bottle implements Storable {
 
     }
 
-    public synchronized boolean may_drop(double volume){
-        if(volume<=current_volume&&Box.getInstance().getPot()!=null&&Box.getInstance().getPot().may_add(volume)){
-            return true;
-        }else{
-            return false;
-        }
-    }
-    public synchronized boolean drop(double volume){
-        if(may_drop(volume)){
 
-            if(Box.getInstance().getPot().add_from_bottle(this, volume)){
-                current_volume-=volume;
-                return true;
-            }else{
-                return false;
-            }
+    public synchronized void drop(double volume){
+        if(current_volume==0)return;
+
+        if(current_volume>=volume){
+            Box.getInstance().getPot().pour(
+                    volume,
+                    pH,
+                    (int)(percent_N*10000),
+                    (int)(percent_P*10000),
+                    (int)(percent_K*10000),
+                    (int)(percent_S*10000),
+                    (int)(percent_Mg*10000),
+                    (int)(percent_Ca*10000),
+                    (int)(percent_B*10000),
+                    (int)(percent_Cu*10000),
+                    (int)(percent_Fe*10000),
+                    (int)(percent_Mn*10000),
+                    (int)(percent_Mo*10000),
+                    (int)(percent_Zn*10000)
+            );
+            current_volume-=volume;
         }else{
-            return false;
+            Box.getInstance().getPot().pour(
+                    current_volume,
+                    pH,
+                    (int)(percent_N*10000),
+                    (int)(percent_P*10000),
+                    (int)(percent_K*10000),
+                    (int)(percent_S*10000),
+                    (int)(percent_Mg*10000),
+                    (int)(percent_Ca*10000),
+                    (int)(percent_B*10000),
+                    (int)(percent_Cu*10000),
+                    (int)(percent_Fe*10000),
+                    (int)(percent_Mn*10000),
+                    (int)(percent_Mo*10000),
+                    (int)(percent_Zn*10000)
+            );
+            current_volume=0;
         }
     }
 

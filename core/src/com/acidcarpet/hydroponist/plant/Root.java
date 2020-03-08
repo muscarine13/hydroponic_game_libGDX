@@ -63,18 +63,36 @@ public class Root {
 
     double water_volume_multiplier;
 
-    public void absorb(){
+    public synchronized void absorb(){
         if(!alive) return;
         WaterPack metabolism_pack;
         if(
                         (box.getPot().getCurrent_pH()< ph_maximum &&box.getPot().getCurrent_pH()> pH_minimum)
                 &&      (box.getPot().get_all_ppm()>ppm_minimum&&box.getPot().get_all_ppm()<ppm_maximum)
                 &&       box.getPump().reduce_oxygen(oxygen_consumption *length)
+                &&       box.getPot().getCurrent_volume()>=length*water_volume_multiplier
         ){
             current_health++;
             if(current_health>maximum_health)current_health = maximum_health;
 
-            metabolism_pack=box.getPot().consume_elements_with_water(length*water_volume_multiplier);
+            metabolism_pack= new WaterPack(
+                    length*water_volume_multiplier,
+                    box.getPot().getCurrent_pH(),
+                    box.getPot().getN(),
+                    box.getPot().getP(),
+                    box.getPot().getK(),
+                    box.getPot().getS(),
+                    box.getPot().getMg(),
+                    box.getPot().getCa(),
+                    box.getPot().getB(),
+                    box.getPot().getCu(),
+                    box.getPot().getFe(),
+                    box.getPot().getMn(),
+                    box.getPot().getMo(),
+                    box.getPot().getZn()
+
+            );
+            box.getPot().drain(length*water_volume_multiplier);
 
             if (metabolism_pack!=null){
                 box.getPlant().add_metabolism_pack(metabolism_pack);
@@ -93,6 +111,7 @@ public class Root {
 
     }
     public void grow(){
+        if(current_health<0) alive=false;
         if(!alive) return;
 
         length+= growth_length;

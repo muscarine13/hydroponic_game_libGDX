@@ -5,9 +5,8 @@ import com.acidcarpet.hydroponist.storage.Storable;
 public class WaterPack implements Storable {
 
     public WaterPack(
-            double water_volume, double current_t, double current_pH, double ELEMENT_N, double ELEMENT_P, double ELEMENT_K,   double ELEMENT_S,  double ELEMENT_Mg, double ELEMENT_Ca,   double ELEMENT_B,  double ELEMENT_Cu, double ELEMENT_Fe, double ELEMENT_Mn, double ELEMENT_Mo, double ELEMENT_Zn ) {
+            double water_volume,  double current_pH, double ELEMENT_N, double ELEMENT_P, double ELEMENT_K,   double ELEMENT_S,  double ELEMENT_Mg, double ELEMENT_Ca,   double ELEMENT_B,  double ELEMENT_Cu, double ELEMENT_Fe, double ELEMENT_Mn, double ELEMENT_Mo, double ELEMENT_Zn ) {
         this.current_volume = water_volume;
-        this.current_t = current_t;
         this.current_pH = current_pH;
 
         this.ELEMENT_N = ELEMENT_N;
@@ -26,7 +25,6 @@ public class WaterPack implements Storable {
 
     double current_volume;
 
-    double current_t;
     double current_pH;
 
     private double ELEMENT_N;
@@ -265,9 +263,6 @@ public class WaterPack implements Storable {
 
     public double getWater_volume() {
         return current_volume;
-    }
-    public double getCurrent_t() {
-        return current_t;
     }
     public double getCurrent_pH() {
         return current_pH;
