@@ -53,6 +53,7 @@ public class TestPack {
     }
     public Plant get_test_plant(){
         return new Plant(
+                "Testus Plantus",
                 250
         ) {
             @Override

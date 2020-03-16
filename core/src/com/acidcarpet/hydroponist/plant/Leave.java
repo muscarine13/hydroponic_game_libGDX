@@ -13,7 +13,8 @@ public class Leave {
     private double height_grow_length;
     private double width_grow_length;
 
-    private double energy_production;
+    private double dark_energy_production;
+    private double light_energy_production;
     private double water_consumption;
 
     private double CO2_consumption;
@@ -33,7 +34,8 @@ public class Leave {
 
             double height_grow_length,
             double width_grow_length,
-            double energy_production,
+            double light_energy_production,
+            double dark_energy_production,
             double water_consumption,
 
             double CO2_consumption,
@@ -51,7 +53,8 @@ public class Leave {
 
         this.height_grow_length = height_grow_length;
         this.width_grow_length = width_grow_length;
-        this.energy_production = energy_production;
+        this.light_energy_production = light_energy_production;
+        this.dark_energy_production = light_energy_production;
         this.water_consumption = water_consumption;
 
         this.CO2_consumption = CO2_consumption;
@@ -78,9 +81,9 @@ public class Leave {
             if (current_health>maximum_health) current_health = maximum_health;
 
             if(box.getLamp().isOn()&&box.getLamp().reduce_lm(lm_consumption *(int)(height*width))){
-                box.getPlant().add_light_energy( energy_production * (int)(height*width));
+                box.getPlant().add_light_energy( light_energy_production * (int)(height*width));
             }else{
-               box.getPlant().add_dark_energy( energy_production * (int)(height*width));
+               box.getPlant().add_dark_energy( dark_energy_production * (int)(height*width));
             }
 
         }else{
@@ -100,5 +103,61 @@ public class Leave {
         width+= width_grow_length;
     }
 
+    public boolean isAlive() {
+        return alive;
+    }
 
+    public double getHeight() {
+        return height;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public double getHeight_grow_length() {
+        return height_grow_length;
+    }
+
+    public double getWidth_grow_length() {
+        return width_grow_length;
+    }
+
+
+
+    public double getWater_consumption() {
+        return water_consumption;
+    }
+
+    public double getCO2_consumption() {
+        return CO2_consumption;
+    }
+
+    public double getT_minimum() {
+        return t_minimum;
+    }
+
+    public double getT_maximum() {
+        return t_maximum;
+    }
+
+    public double getLm_consumption() {
+        return lm_consumption;
+    }
+
+    public int getCurrent_health() {
+        return current_health;
+    }
+
+    public int getMaximum_health() {
+        return maximum_health;
+    }
+
+    public double getDark_energy_production() {
+        return dark_energy_production;
+    }
+
+    public double getLight_energy_production() {
+        return light_energy_production;
+    }
 }

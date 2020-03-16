@@ -42,6 +42,7 @@ import java.util.concurrent.ThreadLocalRandom;
  *
  */
 public abstract class Plant implements Storable {
+    String name;
 
     private boolean alive;
 
@@ -52,21 +53,28 @@ public abstract class Plant implements Storable {
     private int maximum_health;
 
     private List<PlantStage> stages;
+    public PlantStage get_current_stage(){
+        for (PlantStage stage : stages){
+            if(stage.isActive()){
+                return stage;
+            }
+        }
+        return null;
+    }
 
     private List<Leave> leaves;
     private List<Root> roots;
     private List<Product> products;
 
-    public Plant(int maximum_health){
+    public Plant(String name, int maximum_health){
         alive = true;
+        this.name = name;
 
         current_stage_index=0;
 
         leaves = new LinkedList<>();
         roots = new LinkedList<>();
         products = new LinkedList<>();
-
-
 
         stages = set_stages();
 
@@ -343,21 +351,61 @@ public abstract class Plant implements Storable {
         try_grow_up_products(); // Пробуем купить плоды и цветы за энергию
 
     }
+    public synchronized void new_second(){
+        if(!alive) return;
+
+
+
+    }
 
     private double element_N_problem_points;
     private double element_P_problem_points;
     private double element_K_problem_points;
-
     private double element_S_problem_points;
     private double element_Mg_problem_points;
     private double element_Ca_problem_points;
-
     private double element_B_problem_points;
     private double element_Cu_problem_points;
     private double element_Fe_problem_points;
     private double element_Mn_problem_points;
     private double element_Mo_problem_points;
     private double element_Zn_problem_points;
+    public double getElement_N_problem_points() {
+        return element_N_problem_points;
+    }
+    public double getElement_P_problem_points() {
+        return element_P_problem_points;
+    }
+    public double getElement_K_problem_points() {
+        return element_K_problem_points;
+    }
+    public double getElement_S_problem_points() {
+        return element_S_problem_points;
+    }
+    public double getElement_Mg_problem_points() {
+        return element_Mg_problem_points;
+    }
+    public double getElement_Ca_problem_points() {
+        return element_Ca_problem_points;
+    }
+    public double getElement_B_problem_points() {
+        return element_B_problem_points;
+    }
+    public double getElement_Cu_problem_points() {
+        return element_Cu_problem_points;
+    }
+    public double getElement_Fe_problem_points() {
+        return element_Fe_problem_points;
+    }
+    public double getElement_Mn_problem_points() {
+        return element_Mn_problem_points;
+    }
+    public double getElement_Mo_problem_points() {
+        return element_Mo_problem_points;
+    }
+    public double getElement_Zn_problem_points() {
+        return element_Zn_problem_points;
+    }
 
     public abstract List<PlantStage> set_stages(); // Получить все стадии растения
     public Image get_image_plant(){
@@ -405,5 +453,7 @@ public abstract class Plant implements Storable {
     public double getDark_energy() {
         return dark_energy;
     }
-
+    public String getName() {
+        return name;
+    }
 }
