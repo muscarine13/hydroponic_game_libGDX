@@ -757,12 +757,10 @@ public class PlantScreen implements Screen {
     public Group generate_leaves_pane(){
         Group out = new Group();
 
-
-        Image background = new Image(atlas.findRegion("leave_pane_background"));
+        Image background = new Image(atlas.findRegion("leaves_pane_background"));
         background.setPosition(0, 0);
-        background.setName("leave_pane_background");
+        background.setName("leaves_pane_background");
         out.addActor(background);
-
 
         ImageButton leaves_buy_button = new ImageButton(skin, "buy_button");
         leaves_buy_button.setBounds(1080-20-250, 415-20-125, 250, 150);
@@ -910,13 +908,318 @@ public class PlantScreen implements Screen {
         return out;
     }
 
-    public Group generate_roots_pane(){}
-    public Group generate_root(Root root){}
+    public Group generate_roots_pane(){
+        Group out = new Group();
 
-    public Group generate_products_pane(){}
-    public Group generate_product(Product product){}
+        Image background = new Image(atlas.findRegion("roots_pane_background"));
+        background.setPosition(0, 0);
+        background.setName("roots_pane_background");
+        out.addActor(background);
 
-    public Group generate_buttons_pane(){}
+        ImageButton roots_buy_button = new ImageButton(skin, "buy_button");
+        roots_buy_button.setBounds(1080-20-250, 415-20-125, 250, 150);
+        roots_buy_button.setName("roots_buy_button");
+        roots_buy_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                root_buy_button_click();
+            }
+        });
+        out.addActor(roots_buy_button);
+
+        ImageButton roots_coin_heal_button = new ImageButton(skin, "coin_heal_button");
+        roots_coin_heal_button.setBounds(1080-20-250, 415-20-125-125, 250, 150);
+        roots_coin_heal_button.setName("roots_coin_heal_button");
+        roots_coin_heal_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                root_coin_heal_button_click();
+            }
+        });
+        out.addActor(roots_coin_heal_button);
+
+        ImageButton roots_ad_heal_button = new ImageButton(skin, "ad_heal_button");
+        roots_ad_heal_button.setBounds(1080-20-250, 415-20-125-125-125, 250, 150);
+        roots_ad_heal_button.setName("roots_ad_heal_button");
+        roots_ad_heal_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                root_ad_heal_button_click();
+            }
+        });
+        out.addActor(roots_ad_heal_button);
+
+        Table table = new Table();
+        table.defaults().width(250).height(375);
+
+        for (Root root : Box.getInstance().getPlant().getRoots()){
+            table.add(generate_root(root));
+        }
+
+        ScrollPane pane = new ScrollPane(table);
+        pane.setScrollingDisabled(false, true);
+        pane.setBounds(20 ,20 ,1080-20-20-250-20 , 375);
+        out.addActor(pane);
+
+
+        out.setPosition(20, 1920-20-500-20-415-20-415);
+        out.setName("root_pane");
+        return out;
+    }
+    public Group generate_root(Root root){
+        Group out = new Group();
+
+        Image pane = new Image(atlas.findRegion("root_pane"));
+        pane.setBounds(0, 0, 250, 375);
+        out.addActor(pane);
+
+        Image hp;
+
+        if(root.isAlive()){
+
+            int percent = (int)((root.getCurrent_health()/root.getMaximum_health())*10);
+
+            if(percent==0){
+                hp = new Image(atlas.findRegion("item_plant_hp_bar_0"));
+            }else
+            if(percent>=0&&percent<=10){
+                hp = new Image(atlas.findRegion("item_plant_hp_bar_10"));
+            }else
+            if(percent>=10&&percent<=20){
+                hp = new Image(atlas.findRegion("item_plant_hp_bar_20"));
+            }else
+            if(percent>=20&&percent<=30){
+                hp = new Image(atlas.findRegion("item_plant_hp_bar_30"));
+            }else
+            if(percent>=30&&percent<=40){
+                hp = new Image(atlas.findRegion("item_plant_hp_bar_40"));
+            }else
+            if(percent>=40&&percent<=50){
+                hp = new Image(atlas.findRegion("item_plant_hp_bar_50"));
+            }else
+            if(percent>=50&&percent<=60){
+                hp = new Image(atlas.findRegion("item_plant_hp_bar_60"));
+            }else
+            if(percent>=60&&percent<=70){
+                hp = new Image(atlas.findRegion("item_plant_hp_bar_70"));
+            }else
+            if(percent>=70&&percent<=80){
+                hp = new Image(atlas.findRegion("item_plant_hp_bar_80"));
+            }else
+            if(percent>=80&&percent<=90){
+                hp = new Image(atlas.findRegion("item_plant_hp_bar_90"));
+            }else
+            if(percent>=90){
+                hp = new Image(atlas.findRegion("item_plant_hp_bar_100"));
+            }else{
+                hp = null;
+            }
+
+            hp.setPosition(20, 375-20-200);
+            out.addActor(hp);
+
+
+        }else{
+
+        }
+
+        Label length = new Label(
+                root.getLength()+"",
+                new Label.LabelStyle(alice_64_black, Color.BLACK)
+        );
+        length.setAlignment(Align.center);
+        length.setWrap(true);
+        length.setBounds(25, 375-20-200-20-86.5f, 86.5f, 86.5f);
+        out.addActor(length);
+
+        Label water = new Label(
+                root.getWater_volume_multiplier()*root.getLength()+"",
+                new Label.LabelStyle(alice_64_black, Color.BLACK)
+        );
+        water.setAlignment(Align.center);
+        water.setWrap(true);
+        water.setBounds(250-25-86.5f, 25, 86.5f, 86.5f);
+        out.addActor(water);
+
+        return out;
+    }
+
+    public Group generate_products_pane(){
+        Group out = new Group();
+
+        Image background = new Image(atlas.findRegion("products_pane_background"));
+        background.setPosition(0, 0);
+        background.setName("products_pane_background");
+        out.addActor(background);
+
+        ImageButton products_buy_button = new ImageButton(skin, "buy_button");
+        products_buy_button.setBounds(1080-20-250, 415-20-125, 250, 150);
+        products_buy_button.setName("products_buy_button");
+        products_buy_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                product_buy_button_click();
+            }
+        });
+        out.addActor(products_buy_button);
+
+        ImageButton products_coin_heal_button = new ImageButton(skin, "coin_heal_button");
+        products_coin_heal_button.setBounds(1080-20-250, 415-20-125-125, 250, 150);
+        products_coin_heal_button.setName("products_coin_heal_button");
+        products_coin_heal_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                product_coin_heal_button_click();
+            }
+        });
+        out.addActor(products_coin_heal_button);
+
+        ImageButton products_ad_heal_button = new ImageButton(skin, "ad_heal_button");
+        products_ad_heal_button.setBounds(1080-20-250, 415-20-125-125-125, 250, 150);
+        products_ad_heal_button.setName("products_ad_heal_button");
+        products_ad_heal_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                product_ad_heal_button_click();
+            }
+        });
+        out.addActor(products_ad_heal_button);
+
+        Table table = new Table();
+        table.defaults().width(250).height(375);
+
+        for (Leave leave : Box.getInstance().getPlant().getLeaves()){
+            table.add(generate_leave(leave));
+        }
+
+        ScrollPane pane = new ScrollPane(table);
+        pane.setScrollingDisabled(false, true);
+        pane.setBounds(20 ,20 ,1080-20-20-250-20 , 375);
+        out.addActor(pane);
+
+
+        out.setPosition(20, 1920-20-500-20-415-20-415-20-415-20-415);
+        out.setName("product_pane");
+        return out;
+    }
+    public Group generate_product(Product product){
+        Group out = new Group();
+
+        Image pane = new Image(atlas.findRegion("product_pane"));
+        pane.setBounds(0, 0, 250, 375);
+        out.addActor(pane);
+//        Image hp;
+//
+//
+//
+//            int percent = (int)((product.getCurrent_health()/product.getMaximum_health())*10);
+//
+//            if(percent==0){
+//                hp = new Image(atlas.findRegion("item_plant_hp_bar_0"));
+//            }else
+//            if(percent>=0&&percent<=10){
+//                hp = new Image(atlas.findRegion("item_plant_hp_bar_10"));
+//            }else
+//            if(percent>=10&&percent<=20){
+//                hp = new Image(atlas.findRegion("item_plant_hp_bar_20"));
+//            }else
+//            if(percent>=20&&percent<=30){
+//                hp = new Image(atlas.findRegion("item_plant_hp_bar_30"));
+//            }else
+//            if(percent>=30&&percent<=40){
+//                hp = new Image(atlas.findRegion("item_plant_hp_bar_40"));
+//            }else
+//            if(percent>=40&&percent<=50){
+//                hp = new Image(atlas.findRegion("item_plant_hp_bar_50"));
+//            }else
+//            if(percent>=50&&percent<=60){
+//                hp = new Image(atlas.findRegion("item_plant_hp_bar_60"));
+//            }else
+//            if(percent>=60&&percent<=70){
+//                hp = new Image(atlas.findRegion("item_plant_hp_bar_70"));
+//            }else
+//            if(percent>=70&&percent<=80){
+//                hp = new Image(atlas.findRegion("item_plant_hp_bar_80"));
+//            }else
+//            if(percent>=80&&percent<=90){
+//                hp = new Image(atlas.findRegion("item_plant_hp_bar_90"));
+//            }else
+//            if(percent>=90){
+//                hp = new Image(atlas.findRegion("item_plant_hp_bar_100"));
+//            }else{
+//                hp = null;
+//            }
+//
+//            hp.setPosition(20, 375-20-200);
+//            out.addActor(hp);
+
+        Label lvl = new Label(
+                product.getLvl()+"",
+                new Label.LabelStyle(alice_64_black, Color.BLACK)
+        );
+        lvl.setAlignment(Align.center);
+        lvl.setWrap(true);
+        lvl.setBounds(25, 375-20-200-20-86.5f, 86.5f, 86.5f);
+        out.addActor(lvl);
+
+        Label price = new Label(
+                product.getPrice()+"",
+                new Label.LabelStyle(alice_64_black, Color.BLACK)
+        );
+        price.setAlignment(Align.center);
+        price.setWrap(true);
+        price.setBounds(250-25-86.5f, 25, 86.5f, 86.5f);
+        out.addActor(price);
+
+        return out;
+    }
+
+    public Group generate_buttons_pane(){
+        Group out = new Group();
+
+        Image background = new Image(atlas.findRegion("buttons_pane_background"));
+        background.setPosition(0, 0);
+        background.setName("buttons_pane_background");
+        out.addActor(background);
+
+        ImageButton harvest_button = new ImageButton(skin, "harvest_button");
+        harvest_button.setBounds(20, 20, 250, 125);
+        harvest_button.setName("harvest_buy_button");
+        harvest_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                harvest_button_click();
+            }
+        });
+        out.addActor(harvest_button);
+
+        ImageButton kill_button = new ImageButton(skin, "kill_button");
+        kill_button.setBounds(20+250+20, 20, 250, 125);
+        kill_button.setName("kill_button");
+        kill_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                kill_button_click();
+            }
+        });
+        out.addActor(kill_button);
+
+        ImageButton back_button = new ImageButton(skin, "back_button");
+        back_button.setBounds(1080-20-500, 20, 500, 125);
+        back_button.setName("back_button");
+        back_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                back_button_click();
+            }
+        });
+        out.addActor(back_button);
+
+
+        out.setName("button_pane");
+        out.setPosition(20, 20);
+        return out;
+    }
 
 
     @Override
