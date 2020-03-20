@@ -99,7 +99,7 @@ public class PlantScreen implements Screen {
     }
     public Image generate_plant_hp_bar(){
         Image hp_bar;
-        int percent_hp = (int) ((Box.getInstance().getPlant().getCurrent_health()/Box.getInstance().getPlant().getMaximum_health())*100);
+        int percent_hp = (int) (((double)Box.getInstance().getPlant().getCurrent_health()/(double)Box.getInstance().getPlant().getMaximum_health())*100);
 
         if(percent_hp<=0){
             hp_bar = new Image(atlas.findRegion("plant_hp_bar_0_image"));
@@ -774,7 +774,7 @@ public class PlantScreen implements Screen {
         out.addActor(background);
 
         ImageButton leaves_buy_button = new ImageButton(skin, "buy_button");
-        leaves_buy_button.setBounds(1080-20-250, 415-20-125, 250, 150);
+        leaves_buy_button.setBounds(1080-20-250, 415-20-125, 250, 125);
         leaves_buy_button.setName("leaves_buy_button");
         leaves_buy_button.addListener(new ClickListener() {
             @Override
@@ -785,7 +785,7 @@ public class PlantScreen implements Screen {
         out.addActor(leaves_buy_button);
 
         ImageButton leaves_coin_heal_button = new ImageButton(skin, "coin_heal_button");
-        leaves_coin_heal_button.setBounds(1080-20-250, 415-20-125-125, 250, 150);
+        leaves_coin_heal_button.setBounds(1080-20-250, 415-20-125-125, 250, 125);
         leaves_coin_heal_button.setName("leaves_coin_heal_button");
         leaves_coin_heal_button.addListener(new ClickListener() {
             @Override
@@ -796,7 +796,7 @@ public class PlantScreen implements Screen {
         out.addActor(leaves_coin_heal_button);
 
         ImageButton leaves_ad_heal_button = new ImageButton(skin, "ad_heal_button");
-        leaves_ad_heal_button.setBounds(1080-20-250, 415-20-125-125-125, 250, 150);
+        leaves_ad_heal_button.setBounds(1080-20-250, 415-20-125-125-125, 250, 125);
         leaves_ad_heal_button.setName("leaves_ad_heal_button");
         leaves_ad_heal_button.addListener(new ClickListener() {
             @Override
@@ -835,7 +835,7 @@ public class PlantScreen implements Screen {
 
         if(leave.isAlive()){
 
-            int percent = (int)((leave.getCurrent_health()/leave.getMaximum_health())*10);
+            int percent = (int)(((double)leave.getCurrent_health()/(double)leave.getMaximum_health())*100);
 
             if(percent==0){
                 hp = new Image(atlas.findRegion("item_hp_bar_0_image"));
@@ -873,7 +873,7 @@ public class PlantScreen implements Screen {
                 hp = null;
             }
 
-            hp.setPosition(20, 375-20-200);
+            hp.setBounds(25, 375-20-50, 200, 50);
             out.addActor(hp);
 
 
@@ -887,7 +887,7 @@ public class PlantScreen implements Screen {
         );
         height.setAlignment(Align.center);
         height.setWrap(true);
-        height.setBounds(25, 375-20-200-20-86.5f, 86.5f, 86.5f);
+        height.setBounds(25, 375-20-50-86.5f, 86.5f, 86.5f);
         out.addActor(height);
 
         Label width = new Label(
@@ -896,24 +896,24 @@ public class PlantScreen implements Screen {
         );
         width.setAlignment(Align.center);
         width.setWrap(true);
-        width.setBounds(250-25-86.5f, 375-20-200-20-86.5f, 86.5f, 86.5f);
+        width.setBounds(250-25-86.5f, 375-20-50-86.5f, 86.5f, 86.5f);
         out.addActor(width);
 
         Label light = new Label(
-                leave.getLight_energy_production()*(leave.getHeight()*leave.getWidth())+"",
+                (int)(leave.getLight_energy_production()*(leave.getHeight()*leave.getWidth()))+"",
                 new Label.LabelStyle(alice_64_black, Color.BLACK)
         );
         light.setAlignment(Align.center);
-        light.setWrap(true);
+        light.setWrap(false);
         light.setBounds(25, 25, 86.5f, 86.5f);
         out.addActor(light);
 
         Label dark = new Label(
-                leave.getDark_energy_production()*(leave.getHeight()*leave.getWidth())+"",
+                (int)(leave.getDark_energy_production()*(leave.getHeight()*leave.getWidth()))+"",
                 new Label.LabelStyle(alice_64_black, Color.BLACK)
         );
         dark.setAlignment(Align.center);
-        dark.setWrap(true);
+        dark.setWrap(false);
         dark.setBounds(250-25-86.5f, 25, 86.5f, 86.5f);
         out.addActor(dark);
 
@@ -930,7 +930,7 @@ public class PlantScreen implements Screen {
         out.addActor(background);
 
         ImageButton roots_buy_button = new ImageButton(skin, "buy_button");
-        roots_buy_button.setBounds(1080-20-250, 415-20-125, 250, 150);
+        roots_buy_button.setBounds(1080-20-250, 415-20-125, 250, 125);
         roots_buy_button.setName("roots_buy_button");
         roots_buy_button.addListener(new ClickListener() {
             @Override
@@ -941,7 +941,7 @@ public class PlantScreen implements Screen {
         out.addActor(roots_buy_button);
 
         ImageButton roots_coin_heal_button = new ImageButton(skin, "coin_heal_button");
-        roots_coin_heal_button.setBounds(1080-20-250, 415-20-125-125, 250, 150);
+        roots_coin_heal_button.setBounds(1080-20-250, 415-20-125-125, 250, 125);
         roots_coin_heal_button.setName("roots_coin_heal_button");
         roots_coin_heal_button.addListener(new ClickListener() {
             @Override
@@ -952,7 +952,7 @@ public class PlantScreen implements Screen {
         out.addActor(roots_coin_heal_button);
 
         ImageButton roots_ad_heal_button = new ImageButton(skin, "ad_heal_button");
-        roots_ad_heal_button.setBounds(1080-20-250, 415-20-125-125-125, 250, 150);
+        roots_ad_heal_button.setBounds(1080-20-250, 415-20-125-125-125, 250, 125);
         roots_ad_heal_button.setName("roots_ad_heal_button");
         roots_ad_heal_button.addListener(new ClickListener() {
             @Override
@@ -991,7 +991,7 @@ public class PlantScreen implements Screen {
 
         if(root.isAlive()){
 
-            int percent = (int)((root.getCurrent_health()/root.getMaximum_health())*10);
+            int percent = (int)(((double)root.getCurrent_health()/(double)root.getMaximum_health())*100);
 
             if(percent==0){
                 hp = new Image(atlas.findRegion("item_hp_bar_0_image"));
@@ -1029,7 +1029,7 @@ public class PlantScreen implements Screen {
                 hp = null;
             }
 
-            hp.setPosition(20, 375-20-200);
+            hp.setBounds(25, 375-20-50, 200 ,50);
             out.addActor(hp);
 
 
@@ -1043,7 +1043,7 @@ public class PlantScreen implements Screen {
         );
         length.setAlignment(Align.center);
         length.setWrap(true);
-        length.setBounds(25, 375-20-200-20-86.5f, 86.5f, 86.5f);
+        length.setBounds(25, 375-20-50-86.5f, 86.5f, 86.5f);
         out.addActor(length);
 
         Label water = new Label(
@@ -1069,7 +1069,7 @@ public class PlantScreen implements Screen {
         out.addActor(background);
 
         ImageButton products_buy_button = new ImageButton(skin, "buy_button");
-        products_buy_button.setBounds(1080-20-250, 415-20-125, 250, 150);
+        products_buy_button.setBounds(1080-20-250, 415-20-125, 250, 125);
         products_buy_button.setName("products_buy_button");
         products_buy_button.addListener(new ClickListener() {
             @Override
@@ -1080,7 +1080,7 @@ public class PlantScreen implements Screen {
         out.addActor(products_buy_button);
 
         ImageButton products_coin_heal_button = new ImageButton(skin, "coin_heal_button");
-        products_coin_heal_button.setBounds(1080-20-250, 415-20-125-125, 250, 150);
+        products_coin_heal_button.setBounds(1080-20-250, 415-20-125-125, 250, 125);
         products_coin_heal_button.setName("products_coin_heal_button");
         products_coin_heal_button.addListener(new ClickListener() {
             @Override
@@ -1091,7 +1091,7 @@ public class PlantScreen implements Screen {
         out.addActor(products_coin_heal_button);
 
         ImageButton products_ad_heal_button = new ImageButton(skin, "ad_heal_button");
-        products_ad_heal_button.setBounds(1080-20-250, 415-20-125-125-125, 250, 150);
+        products_ad_heal_button.setBounds(1080-20-250, 415-20-125-125-125, 250, 125);
         products_ad_heal_button.setName("products_ad_heal_button");
         products_ad_heal_button.addListener(new ClickListener() {
             @Override
@@ -1175,8 +1175,8 @@ public class PlantScreen implements Screen {
                 new Label.LabelStyle(alice_64_black, Color.BLACK)
         );
         lvl.setAlignment(Align.center);
-        lvl.setWrap(true);
-        lvl.setBounds(25, 375-20-200-20-86.5f, 86.5f, 86.5f);
+        lvl.setWrap(false);
+        lvl.setBounds(25, 375-20-50-86.5f, 86.5f, 86.5f);
         out.addActor(lvl);
 
         Label price = new Label(
@@ -1184,7 +1184,7 @@ public class PlantScreen implements Screen {
                 new Label.LabelStyle(alice_64_black, Color.BLACK)
         );
         price.setAlignment(Align.center);
-        price.setWrap(true);
+        price.setWrap(false);
         price.setBounds(250-25-86.5f, 25, 86.5f, 86.5f);
         out.addActor(price);
 

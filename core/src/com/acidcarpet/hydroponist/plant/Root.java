@@ -5,8 +5,6 @@ import com.acidcarpet.hydroponist.equipment.WaterPack;
 public class Root {
     boolean alive;
 
-    Box box = Box.getInstance();
-
     public Root(
             int maximum_health,
             int growth_length,
@@ -22,8 +20,6 @@ public class Root {
             double water_absorb_multiplier
 
     ){
-
-        this.box = box;
 
         alive=true;
         length=1;
@@ -67,35 +63,35 @@ public class Root {
         if(!alive) return;
         WaterPack metabolism_pack;
         if(
-                        (box.getPot().getCurrent_pH()< ph_maximum &&box.getPot().getCurrent_pH()> pH_minimum)
-                &&      (box.getPot().get_all_ppm()>ppm_minimum&&box.getPot().get_all_ppm()<ppm_maximum)
-                &&       box.getPump().reduce_oxygen(oxygen_consumption *length)
-                &&       box.getPot().getCurrent_volume()>=length*water_volume_multiplier
+                        (Box.getInstance().getPot().getCurrent_pH()< ph_maximum &&Box.getInstance().getPot().getCurrent_pH()> pH_minimum)
+                &&      (Box.getInstance().getPot().get_all_ppm()>ppm_minimum&&Box.getInstance().getPot().get_all_ppm()<ppm_maximum)
+                &&       Box.getInstance().getPump().reduce_oxygen(oxygen_consumption *length)
+                &&       Box.getInstance().getPot().getCurrent_volume()>=length*water_volume_multiplier
         ){
             current_health++;
             if(current_health>maximum_health)current_health = maximum_health;
 
             metabolism_pack= new WaterPack(
                     length*water_volume_multiplier,
-                    box.getPot().getCurrent_pH(),
-                    box.getPot().getN(),
-                    box.getPot().getP(),
-                    box.getPot().getK(),
-                    box.getPot().getS(),
-                    box.getPot().getMg(),
-                    box.getPot().getCa(),
-                    box.getPot().getB(),
-                    box.getPot().getCu(),
-                    box.getPot().getFe(),
-                    box.getPot().getMn(),
-                    box.getPot().getMo(),
-                    box.getPot().getZn()
+                    Box.getInstance().getPot().getCurrent_pH(),
+                    Box.getInstance().getPot().getN(),
+                    Box.getInstance().getPot().getP(),
+                    Box.getInstance().getPot().getK(),
+                    Box.getInstance().getPot().getS(),
+                    Box.getInstance().getPot().getMg(),
+                    Box.getInstance().getPot().getCa(),
+                    Box.getInstance().getPot().getB(),
+                    Box.getInstance().getPot().getCu(),
+                    Box.getInstance().getPot().getFe(),
+                    Box.getInstance().getPot().getMn(),
+                    Box.getInstance().getPot().getMo(),
+                    Box.getInstance().getPot().getZn()
 
             );
-            box.getPot().drain(length*water_volume_multiplier);
+            Box.getInstance().getPot().drain(length*water_volume_multiplier);
 
             if (metabolism_pack!=null){
-                box.getPlant().add_metabolism_pack(metabolism_pack);
+                Box.getInstance().getPlant().add_metabolism_pack(metabolism_pack);
             }else{
                 current_health-=2;
                 if(current_health<=0) {
@@ -119,9 +115,6 @@ public class Root {
 
     public boolean isAlive() {
         return alive;
-    }
-    public Box getBox() {
-        return box;
     }
     public int getCurrent_health() {
         return current_health;

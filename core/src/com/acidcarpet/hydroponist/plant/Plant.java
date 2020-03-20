@@ -76,6 +76,25 @@ public abstract class Plant implements Storable {
         roots = new LinkedList<>();
         products = new LinkedList<>();
 
+        leaves.add(get_new_leave());
+        leaves.add(get_new_leave());
+        leaves.add(get_new_leave());
+        leaves.add(get_new_leave());
+        leaves.add(get_new_leave());
+
+        roots.add(get_new_root());
+        roots.add(get_new_root());
+        roots.add(get_new_root());
+        roots.add(get_new_root());
+        roots.add(get_new_root());
+        roots.add(get_new_root());
+
+        products.add(get_new_product());
+        products.add(get_new_product());
+        products.add(get_new_product());
+        products.add(get_new_product());
+        products.add(get_new_product());
+
         stages = set_stages();
 
         this.maximum_health = maximum_health;
@@ -93,6 +112,8 @@ public abstract class Plant implements Storable {
         element_P_problem_points = 0;
         element_Mg_problem_points = 0;
         element_S_problem_points = 0;
+
+
 
     }
 

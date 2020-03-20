@@ -91,7 +91,7 @@ public class ScreenAssets {
         generator.dispose();
 
         alice_144_green = createFont(144, Color.BLACK);
-        alice_64_black = createFont(144, Color.GREEN);
+        alice_64_black = createFont(64, Color.GREEN);
 
     }
 
