@@ -1,0 +1,1150 @@
+
+plant_screen.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+background
+  rotate: false
+  xy: 1, 103
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+plant_hp_bar_80_image
+  rotate: false
+  xy: 1, 1
+  size: 1040, 100
+  orig: 1040, 100
+  offset: 0, 0
+  index: -1
+item_hp_bar_0_image
+  rotate: false
+  xy: 1083, 1823
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+item_hp_bar_80_image
+  rotate: false
+  xy: 1083, 1621
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+item_hp_bar_20_image
+  rotate: false
+  xy: 1083, 1419
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+item_hp_bar_40_image
+  rotate: false
+  xy: 1083, 1217
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+item_hp_bar_10_image
+  rotate: false
+  xy: 1083, 1015
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+item_hp_bar_100_image
+  rotate: false
+  xy: 1083, 813
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+item_hp_bar_50_image
+  rotate: false
+  xy: 1083, 611
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+item_hp_bar_70_image
+  rotate: false
+  xy: 1083, 409
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+item_hp_bar_60_image
+  rotate: false
+  xy: 1083, 207
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+item_hp_bar_30_image
+  rotate: false
+  xy: 1083, 5
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+
+plant_screen2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+leave_pane
+  rotate: false
+  xy: 1, 503
+  size: 1000, 1500
+  orig: 1000, 1500
+  offset: 0, 0
+  index: -1
+plant_hp_bar_40_image
+  rotate: false
+  xy: 1003, 1903
+  size: 1040, 100
+  orig: 1040, 100
+  offset: 0, 0
+  index: -1
+plant_hp_bar_50_image
+  rotate: false
+  xy: 1003, 1801
+  size: 1040, 100
+  orig: 1040, 100
+  offset: 0, 0
+  index: -1
+plant_hp_bar_20_image
+  rotate: false
+  xy: 1003, 1699
+  size: 1040, 100
+  orig: 1040, 100
+  offset: 0, 0
+  index: -1
+plant_hp_bar_70_image
+  rotate: false
+  xy: 1003, 1597
+  size: 1040, 100
+  orig: 1040, 100
+  offset: 0, 0
+  index: -1
+plant_hp_bar_10_image
+  rotate: false
+  xy: 1003, 1495
+  size: 1040, 100
+  orig: 1040, 100
+  offset: 0, 0
+  index: -1
+plant_hp_bar_0_image
+  rotate: false
+  xy: 1003, 1393
+  size: 1040, 100
+  orig: 1040, 100
+  offset: 0, 0
+  index: -1
+plant_hp_bar_100_image
+  rotate: false
+  xy: 1003, 1291
+  size: 1040, 100
+  orig: 1040, 100
+  offset: 0, 0
+  index: -1
+plant_hp_bar_30_image
+  rotate: false
+  xy: 1003, 1189
+  size: 1040, 100
+  orig: 1040, 100
+  offset: 0, 0
+  index: -1
+plant_hp_bar_60_image
+  rotate: false
+  xy: 1003, 1087
+  size: 1040, 100
+  orig: 1040, 100
+  offset: 0, 0
+  index: -1
+plant_hp_bar_90_image
+  rotate: false
+  xy: 1003, 985
+  size: 1040, 100
+  orig: 1040, 100
+  offset: 0, 0
+  index: -1
+info_pane_background
+  rotate: false
+  xy: 1, 1
+  size: 1080, 500
+  orig: 1080, 500
+  offset: 0, 0
+  index: -1
+item_hp_bar_90_image
+  rotate: false
+  xy: 1083, 783
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+harvest_stage_enable
+  rotate: false
+  xy: 1003, 524
+  size: 256, 257
+  orig: 256, 257
+  offset: 0, 0
+  index: -1
+back_button_disable
+  rotate: false
+  xy: 1261, 656
+  size: 500, 125
+  orig: 500, 125
+  offset: 0, 0
+  index: -1
+S_disabled_icon
+  rotate: false
+  xy: 1763, 525
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+back_button_pressed
+  rotate: false
+  xy: 1261, 529
+  size: 500, 125
+  orig: 500, 125
+  offset: 0, 0
+  index: -1
+back_button_enable
+  rotate: false
+  xy: 1261, 402
+  size: 500, 125
+  orig: 500, 125
+  offset: 0, 0
+  index: -1
+seed_stage_current
+  rotate: false
+  xy: 1763, 267
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Fe_1_icon
+  rotate: false
+  xy: 1083, 9
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+buy_button_pressed
+  rotate: false
+  xy: 1083, 275
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+buy_button_disable
+  rotate: false
+  xy: 1335, 275
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+seed_stage_disable
+  rotate: false
+  xy: 1341, 9
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+S_2_icon
+  rotate: false
+  xy: 1599, 9
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+plant_screen3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+root_pane
+  rotate: false
+  xy: 1, 545
+  size: 1000, 1500
+  orig: 1000, 1500
+  offset: 0, 0
+  index: -1
+product_pane
+  rotate: false
+  xy: 1003, 545
+  size: 1000, 1500
+  orig: 1000, 1500
+  offset: 0, 0
+  index: -1
+products_pane_background
+  rotate: false
+  xy: 1, 128
+  size: 1080, 415
+  orig: 1080, 415
+  offset: 0, 0
+  index: -1
+leaves_pane_background
+  rotate: false
+  xy: 1, 128
+  size: 1080, 415
+  orig: 1080, 415
+  offset: 0, 0
+  index: -1
+roots_pane_background
+  rotate: false
+  xy: 1, 128
+  size: 1080, 415
+  orig: 1080, 415
+  offset: 0, 0
+  index: -1
+kill_button_disable
+  rotate: false
+  xy: 1, 1
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+kill_button_pressed
+  rotate: false
+  xy: 253, 1
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+coin_heal_button_enable
+  rotate: false
+  xy: 505, 1
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+coin_heal_button_pressed
+  rotate: false
+  xy: 757, 1
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+kill_button_enable
+  rotate: false
+  xy: 1009, 1
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+B_1_icon
+  rotate: false
+  xy: 1083, 287
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+post_bloom_stage_current
+  rotate: false
+  xy: 1261, 29
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+vegetation_stage_disable
+  rotate: false
+  xy: 1341, 287
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+pre_vegetation_stage_disable
+  rotate: false
+  xy: 1519, 29
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mg_5_icon
+  rotate: false
+  xy: 1599, 287
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+N_disabled_icon
+  rotate: false
+  xy: 1777, 29
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+plant_screen4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+buttons_pane_background
+  rotate: false
+  xy: 1, 1807
+  size: 1080, 175
+  orig: 1080, 175
+  offset: 0, 0
+  index: -1
+Fe_3_icon
+  rotate: false
+  xy: 1083, 1726
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+soaking_stage_current
+  rotate: false
+  xy: 1341, 1726
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+bloom_stage_current
+  rotate: false
+  xy: 1599, 1726
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+B_2_icon
+  rotate: false
+  xy: 1, 1549
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+K_disabled_icon
+  rotate: false
+  xy: 259, 1549
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mn_1_icon
+  rotate: false
+  xy: 517, 1549
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+K_0_icon
+  rotate: false
+  xy: 775, 1549
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mn_4_icon
+  rotate: false
+  xy: 1033, 1468
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mo_5_icon
+  rotate: false
+  xy: 1291, 1468
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mg_2_icon
+  rotate: false
+  xy: 1549, 1468
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+S_5_icon
+  rotate: false
+  xy: 1, 1291
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mn_5_icon
+  rotate: false
+  xy: 259, 1291
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mn_0_icon
+  rotate: false
+  xy: 517, 1291
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Ca_0_icon
+  rotate: false
+  xy: 775, 1291
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Fe_disabled_icon
+  rotate: false
+  xy: 1033, 1210
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+B_0_icon
+  rotate: false
+  xy: 1291, 1210
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+P_disabled_icon
+  rotate: false
+  xy: 1549, 1210
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+N_1_icon
+  rotate: false
+  xy: 1, 1033
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Zn_5_icon
+  rotate: false
+  xy: 259, 1033
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+pre_bloom_stage_current
+  rotate: false
+  xy: 517, 1033
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mg_0_icon
+  rotate: false
+  xy: 775, 1033
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Ca_disabled_icon
+  rotate: false
+  xy: 1033, 952
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Ca_2_icon
+  rotate: false
+  xy: 1291, 952
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+harvest_stage_current
+  rotate: false
+  xy: 1549, 952
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Zn_0_icon
+  rotate: false
+  xy: 1, 775
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+vegetation_stage_current
+  rotate: false
+  xy: 259, 775
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Cu_disabled_icon
+  rotate: false
+  xy: 517, 775
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mn_disabled_icon
+  rotate: false
+  xy: 775, 775
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+B_5_icon
+  rotate: false
+  xy: 1033, 694
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Fe_0_icon
+  rotate: false
+  xy: 1291, 694
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Fe_5_icon
+  rotate: false
+  xy: 1549, 694
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+S_4_icon
+  rotate: false
+  xy: 1, 517
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+K_2_icon
+  rotate: false
+  xy: 259, 517
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mn_2_icon
+  rotate: false
+  xy: 517, 517
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+P_0_icon
+  rotate: false
+  xy: 775, 517
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Cu_2_icon
+  rotate: false
+  xy: 1033, 436
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+pre_bloom_stage_disable
+  rotate: false
+  xy: 1291, 436
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Zn_4_icon
+  rotate: false
+  xy: 1549, 436
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Zn_1_icon
+  rotate: false
+  xy: 1, 259
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mg_3_icon
+  rotate: false
+  xy: 259, 259
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Ca_5_icon
+  rotate: false
+  xy: 517, 259
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+S_3_icon
+  rotate: false
+  xy: 775, 259
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+B_disabled_icon
+  rotate: false
+  xy: 1033, 178
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mo_disabled_icon
+  rotate: false
+  xy: 1, 1
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mn_3_icon
+  rotate: false
+  xy: 259, 1
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Fe_4_icon
+  rotate: false
+  xy: 517, 1
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Cu_1_icon
+  rotate: false
+  xy: 775, 1
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+buy_button_enable
+  rotate: false
+  xy: 1033, 51
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+harvest_button_enable
+  rotate: false
+  xy: 1285, 51
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+Ca_4_icon
+  rotate: false
+  xy: 1291, 178
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+coin_heal_button_disable
+  rotate: false
+  xy: 1537, 51
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+ad_heal_button_disable
+  rotate: false
+  xy: 1537, 51
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+Ca_1_icon
+  rotate: false
+  xy: 1549, 178
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ad_heal_button_pressed
+  rotate: false
+  xy: 1789, 51
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+
+plant_screen5.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+B_4_icon
+  rotate: false
+  xy: 1, 1676
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+N_4_icon
+  rotate: false
+  xy: 1, 1418
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+K_5_icon
+  rotate: false
+  xy: 259, 1676
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+harvest_stage_disable
+  rotate: false
+  xy: 1, 1160
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Cu_4_icon
+  rotate: false
+  xy: 259, 1418
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mo_1_icon
+  rotate: false
+  xy: 517, 1676
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+soaking_stage_disable
+  rotate: false
+  xy: 1, 902
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+N_2_icon
+  rotate: false
+  xy: 259, 1160
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Cu_3_icon
+  rotate: false
+  xy: 517, 1418
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Zn_3_icon
+  rotate: false
+  xy: 775, 1676
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Zn_2_icon
+  rotate: false
+  xy: 1, 644
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mo_4_icon
+  rotate: false
+  xy: 259, 902
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+N_3_icon
+  rotate: false
+  xy: 517, 1160
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+K_4_icon
+  rotate: false
+  xy: 775, 1418
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+bloom_stage_disable
+  rotate: false
+  xy: 1033, 1676
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+K_1_icon
+  rotate: false
+  xy: 1, 386
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Fe_2_icon
+  rotate: false
+  xy: 259, 644
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mo_0_icon
+  rotate: false
+  xy: 517, 902
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+P_3_icon
+  rotate: false
+  xy: 775, 1160
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mo_3_icon
+  rotate: false
+  xy: 1033, 1418
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Cu_5_icon
+  rotate: false
+  xy: 1291, 1676
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+post_bloom_stage_disable
+  rotate: false
+  xy: 1, 128
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+S_0_icon
+  rotate: false
+  xy: 259, 386
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+P_5_icon
+  rotate: false
+  xy: 517, 644
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+N_0_icon
+  rotate: false
+  xy: 775, 902
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+post_vegetation_stage_disable
+  rotate: false
+  xy: 1033, 1160
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Zn_disabled_icon
+  rotate: false
+  xy: 1291, 1418
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mg_1_icon
+  rotate: false
+  xy: 1549, 1676
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mo_2_icon
+  rotate: false
+  xy: 259, 128
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+N_5_icon
+  rotate: false
+  xy: 517, 386
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+P_2_icon
+  rotate: false
+  xy: 775, 644
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+S_1_icon
+  rotate: false
+  xy: 1033, 902
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+B_3_icon
+  rotate: false
+  xy: 1291, 1160
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+post_vegetation_stage_current
+  rotate: false
+  xy: 1549, 1418
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Cu_0_icon
+  rotate: false
+  xy: 517, 128
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mg_4_icon
+  rotate: false
+  xy: 775, 386
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+K_3_icon
+  rotate: false
+  xy: 1033, 644
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Ca_3_icon
+  rotate: false
+  xy: 1291, 902
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+P_4_icon
+  rotate: false
+  xy: 1549, 1160
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+P_1_icon
+  rotate: false
+  xy: 775, 128
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+Mg_disabled_icon
+  rotate: false
+  xy: 1033, 386
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+pre_vegetation_stage_current
+  rotate: false
+  xy: 1291, 644
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+bloom_stage_enable
+  rotate: false
+  xy: 1549, 903
+  size: 256, 255
+  orig: 256, 255
+  offset: 0, 0
+  index: -1
+pre_vegetation_stage_enable
+  rotate: false
+  xy: 1033, 129
+  size: 256, 255
+  orig: 256, 255
+  offset: 0, 0
+  index: -1
+soaking_stage_enable
+  rotate: false
+  xy: 1291, 387
+  size: 256, 255
+  orig: 256, 255
+  offset: 0, 0
+  index: -1
+post_vegetation_stage_enable
+  rotate: false
+  xy: 1549, 646
+  size: 256, 255
+  orig: 256, 255
+  offset: 0, 0
+  index: -1
+vegetation_stage_enable
+  rotate: false
+  xy: 1291, 130
+  size: 256, 255
+  orig: 256, 255
+  offset: 0, 0
+  index: -1
+post_bloom_stage_enable
+  rotate: false
+  xy: 1549, 389
+  size: 256, 255
+  orig: 256, 255
+  offset: 0, 0
+  index: -1
+pre_bloom_stage_enable
+  rotate: false
+  xy: 1549, 132
+  size: 256, 255
+  orig: 256, 255
+  offset: 0, 0
+  index: -1
+harvest_button_disable
+  rotate: false
+  xy: 1, 1
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+ad_heal_button_enable
+  rotate: false
+  xy: 253, 1
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+harvest_button_pressed
+  rotate: false
+  xy: 505, 1
+  size: 250, 125
+  orig: 250, 125
+  offset: 0, 0
+  index: -1
+
+plant_screen6.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+seed_stage_enable
+  rotate: false
+  xy: 1, 1
+  size: 256, 255
+  orig: 256, 255
+  offset: 0, 0
+  index: -1

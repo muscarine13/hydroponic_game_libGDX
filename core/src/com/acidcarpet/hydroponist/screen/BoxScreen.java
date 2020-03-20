@@ -129,7 +129,7 @@ public class BoxScreen implements Screen {
 
     //
     private void lamp_click(){game.setScreen(new LampScreen(game));}
-    private void plant_click(){System.err.println("Plant click!");}
+    private void plant_click(){game.setScreen(new PlantScreen(game));}
     private void fan_click(){game.setScreen(new FanScreen(game));}
     private void pot_click(){game.setScreen(new PotScreen(game));}
     private void compressor_click(){game.setScreen(new PumpScreen(game));}

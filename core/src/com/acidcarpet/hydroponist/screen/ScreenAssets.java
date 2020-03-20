@@ -27,6 +27,9 @@ public class ScreenAssets {
     BitmapFont alice_28_555555;
     BitmapFont alice_72_8F8F8F_stroke_black;
 
+    BitmapFont alice_144_green;
+    BitmapFont alice_64_black;
+
     private TextureAtlas BoxScreen_atlas;
     private Skin BoxScreen_skin;
 
@@ -41,6 +44,9 @@ public class ScreenAssets {
 
     private TextureAtlas PotScreen_atlas;
     private Skin PotScreen_skin;
+
+    private TextureAtlas PlantScreen_atlas;
+    private Skin PlantScreen_skin;
 
     private ScreenAssets(){
 
@@ -58,6 +64,10 @@ public class ScreenAssets {
 
         PotScreen_atlas = new TextureAtlas(Gdx.files.internal("skin/pot/data/pot_screen.pack"));
         PotScreen_skin = new Skin(Gdx.files.internal("skin/pot/data/pot_screen.json"), PotScreen_atlas);
+
+        PlantScreen_atlas = new TextureAtlas(Gdx.files.internal("skin/plant/data/plant_screen.pack"));
+        PlantScreen_skin = new Skin(Gdx.files.internal("skin/plant/data/plant_screen.json"), PlantScreen_atlas);
+
 
         alice_48_green = createFont(48, Color.GREEN);
         alice_48_black = createFont(48, Color.BLACK);
@@ -79,6 +89,9 @@ public class ScreenAssets {
 
         alice_36_373737_stroke_black  = generator.generateFont(parameter);
         generator.dispose();
+
+        alice_144_green = createFont(144, Color.BLACK);
+        alice_64_black = createFont(144, Color.GREEN);
 
     }
 
@@ -105,6 +118,12 @@ public class ScreenAssets {
     }
     public BitmapFont getAlice_72_8F8F8F_stroke_black() {
         return alice_72_8F8F8F_stroke_black;
+    }
+    public BitmapFont getAlice_144_green() {
+        return alice_144_green;
+    }
+    public BitmapFont getAlice_64_black() {
+        return alice_64_black;
     }
 
     public TextureAtlas getBoxScreen_atlas() {
@@ -140,6 +159,13 @@ public class ScreenAssets {
     }
     public Skin getPotScreen_skin() {
         return PotScreen_skin;
+    }
+
+    public TextureAtlas getPlantScreen_atlas() {
+        return PlantScreen_atlas;
+    }
+    public Skin getPlantScreen_skin() {
+        return PlantScreen_skin;
     }
 
     private BitmapFont createFont(int size, Color color) {

@@ -155,78 +155,78 @@ public abstract class Plant implements Storable {
     public synchronized void add_metabolism_pack(WaterPack pack){
         if(!alive) return;
 
-        if(pack.element_ppm_N()<stages.get(current_stage_index).getCONSUMPTION_ELEMENT_N_MINIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_N_MINIMUM()!=0){
+        if(pack.element_ppm_N()<stages.get(current_stage_index).getPPm_N_MINIMUM()&&stages.get(current_stage_index).getPPm_N_MINIMUM()!=0){
             element_N_problem_points--;
         }
-        if(pack.element_ppm_N()>stages.get(current_stage_index).getCONSUMPTION_ELEMENT_N_MAXIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_N_MAXIMUM()!=0){
+        if(pack.element_ppm_N()>stages.get(current_stage_index).getPPm_N_MAXIMUM()&&stages.get(current_stage_index).getPPm_N_MAXIMUM()!=0){
             element_N_problem_points++;
         }
-        if(pack.element_ppm_P()<stages.get(current_stage_index).getCONSUMPTION_ELEMENT_P_MINIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_P_MINIMUM()!=0){
+        if(pack.element_ppm_P()<stages.get(current_stage_index).getPPm_P_MINIMUM()&&stages.get(current_stage_index).getPPm_P_MINIMUM()!=0){
             element_P_problem_points--;
         }
-        if(pack.element_ppm_P()>stages.get(current_stage_index).getCONSUMPTION_ELEMENT_P_MAXIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_P_MAXIMUM()!=0){
+        if(pack.element_ppm_P()>stages.get(current_stage_index).getPPm_P_MAXIMUM()&&stages.get(current_stage_index).getPPm_P_MAXIMUM()!=0){
             element_P_problem_points++;
         }
-        if(pack.element_ppm_K()<stages.get(current_stage_index).getCONSUMPTION_ELEMENT_K_MINIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_K_MINIMUM()!=0){
+        if(pack.element_ppm_K()<stages.get(current_stage_index).getPPm_K_MINIMUM()&&stages.get(current_stage_index).getPPm_K_MINIMUM()!=0){
             element_K_problem_points--;
         }
-        if(pack.element_ppm_K()>stages.get(current_stage_index).getCONSUMPTION_ELEMENT_K_MAXIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_K_MAXIMUM()!=0){
+        if(pack.element_ppm_K()>stages.get(current_stage_index).getPPm_K_MAXIMUM()&&stages.get(current_stage_index).getPPm_K_MAXIMUM()!=0){
             element_K_problem_points++;
         }
 
-        if(pack.element_ppm_S()<stages.get(current_stage_index).getCONSUMPTION_ELEMENT_S_MINIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_S_MINIMUM()!=0){
+        if(pack.element_ppm_S()<stages.get(current_stage_index).getPPm_S_MINIMUM()&&stages.get(current_stage_index).getPPm_S_MINIMUM()!=0){
             element_S_problem_points--;
         }
-        if(pack.element_ppm_S()>stages.get(current_stage_index).getCONSUMPTION_ELEMENT_S_MAXIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_S_MAXIMUM()!=0){
+        if(pack.element_ppm_S()>stages.get(current_stage_index).getPPm_S_MAXIMUM()&&stages.get(current_stage_index).getPPm_S_MAXIMUM()!=0){
             element_S_problem_points++;
         }
-        if(pack.element_ppm_Mg()<stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Mg_MINIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Mg_MINIMUM()!=0){
+        if(pack.element_ppm_Mg()<stages.get(current_stage_index).getPPm_Mg_MINIMUM()&&stages.get(current_stage_index).getPPm_Mg_MINIMUM()!=0){
             element_Mg_problem_points--;
         }
-        if(pack.element_ppm_Mg()>stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Mg_MAXIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Mg_MAXIMUM()!=0){
+        if(pack.element_ppm_Mg()>stages.get(current_stage_index).getPPm_Mg_MAXIMUM()&&stages.get(current_stage_index).getPPm_Mg_MAXIMUM()!=0){
             element_Mg_problem_points++;
         }
-        if(pack.element_ppm_Ca()<stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Ca_MINIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Ca_MINIMUM()!=0){
+        if(pack.element_ppm_Ca()<stages.get(current_stage_index).getPPm_Ca_MINIMUM()&&stages.get(current_stage_index).getPPm_Ca_MINIMUM()!=0){
             element_Ca_problem_points--;
         }
-        if(pack.element_ppm_Ca()>stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Ca_MAXIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Ca_MAXIMUM()!=0){
+        if(pack.element_ppm_Ca()>stages.get(current_stage_index).getPPm_Ca_MAXIMUM()&&stages.get(current_stage_index).getPPm_Ca_MAXIMUM()!=0){
             element_Ca_problem_points++;
         }
 
-        if(pack.element_ppm_B()<stages.get(current_stage_index).getCONSUMPTION_ELEMENT_B_MINIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_B_MINIMUM()!=0){
+        if(pack.element_ppm_B()<stages.get(current_stage_index).getPPm_B_MINIMUM()&&stages.get(current_stage_index).getPPm_B_MINIMUM()!=0){
             element_B_problem_points--;
         }
-        if(pack.element_ppm_B()>stages.get(current_stage_index).getCONSUMPTION_ELEMENT_B_MAXIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_B_MAXIMUM()!=0){
+        if(pack.element_ppm_B()>stages.get(current_stage_index).getPPm_B_MAXIMUM()&&stages.get(current_stage_index).getPPm_B_MAXIMUM()!=0){
             element_B_problem_points++;
         }
-        if(pack.element_ppm_Cu()<stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Cu_MINIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Cu_MINIMUM()!=0){
+        if(pack.element_ppm_Cu()<stages.get(current_stage_index).getPPm_Cu_MINIMUM()&&stages.get(current_stage_index).getPPm_Cu_MINIMUM()!=0){
             element_Cu_problem_points--;
         }
-        if(pack.element_ppm_Cu()>stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Cu_MAXIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Cu_MAXIMUM()!=0){
+        if(pack.element_ppm_Cu()>stages.get(current_stage_index).getPPm_Cu_MAXIMUM()&&stages.get(current_stage_index).getPPm_Cu_MAXIMUM()!=0){
             element_Cu_problem_points++;
         }
-        if(pack.element_ppm_Fe()<stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Fe_MINIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Fe_MINIMUM()!=0){
+        if(pack.element_ppm_Fe()<stages.get(current_stage_index).getPPm_Fe_MINIMUM()&&stages.get(current_stage_index).getPPm_Fe_MINIMUM()!=0){
             element_Fe_problem_points--;
         }
-        if(pack.element_ppm_Fe()>stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Fe_MAXIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Fe_MAXIMUM()!=0){
+        if(pack.element_ppm_Fe()>stages.get(current_stage_index).getPPm_Fe_MAXIMUM()&&stages.get(current_stage_index).getPPm_Fe_MAXIMUM()!=0){
             element_Fe_problem_points++;
         }
-        if(pack.element_ppm_Mn()<stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Mn_MINIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Mn_MINIMUM()!=0){
+        if(pack.element_ppm_Mn()<stages.get(current_stage_index).getPPm_Mn_MINIMUM()&&stages.get(current_stage_index).getPPm_Mn_MINIMUM()!=0){
             element_Mn_problem_points--;
         }
-        if(pack.element_ppm_Mn()>stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Mn_MAXIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Mn_MAXIMUM()!=0){
+        if(pack.element_ppm_Mn()>stages.get(current_stage_index).getPPm_Mn_MAXIMUM()&&stages.get(current_stage_index).getPPm_Mn_MAXIMUM()!=0){
             element_Mn_problem_points++;
         }
-        if(pack.element_ppm_Mo()<stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Mo_MINIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Mo_MINIMUM()!=0){
+        if(pack.element_ppm_Mo()<stages.get(current_stage_index).getPPm_Mo_MINIMUM()&&stages.get(current_stage_index).getPPm_Mo_MINIMUM()!=0){
             element_Mo_problem_points--;
         }
-        if(pack.element_ppm_Mo()>stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Mo_MAXIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Mo_MAXIMUM()!=0){
+        if(pack.element_ppm_Mo()>stages.get(current_stage_index).getPPm_Mo_MAXIMUM()&&stages.get(current_stage_index).getPPm_Mo_MAXIMUM()!=0){
             element_Mo_problem_points++;
         }
-        if(pack.element_ppm_Zn()<stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Zn_MINIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Zn_MINIMUM()!=0){
+        if(pack.element_ppm_Zn()<stages.get(current_stage_index).getPPm_Zn_MINIMUM()&&stages.get(current_stage_index).getPPm_Zn_MINIMUM()!=0){
             element_Zn_problem_points--;
         }
-        if(pack.element_ppm_Zn()>stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Zn_MAXIMUM()&&stages.get(current_stage_index).getCONSUMPTION_ELEMENT_Zn_MAXIMUM()!=0){
+        if(pack.element_ppm_Zn()>stages.get(current_stage_index).getPPm_Zn_MAXIMUM()&&stages.get(current_stage_index).getPPm_Zn_MAXIMUM()!=0){
             element_Zn_problem_points++;
         }
 

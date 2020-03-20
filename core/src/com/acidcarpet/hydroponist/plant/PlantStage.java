@@ -66,6 +66,7 @@ public class PlantStage {
 
     ){
         this.type = type;
+        active = true;
 
         this.stage_alive_image = stage_alive_image;
         this.stage_dead_image = stage_dead_image;

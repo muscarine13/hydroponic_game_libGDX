@@ -1,0 +1,14 @@
+{
+
+  com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle : {
+    default:{}
+    buy_button: { up:buy_button_enable, down:buy_button_pressed, disabled:buy_button_disable },
+    coin_heal_button: { up:coin_heal_button_enable, down:coin_heal_button_pressed, disabled:coin_heal_button_disable },
+    ad_heal_button: { up:ad_heal_button_enable, down:ad_heal_button_pressed, disabled:ad_heal_button_disable },
+    harvest_button: { up:harvest_button_enable, down:harvest_button_pressed, disabled:harvest_button_disable }
+    kill_button: { up: kill_button_enable, down: kill_button_pressed, disabled: kill_button_disable }
+    back_button: { up:back_button_enable, down:back_button_pressed, disabled:back_button_disable }
+
+  }
+
+}
