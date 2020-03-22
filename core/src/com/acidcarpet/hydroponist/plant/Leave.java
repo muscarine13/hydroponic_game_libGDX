@@ -3,8 +3,6 @@ package com.acidcarpet.hydroponist.plant;
 import com.acidcarpet.hydroponist.equipment.Box;
 
 public class Leave {
-
-    Box box;
     private boolean alive;
 
     private double height;
@@ -15,8 +13,8 @@ public class Leave {
 
     private double dark_energy_production;
     private double light_energy_production;
-    private double water_consumption;
 
+    private double water_consumption;
     private double CO2_consumption;
 
     private double t_minimum;
@@ -45,6 +43,7 @@ public class Leave {
     ){
 
         alive = true;
+
         this.maximum_health = maximum_health;
         this.current_health = maximum_health/2;
 
@@ -54,10 +53,11 @@ public class Leave {
         this.height_grow_length = height_grow_length;
         this.width_grow_length = width_grow_length;
         this.light_energy_production = light_energy_production;
-        this.dark_energy_production = light_energy_production;
-        this.water_consumption = water_consumption;
+        this.dark_energy_production = dark_energy_production;
 
+        this.water_consumption = water_consumption;
         this.CO2_consumption = CO2_consumption;
+
         this.t_minimum = t_minimum;
         this.t_maximum = t_maximum;
         this.lm_consumption = lm_consumption;
@@ -69,21 +69,21 @@ public class Leave {
 
         double actual_water_consumption = water_consumption * (int)(height*width);
         if(
-                        box.getPlant().drink(actual_water_consumption)
+                        Box.getInstance().getPlant().may_drink_water(actual_water_consumption)
                         &&
-                        box.getFan().reduce_CO2(CO2_consumption *(int)(height*width))
+                        Box.getInstance().getFan().reduce_CO2(CO2_consumption *(int)(height*width))
                         &&
-                        (box.actual_t()< t_maximum &&box.actual_t()> t_minimum)
+                        (Box.getInstance().actual_t()< t_maximum &&Box.getInstance().actual_t()> t_minimum)
 
                 ){
 
             current_health++;
             if (current_health>maximum_health) current_health = maximum_health;
 
-            if(box.getLamp().isOn()&&box.getLamp().reduce_lm(lm_consumption *(int)(height*width))){
-                box.getPlant().add_light_energy( light_energy_production * (int)(height*width));
+            if(Box.getInstance().getLamp().isOn()&&Box.getInstance().getLamp().reduce_lm(lm_consumption *(int)(height*width))){
+                Box.getInstance().getPlant().add_light_energy( (int)(light_energy_production * (int)(height*width)));
             }else{
-               box.getPlant().add_dark_energy( dark_energy_production * (int)(height*width));
+               Box.getInstance().getPlant().add_dark_energy( (int) (dark_energy_production * (int)(height*width)));
             }
 
         }else{
@@ -92,8 +92,6 @@ public class Leave {
            if(current_health<0) alive=false;
 
         }
-
-
 
     }
     void grow(){
@@ -106,57 +104,42 @@ public class Leave {
     public boolean isAlive() {
         return alive;
     }
-
     public double getHeight() {
         return height;
     }
-
     public double getWidth() {
         return width;
     }
-
     public double getHeight_grow_length() {
         return height_grow_length;
     }
-
     public double getWidth_grow_length() {
         return width_grow_length;
     }
-
-
-
     public double getWater_consumption() {
         return water_consumption;
     }
-
     public double getCO2_consumption() {
         return CO2_consumption;
     }
-
     public double getT_minimum() {
         return t_minimum;
     }
-
     public double getT_maximum() {
         return t_maximum;
     }
-
     public double getLm_consumption() {
         return lm_consumption;
     }
-
     public int getCurrent_health() {
         return current_health;
     }
-
     public int getMaximum_health() {
         return maximum_health;
     }
-
     public double getDark_energy_production() {
         return dark_energy_production;
     }
-
     public double getLight_energy_production() {
         return light_energy_production;
     }

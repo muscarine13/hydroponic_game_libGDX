@@ -1,6 +1,6 @@
 package com.acidcarpet.hydroponist.plant;
 
-import java.awt.*;
+import com.acidcarpet.hydroponist.equipment.Box;
 
 public class Product {
     String name;
@@ -11,8 +11,8 @@ public class Product {
     private int price;
     private double price_multiplier;
 
-    private double light_energy_price;
-    private double dark_energy_price;
+    private int light_energy;
+    private int dark_energy;
 
     private  double light_energy_multiplier;
     private double dark_energy_multiplier;
@@ -22,8 +22,8 @@ public class Product {
             String description,
             int start_price,
             double price_multiplier,
-            double light_energy_start_price,
-            double dark_energy_start_price,
+            int light_energy,
+            int dark_energy,
             double light_energy_multiplier,
             double dark_energy_multiplier
     ){
@@ -36,26 +36,24 @@ public class Product {
 
         this.price_multiplier = price_multiplier;
 
-        this.dark_energy_price = dark_energy_start_price;
-        this.light_energy_price = light_energy_start_price;
+        this.dark_energy = dark_energy;
+        this.light_energy = light_energy;
 
         this.light_energy_multiplier = light_energy_multiplier;
         this.dark_energy_multiplier = dark_energy_multiplier;
 
     }
 
-    public void grow(Plant plant){
-        if(plant.buy(dark_energy_price, light_energy_price)){
+    public void grow(){
+        if(Box.getInstance().getPlant().may_grow_product(light_energy, dark_energy)){
             lvl++;
 
             price*=price_multiplier;
 
-            light_energy_price+=light_energy_multiplier;
-            dark_energy_price+=dark_energy_multiplier;
+            light_energy +=light_energy_multiplier;
+            dark_energy +=dark_energy_multiplier;
         }
     }
-
-
 
     public int getLvl() {
         return lvl;
@@ -66,11 +64,11 @@ public class Product {
     public double getPrice_multiplier() {
         return price_multiplier;
     }
-    public double getLight_energy_price() {
-        return light_energy_price;
+    public double getLight_energy() {
+        return light_energy;
     }
-    public double getDark_energy_price() {
-        return dark_energy_price;
+    public double getDark_energy() {
+        return dark_energy;
     }
     public double getLight_energy_multiplier() {
         return light_energy_multiplier;

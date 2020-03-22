@@ -45,10 +45,15 @@ public class PlantScreen implements Screen {
     public void product_coin_heal_button_click(){}
     public void product_ad_heal_button_click(){}
 
-    public void harvest_button_click(){}
-    public void kill_button_click(){}
-    public void back_button_click(){}
+    public void harvest_button_click(){
 
+    }
+    public void kill_button_click(){
+        Box.getInstance().kill_plant();
+    }
+    public void back_button_click(){
+        game.setScreen(new BoxScreen(game));
+    }
 
     public PlantScreen(Game game){
         this.game = game;
@@ -195,41 +200,41 @@ public class PlantScreen implements Screen {
     }
     public Image generate_N(){
         Image out;
-        if(Box.getInstance().getPlant().getElement_N_problem_points() == 0){
+        if(Box.getInstance().getPlant().getN_problem_points() == 0){
             out = new Image(atlas.findRegion("N_0_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_N_problem_points() >= 0 && Box.getInstance().getPlant().getElement_N_problem_points() <= 100)
+                (Box.getInstance().getPlant().getN_problem_points() >= 0 && Box.getInstance().getPlant().getN_problem_points() <= 100)
                         ||
-                (Box.getInstance().getPlant().getElement_N_problem_points() <= 0 && Box.getInstance().getPlant().getElement_N_problem_points() >= -100)
+                (Box.getInstance().getPlant().getN_problem_points() <= 0 && Box.getInstance().getPlant().getN_problem_points() >= -100)
         ){
             out= new Image(atlas.findRegion("N_1_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_N_problem_points() >= 100 && Box.getInstance().getPlant().getElement_N_problem_points() <= 200)
+                (Box.getInstance().getPlant().getN_problem_points() >= 100 && Box.getInstance().getPlant().getN_problem_points() <= 200)
                         ||
-                (Box.getInstance().getPlant().getElement_N_problem_points() <= -100 && Box.getInstance().getPlant().getElement_N_problem_points() >= -200)
+                (Box.getInstance().getPlant().getN_problem_points() <= -100 && Box.getInstance().getPlant().getN_problem_points() >= -200)
         ){
             out = new Image(atlas.findRegion("N_2_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_N_problem_points() >= 200 && Box.getInstance().getPlant().getElement_N_problem_points() <= 300)
+                (Box.getInstance().getPlant().getN_problem_points() >= 200 && Box.getInstance().getPlant().getN_problem_points() <= 300)
                         ||
-                (Box.getInstance().getPlant().getElement_N_problem_points() <= -200 && Box.getInstance().getPlant().getElement_N_problem_points() >= -300)
+                (Box.getInstance().getPlant().getN_problem_points() <= -200 && Box.getInstance().getPlant().getN_problem_points() >= -300)
         ){
             out = new Image(atlas.findRegion("N_3_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_N_problem_points() >= 300 && Box.getInstance().getPlant().getElement_N_problem_points() <= 400)
+                (Box.getInstance().getPlant().getN_problem_points() >= 300 && Box.getInstance().getPlant().getN_problem_points() <= 400)
                         ||
-                (Box.getInstance().getPlant().getElement_N_problem_points() <= -300 && Box.getInstance().getPlant().getElement_N_problem_points() >= -400)
+                (Box.getInstance().getPlant().getN_problem_points() <= -300 && Box.getInstance().getPlant().getN_problem_points() >= -400)
         ){
             out = new Image(atlas.findRegion("N_4_icon"));
         }else
         if(
-                Box.getInstance().getPlant().getElement_N_problem_points() >= 400
+                Box.getInstance().getPlant().getN_problem_points() >= 400
                         ||
-                Box.getInstance().getPlant().getElement_N_problem_points() <= -400
+                Box.getInstance().getPlant().getN_problem_points() <= -400
         ){
             out = new Image(atlas.findRegion("N_5_icon"));
         }else out = new Image(atlas.findRegion("N_disabled_icon"));
@@ -238,41 +243,41 @@ public class PlantScreen implements Screen {
     }
     public Image generate_P(){
         Image out;
-        if(Box.getInstance().getPlant().getElement_P_problem_points() == 0){
+        if(Box.getInstance().getPlant().getP_problem_points() == 0){
             out = new Image(atlas.findRegion("P_0_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_P_problem_points() >= 0 && Box.getInstance().getPlant().getElement_P_problem_points() <= 100)
+                (Box.getInstance().getPlant().getP_problem_points() >= 0 && Box.getInstance().getPlant().getP_problem_points() <= 100)
                         ||
-                        (Box.getInstance().getPlant().getElement_P_problem_points() <= 0 && Box.getInstance().getPlant().getElement_P_problem_points() >= -100)
+                        (Box.getInstance().getPlant().getP_problem_points() <= 0 && Box.getInstance().getPlant().getP_problem_points() >= -100)
         ){
             out= new Image(atlas.findRegion("P_1_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_P_problem_points() >= 100 && Box.getInstance().getPlant().getElement_P_problem_points() <= 200)
+                (Box.getInstance().getPlant().getP_problem_points() >= 100 && Box.getInstance().getPlant().getP_problem_points() <= 200)
                         ||
-                        (Box.getInstance().getPlant().getElement_P_problem_points() <= -100 && Box.getInstance().getPlant().getElement_P_problem_points() >= -200)
+                        (Box.getInstance().getPlant().getP_problem_points() <= -100 && Box.getInstance().getPlant().getP_problem_points() >= -200)
         ){
             out = new Image(atlas.findRegion("P_2_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_P_problem_points() >= 200 && Box.getInstance().getPlant().getElement_P_problem_points() <= 300)
+                (Box.getInstance().getPlant().getP_problem_points() >= 200 && Box.getInstance().getPlant().getP_problem_points() <= 300)
                         ||
-                        (Box.getInstance().getPlant().getElement_P_problem_points() <= -200 && Box.getInstance().getPlant().getElement_P_problem_points() >= -300)
+                        (Box.getInstance().getPlant().getP_problem_points() <= -200 && Box.getInstance().getPlant().getP_problem_points() >= -300)
         ){
             out = new Image(atlas.findRegion("P_3_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_P_problem_points() >= 300 && Box.getInstance().getPlant().getElement_P_problem_points() <= 400)
+                (Box.getInstance().getPlant().getP_problem_points() >= 300 && Box.getInstance().getPlant().getP_problem_points() <= 400)
                         ||
-                        (Box.getInstance().getPlant().getElement_P_problem_points() <= -300 && Box.getInstance().getPlant().getElement_P_problem_points() >= -400)
+                        (Box.getInstance().getPlant().getP_problem_points() <= -300 && Box.getInstance().getPlant().getP_problem_points() >= -400)
         ){
             out = new Image(atlas.findRegion("P_4_icon"));
         }else
         if(
-                Box.getInstance().getPlant().getElement_P_problem_points() >= 400
+                Box.getInstance().getPlant().getP_problem_points() >= 400
                         ||
-                        Box.getInstance().getPlant().getElement_P_problem_points() <= -400
+                        Box.getInstance().getPlant().getP_problem_points() <= -400
         ){
             out = new Image(atlas.findRegion("P_5_icon"));
         }else out = new Image(atlas.findRegion("P_disabled_icon"));
@@ -281,41 +286,41 @@ public class PlantScreen implements Screen {
     }
     public Image generate_K(){
         Image out;
-        if(Box.getInstance().getPlant().getElement_K_problem_points() == 0){
+        if(Box.getInstance().getPlant().getK_problem_points() == 0){
             out = new Image(atlas.findRegion("K_0_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_K_problem_points() >= 0 && Box.getInstance().getPlant().getElement_K_problem_points() <= 100)
+                (Box.getInstance().getPlant().getK_problem_points() >= 0 && Box.getInstance().getPlant().getK_problem_points() <= 100)
                         ||
-                        (Box.getInstance().getPlant().getElement_K_problem_points() <= 0 && Box.getInstance().getPlant().getElement_K_problem_points() >= -100)
+                        (Box.getInstance().getPlant().getK_problem_points() <= 0 && Box.getInstance().getPlant().getK_problem_points() >= -100)
         ){
             out= new Image(atlas.findRegion("K_1_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_K_problem_points() >= 100 && Box.getInstance().getPlant().getElement_K_problem_points() <= 200)
+                (Box.getInstance().getPlant().getK_problem_points() >= 100 && Box.getInstance().getPlant().getK_problem_points() <= 200)
                         ||
-                        (Box.getInstance().getPlant().getElement_K_problem_points() <= -100 && Box.getInstance().getPlant().getElement_K_problem_points() >= -200)
+                        (Box.getInstance().getPlant().getK_problem_points() <= -100 && Box.getInstance().getPlant().getK_problem_points() >= -200)
         ){
             out = new Image(atlas.findRegion("K_2_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_K_problem_points() >= 200 && Box.getInstance().getPlant().getElement_K_problem_points() <= 300)
+                (Box.getInstance().getPlant().getK_problem_points() >= 200 && Box.getInstance().getPlant().getK_problem_points() <= 300)
                         ||
-                        (Box.getInstance().getPlant().getElement_K_problem_points() <= -200 && Box.getInstance().getPlant().getElement_K_problem_points() >= -300)
+                        (Box.getInstance().getPlant().getK_problem_points() <= -200 && Box.getInstance().getPlant().getK_problem_points() >= -300)
         ){
             out = new Image(atlas.findRegion("K_3_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_K_problem_points() >= 300 && Box.getInstance().getPlant().getElement_K_problem_points() <= 400)
+                (Box.getInstance().getPlant().getK_problem_points() >= 300 && Box.getInstance().getPlant().getK_problem_points() <= 400)
                         ||
-                        (Box.getInstance().getPlant().getElement_K_problem_points() <= -300 && Box.getInstance().getPlant().getElement_K_problem_points() >= -400)
+                        (Box.getInstance().getPlant().getK_problem_points() <= -300 && Box.getInstance().getPlant().getK_problem_points() >= -400)
         ){
             out = new Image(atlas.findRegion("K_4_icon"));
         }else
         if(
-                Box.getInstance().getPlant().getElement_K_problem_points() >= 400
+                Box.getInstance().getPlant().getK_problem_points() >= 400
                         ||
-                        Box.getInstance().getPlant().getElement_K_problem_points() <= -400
+                        Box.getInstance().getPlant().getK_problem_points() <= -400
         ){
             out = new Image(atlas.findRegion("K_5_icon"));
         }else out = new Image(atlas.findRegion("K_disabled_icon"));
@@ -324,41 +329,41 @@ public class PlantScreen implements Screen {
     }
     public Image generate_S(){
         Image out;
-        if(Box.getInstance().getPlant().getElement_S_problem_points() == 0){
+        if(Box.getInstance().getPlant().getS_problem_points() == 0){
             out = new Image(atlas.findRegion("S_0_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_S_problem_points() >= 0 && Box.getInstance().getPlant().getElement_S_problem_points() <= 100)
+                (Box.getInstance().getPlant().getS_problem_points() >= 0 && Box.getInstance().getPlant().getS_problem_points() <= 100)
                         ||
-                        (Box.getInstance().getPlant().getElement_S_problem_points() <= 0 && Box.getInstance().getPlant().getElement_S_problem_points() >= -100)
+                        (Box.getInstance().getPlant().getS_problem_points() <= 0 && Box.getInstance().getPlant().getS_problem_points() >= -100)
         ){
             out= new Image(atlas.findRegion("S_1_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_S_problem_points() >= 100 && Box.getInstance().getPlant().getElement_S_problem_points() <= 200)
+                (Box.getInstance().getPlant().getS_problem_points() >= 100 && Box.getInstance().getPlant().getS_problem_points() <= 200)
                         ||
-                        (Box.getInstance().getPlant().getElement_S_problem_points() <= -100 && Box.getInstance().getPlant().getElement_S_problem_points() >= -200)
+                        (Box.getInstance().getPlant().getS_problem_points() <= -100 && Box.getInstance().getPlant().getS_problem_points() >= -200)
         ){
             out = new Image(atlas.findRegion("S_2_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_S_problem_points() >= 200 && Box.getInstance().getPlant().getElement_S_problem_points() <= 300)
+                (Box.getInstance().getPlant().getS_problem_points() >= 200 && Box.getInstance().getPlant().getS_problem_points() <= 300)
                         ||
-                        (Box.getInstance().getPlant().getElement_S_problem_points() <= -200 && Box.getInstance().getPlant().getElement_S_problem_points() >= -300)
+                        (Box.getInstance().getPlant().getS_problem_points() <= -200 && Box.getInstance().getPlant().getS_problem_points() >= -300)
         ){
             out = new Image(atlas.findRegion("S_3_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_S_problem_points() >= 300 && Box.getInstance().getPlant().getElement_S_problem_points() <= 400)
+                (Box.getInstance().getPlant().getS_problem_points() >= 300 && Box.getInstance().getPlant().getS_problem_points() <= 400)
                         ||
-                        (Box.getInstance().getPlant().getElement_S_problem_points() <= -300 && Box.getInstance().getPlant().getElement_S_problem_points() >= -400)
+                        (Box.getInstance().getPlant().getS_problem_points() <= -300 && Box.getInstance().getPlant().getS_problem_points() >= -400)
         ){
             out = new Image(atlas.findRegion("S_4_icon"));
         }else
         if(
-                Box.getInstance().getPlant().getElement_S_problem_points() >= 400
+                Box.getInstance().getPlant().getS_problem_points() >= 400
                         ||
-                        Box.getInstance().getPlant().getElement_S_problem_points() <= -400
+                        Box.getInstance().getPlant().getS_problem_points() <= -400
         ){
             out = new Image(atlas.findRegion("S_5_icon"));
         }else out = new Image(atlas.findRegion("S_disabled_icon"));
@@ -367,41 +372,41 @@ public class PlantScreen implements Screen {
     }
     public Image generate_Mg(){
         Image out;
-        if(Box.getInstance().getPlant().getElement_Mg_problem_points() == 0){
+        if(Box.getInstance().getPlant().getMg_problem_points() == 0){
             out = new Image(atlas.findRegion("Mg_0_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Mg_problem_points() >= 0 && Box.getInstance().getPlant().getElement_Mg_problem_points() <= 100)
+                (Box.getInstance().getPlant().getMg_problem_points() >= 0 && Box.getInstance().getPlant().getMg_problem_points() <= 100)
                         ||
-                        (Box.getInstance().getPlant().getElement_Mg_problem_points() <= 0 && Box.getInstance().getPlant().getElement_Mg_problem_points() >= -100)
+                        (Box.getInstance().getPlant().getMg_problem_points() <= 0 && Box.getInstance().getPlant().getMg_problem_points() >= -100)
         ){
             out= new Image(atlas.findRegion("Mg_1_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Mg_problem_points() >= 100 && Box.getInstance().getPlant().getElement_Mg_problem_points() <= 200)
+                (Box.getInstance().getPlant().getMg_problem_points() >= 100 && Box.getInstance().getPlant().getMg_problem_points() <= 200)
                         ||
-                        (Box.getInstance().getPlant().getElement_Mg_problem_points() <= -100 && Box.getInstance().getPlant().getElement_Mg_problem_points() >= -200)
+                        (Box.getInstance().getPlant().getMg_problem_points() <= -100 && Box.getInstance().getPlant().getMg_problem_points() >= -200)
         ){
             out = new Image(atlas.findRegion("Mg_2_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Mg_problem_points() >= 200 && Box.getInstance().getPlant().getElement_Mg_problem_points() <= 300)
+                (Box.getInstance().getPlant().getMg_problem_points() >= 200 && Box.getInstance().getPlant().getMg_problem_points() <= 300)
                         ||
-                        (Box.getInstance().getPlant().getElement_Mg_problem_points() <= -200 && Box.getInstance().getPlant().getElement_Mg_problem_points() >= -300)
+                        (Box.getInstance().getPlant().getMg_problem_points() <= -200 && Box.getInstance().getPlant().getMg_problem_points() >= -300)
         ){
             out = new Image(atlas.findRegion("Mg_3_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Mg_problem_points() >= 300 && Box.getInstance().getPlant().getElement_Mg_problem_points() <= 400)
+                (Box.getInstance().getPlant().getMg_problem_points() >= 300 && Box.getInstance().getPlant().getMg_problem_points() <= 400)
                         ||
-                        (Box.getInstance().getPlant().getElement_Mg_problem_points() <= -300 && Box.getInstance().getPlant().getElement_Mg_problem_points() >= -400)
+                        (Box.getInstance().getPlant().getMg_problem_points() <= -300 && Box.getInstance().getPlant().getMg_problem_points() >= -400)
         ){
             out = new Image(atlas.findRegion("Mg_4_icon"));
         }else
         if(
-                Box.getInstance().getPlant().getElement_Mg_problem_points() >= 400
+                Box.getInstance().getPlant().getMg_problem_points() >= 400
                         ||
-                        Box.getInstance().getPlant().getElement_Mg_problem_points() <= -400
+                        Box.getInstance().getPlant().getMg_problem_points() <= -400
         ){
             out = new Image(atlas.findRegion("Mg_5_icon"));
         }else out = new Image(atlas.findRegion("Mg_disabled_icon"));
@@ -410,41 +415,41 @@ public class PlantScreen implements Screen {
     }
     public Image generate_Ca(){
         Image out;
-        if(Box.getInstance().getPlant().getElement_Ca_problem_points() == 0){
+        if(Box.getInstance().getPlant().getCa_problem_points() == 0){
             out = new Image(atlas.findRegion("Ca_0_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Ca_problem_points() >= 0 && Box.getInstance().getPlant().getElement_Ca_problem_points() <= 100)
+                (Box.getInstance().getPlant().getCa_problem_points() >= 0 && Box.getInstance().getPlant().getCa_problem_points() <= 100)
                         ||
-                        (Box.getInstance().getPlant().getElement_Ca_problem_points() <= 0 && Box.getInstance().getPlant().getElement_Ca_problem_points() >= -100)
+                        (Box.getInstance().getPlant().getCa_problem_points() <= 0 && Box.getInstance().getPlant().getCa_problem_points() >= -100)
         ){
             out= new Image(atlas.findRegion("Ca_1_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Ca_problem_points() >= 100 && Box.getInstance().getPlant().getElement_Ca_problem_points() <= 200)
+                (Box.getInstance().getPlant().getCa_problem_points() >= 100 && Box.getInstance().getPlant().getCa_problem_points() <= 200)
                         ||
-                        (Box.getInstance().getPlant().getElement_Ca_problem_points() <= -100 && Box.getInstance().getPlant().getElement_Ca_problem_points() >= -200)
+                        (Box.getInstance().getPlant().getCa_problem_points() <= -100 && Box.getInstance().getPlant().getCa_problem_points() >= -200)
         ){
             out = new Image(atlas.findRegion("Ca_2_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Ca_problem_points() >= 200 && Box.getInstance().getPlant().getElement_Ca_problem_points() <= 300)
+                (Box.getInstance().getPlant().getCa_problem_points() >= 200 && Box.getInstance().getPlant().getCa_problem_points() <= 300)
                         ||
-                        (Box.getInstance().getPlant().getElement_Ca_problem_points() <= -200 && Box.getInstance().getPlant().getElement_Ca_problem_points() >= -300)
+                        (Box.getInstance().getPlant().getCa_problem_points() <= -200 && Box.getInstance().getPlant().getCa_problem_points() >= -300)
         ){
             out = new Image(atlas.findRegion("Ca_3_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Ca_problem_points() >= 300 && Box.getInstance().getPlant().getElement_Ca_problem_points() <= 400)
+                (Box.getInstance().getPlant().getCa_problem_points() >= 300 && Box.getInstance().getPlant().getCa_problem_points() <= 400)
                         ||
-                        (Box.getInstance().getPlant().getElement_Ca_problem_points() <= -300 && Box.getInstance().getPlant().getElement_Ca_problem_points() >= -400)
+                        (Box.getInstance().getPlant().getCa_problem_points() <= -300 && Box.getInstance().getPlant().getCa_problem_points() >= -400)
         ){
             out = new Image(atlas.findRegion("Ca_4_icon"));
         }else
         if(
-                Box.getInstance().getPlant().getElement_Ca_problem_points() >= 400
+                Box.getInstance().getPlant().getCa_problem_points() >= 400
                         ||
-                        Box.getInstance().getPlant().getElement_Ca_problem_points() <= -400
+                        Box.getInstance().getPlant().getCa_problem_points() <= -400
         ){
             out = new Image(atlas.findRegion("Ca_5_icon"));
         }else out = new Image(atlas.findRegion("Ca_disabled_icon"));
@@ -453,41 +458,41 @@ public class PlantScreen implements Screen {
     }
     public Image generate_B(){
         Image out;
-        if(Box.getInstance().getPlant().getElement_B_problem_points() == 0){
+        if(Box.getInstance().getPlant().getB_problem_points() == 0){
             out = new Image(atlas.findRegion("B_0_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_B_problem_points() >= 0 && Box.getInstance().getPlant().getElement_B_problem_points() <= 100)
+                (Box.getInstance().getPlant().getB_problem_points() >= 0 && Box.getInstance().getPlant().getB_problem_points() <= 100)
                         ||
-                        (Box.getInstance().getPlant().getElement_B_problem_points() <= 0 && Box.getInstance().getPlant().getElement_B_problem_points() >= -100)
+                        (Box.getInstance().getPlant().getB_problem_points() <= 0 && Box.getInstance().getPlant().getB_problem_points() >= -100)
         ){
             out= new Image(atlas.findRegion("B_1_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_B_problem_points() >= 100 && Box.getInstance().getPlant().getElement_B_problem_points() <= 200)
+                (Box.getInstance().getPlant().getB_problem_points() >= 100 && Box.getInstance().getPlant().getB_problem_points() <= 200)
                         ||
-                        (Box.getInstance().getPlant().getElement_B_problem_points() <= -100 && Box.getInstance().getPlant().getElement_B_problem_points() >= -200)
+                        (Box.getInstance().getPlant().getB_problem_points() <= -100 && Box.getInstance().getPlant().getB_problem_points() >= -200)
         ){
             out = new Image(atlas.findRegion("B_2_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_B_problem_points() >= 200 && Box.getInstance().getPlant().getElement_B_problem_points() <= 300)
+                (Box.getInstance().getPlant().getB_problem_points() >= 200 && Box.getInstance().getPlant().getB_problem_points() <= 300)
                         ||
-                        (Box.getInstance().getPlant().getElement_B_problem_points() <= -200 && Box.getInstance().getPlant().getElement_B_problem_points() >= -300)
+                        (Box.getInstance().getPlant().getB_problem_points() <= -200 && Box.getInstance().getPlant().getB_problem_points() >= -300)
         ){
             out = new Image(atlas.findRegion("B_3_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_B_problem_points() >= 300 && Box.getInstance().getPlant().getElement_B_problem_points() <= 400)
+                (Box.getInstance().getPlant().getB_problem_points() >= 300 && Box.getInstance().getPlant().getB_problem_points() <= 400)
                         ||
-                        (Box.getInstance().getPlant().getElement_B_problem_points() <= -300 && Box.getInstance().getPlant().getElement_B_problem_points() >= -400)
+                        (Box.getInstance().getPlant().getB_problem_points() <= -300 && Box.getInstance().getPlant().getB_problem_points() >= -400)
         ){
             out = new Image(atlas.findRegion("B_4_icon"));
         }else
         if(
-                Box.getInstance().getPlant().getElement_B_problem_points() >= 400
+                Box.getInstance().getPlant().getB_problem_points() >= 400
                         ||
-                        Box.getInstance().getPlant().getElement_B_problem_points() <= -400
+                        Box.getInstance().getPlant().getB_problem_points() <= -400
         ){
             out = new Image(atlas.findRegion("B_5_icon"));
         }else out = new Image(atlas.findRegion("B_disabled_icon"));
@@ -496,41 +501,41 @@ public class PlantScreen implements Screen {
     }
     public Image generate_Cu(){
         Image out;
-        if(Box.getInstance().getPlant().getElement_Cu_problem_points() == 0){
+        if(Box.getInstance().getPlant().getCu_problem_points() == 0){
             out = new Image(atlas.findRegion("Cu_0_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Cu_problem_points() >= 0 && Box.getInstance().getPlant().getElement_Cu_problem_points() <= 100)
+                (Box.getInstance().getPlant().getCu_problem_points() >= 0 && Box.getInstance().getPlant().getCu_problem_points() <= 100)
                         ||
-                        (Box.getInstance().getPlant().getElement_Cu_problem_points() <= 0 && Box.getInstance().getPlant().getElement_Cu_problem_points() >= -100)
+                        (Box.getInstance().getPlant().getCu_problem_points() <= 0 && Box.getInstance().getPlant().getCu_problem_points() >= -100)
         ){
             out= new Image(atlas.findRegion("Cu_1_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Cu_problem_points() >= 100 && Box.getInstance().getPlant().getElement_Cu_problem_points() <= 200)
+                (Box.getInstance().getPlant().getCu_problem_points() >= 100 && Box.getInstance().getPlant().getCu_problem_points() <= 200)
                         ||
-                        (Box.getInstance().getPlant().getElement_Cu_problem_points() <= -100 && Box.getInstance().getPlant().getElement_Cu_problem_points() >= -200)
+                        (Box.getInstance().getPlant().getCu_problem_points() <= -100 && Box.getInstance().getPlant().getCu_problem_points() >= -200)
         ){
             out = new Image(atlas.findRegion("Cu_2_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Cu_problem_points() >= 200 && Box.getInstance().getPlant().getElement_Cu_problem_points() <= 300)
+                (Box.getInstance().getPlant().getCu_problem_points() >= 200 && Box.getInstance().getPlant().getCu_problem_points() <= 300)
                         ||
-                        (Box.getInstance().getPlant().getElement_Cu_problem_points() <= -200 && Box.getInstance().getPlant().getElement_Cu_problem_points() >= -300)
+                        (Box.getInstance().getPlant().getCu_problem_points() <= -200 && Box.getInstance().getPlant().getCu_problem_points() >= -300)
         ){
             out = new Image(atlas.findRegion("Cu_3_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Cu_problem_points() >= 300 && Box.getInstance().getPlant().getElement_Cu_problem_points() <= 400)
+                (Box.getInstance().getPlant().getCu_problem_points() >= 300 && Box.getInstance().getPlant().getCu_problem_points() <= 400)
                         ||
-                        (Box.getInstance().getPlant().getElement_Cu_problem_points() <= -300 && Box.getInstance().getPlant().getElement_Cu_problem_points() >= -400)
+                        (Box.getInstance().getPlant().getCu_problem_points() <= -300 && Box.getInstance().getPlant().getCu_problem_points() >= -400)
         ){
             out = new Image(atlas.findRegion("Cu_4_icon"));
         }else
         if(
-                Box.getInstance().getPlant().getElement_Cu_problem_points() >= 400
+                Box.getInstance().getPlant().getCu_problem_points() >= 400
                         ||
-                        Box.getInstance().getPlant().getElement_Cu_problem_points() <= -400
+                        Box.getInstance().getPlant().getCu_problem_points() <= -400
         ){
             out = new Image(atlas.findRegion("Cu_5_icon"));
         }else out = new Image(atlas.findRegion("Cu_disabled_icon"));
@@ -539,41 +544,41 @@ public class PlantScreen implements Screen {
     }
     public Image generate_Fe(){
         Image out;
-        if(Box.getInstance().getPlant().getElement_Fe_problem_points() == 0){
+        if(Box.getInstance().getPlant().getFe_problem_points() == 0){
             out = new Image(atlas.findRegion("Fe_0_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Fe_problem_points() >= 0 && Box.getInstance().getPlant().getElement_Fe_problem_points() <= 100)
+                (Box.getInstance().getPlant().getFe_problem_points() >= 0 && Box.getInstance().getPlant().getFe_problem_points() <= 100)
                         ||
-                        (Box.getInstance().getPlant().getElement_Fe_problem_points() <= 0 && Box.getInstance().getPlant().getElement_Fe_problem_points() >= -100)
+                        (Box.getInstance().getPlant().getFe_problem_points() <= 0 && Box.getInstance().getPlant().getFe_problem_points() >= -100)
         ){
             out= new Image(atlas.findRegion("Fe_1_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Fe_problem_points() >= 100 && Box.getInstance().getPlant().getElement_Fe_problem_points() <= 200)
+                (Box.getInstance().getPlant().getFe_problem_points() >= 100 && Box.getInstance().getPlant().getFe_problem_points() <= 200)
                         ||
-                        (Box.getInstance().getPlant().getElement_Fe_problem_points() <= -100 && Box.getInstance().getPlant().getElement_Fe_problem_points() >= -200)
+                        (Box.getInstance().getPlant().getFe_problem_points() <= -100 && Box.getInstance().getPlant().getFe_problem_points() >= -200)
         ){
             out = new Image(atlas.findRegion("Fe_2_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Fe_problem_points() >= 200 && Box.getInstance().getPlant().getElement_Fe_problem_points() <= 300)
+                (Box.getInstance().getPlant().getFe_problem_points() >= 200 && Box.getInstance().getPlant().getFe_problem_points() <= 300)
                         ||
-                        (Box.getInstance().getPlant().getElement_Fe_problem_points() <= -200 && Box.getInstance().getPlant().getElement_Fe_problem_points() >= -300)
+                        (Box.getInstance().getPlant().getFe_problem_points() <= -200 && Box.getInstance().getPlant().getFe_problem_points() >= -300)
         ){
             out = new Image(atlas.findRegion("Fe_3_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Fe_problem_points() >= 300 && Box.getInstance().getPlant().getElement_Fe_problem_points() <= 400)
+                (Box.getInstance().getPlant().getFe_problem_points() >= 300 && Box.getInstance().getPlant().getFe_problem_points() <= 400)
                         ||
-                        (Box.getInstance().getPlant().getElement_Fe_problem_points() <= -300 && Box.getInstance().getPlant().getElement_Fe_problem_points() >= -400)
+                        (Box.getInstance().getPlant().getFe_problem_points() <= -300 && Box.getInstance().getPlant().getFe_problem_points() >= -400)
         ){
             out = new Image(atlas.findRegion("Fe_4_icon"));
         }else
         if(
-                Box.getInstance().getPlant().getElement_Fe_problem_points() >= 400
+                Box.getInstance().getPlant().getFe_problem_points() >= 400
                         ||
-                        Box.getInstance().getPlant().getElement_Fe_problem_points() <= -400
+                        Box.getInstance().getPlant().getFe_problem_points() <= -400
         ){
             out = new Image(atlas.findRegion("Fe_5_icon"));
         }else out = new Image(atlas.findRegion("Fe_disabled_icon"));
@@ -582,41 +587,41 @@ public class PlantScreen implements Screen {
     }
     public Image generate_Mn(){
         Image out;
-        if(Box.getInstance().getPlant().getElement_Mn_problem_points() == 0){
+        if(Box.getInstance().getPlant().getMn_problem_points() == 0){
             out = new Image(atlas.findRegion("Mn_0_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Mn_problem_points() >= 0 && Box.getInstance().getPlant().getElement_Mn_problem_points() <= 100)
+                (Box.getInstance().getPlant().getMn_problem_points() >= 0 && Box.getInstance().getPlant().getMn_problem_points() <= 100)
                         ||
-                        (Box.getInstance().getPlant().getElement_Mn_problem_points() <= 0 && Box.getInstance().getPlant().getElement_Mn_problem_points() >= -100)
+                        (Box.getInstance().getPlant().getMn_problem_points() <= 0 && Box.getInstance().getPlant().getMn_problem_points() >= -100)
         ){
             out= new Image(atlas.findRegion("Mn_1_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Mn_problem_points() >= 100 && Box.getInstance().getPlant().getElement_Mn_problem_points() <= 200)
+                (Box.getInstance().getPlant().getMn_problem_points() >= 100 && Box.getInstance().getPlant().getMn_problem_points() <= 200)
                         ||
-                        (Box.getInstance().getPlant().getElement_Mn_problem_points() <= -100 && Box.getInstance().getPlant().getElement_Mn_problem_points() >= -200)
+                        (Box.getInstance().getPlant().getMn_problem_points() <= -100 && Box.getInstance().getPlant().getMn_problem_points() >= -200)
         ){
             out = new Image(atlas.findRegion("Mn_2_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Mn_problem_points() >= 200 && Box.getInstance().getPlant().getElement_Mn_problem_points() <= 300)
+                (Box.getInstance().getPlant().getMn_problem_points() >= 200 && Box.getInstance().getPlant().getMn_problem_points() <= 300)
                         ||
-                        (Box.getInstance().getPlant().getElement_Mn_problem_points() <= -200 && Box.getInstance().getPlant().getElement_Mn_problem_points() >= -300)
+                        (Box.getInstance().getPlant().getMn_problem_points() <= -200 && Box.getInstance().getPlant().getMn_problem_points() >= -300)
         ){
             out = new Image(atlas.findRegion("Mn_3_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Mn_problem_points() >= 300 && Box.getInstance().getPlant().getElement_Mn_problem_points() <= 400)
+                (Box.getInstance().getPlant().getMn_problem_points() >= 300 && Box.getInstance().getPlant().getMn_problem_points() <= 400)
                         ||
-                        (Box.getInstance().getPlant().getElement_Mn_problem_points() <= -300 && Box.getInstance().getPlant().getElement_Mn_problem_points() >= -400)
+                        (Box.getInstance().getPlant().getMn_problem_points() <= -300 && Box.getInstance().getPlant().getMn_problem_points() >= -400)
         ){
             out = new Image(atlas.findRegion("Mn_4_icon"));
         }else
         if(
-                Box.getInstance().getPlant().getElement_Mn_problem_points() >= 400
+                Box.getInstance().getPlant().getMn_problem_points() >= 400
                         ||
-                        Box.getInstance().getPlant().getElement_Mn_problem_points() <= -400
+                        Box.getInstance().getPlant().getMn_problem_points() <= -400
         ){
             out = new Image(atlas.findRegion("Mn_5_icon"));
         }else out = new Image(atlas.findRegion("Mn_disabled_icon"));
@@ -625,41 +630,41 @@ public class PlantScreen implements Screen {
     }
     public Image generate_Mo(){
         Image out;
-        if(Box.getInstance().getPlant().getElement_Mo_problem_points() == 0){
+        if(Box.getInstance().getPlant().getMo_problem_points() == 0){
             out = new Image(atlas.findRegion("Mo_0_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Mo_problem_points() >= 0 && Box.getInstance().getPlant().getElement_Mo_problem_points() <= 100)
+                (Box.getInstance().getPlant().getMo_problem_points() >= 0 && Box.getInstance().getPlant().getMo_problem_points() <= 100)
                         ||
-                        (Box.getInstance().getPlant().getElement_Mo_problem_points() <= 0 && Box.getInstance().getPlant().getElement_Mo_problem_points() >= -100)
+                        (Box.getInstance().getPlant().getMo_problem_points() <= 0 && Box.getInstance().getPlant().getMo_problem_points() >= -100)
         ){
             out= new Image(atlas.findRegion("Mo_1_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Mo_problem_points() >= 100 && Box.getInstance().getPlant().getElement_Mo_problem_points() <= 200)
+                (Box.getInstance().getPlant().getMo_problem_points() >= 100 && Box.getInstance().getPlant().getMo_problem_points() <= 200)
                         ||
-                        (Box.getInstance().getPlant().getElement_Mo_problem_points() <= -100 && Box.getInstance().getPlant().getElement_Mo_problem_points() >= -200)
+                        (Box.getInstance().getPlant().getMo_problem_points() <= -100 && Box.getInstance().getPlant().getMo_problem_points() >= -200)
         ){
             out = new Image(atlas.findRegion("Mo_2_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Mo_problem_points() >= 200 && Box.getInstance().getPlant().getElement_Mo_problem_points() <= 300)
+                (Box.getInstance().getPlant().getMo_problem_points() >= 200 && Box.getInstance().getPlant().getMo_problem_points() <= 300)
                         ||
-                        (Box.getInstance().getPlant().getElement_Mo_problem_points() <= -200 && Box.getInstance().getPlant().getElement_Mo_problem_points() >= -300)
+                        (Box.getInstance().getPlant().getMo_problem_points() <= -200 && Box.getInstance().getPlant().getMo_problem_points() >= -300)
         ){
             out = new Image(atlas.findRegion("Mo_3_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Mo_problem_points() >= 300 && Box.getInstance().getPlant().getElement_Mo_problem_points() <= 400)
+                (Box.getInstance().getPlant().getMo_problem_points() >= 300 && Box.getInstance().getPlant().getMo_problem_points() <= 400)
                         ||
-                        (Box.getInstance().getPlant().getElement_Mo_problem_points() <= -300 && Box.getInstance().getPlant().getElement_Mo_problem_points() >= -400)
+                        (Box.getInstance().getPlant().getMo_problem_points() <= -300 && Box.getInstance().getPlant().getMo_problem_points() >= -400)
         ){
             out = new Image(atlas.findRegion("Mo_4_icon"));
         }else
         if(
-                Box.getInstance().getPlant().getElement_Mo_problem_points() >= 400
+                Box.getInstance().getPlant().getMo_problem_points() >= 400
                         ||
-                        Box.getInstance().getPlant().getElement_Mo_problem_points() <= -400
+                        Box.getInstance().getPlant().getMo_problem_points() <= -400
         ){
             out = new Image(atlas.findRegion("Mo_5_icon"));
         }else out = new Image(atlas.findRegion("Mo_disabled_icon"));
@@ -668,41 +673,41 @@ public class PlantScreen implements Screen {
     }
     public Image generate_Zn(){
         Image out;
-        if(Box.getInstance().getPlant().getElement_Zn_problem_points() == 0){
+        if(Box.getInstance().getPlant().getZn_problem_points() == 0){
             out = new Image(atlas.findRegion("Zn_0_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Zn_problem_points() >= 0 && Box.getInstance().getPlant().getElement_Zn_problem_points() <= 100)
+                (Box.getInstance().getPlant().getZn_problem_points() >= 0 && Box.getInstance().getPlant().getZn_problem_points() <= 100)
                         ||
-                        (Box.getInstance().getPlant().getElement_Zn_problem_points() <= 0 && Box.getInstance().getPlant().getElement_Zn_problem_points() >= -100)
+                        (Box.getInstance().getPlant().getZn_problem_points() <= 0 && Box.getInstance().getPlant().getZn_problem_points() >= -100)
         ){
             out= new Image(atlas.findRegion("Zn_1_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Zn_problem_points() >= 100 && Box.getInstance().getPlant().getElement_Zn_problem_points() <= 200)
+                (Box.getInstance().getPlant().getZn_problem_points() >= 100 && Box.getInstance().getPlant().getZn_problem_points() <= 200)
                         ||
-                        (Box.getInstance().getPlant().getElement_Zn_problem_points() <= -100 && Box.getInstance().getPlant().getElement_Zn_problem_points() >= -200)
+                        (Box.getInstance().getPlant().getZn_problem_points() <= -100 && Box.getInstance().getPlant().getZn_problem_points() >= -200)
         ){
             out = new Image(atlas.findRegion("Zn_2_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Zn_problem_points() >= 200 && Box.getInstance().getPlant().getElement_Zn_problem_points() <= 300)
+                (Box.getInstance().getPlant().getZn_problem_points() >= 200 && Box.getInstance().getPlant().getZn_problem_points() <= 300)
                         ||
-                        (Box.getInstance().getPlant().getElement_Zn_problem_points() <= -200 && Box.getInstance().getPlant().getElement_Zn_problem_points() >= -300)
+                        (Box.getInstance().getPlant().getZn_problem_points() <= -200 && Box.getInstance().getPlant().getZn_problem_points() >= -300)
         ){
             out = new Image(atlas.findRegion("Zn_3_icon"));
         }else
         if(
-                (Box.getInstance().getPlant().getElement_Zn_problem_points() >= 300 && Box.getInstance().getPlant().getElement_Zn_problem_points() <= 400)
+                (Box.getInstance().getPlant().getZn_problem_points() >= 300 && Box.getInstance().getPlant().getZn_problem_points() <= 400)
                         ||
-                        (Box.getInstance().getPlant().getElement_Zn_problem_points() <= -300 && Box.getInstance().getPlant().getElement_Zn_problem_points() >= -400)
+                        (Box.getInstance().getPlant().getZn_problem_points() <= -300 && Box.getInstance().getPlant().getZn_problem_points() >= -400)
         ){
             out = new Image(atlas.findRegion("Zn_4_icon"));
         }else
         if(
-                Box.getInstance().getPlant().getElement_Zn_problem_points() >= 400
+                Box.getInstance().getPlant().getZn_problem_points() >= 400
                         ||
-                        Box.getInstance().getPlant().getElement_Zn_problem_points() <= -400
+                        Box.getInstance().getPlant().getZn_problem_points() <= -400
         ){
             out = new Image(atlas.findRegion("Zn_5_icon"));
         }else out = new Image(atlas.findRegion("Zn_disabled_icon"));
@@ -1258,42 +1263,44 @@ public class PlantScreen implements Screen {
 
         stage.addActor(background);
 
-        stage.addActor(generate_info_pane());
-        stage.addActor(generate_leaves_pane());
-        stage.addActor(generate_roots_pane());
-        stage.addActor(generate_products_pane());
-        stage.addActor(generate_buttons_pane());
+
+            stage.addActor(generate_info_pane());
+            stage.addActor(generate_leaves_pane());
+            stage.addActor(generate_roots_pane());
+            stage.addActor(generate_products_pane());
+            stage.addActor(generate_buttons_pane());
 
     }
 
     @Override
     public void render(float delta) {
-//        if(last_update!=Box.get_last_update()){
-//
-//            stage.getRoot().findActor("info_pane").clear();
-//            stage.getRoot().removeActor(stage.getRoot().findActor("info_pane"));
-//            stage.getRoot().addActor(generate_info_pane());
-//
-//            stage.getRoot().findActor("leaves_pane").clear();
-//            stage.getRoot().removeActor(stage.getRoot().findActor("leaves_pane"));
-//            stage.getRoot().addActor(generate_leaves_pane());
-//
-//            stage.getRoot().findActor("roots_pane").clear();
-//            stage.getRoot().removeActor(stage.getRoot().findActor("roots_pane"));
-//            stage.getRoot().addActor(generate_roots_pane());
-//
-//            stage.getRoot().findActor("products_pane").clear();
-//            stage.getRoot().removeActor(stage.getRoot().findActor("products_pane"));
-//            stage.getRoot().addActor(generate_products_pane());
-//
-//            stage.getRoot().findActor("buttons_pane").clearListeners();
-//            stage.getRoot().removeActor(stage.getRoot().findActor("buttons_pane"));
-//            stage.getRoot().addActor( generate_buttons_pane());
-//
-//            last_update = Box.get_last_update();
-//        }
-//
-//
+        if(last_update!=Box.get_last_update()){
+
+                stage.getRoot().findActor("info_pane").clear();
+                stage.getRoot().removeActor(stage.getRoot().findActor("info_pane"));
+                stage.getRoot().addActor(generate_info_pane());
+
+                stage.getRoot().findActor("leaves_pane").clear();
+                stage.getRoot().removeActor(stage.getRoot().findActor("leaves_pane"));
+                stage.getRoot().addActor(generate_leaves_pane());
+
+                stage.getRoot().findActor("roots_pane").clear();
+                stage.getRoot().removeActor(stage.getRoot().findActor("roots_pane"));
+                stage.getRoot().addActor(generate_roots_pane());
+
+                stage.getRoot().findActor("products_pane").clear();
+                stage.getRoot().removeActor(stage.getRoot().findActor("products_pane"));
+                stage.getRoot().addActor(generate_products_pane());
+
+                stage.getRoot().findActor("buttons_pane").clearListeners();
+                stage.getRoot().removeActor(stage.getRoot().findActor("buttons_pane"));
+                stage.getRoot().addActor(generate_buttons_pane());
+
+
+            last_update = Box.get_last_update();
+        }
+
+
         stage.act(delta);
         stage.draw();
     }

@@ -3,7 +3,7 @@ import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.equipment.WaterPack;
 
 public class Root {
-    boolean alive;
+    private boolean alive;
 
     public Root(
             int maximum_health,
@@ -43,21 +43,21 @@ public class Root {
 
     }
 
-    int current_health;
-    int maximum_health;
+    private int current_health;
+    private int maximum_health;
 
-    double length;
-    int growth_length;
+    private double length;
+    private int growth_length;
 
-    double oxygen_consumption;
-    double pH_minimum;
-    double ph_maximum;
-    double t_minimum;
-    double t_maximum;
-    int ppm_minimum;
-    int ppm_maximum;
+    private double oxygen_consumption;
+    private double pH_minimum;
+    private double ph_maximum;
+    private double t_minimum;
+    private double t_maximum;
+    private int ppm_minimum;
+    private int ppm_maximum;
 
-    double water_volume_multiplier;
+    private double water_volume_multiplier;
 
     public synchronized void absorb(){
         if(!alive) return;
@@ -90,15 +90,7 @@ public class Root {
             );
             Box.getInstance().getPot().drain(length*water_volume_multiplier);
 
-            if (metabolism_pack!=null){
-                Box.getInstance().getPlant().add_metabolism_pack(metabolism_pack);
-            }else{
-                current_health-=2;
-                if(current_health<=0) {
-                    current_health=0;
-                    alive=false;
-                }
-            }
+            Box.getInstance().getPlant().add_root_pack(metabolism_pack);
 
         }else{
             current_health--;
@@ -110,7 +102,7 @@ public class Root {
         if(current_health<0) alive=false;
         if(!alive) return;
 
-        length+= growth_length;
+        length+=growth_length;
     }
 
     public boolean isAlive() {
