@@ -5,7 +5,21 @@ import com.acidcarpet.hydroponist.storage.Storable;
 public class WaterPack implements Storable {
 
     public WaterPack(
-            double water_volume,  double current_pH, double ELEMENT_N, double ELEMENT_P, double ELEMENT_K,   double ELEMENT_S,  double ELEMENT_Mg, double ELEMENT_Ca,   double ELEMENT_B,  double ELEMENT_Cu, double ELEMENT_Fe, double ELEMENT_Mn, double ELEMENT_Mo, double ELEMENT_Zn ) {
+            double water_volume,
+            double current_pH,
+            int ELEMENT_N,
+            int ELEMENT_P,
+            int ELEMENT_K,
+            int ELEMENT_S,
+            int ELEMENT_Mg,
+            int ELEMENT_Ca,
+            int ELEMENT_B,
+            int ELEMENT_Cu,
+            int ELEMENT_Fe,
+            int ELEMENT_Mn,
+            int ELEMENT_Mo,
+            int ELEMENT_Zn
+    ) {
         this.current_volume = water_volume;
         this.current_pH = current_pH;
 
@@ -24,199 +38,67 @@ public class WaterPack implements Storable {
     }
 
     double current_volume;
-
     double current_pH;
 
-    private double ELEMENT_N;
-    public double element_volume_in_volume_N(double volume){
-        double percent = ELEMENT_N/total_volume();
-        return volume*percent;
-    }
+    private int ELEMENT_N;
     public int element_ppm_N(){
-        return (int)
-                (
-                        (element_volume_in_volume_N(current_volume)/current_volume)
-                                *
-                                100
-                )
-                *
-                1000;
+        return ELEMENT_N;
+
     }
 
-    private double ELEMENT_P;
-    public double element_volume_in_volume_P(double volume){
-        double percent = ELEMENT_P/total_volume();
-        return volume*percent;
-    }
+    private int ELEMENT_P;
     public int element_ppm_P(){
-        return (int)
-                (
-                        (element_volume_in_volume_P(current_volume)/current_volume)
-                                *
-                                100
-                )
-                *
-                1000;
+        return ELEMENT_P;
     }
 
-    private double ELEMENT_K;
-    public double element_volume_in_volume_K(double volume){
-        double percent = ELEMENT_K/total_volume();
-        return volume*percent;
-    }
+    private int ELEMENT_K;
     public int element_ppm_K(){
-        return (int)
-                (
-                        (element_volume_in_volume_K(current_volume)/current_volume)
-                                *
-                                100
-                )
-                *
-                1000;
+        return ELEMENT_K;
     }
 
-    private double ELEMENT_S;
-    public double element_volume_in_volume_S(double volume){
-        double percent = ELEMENT_S/total_volume();
-        return volume*percent;
-    }
+    private int ELEMENT_S;
     public int element_ppm_S(){
-        return (int)
-                (
-                        (element_volume_in_volume_S(current_volume)/current_volume)
-                                *
-                                100
-                )
-                *
-                1000;
+        return ELEMENT_S;
     }
 
-    private double ELEMENT_Mg;
-    public double element_volume_in_volume_Mg(double volume){
-        double percent = ELEMENT_Mg/total_volume();
-        return volume*percent;
-    }
+    private int ELEMENT_Mg;
     public int element_ppm_Mg(){
-        return (int)
-                (
-                        (element_volume_in_volume_Mg(current_volume)/current_volume)
-                                *
-                                100
-                )
-                *
-                1000;
+        return ELEMENT_Mg;
     }
 
-    private double ELEMENT_Ca;
-    public double element_volume_in_volume_Ca(double volume){
-        double percent = ELEMENT_Ca/total_volume();
-        return volume*percent;
-    }
+    private int ELEMENT_Ca;
     public int element_ppm_Ca(){
-        return (int)
-                (
-                        (element_volume_in_volume_Ca(current_volume)/current_volume)
-                                *
-                                100
-                )
-                *
-                1000;
+        return ELEMENT_Ca;
     }
 
-    private double ELEMENT_B;
-    public double element_volume_in_volume_B(double volume){
-        double percent = ELEMENT_B/total_volume();
-        return volume*percent;
-    }
+    private int ELEMENT_B;
     public int element_ppm_B(){
-        return (int)
-                (
-                        (element_volume_in_volume_B(current_volume)/current_volume)
-                                *
-                                100
-                )
-                *
-                1000;
+        return ELEMENT_B;
     }
 
-    private double ELEMENT_Cu;
-    public double element_volume_in_volume_Cu(double volume){
-        double percent = ELEMENT_Cu/total_volume();
-        return volume*percent;
-    }
+    private int ELEMENT_Cu;
     public int element_ppm_Cu(){
-        return (int)
-                (
-                        (element_volume_in_volume_Cu(current_volume)/current_volume)
-                                *
-                                100
-                )
-                *
-                1000;
+        return ELEMENT_Cu;
     }
 
-    private double ELEMENT_Fe;
-    public double element_volume_in_volume_Fe(double volume){
-        double percent = ELEMENT_Fe/total_volume();
-        return volume*percent;
-    }
+    private int ELEMENT_Fe;
     public int element_ppm_Fe(){
-        return (int)
-                (
-                        (element_volume_in_volume_Fe(current_volume)/current_volume)
-                                *
-                                100
-                )
-                *
-                1000;
+        return ELEMENT_Fe;
     }
 
-    private double ELEMENT_Mn;
-    public double element_volume_in_volume_Mn(double volume){
-        double percent = ELEMENT_Mn/total_volume();
-        return volume*percent;
-    }
+    private int ELEMENT_Mn;
     public int element_ppm_Mn(){
-        return (int)
-                (
-                        (element_volume_in_volume_Mn(current_volume)/current_volume)
-                                *
-                                100
-                )
-                *
-                1000;
+        return ELEMENT_Mn;
     }
 
-    private double ELEMENT_Mo;
-    public double element_volume_in_volume_Mo(double volume){
-        double percent = ELEMENT_Mo/total_volume();
-        return volume*percent;
-    }
+    private int ELEMENT_Mo;
     public int element_ppm_Mo(){
-        return (int)
-                (
-                        (element_volume_in_volume_Mo(current_volume)/current_volume)
-                                *
-                                100
-                )
-                *
-                1000;
+        return ELEMENT_Mo;
     }
 
-    private double ELEMENT_Zn;
-    public double element_volume_in_volume_Zn(double volume){
-        double percent = ELEMENT_Zn/total_volume();
-        return volume*percent;
-    }
+    private int ELEMENT_Zn;
     public int element_ppm_Zn(){
-        return (int)
-                (
-                        (element_volume_in_volume_Zn(current_volume)/current_volume)
-                                *
-                                100
-                )
-                *
-                1000;
+        return ELEMENT_Zn;
     }
 
     public double total_volume(){

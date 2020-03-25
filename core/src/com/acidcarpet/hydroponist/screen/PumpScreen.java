@@ -24,6 +24,8 @@ public class PumpScreen implements Screen {
 
     Game game;
 
+    long last_update;
+
     Skin skin;
     TextureAtlas atlas;
     Stage stage;
@@ -35,36 +37,107 @@ public class PumpScreen implements Screen {
     BitmapFont alice_40_black;
     BitmapFont alice_28_555555;
 
-    boolean refresh;
-
     public PumpScreen(Game game){
         this.game = game;
+        last_update = 1;
 
     }
 
     private void takeoff_click(){
         Box.getInstance().take_off_pump();
-        refresh = true;
     }
     private void off_click(){
         Box.getInstance().getPump().set_off();
-        refresh = true;
     }
     private void on_click(){
         Box.getInstance().getPump().set_on();
-        refresh = true;
     }
     private void item_equip_click(Pump pump){
         Box.getInstance().equip(pump);
-        refresh = true;
     }
     private void item_delete_click(Pump pump){
         Inventory.getInstance().delete(pump);
-        refresh = true;
     }
     private void back_button_click(){
         game.setScreen(new BoxScreen(game));
+    }
 
+    @Override
+    public void show() {
+
+        stage = new Stage(new ExtendViewport(1080, 1920));
+
+        atlas = ScreenAssets.getInstance().getPumpScreen_atlas();
+        skin = ScreenAssets.getInstance().getPumpScreen_skin();
+        Gdx.input.setInputProcessor(stage);
+
+        alice_48_green = ScreenAssets.getInstance().alice_48_green;
+        alice_36_white = ScreenAssets.getInstance().alice_36_white;
+        alice_25_black = ScreenAssets.getInstance().alice_25_black;
+        alice_40_black = ScreenAssets.getInstance().alice_40_black;
+        alice_28_555555 = ScreenAssets.getInstance().alice_28_555555;
+        alice_36_373737_stroke_black = ScreenAssets.getInstance().alice_36_373737_stroke_black;
+
+        Image background = new Image(atlas.findRegion("background"));
+        background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
+        background.setName("background");
+        stage.addActor(background);
+
+        ImageButton back_button = new ImageButton(skin, "back_button");
+        back_button.setPosition((1080/2)-350+40, 40);
+        back_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                back_button_click();
+            }
+        });
+        stage.addActor(back_button);
+
+    }
+
+    @Override
+    public void render(float delta) {
+
+        if(last_update!=Box.get_last_update()){
+
+            try{    stage.getRoot().findActor("infopane").clearListeners();                 }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("infopane"));     }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().findActor("scrollpane").clearListeners();               }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("scrollpane"));   }catch (Exception e){ e.printStackTrace();}
+
+            try{    stage.addActor(generate_scrollpane());                                         }catch (Exception e){ e.printStackTrace();}
+            try{    stage.addActor(generate_infopane());                                           }catch (Exception e){ e.printStackTrace();}
+
+            last_update = Box.get_last_update();
+        }
+
+        stage.act(delta);
+        stage.draw();
+    }
+
+    @Override
+    public void resize(int width, int height) {
+
+    }
+
+    @Override
+    public void pause() {
+
+    }
+
+    @Override
+    public void resume() {
+
+    }
+
+    @Override
+    public void hide() {
+
+    }
+
+    @Override
+    public void dispose() {
+        stage.dispose();
     }
 
     private Group generate_infopane(){
@@ -285,91 +358,6 @@ public class PumpScreen implements Screen {
         out.setPosition(40, 310);
 
         return out;
-    }
-
-
-    @Override
-    public void show() {
-
-        stage = new Stage(new ExtendViewport(1080, 1920));
-
-        atlas = ScreenAssets.getInstance().getPumpScreen_atlas();
-        skin = ScreenAssets.getInstance().getPumpScreen_skin();
-        Gdx.input.setInputProcessor(stage);
-
-        alice_48_green = ScreenAssets.getInstance().alice_48_green;
-        alice_36_white = ScreenAssets.getInstance().alice_36_white;
-        alice_25_black = ScreenAssets.getInstance().alice_25_black;
-        alice_40_black = ScreenAssets.getInstance().alice_40_black;
-        alice_28_555555 = ScreenAssets.getInstance().alice_28_555555;
-        alice_36_373737_stroke_black = ScreenAssets.getInstance().alice_36_373737_stroke_black;
-
-        Image background = new Image(atlas.findRegion("background"));
-        background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
-        background.setName("background");
-        stage.addActor(background);
-
-        ImageButton back_button = new ImageButton(skin, "back_button");
-        back_button.setPosition((1080/2)-350+40, 40);
-        back_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                back_button_click();
-            }
-        });
-        stage.addActor(back_button);
-
-        stage.addActor(generate_infopane());
-        stage.addActor(generate_scrollpane());
-    }
-
-    @Override
-    public void render(float delta) {
-
-        if(refresh){
-
-            stage.getRoot().findActor("infopane").clearListeners();
-            stage.getRoot().removeActor(stage.getRoot().findActor("infopane"));
-            stage.addActor(generate_infopane());
-
-            stage.getRoot().findActor("scrollpane").clearListeners();
-            stage.getRoot().removeActor(stage.getRoot().findActor("scrollpane"));
-            stage.addActor(generate_scrollpane());
-
-            refresh = false;
-        }
-
-
-
-        stage.act(delta);
-        stage.draw();
-    }
-
-    @Override
-    public void resize(int width, int height) {
-
-    }
-
-    @Override
-    public void pause() {
-
-    }
-
-    @Override
-    public void resume() {
-
-    }
-
-    @Override
-    public void hide() {
-
-    }
-
-    @Override
-    public void dispose() {
-        skin.dispose();
-        atlas.dispose();
-        stage.dispose();
     }
 
 }

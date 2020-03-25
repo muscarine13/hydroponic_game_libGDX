@@ -36,8 +36,6 @@ public class BoxScreen implements Screen {
 
     @Override
     public void show() {
-
-
         stage = new Stage(new ExtendViewport(1080, 1920));
 
         atlas = ScreenAssets.getInstance().getBoxScreen_atlas();
@@ -51,19 +49,6 @@ public class BoxScreen implements Screen {
 
         stage.addActor(background);
 
-        stage.addActor(generate_fan());
-        stage.addActor(generate_pot());
-        stage.addActor(generate_plant());
-        stage.addActor(generate_pump());
-        stage.addActor(generate_lamp());
-
-        stage.addActor(generate_x3_button());
-        stage.addActor(generate_shop_button());
-        stage.addActor(generate_storage_button());
-        stage.addActor(generate_donation_button());
-        stage.addActor(generate_settings_button());
-        stage.addActor(generate_room_button());
-
     }
 
     @Override
@@ -71,32 +56,47 @@ public class BoxScreen implements Screen {
 
         if(last_update!=Box.get_last_update()){
 
-            stage.getRoot().findActor("lamp").clear();
-            stage.getRoot().removeActor(stage.getRoot().findActor("lamp"));
-            stage.getRoot().addActorBefore(stage.getRoot().findActor("x3_button"), generate_lamp());
+            try {   stage.getRoot().findActor("lamp").clear();                                  }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("lamp"));             }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().findActor("pump").clearListeners();                         }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("pump"));             }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().findActor("plant").clearListeners();                        }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("plant"));            }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().findActor("pot").clearListeners();                          }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("pot"));              }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().findActor("fan").clearListeners();                          }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("fan"));              }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().findActor("x3_button").clearListeners();                    }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("x3_button"));        }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().findActor("shop_button").clearListeners();                  }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("shop_button"));      }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().findActor("storage_button").clearListeners();               }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("storage_button"));   }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().findActor("donation_button").clearListeners();              }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("donation_button"));  }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().findActor("settings_button").clearListeners();              }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("settings_button"));  }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().findActor("room_button").clearListeners();                  }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("room_button"));      }catch (Exception e){e.printStackTrace();}
 
-            stage.getRoot().findActor("pump").clearListeners();
-            stage.getRoot().removeActor(stage.getRoot().findActor("pump"));
-            stage.getRoot().addActorBefore(stage.getRoot().findActor("lamp"), generate_pump());
-
-            stage.getRoot().findActor("plant").clearListeners();
-            stage.getRoot().removeActor(stage.getRoot().findActor("plant"));
-            stage.getRoot().addActorBefore(stage.getRoot().findActor("pump"), generate_plant());
-
-            stage.getRoot().findActor("pot").clearListeners();
-            stage.getRoot().removeActor(stage.getRoot().findActor("pot"));
-            stage.getRoot().addActorBefore(stage.getRoot().findActor("plant"), generate_pot());
-
-            stage.getRoot().findActor("fan").clearListeners();
-            stage.getRoot().removeActor(stage.getRoot().findActor("fan"));
-            stage.getRoot().addActorBefore(stage.getRoot().findActor("plant"), generate_fan());
+            try {   stage.getRoot().addActor( generate_lamp());                                        }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().addActor( generate_pump());                                        }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().addActor( generate_plant());                                       }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().addActor( generate_pot());                                         }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().addActor( generate_fan());                                         }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().addActor(generate_x3_button());                                    }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().addActor(generate_shop_button());                                  }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().addActor(generate_storage_button());                               }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().addActor(generate_donation_button());                              }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().addActor(generate_settings_button());                              }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().addActor(generate_room_button());                                  }catch (Exception e){e.printStackTrace();}
 
             last_update = Box.get_last_update();
         }
 
-
         stage.act(delta);
         stage.draw();
+
     }
 
     @Override
@@ -121,8 +121,6 @@ public class BoxScreen implements Screen {
 
     @Override
     public void dispose() {
-    //skin.dispose();
-    //atlas.dispose();
     stage.dispose();
     }
 

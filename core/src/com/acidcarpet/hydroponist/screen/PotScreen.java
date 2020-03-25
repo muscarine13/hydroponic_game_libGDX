@@ -29,7 +29,7 @@ public class PotScreen implements Screen {
     TextureAtlas atlas;
     Stage stage;
 
-    long last_refresh;
+    long last_update;
 
     BitmapFont alice_48_green;
     BitmapFont alice_48_black;
@@ -37,6 +37,7 @@ public class PotScreen implements Screen {
 
     PotScreen(Game game){
         this.game = game;
+        last_update = 1;
     }
 
     public void take_off_button_click(){
@@ -45,18 +46,18 @@ public class PotScreen implements Screen {
     }
     public void drop_100ml_button_click(){
         if(Box.getInstance().getPot()!=null){
-            Box.getInstance().getPot().drain(0.1f);
+            Box.getInstance().getPot().drain(0.1);
         }
 
     }
     public void drop_1l_button_click(){
         if(Box.getInstance().getPot()!=null){
-            Box.getInstance().getPot().drain(1.0f);
+            Box.getInstance().getPot().drain(1.0);
         }
     }
     public void drop_10l_button_click(){
         if(Box.getInstance().getPot()!=null){
-            Box.getInstance().getPot().drain(10.0f);
+            Box.getInstance().getPot().drain(10.0);
         }
     }
     public void drop_all2_button_click(){
@@ -79,13 +80,13 @@ public class PotScreen implements Screen {
     }
 
     public void drop_1ml_button_click(Bottle bottle){
-        bottle.drop(0.001f);
+        bottle.drop_to_pot(0.001f);
     }
     public void drop_10ml_button_click(Bottle bottle){
-        bottle.drop(0.01f);
+        bottle.drop_to_pot(0.01f);
     }
     public void drop_all_button_click(Bottle bottle){
-        bottle.drop(bottle.getCurrent_volume());
+        bottle.drop_to_pot(bottle.getCurrent_volume());
     }
     public  void delete2_button_click(Bottle bottle){
         Inventory.getInstance().delete(bottle);
@@ -98,7 +99,6 @@ public class PotScreen implements Screen {
 
     @Override
     public void show() {
-        this.game = game;
 
         stage = new Stage(new ExtendViewport(1080, 1920));
 
@@ -123,37 +123,26 @@ public class PotScreen implements Screen {
                 back_button_click();
             }
         });
+
         stage.addActor(back_button);
-
-        Group info_pane = generate_info_pane();
-        stage.addActor(info_pane);
-
-        Group pot_pane = generate_pot_pane();
-        stage.addActor(pot_pane);
-
-        Group bottle_pane = generate_bottle_pane();
-        stage.addActor(bottle_pane);
-
-
     }
 
     @Override
     public void render(float delta) {
-        if(Box.get_last_update()!=last_refresh){
+        if(Box.get_last_update()!= last_update){
 
-            stage.getRoot().findActor("info_pane").clearListeners();
-            stage.getRoot().removeActor(stage.getRoot().findActor("info_pane"));
-            stage.addActor(generate_info_pane());
+            try{    stage.getRoot().findActor("info_pane").clearListeners();                }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("info_pane"));    }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().findActor("bottle_pane").clearListeners();              }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("bottle_pane"));  }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().findActor("pot_pane").clearListeners();                 }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("pot_pane"));     }catch (Exception e){ e.printStackTrace();}
 
-            stage.getRoot().findActor("bottle_pane").clearListeners();
-            stage.getRoot().removeActor(stage.getRoot().findActor("bottle_pane"));
-            stage.addActor(generate_bottle_pane());
+            try{    stage.addActor(generate_info_pane());                                          }catch (Exception e){ e.printStackTrace();}
+            try{    stage.addActor(generate_bottle_pane());                                        }catch (Exception e){ e.printStackTrace();}
+            try{    stage.addActor(generate_pot_pane());                                           }catch (Exception e){ e.printStackTrace();}
 
-            stage.getRoot().findActor("pot_pane").clearListeners();
-            stage.getRoot().removeActor(stage.getRoot().findActor("pot_pane"));
-            stage.addActor(generate_pot_pane());
-
-            last_refresh = Box.get_last_update();
+            last_update = Box.get_last_update();
 
         }
 
@@ -223,7 +212,6 @@ public class PotScreen implements Screen {
             Group buttons = generate_button_sub_pane();
             buttons.setPosition(30, 20);
             out.addActor(buttons);
-
 
         }else{
 

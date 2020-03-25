@@ -15,7 +15,9 @@ public class Inventory {
         return instance;
     }
 
-    private Map<String, List<com.acidcarpet.hydroponist.storage.Storable>> storage;
+    private Map<String, List<Storable>> storage;
+    private int gold;
+    private int diamond;
 
     private Inventory(){
 
@@ -54,16 +56,19 @@ public class Inventory {
         for(int i = 0; i<10; i++)
             add(TestPack.getInstance().get_test_pump());
 
-        for(int i = 0; i<10; i++)
-            add(TestPack.getInstance().get_test_plant());
+//        for(int i = 0; i<10; i++)
+//            add(TestPack.getInstance().get_test_plant());
 
         for(int i = 0; i<10; i++)
             add(TestPack.getInstance().get_test_bottle());
 
+        gold = 0;
+        diamond = 0;
+
 
     }
 
-    public synchronized void add(com.acidcarpet.hydroponist.storage.Storable item_to_add){
+    public synchronized void add(Storable item_to_add){
 
         Type item_type = null;
 
@@ -115,7 +120,7 @@ public class Inventory {
             }
         }
     }
-    public synchronized com.acidcarpet.hydroponist.storage.Storable get(Type type, int index){
+    public synchronized Storable get(Type type, int index){
         if(type!=null){
             switch (type){
                 case LAMP:   return storage.get(Type.LAMP.line).get(index);
@@ -130,7 +135,7 @@ public class Inventory {
             return null;
         }
     }
-    public synchronized com.acidcarpet.hydroponist.storage.Storable get_and_remove(Type type, int index){
+    public synchronized Storable get_and_remove(Type type, int index){
         if(type!=null){
             switch (type){
                 case LAMP:   return storage.get(Type.LAMP.line).remove(index);
@@ -161,6 +166,18 @@ public class Inventory {
         }
     }
 
+    public synchronized int getGold() {
+        return gold;
+    }
+    public synchronized void setGold(int gold) {
+        this.gold = gold;
+    }
+    public synchronized int getDiamond() {
+        return diamond;
+    }
+    public synchronized void setDiamond(int diamond) {
+        this.diamond = diamond;
+    }
 
     public enum Type{
         LAMP("LAMP"),

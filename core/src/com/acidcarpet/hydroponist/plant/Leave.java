@@ -2,6 +2,8 @@ package com.acidcarpet.hydroponist.plant;
 
 import com.acidcarpet.hydroponist.equipment.Box;
 
+import java.util.Random;
+
 public class Leave {
     private boolean alive;
 
@@ -63,42 +65,50 @@ public class Leave {
         this.lm_consumption = lm_consumption;
 
     }
-
-    void photosynthesis(){
+    public synchronized void hit(){
         if(!alive) return;
+        current_health--;
+        if(current_health<=0) {
+            alive = false;
+            current_health = 0;
+        }
+    }
+    public synchronized void heal(){
+        if(!alive) return;
+        current_health++;
+        if(current_health>=maximum_health) {
+            current_health = maximum_health;
+        }
+    }
+    public boolean may_photosynthesis(){
+        if(!alive) return false;
 
         double actual_water_consumption = water_consumption * (int)(height*width);
         if(
-                        Box.getInstance().getPlant().may_drink_water(actual_water_consumption)
+                        (Box.getInstance().getPlant().getWater()>=actual_water_consumption)
                         &&
                         Box.getInstance().getFan().reduce_CO2(CO2_consumption *(int)(height*width))
                         &&
                         (Box.getInstance().actual_t()< t_maximum &&Box.getInstance().actual_t()> t_minimum)
 
-                ){
-
-            current_health++;
-            if (current_health>maximum_health) current_health = maximum_health;
-
-            if(Box.getInstance().getLamp().isOn()&&Box.getInstance().getLamp().reduce_lm(lm_consumption *(int)(height*width))){
-                Box.getInstance().getPlant().add_light_energy( (int)(light_energy_production * (int)(height*width)));
-            }else{
-               Box.getInstance().getPlant().add_dark_energy( (int) (dark_energy_production * (int)(height*width)));
-            }
-
+        ){
+           return true;
         }else{
-
-           current_health--;
-           if(current_health<0) alive=false;
-
+            return false;
         }
 
     }
     void grow(){
         if(!alive) return;
 
-        height+= height_grow_length;
-        width+= width_grow_length;
+        boolean win;
+        win = new Random().nextDouble()<0.005; // 1 к 500 0.5%
+
+        if(win){
+            height+= height_grow_length;
+            width+= width_grow_length;
+        }
+
     }
 
     public boolean isAlive() {

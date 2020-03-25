@@ -48,6 +48,9 @@ public class PlantStage {
 
     public synchronized void second(){
         if(!active) return;
+
+        if(type==PlantStages.HARVEST) return;
+
         if(remain>0) remain--;
         else{
             active=false;
@@ -56,6 +59,7 @@ public class PlantStage {
     }
 
     public PlantStage(
+
             PlantStages type,
             Image stage_alive_image,
             Image stage_dead_image,
@@ -64,15 +68,12 @@ public class PlantStage {
             int leaves_add_min,
             int roots_add_min,
             int products_add_min,
-
             int ppm_N_min,
             int ppm_P_min,
             int ppm_K_min,
-
             int ppm_S_min,
             int ppm_Mg_min,
             int ppm_Ca_min,
-
             int ppm_B_min,
             int ppm_Cu_min,
             int ppm_Fe_min,
@@ -84,15 +85,12 @@ public class PlantStage {
             int leaves_add_max,
             int roots_add_max,
             int products_add_max,
-
             int ppm_N_max,
             int ppm_P_max,
             int ppm_K_max,
-
             int ppm_S_max,
             int ppm_Mg_max,
             int ppm_Ca_max,
-
             int ppm_B_max,
             int ppm_Cu_max,
             int ppm_Fe_max,
@@ -106,9 +104,9 @@ public class PlantStage {
 
         this.remain =  new Random().nextInt(time_max-time_min) + time_min;
 
-        this.leaves_add = new Random().nextInt(leaves_add_max-leaves_add_min) + leaves_add_min;
-        this.roots_add = new Random().nextInt(roots_add_max-roots_add_min) + roots_add_min;
-        this.products_add = new Random().nextInt(products_add_max-products_add_min) + products_add_min;
+        if(leaves_add_max>0&&leaves_add_min>=0&&leaves_add_max>leaves_add_min) this.leaves_add = new Random().nextInt(leaves_add_max-leaves_add_min) + leaves_add_min;
+        if(roots_add_max>0&&roots_add_min>=0&&roots_add_max>roots_add_min) this.roots_add = new Random().nextInt(roots_add_max-roots_add_min) + roots_add_min;
+        if(products_add_max>0&&products_add_min>=0&&products_add_max>roots_add_min) this.products_add = new Random().nextInt(products_add_max-products_add_min) + products_add_min;
 
         this.stage_alive_image = stage_alive_image;
         this.stage_dead_image = stage_dead_image;

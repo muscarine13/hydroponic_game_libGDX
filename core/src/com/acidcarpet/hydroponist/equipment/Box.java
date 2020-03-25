@@ -23,8 +23,6 @@ public class Box {
         if(instance==null) instance = new Box();
         return instance;
     }
-    private String name;
-    private String description;
 
     private double box_ordinary_temperature;
 
@@ -37,15 +35,14 @@ public class Box {
 
     public Box(
     ){
-        this.name = "Гроубокс";
-        this.description = "Описание гроубокса";
+
         this.box_ordinary_temperature = 24;
         this.lamp = TestPack.getInstance().get_test_lamp();
         this.fan = TestPack.getInstance().get_test_fan();
         this.pot = TestPack.getInstance().get_test_pot();
         this.pump = TestPack.getInstance().get_test_pump();
 
-        plant = TestPack.getInstance().get_test_plant();
+        this.plant = TestPack.getInstance().get_test_plant();
 
         last_update = new Date().getTime();
     }
@@ -69,15 +66,6 @@ public class Box {
     public Pump getPump() {
         return pump;
     }
-    public String getName() {
-        return name;
-    }
-    public String getDescription() {
-        return description;
-    }
-    public double getBox_ordinary_temperature() {
-        return box_ordinary_temperature;
-    }
 
     public void setLamp(Lamp lamp) {
         this.lamp = lamp;
@@ -88,21 +76,11 @@ public class Box {
     public void setPlant(Plant plant) {
         this.plant = plant;
     }
-//    public void setPot(Pot pot) {
-//        this.pot = pot;
-//    }
+    public void setPot(Pot pot) {
+        this.pot = pot;
+    }
     public void setPump(Pump pump) {
         this.pump = pump;
-    }
-
-    public synchronized void setName(String name) {
-        this.name = name;
-    }
-    public synchronized void setDescription(String description) {
-        this.description = description;
-    }
-    public synchronized void setBox_ordinary_temperature(double box_ordinary_temperature) {
-        this.box_ordinary_temperature = box_ordinary_temperature;
     }
 
     public synchronized void equip(Lamp lamp) {
@@ -169,6 +147,11 @@ public class Box {
     public synchronized void take_off_pump() {
         if(pump!=null)Inventory.getInstance().add(pump);
         pump=null;
+        last_update = new Date().getTime();
+    }
+    public synchronized void harvest_plant(){
+
+        plant=null;
         last_update = new Date().getTime();
     }
 

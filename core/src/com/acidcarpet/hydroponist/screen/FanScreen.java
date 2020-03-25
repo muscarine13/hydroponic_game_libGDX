@@ -20,11 +20,15 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
+import java.util.Date;
+
 import static java.lang.String.*;
 
 public class FanScreen implements Screen {
 
     Game game;
+
+    long last_update;
 
     Skin skin;
     TextureAtlas atlas;
@@ -37,36 +41,29 @@ public class FanScreen implements Screen {
     BitmapFont alice_40_black;
     BitmapFont alice_28_555555;
 
-    boolean refresh;
-
     public FanScreen(Game game){
         this.game = game;
+        last_update = new Date().getTime();
 
     }
 
     private void takeoff_click(){
         Box.getInstance().take_off_fan();
-        refresh = true;
     }
     private void off_click(){
         Box.getInstance().getFan().set_off();
-        refresh = true;
     }
     private void on_click(){
         Box.getInstance().getFan().set_on();
-        refresh = true;
     }
     private void item_equip_click(Fan fan){
         Box.getInstance().equip(fan);
-        refresh = true;
     }
     private void item_delete_click(Fan fan){
         Inventory.getInstance().delete(fan);
-        refresh = true;
     }
     private void back_button_click(){
         game.setScreen(new BoxScreen(game));
-
     }
 
     private Group generate_infopane(){
@@ -351,20 +348,18 @@ public class FanScreen implements Screen {
     @Override
     public void render(float delta) {
 
-        if(refresh){
+        if(last_update!=Box.get_last_update()){
 
-            stage.getRoot().findActor("infopane").clearListeners();
-            stage.getRoot().removeActor(stage.getRoot().findActor("infopane"));
-            stage.addActor(generate_infopane());
+            try{    stage.getRoot().findActor("infopane").clearListeners();                 } catch(Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("infopane"));     } catch(Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().findActor("scrollpane").clearListeners();               } catch(Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("scrollpane"));   } catch(Exception e){ e.printStackTrace();}
 
-            stage.getRoot().findActor("scrollpane").clearListeners();
-            stage.getRoot().removeActor(stage.getRoot().findActor("scrollpane"));
-            stage.addActor(generate_scrollpane());
+            try{    stage.addActor(generate_infopane());                                           } catch(Exception e){ e.printStackTrace();}
+            try{    stage.addActor(generate_scrollpane());                                         } catch(Exception e){ e.printStackTrace();}
 
-            refresh = false;
+            last_update = Box.get_last_update();
         }
-
-
 
         stage.act(delta);
         stage.draw();
@@ -392,8 +387,6 @@ public class FanScreen implements Screen {
 
     @Override
     public void dispose() {
-        skin.dispose();
-        atlas.dispose();
         stage.dispose();
     }
 

@@ -2,6 +2,8 @@ package com.acidcarpet.hydroponist.plant;
 import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.equipment.WaterPack;
 
+import java.util.Random;
+
 public class Root {
     private boolean alive;
 
@@ -22,7 +24,7 @@ public class Root {
     ){
 
         alive=true;
-        length=1;
+        length=growth_length;
 
         this.maximum_health = maximum_health;
         this.current_health = maximum_health/2;
@@ -43,6 +45,7 @@ public class Root {
 
     }
 
+
     private int current_health;
     private int maximum_health;
 
@@ -59,50 +62,45 @@ public class Root {
 
     private double water_volume_multiplier;
 
-    public synchronized void absorb(){
-        if(!alive) return;
-        WaterPack metabolism_pack;
+    public synchronized boolean may_absorb(){
+        if(!alive) return false;
         if(
-                        (Box.getInstance().getPot().getCurrent_pH()< ph_maximum &&Box.getInstance().getPot().getCurrent_pH()> pH_minimum)
-                &&      (Box.getInstance().getPot().get_all_ppm()>ppm_minimum&&Box.getInstance().getPot().get_all_ppm()<ppm_maximum)
-                &&       Box.getInstance().getPump().reduce_oxygen(oxygen_consumption *length)
-                &&       Box.getInstance().getPot().getCurrent_volume()>=length*water_volume_multiplier
+                (Box.getInstance().getPot().getCurrent_pH()< ph_maximum &&Box.getInstance().getPot().getCurrent_pH()> pH_minimum)
+                        &&      (Box.getInstance().getPot().get_all_ppm()>ppm_minimum&&Box.getInstance().getPot().get_all_ppm()<ppm_maximum)
+                        &&       Box.getInstance().getPump().reduce_oxygen(oxygen_consumption *length)
+                        &&       Box.getInstance().getPot().getCurrent_volume()>=length*water_volume_multiplier
         ){
-            current_health++;
-            if(current_health>maximum_health)current_health = maximum_health;
-
-            metabolism_pack= new WaterPack(
-                    length*water_volume_multiplier,
-                    Box.getInstance().getPot().getCurrent_pH(),
-                    Box.getInstance().getPot().getN(),
-                    Box.getInstance().getPot().getP(),
-                    Box.getInstance().getPot().getK(),
-                    Box.getInstance().getPot().getS(),
-                    Box.getInstance().getPot().getMg(),
-                    Box.getInstance().getPot().getCa(),
-                    Box.getInstance().getPot().getB(),
-                    Box.getInstance().getPot().getCu(),
-                    Box.getInstance().getPot().getFe(),
-                    Box.getInstance().getPot().getMn(),
-                    Box.getInstance().getPot().getMo(),
-                    Box.getInstance().getPot().getZn()
-
-            );
-            Box.getInstance().getPot().drain(length*water_volume_multiplier);
-
-            Box.getInstance().getPlant().add_root_pack(metabolism_pack);
-
+            return true;
         }else{
-            current_health--;
-            if(current_health<0)alive=false;
+           return false;
         }
-
     }
+
+    public synchronized void hit(){
+        if(!alive) return;
+        current_health--;
+        if(current_health<=0) {
+            alive = false;
+            current_health = 0;
+        }
+    }
+    public synchronized void heal(){
+        if(!alive) return;
+        current_health++;
+        if(current_health>=maximum_health) {
+            current_health = maximum_health;
+        }
+    }
+
     public void grow(){
-        if(current_health<0) alive=false;
         if(!alive) return;
 
-        length+=growth_length;
+        boolean win;
+        win = new Random().nextDouble()<0.001; // 1 к 1000 0.1%
+
+        if(win) {
+            length += growth_length;
+        }
     }
 
     public boolean isAlive() {

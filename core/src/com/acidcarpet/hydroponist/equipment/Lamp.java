@@ -6,10 +6,13 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 public class Lamp implements Storable {
 
     public Lamp(
+
             String name,
             String description,
+
             int lm_production,
             double t_add,
+
             Image image_lamp_on,
             Image image_lamp_off,
             Image image_light_on,
@@ -66,11 +69,9 @@ public class Lamp implements Storable {
         }
     }
     public synchronized void second(){
-
         if(!on) return;
 
         lm = lm_production;
-
     }
 
     public boolean isOn() {

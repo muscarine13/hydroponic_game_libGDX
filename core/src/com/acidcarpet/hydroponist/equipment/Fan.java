@@ -8,9 +8,11 @@ public class Fan implements Storable {
     public Fan(
                 String name,
                String description,
-               double CO2_production,
+
+                double CO2_production,
                double t_reduce,
-               Image image_on,
+
+                Image image_on,
                Image image_off,
                Image item_icon
     ){
@@ -22,14 +24,12 @@ public class Fan implements Storable {
         this.image_off = image_off;
         this.item_icon = item_icon;
 
-        this.energy_consumption = energy_consumption;
-        CO2 = CO2_production;
+        this.CO2 = CO2_production;
         this.CO2_production = CO2_production;
         this.t_reduce = t_reduce;
     }
 
-    double energy_consumption;
-    double t_reduce;
+
 
     String name;
     String description;
@@ -53,6 +53,8 @@ public class Fan implements Storable {
     private double CO2;
     private double CO2_production;
 
+    double t_reduce;
+
     public synchronized boolean reduce_CO2(double consumption){
         if(CO2 >=consumption){
             CO2 -=consumption;
@@ -62,11 +64,9 @@ public class Fan implements Storable {
         }
     }
     public synchronized void second(){
-
         if(!on) return;
 
         CO2 = CO2_production;
-
     }
 
     public boolean isOn() {

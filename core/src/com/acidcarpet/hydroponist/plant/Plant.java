@@ -1,5 +1,6 @@
 package com.acidcarpet.hydroponist.plant;
 
+import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.equipment.WaterPack;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
@@ -10,9 +11,12 @@ public abstract class Plant {
     String name;
 
     private boolean alive;
+    public boolean isAlive() {
+        return alive;
+    }
 
     private boolean grow_up;
-    public void grow_up(){
+    public synchronized void try_grow_up(){
         if(grow_up==true){
 
             if(get_current_stage()==null){
@@ -39,9 +43,23 @@ public abstract class Plant {
 
     private int current_health;
     private int maximum_health;
+    public synchronized void hit(){
+        current_health--;
+        if(current_health<=0){
+            current_health = 0;
+            alive=false;
+        }
+
+    }
+    public synchronized void heal(){
+        if(alive){
+            current_health++;
+            if(current_health>=maximum_health) current_health = maximum_health;
+        }
+    }
 
     private List<PlantStage> stages;
-    public PlantStage get_current_stage(){
+    public synchronized PlantStage get_current_stage(){
         for (PlantStage stage : stages){
             if(stage.isActive()){
                 return stage;
@@ -49,7 +67,7 @@ public abstract class Plant {
         }
         return null;
     }
-    public boolean current_stage_second(){
+    public synchronized boolean current_stage_second(){
         if(!alive) return false;
         if(get_current_stage()!=null){
             get_current_stage().second();
@@ -60,13 +78,185 @@ public abstract class Plant {
     }
 
     private List<Root> roots;
-    public boolean roots_second(){
+    public synchronized boolean roots_second(){
         if(!alive) return false;
 
         if(!roots.isEmpty()){
 
             for (Root root : roots){
-                root.absorb();
+                if(root.isAlive()){
+                    if(root.may_absorb()){
+                        water+=root.getWater_volume_multiplier()*root.getLength();
+                        Box.getInstance().getPot().drain(root.getWater_volume_multiplier()*root.getLength());
+
+                        if((Box.getInstance().getPot().getN()>=get_current_stage().getPpm_N_min()&&Box.getInstance().getPot().getN()<=get_current_stage().getPpm_N_max())){
+                            N_problem_points--;
+                            if(N_problem_points<=0) {
+                                N_problem_points=0;
+                                heal();
+                            }
+                        }else{
+                            N_problem_points++;
+                            if(N_problem_points>=100) {
+                                N_problem_points=100;
+                                hit();
+                            }
+                        }
+                        if((Box.getInstance().getPot().getP()>=get_current_stage().getPpm_P_min()&&Box.getInstance().getPot().getP()<=get_current_stage().getPpm_P_max())){
+                            P_problem_points--;
+                            if(P_problem_points<=0) {
+                                P_problem_points=0;
+                                heal();
+                            }
+                        }else{
+                            P_problem_points++;
+                            if(P_problem_points>=100) {
+                                P_problem_points=100;
+                                hit();
+
+                            }
+                        }
+                        if((Box.getInstance().getPot().getK()>=get_current_stage().getPpm_K_min()&&Box.getInstance().getPot().getK()<=get_current_stage().getPpm_K_max())){
+                            K_problem_points--;
+                            if(K_problem_points<=0) {
+                                K_problem_points=0;
+                                heal();
+                            }
+                        }else{
+                            K_problem_points++;
+                            if(K_problem_points>=100) {
+                                K_problem_points=100;
+                                hit();
+                            }
+                        }
+
+                        if((Box.getInstance().getPot().getS()>=get_current_stage().getPpm_S_min()&&Box.getInstance().getPot().getS()<=get_current_stage().getPpm_S_max())){
+                            S_problem_points--;
+                            if(S_problem_points<=0) {
+                                S_problem_points=0;
+                                heal();
+                            }
+                        }else{
+                            S_problem_points++;
+                            if(S_problem_points>=100) {
+                                S_problem_points=100;
+                                hit();
+                            }
+                        }
+                        if((Box.getInstance().getPot().getMg()>=get_current_stage().getPpm_Mg_min()&&Box.getInstance().getPot().getMg()<=get_current_stage().getPpm_Mg_max())){
+                            Mg_problem_points--;
+                            if(Mg_problem_points<=0) {
+                                Mg_problem_points=0;
+                                heal();
+                            }
+                        }else{
+                            Mg_problem_points++;
+                            if(Mg_problem_points>=100) {
+                                Mg_problem_points=100;
+                                hit();
+                            }
+                        }
+                        if((Box.getInstance().getPot().getCa()>=get_current_stage().getPpm_Ca_min()&&Box.getInstance().getPot().getCa()<=get_current_stage().getPpm_Ca_max())){
+                            Ca_problem_points--;
+                            if(Ca_problem_points<=0) {
+                                Ca_problem_points=0;
+                                heal();
+                            }
+                        }else{
+                            Ca_problem_points++;
+                            if(Ca_problem_points>=100) {
+                                Ca_problem_points=100;
+                                hit();
+                            }
+                        }
+
+                        if((Box.getInstance().getPot().getB()>=get_current_stage().getPpm_B_min()&&Box.getInstance().getPot().getB()<=get_current_stage().getPpm_B_max())){
+                            B_problem_points--;
+                            if(B_problem_points<=0) {
+                                B_problem_points=0;
+                                heal();
+                            }
+                        }else{
+                            B_problem_points++;
+                            if(B_problem_points>=100) {
+                                B_problem_points=100;
+                               hit();
+                            }
+                        }
+                        if((Box.getInstance().getPot().getCu()>=get_current_stage().getPpm_Cu_min()&&Box.getInstance().getPot().getCu()<=get_current_stage().getPpm_Cu_max())){
+                            Cu_problem_points--;
+                            if(Cu_problem_points<=0) {
+                                Cu_problem_points=0;
+                                heal();
+                            }
+                        }else{
+                            Cu_problem_points++;
+                            if(Cu_problem_points>=100) {
+                                Cu_problem_points=100;
+                               hit();
+                            }
+                        }
+                        if((Box.getInstance().getPot().getFe()>=get_current_stage().getPpm_Fe_min()&&Box.getInstance().getPot().getFe()<=get_current_stage().getPpm_Fe_max())){
+                            Fe_problem_points--;
+                            if(Fe_problem_points<=0) {
+                                Fe_problem_points=0;
+                                heal();
+                            }
+                        }else{
+                            Fe_problem_points++;
+                            if(Fe_problem_points>=100) {
+                                Fe_problem_points=100;
+                                hit();
+                            }
+                        }
+
+                        if((Box.getInstance().getPot().getMn()>=get_current_stage().getPpm_Mn_min()&&Box.getInstance().getPot().getMn()<=get_current_stage().getPpm_Mn_max())){
+                            Mn_problem_points--;
+                            if(Mn_problem_points<=0) {
+                                Mn_problem_points=0;
+                                heal();
+                            }
+                        }else{
+                            Mn_problem_points++;
+                            if(Mn_problem_points>=100) {
+                                Mn_problem_points=100;
+                                hit();
+                            }
+                        }
+                        if((Box.getInstance().getPot().getMo()>=get_current_stage().getPpm_Mo_min()&&Box.getInstance().getPot().getMo()<=get_current_stage().getPpm_Mo_max())){
+                            Mo_problem_points--;
+                            if(Mo_problem_points<=0) {
+                                Mo_problem_points=0;
+                                heal();
+                            }
+                        }else{
+                            Mo_problem_points++;
+                            if(Mo_problem_points>=100) {
+                                Mo_problem_points=100;
+                                hit();
+                            }
+                        }
+                        if((Box.getInstance().getPot().getZn()>=get_current_stage().getPpm_Zn_min()&&Box.getInstance().getPot().getZn()<=get_current_stage().getPpm_Zn_max())){
+                            Zn_problem_points--;
+                            if(Zn_problem_points<=0) {
+                                Zn_problem_points=0;
+                                heal();
+                            }
+                        }else{
+                            Zn_problem_points++;
+                            if(Zn_problem_points>=100) {
+                                Zn_problem_points=100;
+                                hit();
+                            }
+                        }
+
+                        root.heal();
+                        root.grow();
+                    }else{
+                        root.hit();
+                    }
+                }
+
             }
             return true;
 
@@ -74,229 +264,35 @@ public abstract class Plant {
             return false;
         }
     }
-    public synchronized void add_root_pack(WaterPack pack) {
-        if (!alive) return;
-        if(get_current_stage()==null) return;
-
-        if((pack.element_ppm_N()>=get_current_stage().getPpm_N_min()&&pack.element_ppm_N()<=get_current_stage().getPpm_N_max())){
-            N_problem_points--;
-            if(N_problem_points<=0) {
-                N_problem_points=0;
-
-            }
-        }else{
-            N_problem_points++;
-            if(N_problem_points>=100) {
-                N_problem_points=100;
-                current_health--;
-                if(current_health<=0){
-                    alive=false;
-                    current_health=0;
-                }
-            }
-        }
-        if((pack.element_ppm_P()>=get_current_stage().getPpm_P_min()&&pack.element_ppm_P()<=get_current_stage().getPpm_P_max())){
-            P_problem_points--;
-            if(P_problem_points<=0) {
-                P_problem_points=0;
-
-            }
-        }else{
-            P_problem_points++;
-            if(P_problem_points>=100) {
-                P_problem_points=100;
-                current_health--;
-                if(current_health<=0){
-                    alive=false;
-                    current_health=0;
-                }
-            }
-        }
-        if((pack.element_ppm_K()>=get_current_stage().getPpm_K_min()&&pack.element_ppm_K()<=get_current_stage().getPpm_K_max())){
-            K_problem_points--;
-            if(K_problem_points<=0) {
-                K_problem_points=0;
-
-            }
-        }else{
-            K_problem_points++;
-            if(K_problem_points>=100) {
-                K_problem_points=100;
-                current_health--;
-                if(current_health<=0){
-                    alive=false;
-                    current_health=0;
-                }
-            }
-        }
-
-        if((pack.element_ppm_S()>=get_current_stage().getPpm_S_min()&&pack.element_ppm_S()<=get_current_stage().getPpm_S_max())){
-            S_problem_points--;
-            if(S_problem_points<=0) {
-                S_problem_points=0;
-
-            }
-        }else{
-            S_problem_points++;
-            if(S_problem_points>=100) {
-                S_problem_points=100;
-                current_health--;
-                if(current_health<=0){
-                    alive=false;
-                    current_health=0;
-                }
-            }
-        }
-        if((pack.element_ppm_Mg()>=get_current_stage().getPpm_Mg_min()&&pack.element_ppm_Mg()<=get_current_stage().getPpm_Mg_max())){
-            Mg_problem_points--;
-            if(Mg_problem_points<=0) {
-                Mg_problem_points=0;
-
-            }
-        }else{
-            Mg_problem_points++;
-            if(Mg_problem_points>=100) {
-                Mg_problem_points=100;
-                current_health--;
-                if(current_health<=0){
-                    alive=false;
-                    current_health=0;
-                }
-            }
-        }
-        if((pack.element_ppm_Ca()>=get_current_stage().getPpm_Ca_min()&&pack.element_ppm_Ca()<=get_current_stage().getPpm_Ca_max())){
-            Ca_problem_points--;
-            if(Ca_problem_points<=0) {
-                Ca_problem_points=0;
-
-            }
-        }else{
-            Ca_problem_points++;
-            if(Ca_problem_points>=100) {
-                Ca_problem_points=100;
-                current_health--;
-                if(current_health<=0){
-                    alive=false;
-                    current_health=0;
-                }
-            }
-        }
-
-        if((pack.element_ppm_B()>=get_current_stage().getPpm_B_min()&&pack.element_ppm_B()<=get_current_stage().getPpm_B_max())){
-            B_problem_points--;
-            if(B_problem_points<=0) {
-                B_problem_points=0;
-
-            }
-        }else{
-            B_problem_points++;
-            if(B_problem_points>=100) {
-                B_problem_points=100;
-                current_health--;
-                if(current_health<=0){
-                    alive=false;
-                    current_health=0;
-                }
-            }
-        }
-        if((pack.element_ppm_Cu()>=get_current_stage().getPpm_Cu_min()&&pack.element_ppm_Cu()<=get_current_stage().getPpm_Cu_max())){
-            Cu_problem_points--;
-            if(Cu_problem_points<=0) {
-                Cu_problem_points=0;
-
-            }
-        }else{
-            Cu_problem_points++;
-            if(Cu_problem_points>=100) {
-                Cu_problem_points=100;
-                current_health--;
-                if(current_health<=0){
-                    alive=false;
-                    current_health=0;
-                }
-            }
-        }
-        if((pack.element_ppm_Fe()>=get_current_stage().getPpm_Fe_min()&&pack.element_ppm_Fe()<=get_current_stage().getPpm_Fe_max())){
-            Fe_problem_points--;
-            if(Fe_problem_points<=0) {
-                Fe_problem_points=0;
-
-            }
-        }else{
-            Fe_problem_points++;
-            if(Fe_problem_points>=100) {
-                Fe_problem_points=100;
-                current_health--;
-                if(current_health<=0){
-                    alive=false;
-                    current_health=0;
-                }
-            }
-        }
-
-        if((pack.element_ppm_Mn()>=get_current_stage().getPpm_Mn_min()&&pack.element_ppm_Mn()<=get_current_stage().getPpm_Mn_max())){
-            Mn_problem_points--;
-            if(Mn_problem_points<=0) {
-                Mn_problem_points=0;
-
-            }
-        }else{
-            Mn_problem_points++;
-            if(Mn_problem_points>=100) {
-                Mn_problem_points=100;
-                current_health--;
-                if(current_health<=0){
-                    alive=false;
-                    current_health=0;
-                }
-            }
-        }
-        if((pack.element_ppm_Mo()>=get_current_stage().getPpm_Mo_min()&&pack.element_ppm_Mo()<=get_current_stage().getPpm_Mo_max())){
-            Mo_problem_points--;
-            if(Mo_problem_points<=0) {
-                Mo_problem_points=0;
-
-            }
-        }else{
-            Mo_problem_points++;
-            if(Mo_problem_points>=100) {
-                Mo_problem_points=100;
-                current_health--;
-                if(current_health<=0){
-                    alive=false;
-                    current_health=0;
-                }
-            }
-        }
-        if((pack.element_ppm_Zn()>=get_current_stage().getPpm_Zn_min()&&pack.element_ppm_Zn()<=get_current_stage().getPpm_Zn_max())){
-            Zn_problem_points--;
-            if(Zn_problem_points<=0) {
-                Zn_problem_points=0;
-
-            }
-        }else{
-            Zn_problem_points++;
-            if(Zn_problem_points>=100) {
-                Zn_problem_points=100;
-                current_health--;
-                if(current_health<=0){
-                    alive=false;
-                    current_health=0;
-                }
-            }
-        }
-
-        water+=pack.getWater_volume();
-
-    }
 
     private List<Leave> leaves;
-    public boolean leaves_second(){
+    public synchronized boolean leaves_second(){
         if(!alive) return false;
 
         if(!leaves.isEmpty()){
             for (Leave leave : leaves){
-                leave.photosynthesis();
+               if(!leave.isAlive()){
+                   if(leave.may_photosynthesis()){
+
+                       water-=leave.getWater_consumption()*(leave.getHeight()*leave.getWidth());
+
+                       if(Box.getInstance().getLamp()!=null){
+
+                           if(Box.getInstance().getLamp().isOn()){
+                               light_energy+=(int)(leave.getLight_energy_production()*(leave.getHeight()*leave.getWidth()));
+                           }else{
+                               dark_energy+=(int)(leave.getDark_energy_production()*(leave.getHeight()*leave.getWidth()));
+                           }
+                       }else{
+                           dark_energy+=(int)(leave.getDark_energy_production()*(leave.getHeight()*leave.getWidth()));
+                       }
+
+                       leave.heal();
+                       leave.grow();
+                   }else{
+                       leave.hit();
+                   }
+               }
             }
             return true;
         }else{
@@ -305,36 +301,25 @@ public abstract class Plant {
 
 
     }
-    public synchronized boolean may_drink_water(double volume){
-        if(water>=volume){
-            water-=volume;
-            return true;
-        }else{
-            return false;
-        }
-    }
-    public synchronized void add_dark_energy(int energy){
-        dark_energy+=energy;
-    }
-    public synchronized void add_light_energy(int energy){
-        light_energy+=energy;
-    }
 
     private List<Product> products;
-    public boolean products_second(){
+    public synchronized boolean products_second(){
         if(!alive) return false;
 
         if(!products.isEmpty()){
 
             for (Product product : products){
-                product.grow();
+                if(may_grow_product((int)product.getLight_energy(), (int)product.getDark_energy())){
+                    product.grow();
+                }
+
             }
             return true;
         }else{
             return true;
         }
     }
-    public boolean may_grow_product(int light_energy, int dark_energy){
+    public synchronized boolean may_grow_product(int light_energy, int dark_energy){
         if(this.light_energy>=light_energy && this.dark_energy>=dark_energy){
             this.light_energy-=light_energy;
             this.dark_energy-=dark_energy;
@@ -342,6 +327,25 @@ public abstract class Plant {
         }else{
             return false;
         }
+    }
+
+    public synchronized void second(){
+
+        if(alive) {
+            if(current_health<=0) {
+                alive = false;
+                current_health=0;
+            }else {
+                current_stage_second();
+                try_grow_up();
+
+                roots_second();
+                leaves_second();
+                products_second();
+                Box.update();
+            }
+        }
+
     }
 
     double water;
@@ -441,4 +445,36 @@ public abstract class Plant {
     public abstract Leave get_new_leave(); // Получить новый обьект листочка
     public abstract Root get_new_root(); // Получить новый обьект корешочка
     public abstract Product get_new_product(); // Получить новый обьект цветочка или плода или проччего продукта
+
+
+    public String getName() {
+        return name;
+    }
+    public int getCurrent_health() {
+        return current_health;
+    }
+    public int getMaximum_health() {
+        return maximum_health;
+    }
+    public List<PlantStage> getStages() {
+        return stages;
+    }
+    public List<Root> getRoots() {
+        return roots;
+    }
+    public List<Leave> getLeaves() {
+        return leaves;
+    }
+    public List<Product> getProducts() {
+        return products;
+    }
+    public double getWater() {
+        return water;
+    }
+    public int getDark_energy() {
+        return dark_energy;
+    }
+    public int getLight_energy() {
+        return light_energy;
+    }
 }

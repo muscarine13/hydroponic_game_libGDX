@@ -52,7 +52,7 @@ public class Pot implements Storable {
 
     }
     public synchronized void drain(double volume){
-        current_volume=round(current_volume-volume, 3);
+        current_volume=round(current_volume-volume, 10);
         if(current_volume<0) {
             current_volume=0;
             pH=0;

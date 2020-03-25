@@ -8,7 +8,9 @@ public class Pump implements Storable {
     public Pump(
             String name,
             String description,
+
             double oxygen_production,
+
             Image image_on,
             Image image_off,
             Image item_icon
@@ -59,11 +61,9 @@ public class Pump implements Storable {
         }
     }
     public synchronized void second(){
-
         if(!on) return;
 
         oxygen = oxygen_production;
-
     }
 
     private Image image_on;

@@ -722,6 +722,7 @@ public class PlantScreen implements Screen {
         int x = 0;
         for(PlantStage stage : list){
             Image stage_image = null;
+            if(Box.getInstance().getPlant().get_current_stage()==null) return null;
             if(Box.getInstance().getPlant().get_current_stage().equals(stage)){
                 switch (stage.getType()){
                     case SEED: stage_image = new Image(atlas.findRegion("seed_stage_current")); break;

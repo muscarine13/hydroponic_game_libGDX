@@ -20,8 +20,10 @@ public class Product {
     public Product(
             String name,
             String description,
+
             int start_price,
             double price_multiplier,
+
             int light_energy,
             int dark_energy,
             double light_energy_multiplier,
