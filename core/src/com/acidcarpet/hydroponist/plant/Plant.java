@@ -16,22 +16,24 @@ public abstract class Plant {
     }
 
     private boolean grow_up;
-    public synchronized void try_grow_up(){
-        if(grow_up==true){
+    public synchronized void setGrowUp(boolean grow_up){
+        this.grow_up = grow_up;
+    }
+    public synchronized void try_grow_up() {
+        if (grow_up == true) {
 
-            if(get_current_stage()==null){
-                grow_up=false;
-                return;
-            }else {
 
+            if (get_current_stage().getLeaves_add() > 0) {
                 for (int i = 0; i < get_current_stage().getLeaves_add(); i++) {
                     leaves.add(get_new_leave());
                 }
-
+            }
+            if (get_current_stage().getRoots_add() > 0) {
                 for (int i = 0; i < get_current_stage().getRoots_add(); i++) {
                     roots.add(get_new_root());
                 }
-
+            }
+            if (get_current_stage().getProducts_add() > 0) {
                 for (int i = 0; i < get_current_stage().getProducts_add(); i++) {
                     products.add(get_new_product());
                 }
@@ -271,14 +273,19 @@ public abstract class Plant {
 
         if(!leaves.isEmpty()){
             for (Leave leave : leaves){
-               if(!leave.isAlive()){
+               if(leave.isAlive()){
                    if(leave.may_photosynthesis()){
 
                        water-=leave.getWater_consumption()*(leave.getHeight()*leave.getWidth());
 
                        if(Box.getInstance().getLamp()!=null){
 
-                           if(Box.getInstance().getLamp().isOn()){
+
+                           if(
+                                   Box.getInstance().getLamp().isOn()
+                                           &&
+                                   Box.getInstance().getLamp().reduce_lm(leave.getLm_consumption()*(int)(leave.getWidth()*leave.getHeight())))
+                           {
                                light_energy+=(int)(leave.getLight_energy_production()*(leave.getHeight()*leave.getWidth()));
                            }else{
                                dark_energy+=(int)(leave.getDark_energy_production()*(leave.getHeight()*leave.getWidth()));
@@ -342,6 +349,7 @@ public abstract class Plant {
                 roots_second();
                 leaves_second();
                 products_second();
+
                 Box.update();
             }
         }

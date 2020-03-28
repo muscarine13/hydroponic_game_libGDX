@@ -56,8 +56,7 @@ public class BoxScreen implements Screen {
 
         if(last_update!=Box.get_last_update()){
 
-            try {   stage.getRoot().findActor("lamp").clear();                                  }catch (Exception e){e.printStackTrace();}
-            try {   stage.getRoot().removeActor(stage.getRoot().findActor("lamp"));             }catch (Exception e){e.printStackTrace();}
+
             try {   stage.getRoot().findActor("pump").clearListeners();                         }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("pump"));             }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().findActor("plant").clearListeners();                        }catch (Exception e){e.printStackTrace();}
@@ -66,6 +65,8 @@ public class BoxScreen implements Screen {
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("pot"));              }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().findActor("fan").clearListeners();                          }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("fan"));              }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().findActor("lamp").clear();                                  }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("lamp"));             }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().findActor("x3_button").clearListeners();                    }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("x3_button"));        }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().findActor("shop_button").clearListeners();                  }catch (Exception e){e.printStackTrace();}
@@ -79,11 +80,12 @@ public class BoxScreen implements Screen {
             try {   stage.getRoot().findActor("room_button").clearListeners();                  }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("room_button"));      }catch (Exception e){e.printStackTrace();}
 
-            try {   stage.getRoot().addActor( generate_lamp());                                        }catch (Exception e){e.printStackTrace();}
+
             try {   stage.getRoot().addActor( generate_pump());                                        }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor( generate_plant());                                       }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor( generate_pot());                                         }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor( generate_fan());                                         }catch (Exception e){e.printStackTrace();}
+            try {   stage.getRoot().addActor( generate_lamp());                                        }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor(generate_x3_button());                                    }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor(generate_shop_button());                                  }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor(generate_storage_button());                               }catch (Exception e){e.printStackTrace();}
@@ -126,11 +128,11 @@ public class BoxScreen implements Screen {
 
 
     //
-    private void lamp_click(){game.setScreen(new LampScreen(game));}
     private void plant_click(){game.setScreen(new PlantScreen(game));}
     private void fan_click(){game.setScreen(new FanScreen(game));}
     private void pot_click(){game.setScreen(new PotScreen(game));}
     private void compressor_click(){game.setScreen(new PumpScreen(game));}
+    private void lamp_click(){game.setScreen(new LampScreen(game));}
 
     private void x3_button_click(){
         System.out.println("x3_button click!");

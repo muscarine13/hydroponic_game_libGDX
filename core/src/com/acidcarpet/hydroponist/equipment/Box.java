@@ -47,6 +47,13 @@ public class Box {
         last_update = new Date().getTime();
     }
 
+    public synchronized void second(){
+        if(lamp!=null) lamp.second();
+        if(fan!=null) fan.second();
+        if(pump!=null) pump.second();
+
+        if(plant!=null) plant.second();
+    }
     public double actual_t(){
         return box_ordinary_temperature +lamp.getT_add()-fan.getT_reduce();
     }
@@ -153,6 +160,32 @@ public class Box {
 
         plant=null;
         last_update = new Date().getTime();
+    }
+
+
+    public void test_info(){
+
+        try{
+            System.out.println("dark_energy: "+plant.getDark_energy());
+        }catch (Exception e){
+            System.out.println("dark_energy: error");
+        }
+
+        try{
+            System.out.println("light_energy: "+plant.getLight_energy());
+        }catch (Exception e){
+            System.out.println("light_energy: error");
+        }
+
+        try{
+            System.out.println("water: "+plant.getWater());
+        }catch (Exception e){
+            System.out.println("water: error");
+        }
+
+
+
+
     }
 
 }

@@ -19,7 +19,8 @@ public class GameEngine extends Game {
 		public void run() {
 			while (true){
 				if(Box.getInstance().getPlant()!=null) {
-					Box.getInstance().getPlant().second();
+					Box.getInstance().second();
+					Box.getInstance().test_info();
 				}
 					try {
 						Thread.sleep(1000);

@@ -1,6 +1,7 @@
 package com.acidcarpet.hydroponist.plant;
 
 
+import com.acidcarpet.hydroponist.equipment.Box;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 import java.util.Random;
@@ -54,6 +55,7 @@ public class PlantStage {
         if(remain>0) remain--;
         else{
             active=false;
+            Box.getInstance().getPlant().setGrowUp(true);
             remain=0;
         }
     }

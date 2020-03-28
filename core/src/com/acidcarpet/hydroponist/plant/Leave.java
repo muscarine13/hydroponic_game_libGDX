@@ -84,6 +84,17 @@ public class Leave {
         if(!alive) return false;
 
         double actual_water_consumption = water_consumption * (int)(height*width);
+
+        System.out.println(
+                (Box.getInstance().getPlant().getWater()>=actual_water_consumption)
+        +"/n"
+                +Box.getInstance().getFan().reduce_CO2(CO2_consumption *(int)(height*width))
+                        +"/n"
+                +(Box.getInstance().actual_t()< t_maximum &&Box.getInstance().actual_t()> t_minimum)
+
+        );
+
+
         if(
                         (Box.getInstance().getPlant().getWater()>=actual_water_consumption)
                         &&
