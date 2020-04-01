@@ -55,7 +55,15 @@ public class Box {
         if(plant!=null) plant.second();
     }
     public double actual_t(){
-        return box_ordinary_temperature +lamp.getT_add()-fan.getT_reduce();
+        double actual_t = box_ordinary_temperature;
+
+        if(Box.getInstance().getLamp()!=null){
+            box_ordinary_temperature+=lamp.getT_add();
+        }
+        if(Box.getInstance().getFan()!=null){
+            box_ordinary_temperature-=fan.getT_reduce();
+        }
+        return actual_t;
     }
 
     public Lamp getLamp() {

@@ -1,8 +1,14 @@
 package com.acidcarpet.hydroponist;
 
 import com.acidcarpet.hydroponist.equipment.Box;
-import com.acidcarpet.hydroponist.screen.BoxScreen;
-import com.acidcarpet.hydroponist.screen.LampScreen;
+import com.acidcarpet.hydroponist.genered.test_pack.TestPack;
+import com.acidcarpet.hydroponist.screen.box.BoxResources;
+import com.acidcarpet.hydroponist.screen.box.BoxScreen;
+import com.acidcarpet.hydroponist.screen.fan.FanResources;
+import com.acidcarpet.hydroponist.screen.lamp.LampResources;
+import com.acidcarpet.hydroponist.screen.plant.PlantResources;
+import com.acidcarpet.hydroponist.screen.pot.PotResources;
+import com.acidcarpet.hydroponist.screen.pump.PumpResources;
 import com.badlogic.gdx.Game;
 
 
@@ -13,6 +19,15 @@ public class GameEngine extends Game {
 	
 	@Override
 	public void create () {
+		TestPack.getInstance().set_atlas();
+
+		BoxResources.set_all();
+		FanResources.set_all();
+		LampResources.set_all();
+		PlantResources.set_all();
+		PotResources.set_all();
+		PumpResources.set_all();
+
 	setScreen(new BoxScreen(this));
 	new Thread(){
 		@Override
@@ -42,5 +57,13 @@ public class GameEngine extends Game {
 	@Override
 	public void dispose () {
 
+		TestPack.getInstance().dispose_atlas();
+
+		BoxResources.dispose_all();
+		FanResources.dispose_all();
+		LampResources.dispose_all();
+		PlantResources.dispose_all();
+		PotResources.dispose_all();
+		PumpResources.dispose_all();
 	}
 }

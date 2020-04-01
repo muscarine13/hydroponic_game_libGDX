@@ -1,8 +1,9 @@
-package com.acidcarpet.hydroponist.screen;
+package com.acidcarpet.hydroponist.screen.pot;
 
 import com.acidcarpet.hydroponist.equipment.Bottle;
 import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.equipment.Pot;
+import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.storage.Inventory;
 import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.Game;
@@ -35,7 +36,7 @@ public class PotScreen implements Screen {
     BitmapFont alice_48_black;
     BitmapFont alice_72_8F8F8F_stroke_black;
 
-    PotScreen(Game game){
+    public PotScreen(Game game){
         this.game = game;
         last_update = 1;
     }
@@ -127,13 +128,13 @@ public class PotScreen implements Screen {
 
         stage = new Stage(new ExtendViewport(1080, 1920));
 
-        atlas = ScreenAssets.getInstance().getPotScreen_atlas();
-        skin = ScreenAssets.getInstance().getPotScreen_skin();
+        atlas = PotResources.getAtlas();
+        skin = PotResources.getSkin();
         Gdx.input.setInputProcessor(stage);
 
-        alice_48_green = ScreenAssets.getInstance().getAlice_48_green();
-        alice_48_black = ScreenAssets.getInstance().getAlice_48_green();
-        alice_72_8F8F8F_stroke_black = ScreenAssets.getInstance().getAlice_72_8F8F8F_stroke_black();
+        alice_48_green = PotResources.getAlice_48_green();
+        alice_48_black = PotResources.getAlice_48_black();
+        alice_72_8F8F8F_stroke_black = PotResources.getAlice_72_8F8F8F_stroke_black();
 
         Image background = new Image(atlas.findRegion("background"));
         background.setBounds(0, 0, stage.getWidth(), stage.getHeight());

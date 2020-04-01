@@ -1,6 +1,11 @@
-package com.acidcarpet.hydroponist.screen;
+package com.acidcarpet.hydroponist.screen.box;
 
 import com.acidcarpet.hydroponist.equipment.Box;
+import com.acidcarpet.hydroponist.screen.fan.FanScreen;
+import com.acidcarpet.hydroponist.screen.lamp.LampScreen;
+import com.acidcarpet.hydroponist.screen.plant.PlantScreen;
+import com.acidcarpet.hydroponist.screen.pot.PotScreen;
+import com.acidcarpet.hydroponist.screen.pump.PumpScreen;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -38,8 +43,8 @@ public class BoxScreen implements Screen {
     public void show() {
         stage = new Stage(new ExtendViewport(1080, 1920));
 
-        atlas = ScreenAssets.getInstance().getBoxScreen_atlas();
-        skin = ScreenAssets.getInstance().getBoxScreen_skin();
+        atlas = BoxResources.getAtlas();
+        skin = BoxResources.getSkin();
 
         Gdx.input.setInputProcessor(stage);
 

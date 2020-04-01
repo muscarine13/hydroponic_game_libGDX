@@ -1,10 +1,11 @@
-package com.acidcarpet.hydroponist.screen;
+package com.acidcarpet.hydroponist.screen.plant;
 
 import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.plant.Leave;
 import com.acidcarpet.hydroponist.plant.PlantStage;
 import com.acidcarpet.hydroponist.plant.Product;
 import com.acidcarpet.hydroponist.plant.Root;
+import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -1251,12 +1252,12 @@ public class PlantScreen implements Screen {
     public void show() {
         stage = new Stage(new ExtendViewport(1080, 1920));
 
-        atlas = ScreenAssets.getInstance().getPlantScreen_atlas();
-        skin = ScreenAssets.getInstance().getPlantScreen_skin();
+        atlas = PlantResources.getAtlas();
+        skin = PlantResources.getSkin();
         Gdx.input.setInputProcessor(stage);
 
-        alice_144_green = ScreenAssets.getInstance().alice_144_green;
-        alice_64_black = ScreenAssets.getInstance().alice_64_black;
+        alice_144_green = PlantResources.getAlice_144_green();
+        alice_64_black = PlantResources.getAlice_64_black();
 
         Image background = new Image(atlas.findRegion("background"));
         background.setName("background");

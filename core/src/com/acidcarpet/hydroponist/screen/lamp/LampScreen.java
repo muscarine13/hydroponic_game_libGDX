@@ -1,7 +1,8 @@
-package com.acidcarpet.hydroponist.screen;
+package com.acidcarpet.hydroponist.screen.lamp;
 
 import com.acidcarpet.hydroponist.equipment.Box;
-import com.acidcarpet.hydroponist.equipment.Pump;
+import com.acidcarpet.hydroponist.equipment.Lamp;
+import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.storage.Inventory;
 import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.Game;
@@ -20,7 +21,11 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
-public class PumpScreen implements Screen {
+import java.util.Date;
+
+import static java.lang.String.*;
+
+public class LampScreen implements Screen {
 
     Game game;
 
@@ -37,26 +42,26 @@ public class PumpScreen implements Screen {
     BitmapFont alice_40_black;
     BitmapFont alice_28_555555;
 
-    public PumpScreen(Game game){
-        this.game = game;
-        last_update = 1;
 
+    public LampScreen(Game game){
+        this.game = game;
+        last_update = new Date().getTime();
     }
 
     private void takeoff_click(){
-        Box.getInstance().take_off_pump();
+        Box.getInstance().take_off_lamp();
     }
     private void off_click(){
-        Box.getInstance().getPump().set_off();
+        Box.getInstance().getLamp().set_off();
     }
     private void on_click(){
-        Box.getInstance().getPump().set_on();
+        Box.getInstance().getLamp().set_on();
     }
-    private void item_equip_click(Pump pump){
-        Box.getInstance().equip(pump);
+    private void item_equip_click(Lamp lamp){
+        Box.getInstance().equip(lamp);
     }
-    private void item_delete_click(Pump pump){
-        Inventory.getInstance().delete(pump);
+    private void item_delete_click(Lamp lamp){
+        Inventory.getInstance().delete(lamp);
     }
     private void back_button_click(){
         game.setScreen(new BoxScreen(game));
@@ -64,19 +69,18 @@ public class PumpScreen implements Screen {
 
     @Override
     public void show() {
-
         stage = new Stage(new ExtendViewport(1080, 1920));
 
-        atlas = ScreenAssets.getInstance().getPumpScreen_atlas();
-        skin = ScreenAssets.getInstance().getPumpScreen_skin();
+        atlas = LampResources.getAtlas();
+        skin = LampResources.getSkin();
         Gdx.input.setInputProcessor(stage);
 
-        alice_48_green = ScreenAssets.getInstance().alice_48_green;
-        alice_36_white = ScreenAssets.getInstance().alice_36_white;
-        alice_25_black = ScreenAssets.getInstance().alice_25_black;
-        alice_40_black = ScreenAssets.getInstance().alice_40_black;
-        alice_28_555555 = ScreenAssets.getInstance().alice_28_555555;
-        alice_36_373737_stroke_black = ScreenAssets.getInstance().alice_36_373737_stroke_black;
+        alice_48_green = LampResources.getAlice_48_green();
+        alice_36_white = LampResources.getAlice_36_white();
+        alice_25_black = LampResources.getAlice_25_black();
+        alice_40_black = LampResources.getAlice_40_black();
+        alice_28_555555 = LampResources.getAlice_28_555555();
+        alice_36_373737_stroke_black = LampResources.getAlice_36_white();
 
         Image background = new Image(atlas.findRegion("background"));
         background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
@@ -92,7 +96,6 @@ public class PumpScreen implements Screen {
             }
         });
         stage.addActor(back_button);
-
     }
 
     @Override
@@ -100,13 +103,13 @@ public class PumpScreen implements Screen {
 
         if(last_update!=Box.get_last_update()){
 
-            try{    stage.getRoot().findActor("infopane").clearListeners();                 }catch (Exception e){ e.printStackTrace();}
-            try{    stage.getRoot().removeActor(stage.getRoot().findActor("infopane"));     }catch (Exception e){ e.printStackTrace();}
-            try{    stage.getRoot().findActor("scrollpane").clearListeners();               }catch (Exception e){ e.printStackTrace();}
-            try{    stage.getRoot().removeActor(stage.getRoot().findActor("scrollpane"));   }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().findActor("infopane").clearListeners();               }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("infopane"));   }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().findActor("scrollpane").clearListeners();             }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("scrollpane")); }catch (Exception e){ e.printStackTrace();}
 
-            try{    stage.addActor(generate_scrollpane());                                         }catch (Exception e){ e.printStackTrace();}
-            try{    stage.addActor(generate_infopane());                                           }catch (Exception e){ e.printStackTrace();}
+            try{    stage.addActor(generate_infopane());                                         }catch (Exception e){ e.printStackTrace();}
+            try{    stage.addActor(generate_scrollpane());                                       }catch (Exception e){ e.printStackTrace();}
 
             last_update = Box.get_last_update();
         }
@@ -148,15 +151,15 @@ public class PumpScreen implements Screen {
         background.setName("infopane_background");
         out.addActor(background);
 
-        if(Box.getInstance().getPump()!=null){// лампа есть и надо получить ее новую карточку
+        if(Box.getInstance().getLamp()!=null){// лампа есть и надо получить ее новую карточку
 
-            Image item_icon = Box.getInstance().getPump().get_image_item();
+            Image item_icon = Box.getInstance().getLamp().get_image_item();
             item_icon.setBounds(20, 490, 300, 300);
             item_icon.setName("infopane_item_image");
             out.addActor(item_icon);
 
             Label title_label = new  Label(
-                    Box.getInstance().getPump().getName(),
+                    Box.getInstance().getLamp().getName(),
                     new LabelStyle(alice_48_green, Color.GREEN)
             );
             title_label.setWrap(true);
@@ -166,7 +169,7 @@ public class PumpScreen implements Screen {
             out.addActor(title_label);
 
             Label description_label = new   Label(
-                    Box.getInstance().getPump().getDescription(),
+                    Box.getInstance().getLamp().getDescription(),
                     new LabelStyle(alice_36_white, Color.GREEN)
             );
             description_label.setWrap(true);
@@ -175,18 +178,31 @@ public class PumpScreen implements Screen {
             description_label.setName("infopane_description_label");
             out.addActor(description_label);
 
-            Image o2_icon = new Image(atlas.findRegion("oxygen_icon"));
-            o2_icon.setBounds(20, 20, 150, 150);
-            o2_icon.setName("infopane_o2_icon");
-            out.addActor(o2_icon);
-            Label o2_label = new Label(
-                    ""+Box.getInstance().getPump().getOxygen_production(),
+            Image light_icon = new Image(atlas.findRegion("light_icon"));
+            light_icon.setBounds(20, 20, 150, 150);
+            light_icon.setName("infopane_light_icon");
+            out.addActor(light_icon);
+            Label light_label = new Label(
+                    ""+Box.getInstance().getLamp().getLm_production(),
                     new LabelStyle(alice_40_black,  Color.BLACK)
             );
-            o2_label.setAlignment(Align.right);
-            o2_label.setBounds(20, 20, 140, 150);
-            o2_label.setName("infopane_o2_label");
-            out.addActor(o2_label);
+            light_label.setAlignment(Align.right);
+            light_label.setBounds(20, 20, 140, 150);
+            light_label.setName("infopane_light_label");
+            out.addActor(light_label);
+
+            Image temp_icon = new Image((atlas.findRegion("temperature_icon")));
+            temp_icon.setName("infopane_temp_icon");
+            temp_icon.setBounds(20+150+20, 20, 150, 150);
+            out.addActor(temp_icon);
+            Label temp_label = new Label(
+                    "+"+format("%.2f", Box.getInstance().getLamp().getT_add()),
+                    new LabelStyle(alice_40_black,  Color.BLACK)
+            );
+            temp_label.setAlignment(Align.right);
+            temp_label.setBounds(20+150+20, 20, 140, 150);
+            temp_label.setName("infopane_temp_label");
+            out.addActor(temp_label);
 
             ImageButton takeoff_button = new ImageButton(skin, "takeoff_button");
             takeoff_button.setName("infopane_takeoff_button");
@@ -200,7 +216,7 @@ public class PumpScreen implements Screen {
             out.addActor(takeoff_button);
 
 
-            if(Box.getInstance().getPump().isOn()){
+            if(Box.getInstance().getLamp().isOn()){
                 ImageButton off_button = new ImageButton(skin, "off_button");
                 off_button.setName("infopane_power_button");
                 off_button.setBounds(740, 20, 150, 150);
@@ -240,7 +256,7 @@ public class PumpScreen implements Screen {
 
 
             Label description_label = new   Label(
-                    "В данный момент у вас нет активной воздушной помпы. Растение не будет получать необходимый объем о2 для роста и жизни. Так же без кислорода просто умрут корни.",
+                    "В данный момент у вас нет активной лампы. Темновая фаза растения протекает только при экипированной лампе, хоть и отключенной. Во время попытки вырасти без лампы будет убавлятся здоровье.",
                     new LabelStyle(alice_36_white, Color.GREEN)
             );
             description_label.setWrap(true);
@@ -259,12 +275,12 @@ public class PumpScreen implements Screen {
 
     }
 
-    private Group generate_item(final Pump pump){
+    private Group generate_item(final Lamp lamp){
         Group out = new Group();
         //out.setTouchable(Touchable.disabled);
         try {
 
-            Image item_icon = pump.get_image_item();
+            Image item_icon = lamp.get_image_item();
             //item_icon.setTouchable(Touchable.disabled);
             item_icon.setName("item_icon");
             item_icon.setBounds(0, 0, 340, 340);
@@ -276,8 +292,8 @@ public class PumpScreen implements Screen {
             equip.addListener(new ClickListener() {
                 @Override
                 public void clicked(InputEvent event, float x, float y) {
-
-                    item_equip_click(pump);
+                    System.out.println("123123");
+                    item_equip_click(lamp);
                 }
             });
             out.addActor(equip);
@@ -289,7 +305,7 @@ public class PumpScreen implements Screen {
             delete.addListener(new ClickListener() {
                 @Override
                 public void clicked(InputEvent event, float x, float y) {
-                    item_delete_click(pump);
+                    item_delete_click(lamp);
                 }
             });
             out.addActor(delete);
@@ -300,18 +316,28 @@ public class PumpScreen implements Screen {
             item_frontpane.setTouchable(Touchable.disabled);
             out.addActor(item_frontpane);
 
-            Label o2_label = new Label(
-                    pump.getOxygen_production() + "",
+            Label light_label = new Label(
+                    lamp.getLm_production() + "",
                     new LabelStyle(alice_28_555555, Color.BLACK)
             );
-            o2_label.setAlignment(Align.right);
-            o2_label.setName("item_o2_label");
-            o2_label.setWrap(true);
-            o2_label.setBounds(250, 250, 80, 90);
-            out.addActor(o2_label);
+            light_label.setAlignment(Align.right);
+            light_label.setName("item_light_label");
+            light_label.setWrap(true);
+            light_label.setBounds(0, 250, 80, 90);
+            out.addActor(light_label);
+
+            Label temp_label = new Label(
+                    "+"+lamp.getT_add(),
+                    new LabelStyle(alice_28_555555, Color.BLACK)
+            );
+            temp_label.setAlignment(Align.right);
+            temp_label.setName("item_temp_label");
+            temp_label.setWrap(true);
+            temp_label.setBounds(250, 250, 80, 90);
+            out.addActor(temp_label);
 
             Label name_label = new Label(
-                    pump.getName(),
+                    lamp.getName(),
                     new LabelStyle(alice_36_373737_stroke_black, Color.BLACK)
             );
             name_label.setAlignment(Align.center);
@@ -339,12 +365,12 @@ public class PumpScreen implements Screen {
         table.defaults().width(340).height(340);
 
         int i = 0;
-        for(Storable current_pump : Inventory.getInstance().get_list(Inventory.Type.PUMP)){
+        for(Storable current_lamp : Inventory.getInstance().get_list(Inventory.Type.LAMP)){
             if(i>=3) {
                 i=0;
                 table.row();
             }
-            table.add(generate_item((Pump)current_pump));
+            table.add(generate_item((Lamp)current_lamp));
             i++;
 
         }
@@ -361,4 +387,3 @@ public class PumpScreen implements Screen {
     }
 
 }
-

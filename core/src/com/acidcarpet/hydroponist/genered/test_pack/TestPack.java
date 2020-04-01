@@ -17,14 +17,20 @@ public class TestPack {
     }
 
     private TestPack(){
+
+    }
+    private TextureAtlas atlas;
+
+    public TextureAtlas get_atlas(){
+        return atlas;
+    }
+    public  void set_atlas(){
         atlas = new TextureAtlas(
                 Gdx.files.internal("item/test_package/data/pack.pack")
         );
     }
-    private TextureAtlas atlas;
-
-    private TextureAtlas get_atlas(){
-        return atlas;
+    public void dispose_atlas(){
+        atlas.dispose();
     }
 
     public Lamp get_LED_65_lamp(){

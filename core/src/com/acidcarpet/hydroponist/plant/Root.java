@@ -64,6 +64,9 @@ public class Root {
 
     public synchronized boolean may_absorb(){
         if(!alive) return false;
+        if(Box.getInstance().getPot()==null) return false;
+        if(Box.getInstance().getPump()==null) return false;
+
         if(
                 (Box.getInstance().getPot().getCurrent_pH()< ph_maximum &&Box.getInstance().getPot().getCurrent_pH()> pH_minimum)
                         &&      (Box.getInstance().getPot().get_all_ppm()>ppm_minimum&&Box.getInstance().getPot().get_all_ppm()<ppm_maximum)

@@ -82,23 +82,14 @@ public class Leave {
     }
     public boolean may_photosynthesis(){
         if(!alive) return false;
+        if(Box.getInstance().getLamp()==null) return false;
+        if(Box.getInstance().getFan()==null) return false;
 
         double actual_water_consumption = water_consumption * (int)(height*width);
 
-        System.out.println(
-                (Box.getInstance().getPlant().getWater()>=actual_water_consumption)
-        +"/n"
-                +Box.getInstance().getFan().reduce_CO2(CO2_consumption *(int)(height*width))
-                        +"/n"
-                +(Box.getInstance().actual_t()< t_maximum &&Box.getInstance().actual_t()> t_minimum)
-
-        );
-
-
         if(
                         (Box.getInstance().getPlant().getWater()>=actual_water_consumption)
-                        &&
-                        Box.getInstance().getFan().reduce_CO2(CO2_consumption *(int)(height*width))
+                        && Box.getInstance().getFan().reduce_CO2(CO2_consumption *(int)(height*width))
                         &&
                         (Box.getInstance().actual_t()< t_maximum &&Box.getInstance().actual_t()> t_minimum)
 
