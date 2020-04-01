@@ -15,8 +15,6 @@ import com.badlogic.gdx.Game;
 public class GameEngine extends Game {
 
 
-
-	
 	@Override
 	public void create () {
 		TestPack.getInstance().set_atlas();
@@ -28,24 +26,28 @@ public class GameEngine extends Game {
 		PotResources.set_all();
 		PumpResources.set_all();
 
-	setScreen(new BoxScreen(this));
-	new Thread(){
-		@Override
-		public void run() {
-			while (true){
-				if(Box.getInstance().getPlant()!=null) {
-					Box.getInstance().second();
-					Box.getInstance().test_info();
-				}
+
+		new Thread(){
+			@Override
+			public void run() {
+				while (true){
+					if(Box.getInstance().getPlant()!=null) {
+						Box.getInstance().second();
+						//Box.getInstance().test_info();
+					}
 					try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-			}
+				}
 
-		}
-	}.start();
+			}
+		}.start();
+
+
+	setScreen(new BoxScreen(this));
+
 	}
 
 	@Override

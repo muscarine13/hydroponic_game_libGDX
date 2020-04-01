@@ -37,9 +37,9 @@ public class Box {
     ){
 
         this.box_ordinary_temperature = 24;
-        this.lamp = TestPack.getInstance().get_LED_200_lamp();
+        this.lamp = TestPack.getInstance().get_LED_65_lamp();
         this.fan = TestPack.getInstance().get_FAN_N_fan();
-        this.pot = TestPack.getInstance().get_MIDDLE_pot();
+        this.pot = TestPack.getInstance().get_MINI_pot();
         this.pump = TestPack.getInstance().get_WIND_pump();
 
         this.plant = TestPack.getInstance().get_Malco_plant();
@@ -106,6 +106,7 @@ public class Box {
         Inventory.getInstance().delete(lamp);
 
         last_update = new Date().getTime();
+        Inventory.update();
     }
     public synchronized void equip(Fan fan) {
         if(this.fan!=null){
@@ -115,11 +116,13 @@ public class Box {
         Inventory.getInstance().delete(fan);
 
         last_update = new Date().getTime();
+        Inventory.update();
     }
     public synchronized void equip(Plant plant) {
         kill_plant();
         this.plant = plant;
         last_update = new Date().getTime();
+        Inventory.update();
     }
     public synchronized void equip(Pot pot) {
         if(this.pot!=null){
@@ -129,6 +132,7 @@ public class Box {
         Inventory.getInstance().delete(pot);
 
         last_update = new Date().getTime();
+        Inventory.update();
     }
     public synchronized void equip(Pump pump) {
         if(this.pump!=null){
@@ -138,35 +142,42 @@ public class Box {
         Inventory.getInstance().delete(pump);
 
         last_update = new Date().getTime();
+        Inventory.update();
     }
 
     public synchronized void take_off_lamp() {
         if(lamp!=null)Inventory.getInstance().add(lamp);
         lamp=null;
         last_update = new Date().getTime();
+        Inventory.update();
     }
     public synchronized void take_off_fan() {
         if(fan!=null)Inventory.getInstance().add(fan);
         fan=null;
         last_update = new Date().getTime();
+        Inventory.update();
     }
     public synchronized void kill_plant() {
         plant=null;
         last_update = new Date().getTime();
+        Inventory.update();
     }
     public synchronized void take_off_pot() {
         if(pot!=null)Inventory.getInstance().add(pot);
         pot=null;
         last_update = new Date().getTime();
+        Inventory.update();
     }
     public synchronized void take_off_pump() {
         if(pump!=null)Inventory.getInstance().add(pump);
         pump=null;
         last_update = new Date().getTime();
+        Inventory.update();
     }
     public synchronized void harvest_plant(){
         plant=null;
         last_update = new Date().getTime();
+        Inventory.update();
     }
 
 

@@ -30,7 +30,9 @@ public class PotScreen implements Screen {
     TextureAtlas atlas;
     Stage stage;
 
-    long last_update;
+    long box_last_update;
+    long inventory_last_update;
+
 
     BitmapFont alice_48_green;
     BitmapFont alice_48_black;
@@ -38,7 +40,8 @@ public class PotScreen implements Screen {
 
     public PotScreen(Game game){
         this.game = game;
-        last_update = 1;
+        box_last_update = 1;
+        inventory_last_update = 1;
     }
 
     public void take_off_button_click(){
@@ -155,21 +158,28 @@ public class PotScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        if(Box.get_last_update()!= last_update){
+        if(Box.get_last_update()!= box_last_update){
 
             try{    stage.getRoot().findActor("info_pane").clearListeners();                }catch (Exception e){ e.printStackTrace();}
             try{    stage.getRoot().removeActor(stage.getRoot().findActor("info_pane"));    }catch (Exception e){ e.printStackTrace();}
-            try{    stage.getRoot().findActor("bottle_pane").clearListeners();              }catch (Exception e){ e.printStackTrace();}
-            try{    stage.getRoot().removeActor(stage.getRoot().findActor("bottle_pane"));  }catch (Exception e){ e.printStackTrace();}
-            try{    stage.getRoot().findActor("pot_pane").clearListeners();                 }catch (Exception e){ e.printStackTrace();}
-            try{    stage.getRoot().removeActor(stage.getRoot().findActor("pot_pane"));     }catch (Exception e){ e.printStackTrace();}
 
             try{    stage.addActor(generate_info_pane());                                          }catch (Exception e){ e.printStackTrace();}
-            try{    stage.addActor(generate_bottle_pane());                                        }catch (Exception e){ e.printStackTrace();}
-            try{    stage.addActor(generate_pot_pane());                                           }catch (Exception e){ e.printStackTrace();}
 
-            last_update = Box.get_last_update();
+            box_last_update = Box.get_last_update();
 
+        }
+
+        if(Inventory.last_update()!=inventory_last_update) {
+            try {   stage.getRoot().findActor("bottle_pane").clearListeners();} catch (Exception e) { e.printStackTrace(); }
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("bottle_pane")); } catch (Exception e) { e.printStackTrace(); }
+            try { stage.getRoot().findActor("pot_pane").clearListeners(); } catch (Exception e) { e.printStackTrace(); }
+            try { stage.getRoot().removeActor(stage.getRoot().findActor("pot_pane")); } catch (Exception e) { e.printStackTrace(); }
+
+
+            try { stage.addActor(generate_bottle_pane()); } catch (Exception e) { e.printStackTrace(); }
+            try { stage.addActor(generate_pot_pane()); } catch (Exception e) { e.printStackTrace(); }
+
+            inventory_last_update = Inventory.last_update();
         }
 
         stage.act(delta);

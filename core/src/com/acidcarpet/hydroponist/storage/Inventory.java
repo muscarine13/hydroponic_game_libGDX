@@ -14,12 +14,21 @@ public class Inventory {
         if(instance==null) instance = new Inventory();
         return instance;
     }
+    private static long last_update;
+    public static long last_update(){
+        return last_update;
+    }
+    public static void update(){
+        last_update = new Date().getTime();
+    }
 
     private Map<String, List<Storable>> storage;
     private int gold;
     private int diamond;
 
     private Inventory(){
+
+        last_update = new Date().getTime();
 
         storage = new HashMap<>();
 
@@ -43,13 +52,14 @@ public class Inventory {
 
 
         add(TestPack.getInstance().get_LED_65_lamp());
-//        add(TestPack.getInstance().get_LED_200_lamp());
-//        add(TestPack.getInstance().get_LED_1000_lamp());
+        add(TestPack.getInstance().get_LED_200_lamp());
+        add(TestPack.getInstance().get_LED_1000_lamp());
+
         //add(TestPack.getInstance().get_FAN_N_fan());
         add(TestPack.getInstance().get_FAN_A_fan());
         add(TestPack.getInstance().get_FAN_P_fan());
-        add(TestPack.getInstance().get_MINI_pot());
-        //add(TestPack.getInstance().get_MIDDLE_pot());
+        //add(TestPack.getInstance().get_MINI_pot());
+        add(TestPack.getInstance().get_MIDDLE_pot());
         add(TestPack.getInstance().get_MAXI_pot());
         //add(TestPack.getInstance().get_WIND_pump());
         add(TestPack.getInstance().get_CYCLONE_pump());
@@ -100,6 +110,8 @@ public class Inventory {
            }
         }
 
+        update();
+
     }
     public synchronized void delete(Type type, int index){
         if(type!=null){
@@ -113,6 +125,7 @@ public class Inventory {
                 default:
             }
         }
+        update();
     }
     public synchronized void delete(Storable item){
         if(item==null) return;
@@ -128,6 +141,7 @@ public class Inventory {
 
             }
         }
+        update();
     }
     public synchronized Storable get(Type type, int index){
         if(type!=null){
@@ -145,6 +159,7 @@ public class Inventory {
         }
     }
     public synchronized Storable get_and_remove(Type type, int index){
+        update();
         if(type!=null){
             switch (type){
                 case LAMP:   return storage.get(Type.LAMP.line).remove(index);
@@ -158,6 +173,7 @@ public class Inventory {
         }else{
             return null;
         }
+
     }
     public synchronized List<Storable> get_list(Type type){
         if(type!=null){
@@ -180,12 +196,14 @@ public class Inventory {
     }
     public synchronized void setGold(int gold) {
         this.gold = gold;
+        update();
     }
     public synchronized int getDiamond() {
         return diamond;
     }
     public synchronized void setDiamond(int diamond) {
         this.diamond = diamond;
+        update();
     }
 
     public enum Type{

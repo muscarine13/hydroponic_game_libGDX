@@ -25,7 +25,8 @@ public class PumpScreen implements Screen {
 
     Game game;
 
-    long last_update;
+    long box_last_update;
+    long inventory_last_update;
 
     Skin skin;
     TextureAtlas atlas;
@@ -40,7 +41,8 @@ public class PumpScreen implements Screen {
 
     public PumpScreen(Game game){
         this.game = game;
-        last_update = 1;
+        box_last_update = 1;
+        inventory_last_update = 1;
 
     }
 
@@ -99,17 +101,23 @@ public class PumpScreen implements Screen {
     @Override
     public void render(float delta) {
 
-        if(last_update!=Box.get_last_update()){
+        if(box_last_update !=Box.get_last_update()){
 
             try{    stage.getRoot().findActor("infopane").clearListeners();                 }catch (Exception e){ e.printStackTrace();}
             try{    stage.getRoot().removeActor(stage.getRoot().findActor("infopane"));     }catch (Exception e){ e.printStackTrace();}
+
+            try{    stage.addActor(generate_infopane());                                           }catch (Exception e){ e.printStackTrace();}
+
+
+            box_last_update = Box.get_last_update();
+        }
+        if(inventory_last_update!=Inventory.last_update()){
             try{    stage.getRoot().findActor("scrollpane").clearListeners();               }catch (Exception e){ e.printStackTrace();}
             try{    stage.getRoot().removeActor(stage.getRoot().findActor("scrollpane"));   }catch (Exception e){ e.printStackTrace();}
 
             try{    stage.addActor(generate_scrollpane());                                         }catch (Exception e){ e.printStackTrace();}
-            try{    stage.addActor(generate_infopane());                                           }catch (Exception e){ e.printStackTrace();}
 
-            last_update = Box.get_last_update();
+            inventory_last_update = Inventory.last_update();
         }
 
         stage.act(delta);

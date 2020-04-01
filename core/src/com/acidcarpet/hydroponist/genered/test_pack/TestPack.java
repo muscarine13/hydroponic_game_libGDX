@@ -65,11 +65,11 @@ public class TestPack {
                 "Лампа для новичков мощностью 1000W. Очень сильно повышает температуру на 22.5 градуса. Отличная лампа для профессионалов, знающих что они делают..",
                 1000,
                 22.5,
-                new Image(atlas.findRegion("LED_1000_lamp_on")),
-                new Image(atlas.findRegion("LED_1000_lamp_off")),
-                new Image(atlas.findRegion("LED_1000_light_on")),
-                new Image(atlas.findRegion("LED_1000_light_off")),
-                new Image(atlas.findRegion("LED_1000_lamp_icon"))
+                new Image(atlas.findRegion("LED_1000_PRO_lamp_on")),
+                new Image(atlas.findRegion("LED_1000_PRO_lamp_off")),
+                new Image(atlas.findRegion("LED_1000_PRO_light_on")),
+                new Image(atlas.findRegion("LED_1000_PRO_light_off")),
+                new Image(atlas.findRegion("LED_1000_PRO_lamp_icon"))
         );
     }
 
