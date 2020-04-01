@@ -27,33 +27,462 @@ public class TestPack {
         return atlas;
     }
 
-    public Lamp get_test_lamp(){
+    public Lamp get_LED_65_lamp(){
         return new Lamp(
-                "TestGro LED 600W",
-                "Тестовая лампа для новичков, нормально светит",
-                1500,
-                2.5,
-                new Image(atlas.findRegion("test_lamp_on")),
-                new Image(atlas.findRegion("test_lamp_off")),
-                new Image(atlas.findRegion("test_light_on")),
-                new Image(atlas.findRegion("test_light_off")),
-                new Image(atlas.findRegion("test_lamp_icon"))
+                "TestGro LED 65",
+                "Лампа для новичков мощностью 65W. Повышает температуру всего на 3 с половиной градуса. Отличная лампа для начала.",
+                65,
+                3.5,
+                new Image(atlas.findRegion("LED_65_lamp_on")),
+                new Image(atlas.findRegion("LED_65_lamp_off")),
+                new Image(atlas.findRegion("LED_65_light_on")),
+                new Image(atlas.findRegion("LED_65_light_off")),
+                new Image(atlas.findRegion("LED_65_lamp_icon"))
         );
     }
-    public Fan get_test_fan(){
+    public Lamp get_LED_200_lamp(){
+        return new Lamp(
+                "TestGro LED 200",
+                "Лампа для новичков мощностью целых 200W. Повышает температуру на четсные 5.8 градусов. Отличная лампа для любителя.",
+                200,
+                5.8,
+                new Image(atlas.findRegion("LED_200_lamp_on")),
+                new Image(atlas.findRegion("LED_200_lamp_off")),
+                new Image(atlas.findRegion("LED_200_light_on")),
+                new Image(atlas.findRegion("LED_200_light_off")),
+                new Image(atlas.findRegion("LED_200_lamp_icon"))
+        );
+    }
+    public Lamp get_LED_1000_lamp(){
+        return new Lamp(
+                "TestGro LED 1000 PRO",
+                "Лампа для новичков мощностью 1000W. Очень сильно повышает температуру на 22.5 градуса. Отличная лампа для профессионалов, знающих что они делают..",
+                1000,
+                22.5,
+                new Image(atlas.findRegion("LED_1000_lamp_on")),
+                new Image(atlas.findRegion("LED_1000_lamp_off")),
+                new Image(atlas.findRegion("LED_1000_light_on")),
+                new Image(atlas.findRegion("LED_1000_light_off")),
+                new Image(atlas.findRegion("LED_1000_lamp_icon"))
+        );
+    }
+
+    public Fan get_FAN_N_fan(){
         return new Fan(
-                "TestGro SmallWind 150",
-                "Тестовый вентилятор для новичков, вроде дует",
-                60.5,
-                2.5,
-                new Image(atlas.findRegion("test_fan_on")),
-                new Image(atlas.findRegion("test_fan_off")),
-                new Image(atlas.findRegion("test_fan_icon"))
+                "TestGro FAN-N",
+                "Маленький канальный вентилятор. Больше гудит чем дует, но для начала впролне подойдет для выращивания маленьких тестовых растений.",
+                1.5,
+                3.1,
+                new Image(atlas.findRegion("FAN_N_fan_on")),
+                new Image(atlas.findRegion("FAN_N_fan_off")),
+                new Image(atlas.findRegion("FAN_N_fan_icon"))
         );
     }
-    public Plant get_test_plant(){
+    public Fan get_FAN_A_fan(){
+        return new Fan(
+                "TestGro FAN-A",
+                "Средненький канальный вентилятор. Нормально дует и очень хорошо охлаждает. Вполне может помочь при выращивании средних и маленьких тестовых посевов.",
+                3.2,
+                5.5,
+                new Image(atlas.findRegion("FAN_A_fan_on")),
+                new Image(atlas.findRegion("FAN_A_fan_off")),
+                new Image(atlas.findRegion("FAN_A_fan_icon"))
+        );
+    }
+    public Fan get_FAN_P_fan(){
+        return new Fan(
+                "TestGro FAN-P",
+                "Большой канальный вентилятор. Дует как турбина самолета и охлаждает так же. Походит для всего.",
+                15.5,
+                19.1,
+                new Image(atlas.findRegion("FAN_P_fan_on")),
+                new Image(atlas.findRegion("FAN_P_fan_off")),
+                new Image(atlas.findRegion("FAN_P_fan_icon"))
+        );
+    }
+
+    public Pot get_MINI_pot(){
+        return new Pot(
+                "TestGro Pot MINI",
+                "Маленькое любительствое ведерко на 20л. По виду самодельное. Подойдет для маленьких тестовых растений.",
+                20.0,
+                new Image(atlas.findRegion("MINI_pot")),
+                new Image(atlas.findRegion("MINI_pot_icon"))
+        );
+
+    }
+    public Pot get_MIDDLE_pot(){
+        return new Pot(
+                "TestGro Pot MIDDLE",
+                "Среднее профессиональное ведерко на 40л. Подойдет для маленьких и средних тестовых растений.",
+                40.0,
+                new Image(atlas.findRegion("MIDDLE_pot")),
+                new Image(atlas.findRegion("MIDDLE_pot_icon"))
+        );
+
+    }
+    public Pot get_MAXI_pot(){
+        return new Pot(
+                "TestGro Pot MAXI",
+                "Большое профессиональное ведерко на 60л. Подойдет для любых тестовых растений.",
+                60.0,
+                new Image(atlas.findRegion("MAXI_pot")),
+                new Image(atlas.findRegion("MAXI_pot_icon"))
+        );
+
+    }
+
+    public Pump get_WIND_pump(){
+        return new Pump(
+                "TestGro WIND",
+                "Маленький воздушный компрессор для маленьких тестовых растений в маленьких тестовых горшках.",
+                10,
+                new Image(atlas.findRegion("WIND_compressor_on")),
+                new Image(atlas.findRegion("WIND_compressor_off")),
+                new Image(atlas.findRegion("WIND_pump_icon"))
+        );
+    }
+    public Pump get_CYCLONE_pump(){
+        return new Pump(
+                "TestGro CYCLONE",
+                "Средний воздушный компрессор для средних тестовых растений включительно.",
+                20,
+                new Image(atlas.findRegion("CYCLONE_compressor_on")),
+                new Image(atlas.findRegion("CYCLONE_compressor_off")),
+                new Image(atlas.findRegion("CYCLONE_pump_icon"))
+        );
+    }
+    public Pump get_TORNADO_pump(){
+        return new Pump(
+                "TestGro TORNADO",
+                "Большой воздушный компрессор для любых тестовых растений.",
+                50,
+                new Image(atlas.findRegion("TORNADO_compressor_on")),
+                new Image(atlas.findRegion("TORNADO_compressor_off")),
+                new Image(atlas.findRegion("TORNADO_pump_icon"))
+        );
+    }
+
+    public Bottle get_pH_up_bottle(){
+        return new Bottle(
+                "TestGro pH UP",
+                "Жидкость, повышающая pH",
+                0.5,
+                14,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                new Image(atlas.findRegion("pH_up"))
+        );
+    }
+    public Bottle get_pH_down_bottle(){
+        return new Bottle(
+                "TestGro pH DOWN",
+                "Жидкость, пинижающая pH",
+                0.5,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                new Image(atlas.findRegion("pH_down"))
+        );
+    }
+    public Bottle get_water_bottle(){
+        return new Bottle(
+                "TestGro Clean Water",
+                "Чистая дистиллированная вода без солей",
+                100.0,
+                5.5,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                new Image(atlas.findRegion("aqua"))
+        );
+    }
+
+    public Bottle get_nutrient_N_bottle(){
+        return new Bottle(
+                "TestGro N Nutrient",
+                "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                0.5,
+                5.5,
+                10,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                new Image(atlas.findRegion("macro_N"))
+        );
+    }
+    public Bottle get_nutrient_P_bottle(){
+        return new Bottle(
+                "TestGro P Nutrient",
+                "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                0.5,
+                5.5,
+                0,
+                10,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                new Image(atlas.findRegion("macro_P"))
+        );
+    }
+    public Bottle get_nutrient_K_bottle(){
+        return new Bottle(
+                "TestGro K Nutrient",
+                "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                0.5,
+                5.5,
+                0,
+                0,
+                10,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                new Image(atlas.findRegion("macro_K"))
+        );
+    }
+    public Bottle get_nutrient_S_bottle(){
+        return new Bottle(
+                "TestGro S Nutrient",
+                "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                0.5,
+                5.5,
+                0,
+                0,
+                0,
+                10,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                new Image(atlas.findRegion("macro_S"))
+        );
+    }
+    public Bottle get_nutrient_Mg_bottle(){
+        return new Bottle(
+                "TestGro Mg Nutrient",
+                "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                0.5,
+                5.5,
+                0,
+                0,
+                0,
+                0,
+                10,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                new Image(atlas.findRegion("macro_Mg"))
+        );
+    }
+    public Bottle get_nutrient_Ca_bottle(){
+        return new Bottle(
+                "TestGro Ca Nutrient",
+                "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                0.5,
+                5.5,
+                0,
+                0,
+                0,
+                0,
+                0,
+                10,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                new Image(atlas.findRegion("macro_Ca"))
+        );
+    }
+    public Bottle get_nutrient_B_bottle(){
+        return new Bottle(
+                "TestGro B Nutrient",
+                "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                0.5,
+                5.5,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5,
+                0,
+                0,
+                0,
+                0,
+                0,
+                new Image(atlas.findRegion("micro_B"))
+        );
+    }
+    public Bottle get_nutrient_Cu_bottle(){
+        return new Bottle(
+                "TestGro Cu Nutrient",
+                "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                0.5,
+                5.5,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5,
+                0,
+                0,
+                0,
+                0,
+                new Image(atlas.findRegion("micro_Cu"))
+        );
+    }
+    public Bottle get_nutrient_Fe_bottle(){
+        return new Bottle(
+                "TestGro Fe Nutrient",
+                "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                0.5,
+                5.5,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5,
+                0,
+                0,
+                0,
+                new Image(atlas.findRegion("micro_Fe"))
+        );
+    }
+    public Bottle get_nutrient_Mn_bottle(){
+        return new Bottle(
+                "TestGro Mn Nutrient",
+                "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                0.5,
+                5.5,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5,
+                0,
+                0,
+                new Image(atlas.findRegion("micro_Mn"))
+        );
+    }
+    public Bottle get_nutrient_Mo_bottle(){
+        return new Bottle(
+                "TestGro Mo Nutrient",
+                "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                0.5,
+                5.5,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5,
+                0,
+                new Image(atlas.findRegion("micro_Mo"))
+        );
+    }
+    public Bottle get_nutrient_Zn_bottle(){
+        return new Bottle(
+                "TestGro Zn Nutrient",
+                "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                0.5,
+                5.5,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5,
+                new Image(atlas.findRegion("micro_Zn"))
+        );
+    }
+
+    public Plant get_Malco_plant(){
         return new Plant(
-                "Testus Plantus",
+                "Testplanta Malco",
                 1000
         ) {
             @Override
@@ -62,8 +491,8 @@ public class TestPack {
 
                 out.add(new PlantStage( //76ppm
                         PlantStages.SEED,
-                        new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_seed_alive")),
-                        new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_seed_dead")),
+                        new Image(TestPack.getInstance().get_atlas().findRegion("Malco_seed_alive")),
+                        new Image(TestPack.getInstance().get_atlas().findRegion("Malco_seed_dead")),
                         10,
                         0,
                         1,
@@ -85,107 +514,105 @@ public class TestPack {
                         0,
                         2,
                         0,
-                        150,
-                        150,
-                        150,
-                        130,
-                        80,
-                        40,
+                        48,
+                        42,
+                        38,
+                        20,
+                        20,
+                        20,
+                        20,
+                        16,
                         10,
-                        10,
-                        10,
-                        10,
-                        1,
-                        0
+                        2,
+                        2,
+                        2
                 ));
 
                 out.add(new PlantStage( //76ppm
                         PlantStages.VEGETATION,
-                        new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_vegetation_alive")),
-                        new Image(TestPack.getInstance().get_atlas().findRegion("test_plant_vegetation_dead")),
+                        new Image(TestPack.getInstance().get_atlas().findRegion("Malco_vegetation_alive")),
+                        new Image(TestPack.getInstance().get_atlas().findRegion("Malco_vegetation_dead")),
                         10,
+                        5,
                         1,
-                        1,
                         0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
+                        120,
+                        105,
+                        95,
+                        50,
+                        50,
+                        50,
+                        50,
+                        40,
+                        25,
+                        5,
+                        5,
+                        5,
 
-                        20,
-                        3,
-                        2,
-                        0,
-                        150,
-                        150,
-                        150,
-                        130,
-                        80,
                         40,
                         10,
+                        5,
+                        0,
+                        240,
+                        210,
+                        190,
+                        100,
+                        100,
+                        100,
+                        100,
+                        80,
                         10,
                         10,
                         10,
-                        1,
-                        0
+                        10
                 ));
-
 
                 out.add(new PlantStage( //76ppm
                         PlantStages.BLOOM,
-                        new Image(atlas.findRegion("test_plant_bloom_alive")),
-                        new Image(atlas.findRegion("test_plant_bloom_dead")),
+                        new Image(TestPack.getInstance().get_atlas().findRegion("Malco_bloom_alive")),
+                        new Image(TestPack.getInstance().get_atlas().findRegion("Malco_bloom_dead")),
                         10,
-                        0,
-                        0,
                         1,
                         0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
+                        1,
+                        240,
+                        210,
+                        190,
+                        100,
+                        100,
+                        100,
+                        100,
+                        80,
+                        50,
+                        10,
+                        10,
+                        10,
 
                         20,
+                        2,
                         0,
-                        0,
-                        3,
-                        150,
-                        150,
-                        150,
-                        130,
-                        80,
-                        40,
-                        10,
-                        10,
-                        10,
-                        10,
-                        1,
-                        0
+                        5,
+                        480,
+                        420,
+                        380,
+                        200,
+                        200,
+                        200,
+                        200,
+                        160,
+                        100,
+                        20,
+                        20,
+                        20
                 ));
-
 
                 out.add(new PlantStage( //76ppm
                         PlantStages.HARVEST,
-                        new Image(atlas.findRegion("test_plant_harvest_alive")),
-                        new Image(atlas.findRegion("test_plant_harvest_dead")),
+                        new Image(TestPack.getInstance().get_atlas().findRegion("Malco_harvest_alive")),
+                        new Image(TestPack.getInstance().get_atlas().findRegion("Malco_harvest_dead")),
                         10,
                         0,
-                        1,
+                        0,
                         0,
                         0,
                         0,
@@ -217,6 +644,8 @@ public class TestPack {
                         0,
                         0
                 ));
+
+
 
                 return out;
             }
@@ -225,9 +654,9 @@ public class TestPack {
             public Leave get_new_leave() {
                 return new Leave(
                         100,
-                        4,
                         5,
-                        1,
+                        0.5,
+                        3,
                         2,
                         12,
                         13,
@@ -244,13 +673,13 @@ public class TestPack {
                 return new Root(
                         200,
                         2,
-                        1.5,
+                        0.01,
                         1,
                         13,
                         20,
                         30,
                         0,
-                        35000,
+                        10000,
                         0.00012
                 );
             }
@@ -269,60 +698,5 @@ public class TestPack {
                 );
             }
         };
-    }
-    public Pot get_test_pot(){
-        return new Pot(
-                "TestGro Aqua50 PRO",
-                "Профессиональный горшок для выращивания на гидропонике. Тестовый конечно.",
-                30.0,
-                20.05,
-                5.5,
-                15,
-                13,
-                12,
-                11,
-                10,
-                9,
-                8,
-                7,
-                6,
-                5,
-                4,
-                3,
-                new Image(atlas.findRegion("test_pot")),
-                new Image(atlas.findRegion("test_pot_icon"))
-        );
-
-    }
-    public Pump get_test_pump(){
-        return new Pump(
-                "TestGro Oxy100 Start",
-                "Описание компрессора новичка из тестового набора. Ничего особенного",
-                100,
-                new Image(atlas.findRegion("test_compressor_on")),
-                new Image(atlas.findRegion("test_compressor_off")),
-                new Image(atlas.findRegion("test_pump_icon"))
-        );
-    }
-    public Bottle get_test_bottle(){
-        return new Bottle(
-                "TestGro Universal",
-                "Описание бутыля с удобрением. Тестовый образец",
-                0.5,
-                5,
-                12,
-                11,
-                10,
-                9,
-                8,
-                7,
-                6,
-                5,
-                4,
-                3,
-                2,
-                1,
-                new Image(atlas.findRegion("test_bottle_icon"))
-        );
     }
 }

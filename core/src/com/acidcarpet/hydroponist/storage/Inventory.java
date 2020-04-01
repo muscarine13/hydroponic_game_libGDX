@@ -24,7 +24,6 @@ public class Inventory {
         storage = new HashMap<>();
 
         List<com.acidcarpet.hydroponist.storage.Storable> lamp_array = new ArrayList<>();
-        lamp_array.add(TestPack.getInstance().get_test_lamp());
         storage.put(Type.LAMP.line, lamp_array);
 
         List<com.acidcarpet.hydroponist.storage.Storable> fan_array = new ArrayList<>();
@@ -43,24 +42,34 @@ public class Inventory {
         storage.put(Type.BOTTLE.line, bottle_array);
 
 
+        add(TestPack.getInstance().get_LED_65_lamp());
+//        add(TestPack.getInstance().get_LED_200_lamp());
+//        add(TestPack.getInstance().get_LED_1000_lamp());
+        //add(TestPack.getInstance().get_FAN_N_fan());
+        add(TestPack.getInstance().get_FAN_A_fan());
+        add(TestPack.getInstance().get_FAN_P_fan());
+        add(TestPack.getInstance().get_MINI_pot());
+        //add(TestPack.getInstance().get_MIDDLE_pot());
+        add(TestPack.getInstance().get_MAXI_pot());
+        //add(TestPack.getInstance().get_WIND_pump());
+        add(TestPack.getInstance().get_CYCLONE_pump());
+        add(TestPack.getInstance().get_TORNADO_pump());
+        add(TestPack.getInstance().get_water_bottle());
+        add(TestPack.getInstance().get_pH_down_bottle());
+        add(TestPack.getInstance().get_pH_up_bottle());
+        add(TestPack.getInstance().get_nutrient_N_bottle());
+        add(TestPack.getInstance().get_nutrient_P_bottle());
+        add(TestPack.getInstance().get_nutrient_K_bottle());
+        add(TestPack.getInstance().get_nutrient_S_bottle());
+        add(TestPack.getInstance().get_nutrient_Mg_bottle());
+        add(TestPack.getInstance().get_nutrient_Ca_bottle());
+        add(TestPack.getInstance().get_nutrient_B_bottle());
+        add(TestPack.getInstance().get_nutrient_Cu_bottle());
+        add(TestPack.getInstance().get_nutrient_Fe_bottle());
+        add(TestPack.getInstance().get_nutrient_Mn_bottle());
+        add(TestPack.getInstance().get_nutrient_Mo_bottle());
+        add(TestPack.getInstance().get_nutrient_Zn_bottle());
 
-        for(int i = 0; i<10; i++)
-            add(TestPack.getInstance().get_test_lamp());
-
-        for(int i = 0; i<10; i++)
-            add(TestPack.getInstance().get_test_fan());
-
-        for(int i = 0; i<10; i++)
-            add(TestPack.getInstance().get_test_pot());
-
-        for(int i = 0; i<10; i++)
-            add(TestPack.getInstance().get_test_pump());
-
-//        for(int i = 0; i<10; i++)
-//            add(TestPack.getInstance().get_test_plant());
-
-        for(int i = 0; i<10; i++)
-            add(TestPack.getInstance().get_test_bottle());
 
         gold = 0;
         diamond = 0;

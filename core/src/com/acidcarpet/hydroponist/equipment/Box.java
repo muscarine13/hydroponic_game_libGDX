@@ -37,12 +37,12 @@ public class Box {
     ){
 
         this.box_ordinary_temperature = 24;
-        this.lamp = TestPack.getInstance().get_test_lamp();
-        this.fan = TestPack.getInstance().get_test_fan();
-        this.pot = TestPack.getInstance().get_test_pot();
-        this.pump = TestPack.getInstance().get_test_pump();
+        this.lamp = TestPack.getInstance().get_LED_200_lamp();
+        this.fan = TestPack.getInstance().get_FAN_N_fan();
+        this.pot = TestPack.getInstance().get_MIDDLE_pot();
+        this.pump = TestPack.getInstance().get_WIND_pump();
 
-        this.plant = TestPack.getInstance().get_test_plant();
+        this.plant = TestPack.getInstance().get_Malco_plant();
 
         last_update = new Date().getTime();
     }
@@ -157,7 +157,6 @@ public class Box {
         last_update = new Date().getTime();
     }
     public synchronized void harvest_plant(){
-
         plant=null;
         last_update = new Date().getTime();
     }

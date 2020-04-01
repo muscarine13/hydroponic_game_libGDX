@@ -67,6 +67,31 @@ public class PotScreen implements Screen {
     }
     public void pro_help_button_click(){
 
+        if(Box.getInstance().getPlant()!=null&&Box.getInstance().getPot()!=null){
+            Box.getInstance().getPot().drain(Box.getInstance().getPot().getCurrent_volume());
+
+            Box.getInstance().getPot().pour(
+                    Box.getInstance().getPot().getMaximum_volume(),
+                    5.5,
+                    Box.getInstance().getPlant().get_current_stage().getPpm_N_max()-1,
+                    Box.getInstance().getPlant().get_current_stage().getPpm_P_max()-1,
+                    Box.getInstance().getPlant().get_current_stage().getPpm_K_max()-1,
+
+                    Box.getInstance().getPlant().get_current_stage().getPpm_S_max()-1,
+                    Box.getInstance().getPlant().get_current_stage().getPpm_Mg_max()-1,
+                    Box.getInstance().getPlant().get_current_stage().getPpm_Ca_max()-1,
+
+                    Box.getInstance().getPlant().get_current_stage().getPpm_B_max()-1,
+                    Box.getInstance().getPlant().get_current_stage().getPpm_Cu_max()-1,
+                    Box.getInstance().getPlant().get_current_stage().getPpm_Fe_max()-1,
+
+                    Box.getInstance().getPlant().get_current_stage().getPpm_Mn_max()-1,
+                    Box.getInstance().getPlant().get_current_stage().getPpm_Mo_max()-1,
+                    Box.getInstance().getPlant().get_current_stage().getPpm_Zn_max()-1
+
+            );
+
+        }
     }
 
     public void delete_button_clicked(Pot pot){

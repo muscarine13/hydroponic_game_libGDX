@@ -79,23 +79,6 @@ public class Pot implements Storable {
             String name,
             String description,
             double maximum_volume,
-            double current_volume,
-            double current_pH,
-
-            int ppm_N,
-            int ppm_P,
-            int ppm_K,
-
-            int ppm_S,
-            int ppm_Mg,
-            int ppm_Ca,
-
-            int ppm_B,
-            int ppm_Cu,
-            int ppm_Fe,
-            int ppm_Mn,
-            int ppm_Mo,
-            int ppm_Zn,
 
             Image image_pot,
             Image icon_pot
@@ -105,21 +88,21 @@ public class Pot implements Storable {
         this.description = description;
 
         this.maximum_volume = maximum_volume;
-        this.current_volume = current_volume;
+        this.current_volume = 0;
 
-        this.pH = current_pH;
-        this.N = ppm_N;
-        this.K = ppm_K;
-        this.B = ppm_B;
-        this.Ca = ppm_Ca;
-        this.Cu = ppm_Cu;
-        this.Fe = ppm_Fe;
-        this.Mn = ppm_Mn;
-        this.Mo = ppm_Mo;
-        this.Zn = ppm_Zn;
-        this.P = ppm_P;
-        this.Mg = ppm_Mg;
-        this.S = ppm_S;
+        this.pH = 0;
+        this.N = 0;
+        this.K = 0;
+        this.B = 0;
+        this.Ca = 0;
+        this.Cu = 0;
+        this.Fe = 0;
+        this.Mn = 0;
+        this.Mo = 0;
+        this.Zn = 0;
+        this.P = 0;
+        this.Mg = 0;
+        this.S = 0;
 
         this.image_pot = image_pot;
         this.icon_pot = icon_pot;
