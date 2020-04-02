@@ -110,6 +110,7 @@ public class PotScreen implements Screen {
 
     public void drop_1ml_button_click(Bottle bottle){
         bottle.drop_to_pot(0.001f);
+
     }
     public void drop_10ml_button_click(Bottle bottle){
         bottle.drop_to_pot(0.01f);
@@ -927,18 +928,20 @@ public class PotScreen implements Screen {
         remain_label.setTouchable(Touchable.disabled);
         out.addActor(remain_label);
 
-        Label name_label = new Label(
-                bottle.getName()+"",
-                new Label.LabelStyle(alice_72_8F8F8F_stroke_black, Color.BLACK)
-        );
-        name_label.setAlignment(Align.center);
-        name_label.setName("name_label");
-        name_label.setWrap(true);
-        name_label.setBounds(0, 600-170, 600, 100);
-        name_label.setTouchable(Touchable.disabled);
-        out.addActor(name_label);
+//        Label name_label = new Label(
+//                bottle.getName()+"",
+//                new Label.LabelStyle(alice_72_8F8F8F_stroke_black, Color.BLACK)
+//        );
+//        name_label.setAlignment(Align.center);
+//        name_label.setName("name_label");
+//        name_label.setWrap(true);
+//        name_label.setBounds(0, 600-170, 600, 100);
+//        name_label.setTouchable(Touchable.disabled);
+//        out.addActor(name_label);
 
 
         return out;
     }
+
+
 }

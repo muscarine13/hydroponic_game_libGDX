@@ -772,7 +772,7 @@ public class PlantScreen implements Screen {
     }
 
     public Group generate_leaves_pane(){
-           Group out = new Group();
+        Group out = new Group();
 
 
         Image background = new Image(atlas.findRegion("leaves_pane_background"));
@@ -813,17 +813,19 @@ public class PlantScreen implements Screen {
         });
         out.addActor(leaves_ad_heal_button);
 
-        Table table = new Table();
-        table.defaults().width(250).height(375);
+        if(Box.getInstance().getPlant()!=null) {
+            Table table = new Table();
+            table.defaults().width(250).height(375);
 
-        for (Leave leave : Box.getInstance().getPlant().getLeaves()){
-            table.add(generate_leave(leave));
+            for (Leave leave : Box.getInstance().getPlant().getLeaves()) {
+                table.add(generate_leave(leave));
+            }
+
+            ScrollPane pane = new ScrollPane(table);
+            pane.setScrollingDisabled(false, true);
+            pane.setBounds(20, 20, 1080 - 20 - 20 - 250 - 20, 375);
+            out.addActor(pane);
         }
-
-        ScrollPane pane = new ScrollPane(table);
-        pane.setScrollingDisabled(false, true);
-        pane.setBounds(20 ,20 ,1080-20-20-250-20 , 375);
-        out.addActor(pane);
 
 
         out.setPosition(20+20, 1920-500-415);
@@ -969,18 +971,19 @@ public class PlantScreen implements Screen {
         });
         out.addActor(roots_ad_heal_button);
 
-        Table table = new Table();
-        table.defaults().width(250).height(375);
+        if(Box.getInstance().getPlant()!=null) {
+            Table table = new Table();
+            table.defaults().width(250).height(375);
 
-        for (Root root : Box.getInstance().getPlant().getRoots()){
-            table.add(generate_root(root));
+            for (Root root : Box.getInstance().getPlant().getRoots()) {
+                table.add(generate_root(root));
+            }
+
+            ScrollPane pane = new ScrollPane(table);
+            pane.setScrollingDisabled(false, true);
+            pane.setBounds(20, 20, 1080 - 20 - 20 - 250 - 20, 375);
+            out.addActor(pane);
         }
-
-        ScrollPane pane = new ScrollPane(table);
-        pane.setScrollingDisabled(false, true);
-        pane.setBounds(20 ,20 ,1080-20-20-250-20 , 375);
-        out.addActor(pane);
-
 
         out.setPosition(20+20, 1920-500-415-415);
         out.setName("roots_pane");
@@ -1108,19 +1111,20 @@ public class PlantScreen implements Screen {
         });
         out.addActor(products_ad_heal_button);
 
-        Table table = new Table();
-        table.defaults().width(250).height(375);
+        if(Box.getInstance().getPlant()!=null) {
+            Table table = new Table();
+            table.defaults().width(250).height(375);
 
-        for (Product product : Box.getInstance().getPlant().getProducts()){
-            table.add(generate_product(product));
+            for (Product product : Box.getInstance().getPlant().getProducts()) {
+                table.add(generate_product(product));
+            }
+
+            ScrollPane pane = new ScrollPane(table);
+            pane.setScrollingDisabled(false, true);
+            pane.setBounds(20, 20, 1080 - 20 - 20 - 250 - 20, 375);
+            out.addActor(pane);
+
         }
-
-        ScrollPane pane = new ScrollPane(table);
-        pane.setScrollingDisabled(false, true);
-        pane.setBounds(20 ,20 ,1080-20-20-250-20 , 375);
-        out.addActor(pane);
-
-
         out.setPosition(20+20, 1920-500-415-415-415);
         out.setName("products_pane");
         return out;

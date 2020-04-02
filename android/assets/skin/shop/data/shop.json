@@ -1,0 +1,19 @@
+{
+
+  com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle : {
+    default:{}
+
+    coin_buy_button: { up:coin_buy_button_enable, down:coin_buy_button_pressed, disabled:coin_buy_button_disable }
+    diamond_buy_button: { up:diamond_buy_button_enable, down:diamond_buy_button_pressed, disabled:diamond_buy_button_disable }
+
+    lamp_button: { up:lamp_button_enable, down:lamp_button_pressed, disabled:lamp_button_disable }
+    fan_button: { up:fan_button_enable, down:fan_button_pressed, disabled:fan_button_disable }
+    pot_button: { up:pot_button_enable, down:pot_button_pressed, disabled:pot_button_disable }
+    pump_button: { up:pump_button_enable, down:pump_button_pressed, disabled:pump_button_disable }
+    plant_button: { up:plant_button_enable, down:plant_button_pressed, disabled:plant_button_disable }
+
+    back_button: { up:back_button_enable, down:back_button_pressed, disabled:back_button_disable }
+
+  }
+
+}
