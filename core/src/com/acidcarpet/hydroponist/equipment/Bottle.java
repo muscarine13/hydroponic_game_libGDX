@@ -1,12 +1,16 @@
 package com.acidcarpet.hydroponist.equipment;
 
+import com.acidcarpet.hydroponist.storage.Buyable;
 import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
-public class Bottle implements Storable {
+public class Bottle implements Storable, Buyable {
     public Bottle(
             String name,
             String description,
+
+            int gold_price,
+            int diamond_price,
 
             double maximum_volume,
             double pH,
@@ -32,6 +36,9 @@ public class Bottle implements Storable {
         this.maximum_volume = maximum_volume;
         this.current_volume = maximum_volume;
         this.pH = pH;
+
+        this.gold_price = gold_price;
+        this.diamond_price = diamond_price;
 
         this.percent_N = percent_N;
         this.percent_P = percent_P;
@@ -100,6 +107,50 @@ public class Bottle implements Storable {
 
     private String name;
     private String description;
+
+    private int gold_price;
+    private int diamond_price;
+    @Override
+    public int coin_price() {
+        return gold_price;
+    }
+
+    @Override
+    public int diamond_price() {
+        return diamond_price;
+    }
+
+    @Override
+    public Buyable get_new_this() {
+        return  new Bottle(
+                name,
+                description,
+
+                gold_price,
+                diamond_price,
+
+                maximum_volume,
+                pH,
+
+                percent_N,
+                percent_P,
+                percent_K,
+
+                percent_S,
+                percent_Mg,
+                percent_Ca,
+
+                percent_B,
+                percent_Cu,
+                percent_Fe,
+
+                percent_Mn,
+                percent_Mo,
+                percent_Zn,
+
+                bottle_icon
+        );
+    }
 
     private double maximum_volume;
     private double current_volume;

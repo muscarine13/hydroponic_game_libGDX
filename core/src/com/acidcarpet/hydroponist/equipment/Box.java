@@ -1,9 +1,9 @@
 package com.acidcarpet.hydroponist.equipment;
 
 
-import com.acidcarpet.hydroponist.genered.test_pack.*;
 import com.acidcarpet.hydroponist.plant.Plant;
 import com.acidcarpet.hydroponist.storage.Inventory;
+import com.acidcarpet.hydroponist.storage.TestPack;
 
 
 import java.util.Date;
@@ -37,10 +37,10 @@ public class Box {
     ){
 
         this.box_ordinary_temperature = 24;
-        this.lamp = TestPack.getInstance().get_LED_65_lamp();
-        this.fan = TestPack.getInstance().get_FAN_N_fan();
-        this.pot = TestPack.getInstance().get_MINI_pot();
-        this.pump = TestPack.getInstance().get_WIND_pump();
+        this.lamp = com.acidcarpet.hydroponist.storage.TestPack.getInstance().get_LED_65_lamp();
+        this.fan = com.acidcarpet.hydroponist.storage.TestPack.getInstance().get_FAN_N_fan();
+        this.pot = com.acidcarpet.hydroponist.storage.TestPack.getInstance().get_MINI_pot();
+        this.pump = com.acidcarpet.hydroponist.storage.TestPack.getInstance().get_WIND_pump();
 
         this.plant = TestPack.getInstance().get_Malco_plant();
 

@@ -11,8 +11,8 @@ public class BoxResources {
 
     public static void set_all(){
 
-        atlas = new TextureAtlas(Gdx.files.internal("skin/box/skin/skin.atlas"));
-        skin = new Skin(Gdx.files.internal("skin/box/skin/skin.json"), atlas);
+        atlas = new TextureAtlas(Gdx.files.internal("skin/shop/data/shop.atlas"));
+        skin = new Skin(Gdx.files.internal("skin/shop/data/shop.json"), atlas);
 
     }
     public static void dispose_all(){

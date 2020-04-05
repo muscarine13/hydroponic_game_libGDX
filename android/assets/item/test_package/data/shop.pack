@@ -1,5 +1,5 @@
 
-pack.png
+shop.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -102,7 +102,7 @@ FAN_A_fan_off
   offset: 0, 0
   index: -1
 
-pack2.png
+shop2.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -170,7 +170,7 @@ CYCLONE_compressor_on
   offset: 0, 0
   index: -1
 
-pack3.png
+shop3.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -238,7 +238,7 @@ TORNADO_compressor_off
   offset: 0, 0
   index: -1
 
-pack4.png
+shop4.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -313,7 +313,7 @@ CYCLONE_compressor_off
   offset: 0, 0
   index: -1
 
-pack5.png
+shop5.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -367,7 +367,7 @@ macro_Ca
   offset: 0, 0
   index: -1
 
-pack6.png
+shop6.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -435,7 +435,7 @@ micro_Fe
   offset: 0, 0
   index: -1
 
-pack7.png
+shop7.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -524,7 +524,7 @@ micro_Cu
   offset: 0, 0
   index: -1
 
-pack8.png
+shop8.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -585,7 +585,7 @@ micro_Zn
   offset: 0, 0
   index: -1
 
-pack9.png
+shop9.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
@@ -660,7 +660,7 @@ FAN_P_fan_on
   offset: 0, 0
   index: -1
 
-pack10.png
+shop10.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none

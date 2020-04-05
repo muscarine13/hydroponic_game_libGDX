@@ -2,13 +2,26 @@ package com.acidcarpet.hydroponist.plant;
 
 import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.equipment.WaterPack;
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public abstract class Plant {
-    String name;
+public abstract class Plant implements Storable {
+    private String name;
+
+    private int gold_price;
+    private int diamond_price;
+    @Override
+    public int coin_price() {
+        return gold_price;
+    }
+
+    @Override
+    public int diamond_price() {
+        return diamond_price;
+    }
 
     private boolean alive;
     public boolean isAlive() {
@@ -361,10 +374,12 @@ public abstract class Plant {
     int dark_energy;
     int light_energy;
 
-    public Plant(String name, int maximum_health){
+    public Plant(String name, int maximum_health, int gold_price, int diamond_price){
         alive = true;
         this.name = name;
 
+        this.gold_price = gold_price;
+        this.diamond_price = diamond_price;
 
         water = 0;
 
@@ -391,7 +406,6 @@ public abstract class Plant {
         S_problem_points = 0;
 
         grow_up = true;
-
 
     }
 
@@ -453,7 +467,6 @@ public abstract class Plant {
     public abstract Leave get_new_leave(); // Получить новый обьект листочка
     public abstract Root get_new_root(); // Получить новый обьект корешочка
     public abstract Product get_new_product(); // Получить новый обьект цветочка или плода или проччего продукта
-
 
     public String getName() {
         return name;

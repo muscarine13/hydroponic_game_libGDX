@@ -1,5 +1,5 @@
 name=shop
-filename=shop
+filename=
 input=png
 output=data
 
@@ -13,7 +13,7 @@ filterMag=Nearest
 filterMin=Nearest
 format=RGBA8888
 ignoreBlankImages=true
-jpegQuality=1.0
+jpegQuality=0.9
 maxHeight=2048
 maxWidth=2048
 minHeight=16

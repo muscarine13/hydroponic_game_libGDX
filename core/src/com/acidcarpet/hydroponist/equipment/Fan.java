@@ -6,15 +6,18 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public class Fan implements Storable {
     public Fan(
-                String name,
-               String description,
+            String name,
+            String description,
 
-                double CO2_production,
-               double t_reduce,
+            double CO2_production,
+            double t_reduce,
 
-                Image image_on,
-               Image image_off,
-               Image item_icon
+            int gold_price,
+            int diamond_price,
+
+            Image image_on,
+            Image image_off,
+            Image item_icon
     ){
         on = true;
 
@@ -24,15 +27,29 @@ public class Fan implements Storable {
         this.image_off = image_off;
         this.item_icon = item_icon;
 
+        this.gold_price = gold_price;
+        this.diamond_price = diamond_price;
+
         this.CO2 = CO2_production;
         this.CO2_production = CO2_production;
         this.t_reduce = t_reduce;
     }
 
+    private int gold_price;
+    private int diamond_price;
 
+    @Override
+    public int coin_price() {
+        return gold_price;
+    }
 
-    String name;
-    String description;
+    @Override
+    public int diamond_price() {
+        return diamond_price;
+    }
+
+    private String name;
+    private String description;
     public String getName() {
         return name;
     }

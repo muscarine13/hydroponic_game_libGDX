@@ -80,6 +80,9 @@ public class Pot implements Storable {
             String description,
             double maximum_volume,
 
+            int gold_price,
+            int diamond_price,
+
             Image image_pot,
             Image icon_pot
     ) {
@@ -89,6 +92,9 @@ public class Pot implements Storable {
 
         this.maximum_volume = maximum_volume;
         this.current_volume = 0;
+
+        this.gold_price = gold_price;
+        this.diamond_price = diamond_price;
 
         this.pH = 0;
         this.N = 0;
@@ -115,6 +121,18 @@ public class Pot implements Storable {
     }
     public String getDescription() {
         return description;
+    }
+
+    private int gold_price;
+    private int diamond_price;
+    @Override
+    public int coin_price() {
+        return gold_price;
+    }
+
+    @Override
+    public int diamond_price() {
+        return diamond_price;
     }
 
     private double maximum_volume;

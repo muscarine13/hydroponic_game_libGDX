@@ -6,6 +6,7 @@ import com.acidcarpet.hydroponist.screen.lamp.LampScreen;
 import com.acidcarpet.hydroponist.screen.plant.PlantScreen;
 import com.acidcarpet.hydroponist.screen.pot.PotScreen;
 import com.acidcarpet.hydroponist.screen.pump.PumpScreen;
+import com.acidcarpet.hydroponist.screen.shop.ShopScreen;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -143,7 +144,7 @@ public class BoxScreen implements Screen {
         System.out.println("x3_button click!");
     }
     private void shop_button_click(){
-        System.out.println("shop_button click!");
+        game.setScreen(new ShopScreen(game));
     }
     private void storage_button_click(){
         System.out.println("storage_button click!");

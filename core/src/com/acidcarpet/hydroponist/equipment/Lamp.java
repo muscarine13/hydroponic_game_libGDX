@@ -13,6 +13,9 @@ public class Lamp implements Storable {
             int lm_production,
             double t_add,
 
+            int gold_price,
+            int diamond_price,
+
             Image image_lamp_on,
             Image image_lamp_off,
             Image image_light_on,
@@ -22,6 +25,9 @@ public class Lamp implements Storable {
         this.name = name;
         this.description = description;
 
+        this.gold_price = gold_price;
+        this.diamond_price = diamond_price;
+
         on = true;
 
         this.image_lamp_on = image_lamp_on;
@@ -30,13 +36,25 @@ public class Lamp implements Storable {
         this.image_light_off = image_light_off;
         this.item_icon = item_icon;
 
-
         lm = lm_production;
         this.lm_production = lm_production;
         this.t_add = t_add;
     }
 
-    double t_add;
+    private double t_add;
+
+
+    private int gold_price;
+    private int diamond_price;
+    @Override
+    public int coin_price() {
+        return gold_price;
+    }
+
+    @Override
+    public int diamond_price() {
+        return diamond_price;
+    }
 
     private boolean on;
     public synchronized void set_on(){

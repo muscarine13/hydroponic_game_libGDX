@@ -1,4 +1,4 @@
-package com.acidcarpet.hydroponist.genered.test_pack;
+package com.acidcarpet.hydroponist.storage;
 
 import com.acidcarpet.hydroponist.equipment.*;
 import com.acidcarpet.hydroponist.plant.*;
@@ -39,6 +39,8 @@ public class TestPack {
                 "Лампа для новичков мощностью 65W. Повышает температуру всего на 3 с половиной градуса. Отличная лампа для начала.",
                 65,
                 3.5,
+                1750,
+                20,
                 new Image(atlas.findRegion("LED_65_lamp_on")),
                 new Image(atlas.findRegion("LED_65_lamp_off")),
                 new Image(atlas.findRegion("LED_65_light_on")),
@@ -52,6 +54,8 @@ public class TestPack {
                 "Лампа для новичков мощностью целых 200W. Повышает температуру на четсные 5.8 градусов. Отличная лампа для любителя.",
                 200,
                 5.8,
+                4250,
+                65,
                 new Image(atlas.findRegion("LED_200_lamp_on")),
                 new Image(atlas.findRegion("LED_200_lamp_off")),
                 new Image(atlas.findRegion("LED_200_light_on")),
@@ -65,6 +69,8 @@ public class TestPack {
                 "Лампа для новичков мощностью 1000W. Очень сильно повышает температуру на 22.5 градуса. Отличная лампа для профессионалов, знающих что они делают..",
                 1000,
                 22.5,
+                7325,
+                90,
                 new Image(atlas.findRegion("LED_1000_PRO_lamp_on")),
                 new Image(atlas.findRegion("LED_1000_PRO_lamp_off")),
                 new Image(atlas.findRegion("LED_1000_PRO_light_on")),
@@ -79,6 +85,8 @@ public class TestPack {
                 "Маленький канальный вентилятор. Больше гудит чем дует, но для начала впролне подойдет для выращивания маленьких тестовых растений.",
                 1.5,
                 3.1,
+                1500,
+                25,
                 new Image(atlas.findRegion("FAN_N_fan_on")),
                 new Image(atlas.findRegion("FAN_N_fan_off")),
                 new Image(atlas.findRegion("FAN_N_fan_icon"))
@@ -90,6 +98,8 @@ public class TestPack {
                 "Средненький канальный вентилятор. Нормально дует и очень хорошо охлаждает. Вполне может помочь при выращивании средних и маленьких тестовых посевов.",
                 3.2,
                 5.5,
+                3500,
+                50,
                 new Image(atlas.findRegion("FAN_A_fan_on")),
                 new Image(atlas.findRegion("FAN_A_fan_off")),
                 new Image(atlas.findRegion("FAN_A_fan_icon"))
@@ -101,6 +111,8 @@ public class TestPack {
                 "Большой канальный вентилятор. Дует как турбина самолета и охлаждает так же. Походит для всего.",
                 15.5,
                 19.1,
+                4500,
+                75,
                 new Image(atlas.findRegion("FAN_P_fan_on")),
                 new Image(atlas.findRegion("FAN_P_fan_off")),
                 new Image(atlas.findRegion("FAN_P_fan_icon"))
@@ -112,6 +124,8 @@ public class TestPack {
                 "TestGro Pot MINI",
                 "Маленькое любительствое ведерко на 20л. По виду самодельное. Подойдет для маленьких тестовых растений.",
                 20.0,
+                650,
+                5,
                 new Image(atlas.findRegion("MINI_pot")),
                 new Image(atlas.findRegion("MINI_pot_icon"))
         );
@@ -122,6 +136,8 @@ public class TestPack {
                 "TestGro Pot MIDDLE",
                 "Среднее профессиональное ведерко на 40л. Подойдет для маленьких и средних тестовых растений.",
                 40.0,
+                2000,
+                25,
                 new Image(atlas.findRegion("MIDDLE_pot")),
                 new Image(atlas.findRegion("MIDDLE_pot_icon"))
         );
@@ -132,6 +148,8 @@ public class TestPack {
                 "TestGro Pot MAXI",
                 "Большое профессиональное ведерко на 60л. Подойдет для любых тестовых растений.",
                 60.0,
+                4500,
+                55,
                 new Image(atlas.findRegion("MAXI_pot")),
                 new Image(atlas.findRegion("MAXI_pot_icon"))
         );
@@ -143,6 +161,8 @@ public class TestPack {
                 "TestGro WIND",
                 "Маленький воздушный компрессор для маленьких тестовых растений в маленьких тестовых горшках.",
                 10,
+                500,
+                7,
                 new Image(atlas.findRegion("WIND_compressor_on")),
                 new Image(atlas.findRegion("WIND_compressor_off")),
                 new Image(atlas.findRegion("WIND_pump_icon"))
@@ -153,6 +173,8 @@ public class TestPack {
                 "TestGro CYCLONE",
                 "Средний воздушный компрессор для средних тестовых растений включительно.",
                 20,
+                950,
+                12,
                 new Image(atlas.findRegion("CYCLONE_compressor_on")),
                 new Image(atlas.findRegion("CYCLONE_compressor_off")),
                 new Image(atlas.findRegion("CYCLONE_pump_icon"))
@@ -163,6 +185,8 @@ public class TestPack {
                 "TestGro TORNADO",
                 "Большой воздушный компрессор для любых тестовых растений.",
                 50,
+                1650,
+                35,
                 new Image(atlas.findRegion("TORNADO_compressor_on")),
                 new Image(atlas.findRegion("TORNADO_compressor_off")),
                 new Image(atlas.findRegion("TORNADO_pump_icon"))
@@ -173,6 +197,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro pH UP",
                 "Жидкость, повышающая pH",
+                150,
+                10,
                 0.5,
                 14,
                 0,
@@ -194,6 +220,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro pH DOWN",
                 "Жидкость, пинижающая pH",
+                150,
+                10,
                 0.5,
                 1,
                 0,
@@ -215,6 +243,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro Clean Water",
                 "Чистая дистиллированная вода без солей",
+                50,
+                1,
                 100.0,
                 5.5,
                 0,
@@ -232,11 +262,12 @@ public class TestPack {
                 new Image(atlas.findRegion("aqua"))
         );
     }
-
     public Bottle get_nutrient_N_bottle(){
         return new Bottle(
                 "TestGro N Nutrient",
                 "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                150,
+                10,
                 0.5,
                 5.5,
                 10,
@@ -258,6 +289,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro P Nutrient",
                 "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                150,
+                10,
                 0.5,
                 5.5,
                 0,
@@ -279,6 +312,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro K Nutrient",
                 "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                150,
+                10,
                 0.5,
                 5.5,
                 0,
@@ -300,6 +335,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro S Nutrient",
                 "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                150,
+                10,
                 0.5,
                 5.5,
                 0,
@@ -321,6 +358,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro Mg Nutrient",
                 "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                150,
+                10,
                 0.5,
                 5.5,
                 0,
@@ -342,6 +381,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro Ca Nutrient",
                 "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                150,
+                10,
                 0.5,
                 5.5,
                 0,
@@ -363,6 +404,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro B Nutrient",
                 "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                150,
+                10,
                 0.5,
                 5.5,
                 0,
@@ -384,6 +427,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro Cu Nutrient",
                 "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                150,
+                10,
                 0.5,
                 5.5,
                 0,
@@ -405,6 +450,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro Fe Nutrient",
                 "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                150,
+                10,
                 0.5,
                 5.5,
                 0,
@@ -426,6 +473,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro Mn Nutrient",
                 "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                150,
+                10,
                 0.5,
                 5.5,
                 0,
@@ -447,6 +496,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro Mo Nutrient",
                 "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                150,
+                10,
                 0.5,
                 5.5,
                 0,
@@ -468,6 +519,8 @@ public class TestPack {
         return new Bottle(
                 "TestGro Zn Nutrient",
                 "Удобрение, сдержащее только 1 элемент. Такие удобрения используются для тестирования.",
+                150,
+                10,
                 0.5,
                 5.5,
                 0,
@@ -486,10 +539,99 @@ public class TestPack {
         );
     }
 
+    public List<Offer> get_offers(){
+        List<Offer> out = new ArrayList();
+
+        out.add(new Offer(
+                "Набор новичка",
+                "В этот набор входит все, что нужно начинающему садоводу. Осталось только купить растение)",
+                4800,
+                50,
+                new Image(atlas.findRegion("start_kit"))
+        ) {
+            @Override
+            List<Storable> set_items() {
+                List<Storable> out = new ArrayList<>();
+                out.add(get_LED_65_lamp());
+                out.add(get_FAN_N_fan());
+                out.add(get_MINI_pot());
+                out.add(get_WIND_pump());
+                return out;
+            }
+        });
+
+        out.add(new Offer(
+                "Набор любителя",
+                "Если вы уже не новичок и что-то понимаете в растениях, то этот набор, несомненно, ваш выбор!",
+                10500,
+                100,
+                new Image(atlas.findRegion("normal_kit"))
+        ) {
+            @Override
+            List<Storable> set_items() {
+                List<Storable> out = new ArrayList<>();
+                out.add(get_LED_200_lamp());
+                out.add(get_FAN_A_fan());
+                out.add(get_MIDDLE_pot());
+                out.add(get_CYCLONE_pump());
+                return out;
+            }
+        });
+        out.add(new Offer(
+                "Набор профессионала",
+                "Профессиональный набор оборудования. Дорого и очень сердито.",
+                22000,
+                100,
+                new Image(atlas.findRegion("pro_kit"))
+        ) {
+            @Override
+            List<Storable> set_items() {
+                List<Storable> out = new ArrayList<>();
+                out.add(get_LED_1000_lamp());
+                out.add(get_FAN_P_fan());
+                out.add(get_MAXI_pot());
+                out.add(get_TORNADO_pump());
+                return out;
+            }
+        });
+        out.add(new Offer(
+                "Набор бутылей",
+                "Читерный набор для выращивания. Все элементы по отдельности в каждой банке и сервисные жидкости. В набор так же входит обычная вода.",
+                50000,
+                150,
+                new Image(atlas.findRegion("bottle_kit"))
+        ) {
+            @Override
+            List<Storable> set_items() {
+                List<Storable> out = new ArrayList<>();
+                out.add(get_water_bottle());
+                out.add(get_pH_down_bottle());
+                out.add(get_pH_up_bottle());
+                out.add(get_nutrient_N_bottle());
+                out.add(get_nutrient_P_bottle());
+                out.add(get_nutrient_K_bottle());
+                out.add(get_nutrient_S_bottle());
+                out.add(get_nutrient_Mg_bottle());
+                out.add(get_nutrient_Ca_bottle());
+                out.add(get_nutrient_B_bottle());
+                out.add(get_nutrient_Cu_bottle());
+                out.add(get_nutrient_Fe_bottle());
+                out.add(get_nutrient_Mn_bottle());
+                out.add(get_nutrient_Mo_bottle());
+                out.add(get_nutrient_Zn_bottle());
+                return out;
+            }
+        });
+
+        return out;
+    }
+
     public Plant get_Malco_plant(){
         return new Plant(
                 "Testplanta Malco",
-                1000
+                1000,
+                500,
+                10
         ) {
             @Override
             public List<PlantStage> set_stages() {

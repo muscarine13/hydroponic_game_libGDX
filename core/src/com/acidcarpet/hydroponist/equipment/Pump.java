@@ -11,12 +11,18 @@ public class Pump implements Storable {
 
             double oxygen_production,
 
+            int gold_price,
+            int diamond_price,
+
             Image image_on,
             Image image_off,
             Image item_icon
     ){
         this.name = name;
         this.description = description;
+
+        this.gold_price = gold_price;
+        this.diamond_price = diamond_price;
 
         on = true;
 
@@ -38,6 +44,18 @@ public class Pump implements Storable {
     public synchronized void set_off(){
         on = false;
         Box.update();
+    }
+
+    private int gold_price;
+    private int diamond_price;
+    @Override
+    public int coin_price() {
+        return gold_price;
+    }
+
+    @Override
+    public int diamond_price() {
+        return diamond_price;
     }
 
     private String name;
