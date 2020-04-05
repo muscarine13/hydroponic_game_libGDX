@@ -211,7 +211,7 @@ item_pane
   orig: 1080, 200
   offset: 0, 0
   index: -1
-buttons_backround
+buttons_background
   rotate: false
   xy: 1, 1
   size: 1080, 160

@@ -14,12 +14,14 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
+import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
@@ -65,7 +67,7 @@ public class ShopScreen implements Screen {
         alice_24_392200=ShopResources.getAlice_24_392200();
 
         Image background = new Image(atlas.findRegion("background"));
-        background.setPosition(0, 0);
+        background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
         background.setName("background");
         stage.addActor(background);
 
@@ -94,6 +96,9 @@ public class ShopScreen implements Screen {
 
             last_update = Inventory.last_update();
         }
+
+        stage.act(delta);
+        stage.draw();
     }
 
     @Override
@@ -164,7 +169,7 @@ public class ShopScreen implements Screen {
         out.addActor(diamond_label);
 
 
-        out.setPosition(0, 1920-150);
+        out.setPosition(40+0, 1920-150);
         out.setName("resources_pane");
 
         return out;
@@ -210,12 +215,11 @@ public class ShopScreen implements Screen {
         icon.setName("item_icon");
         out.addActor(icon);
 
-
         TextButton.TextButtonStyle coin_buttonStyle = new TextButton.TextButtonStyle();
         coin_buttonStyle.font = alice_64_F6EB86_stroke_5_9A8C0D;
-        coin_buttonStyle.up = (Drawable)atlas.findRegion("coin_buy_button_enable");
-        coin_buttonStyle.down = (Drawable)atlas.findRegion("coin_buy_button_pressed");
-        coin_buttonStyle.disabled = (Drawable)atlas.findRegion("coin_buy_button_disable");
+        coin_buttonStyle.up = new TextureRegionDrawable(atlas.findRegion("coin_buy_button_enable"));
+        coin_buttonStyle.down = new TextureRegionDrawable(atlas.findRegion("coin_buy_button_pressed"));
+        coin_buttonStyle.disabled = new TextureRegionDrawable(atlas.findRegion("coin_buy_button_disable"));
         TextButton coin_buy_button = new TextButton(offer.getCoin_price()+"", coin_buttonStyle);
         coin_buy_button.setBounds(1080-15-200, 200-15-80, 200, 80);
         coin_buy_button.setName("coin_buy_button");
@@ -234,9 +238,9 @@ public class ShopScreen implements Screen {
 
         TextButton.TextButtonStyle diamond_buttonStyle = new TextButton.TextButtonStyle();
         diamond_buttonStyle.font = alice_64_F6EB86_stroke_5_9A8C0D;
-        diamond_buttonStyle.up = (Drawable)atlas.findRegion("diamond_buy_button_enable");
-        diamond_buttonStyle.down = (Drawable)atlas.findRegion("diamond_buy_button_pressed");
-        diamond_buttonStyle.disabled = (Drawable)atlas.findRegion("diamond_buy_button_disable");
+        diamond_buttonStyle.up = new TextureRegionDrawable(atlas.findRegion("diamond_buy_button_enable"));
+        diamond_buttonStyle.down = new TextureRegionDrawable(atlas.findRegion("diamond_buy_button_pressed"));
+        diamond_buttonStyle.disabled = new TextureRegionDrawable(atlas.findRegion("diamond_buy_button_disable"));
         TextButton diamond_buy_button = new TextButton(offer.getDiamond_price()+"",diamond_buttonStyle);
         diamond_buy_button.setBounds(1080-15-200, 15, 200, 80);
         diamond_buy_button.setName("diamond_buy_button");
@@ -290,7 +294,7 @@ public class ShopScreen implements Screen {
         out.addActor(background);
 
         ImageButton back_button = new ImageButton(skin, "back_button");
-        back_button.setBounds(1080/2-(560/2)+20, 20, 560, 120);
+        back_button.setBounds(1080/2-(560/2), 20, 560, 120);
         back_button.setName("back_button");
         back_button.addListener(new ClickListener() {
             @Override
@@ -301,7 +305,7 @@ public class ShopScreen implements Screen {
         out.addActor(back_button);
 
         out.setName("buttons_pane");
-        out.setPosition(0, 0);
+        out.setPosition(0+40, 0);
         return out;
     }
 
