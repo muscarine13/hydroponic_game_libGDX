@@ -26,8 +26,8 @@ public class ShopResources {
 
     public static void set_all(){
 
-        atlas = new TextureAtlas(Gdx.files.internal("skin/pump/data/pack.pack"));
-        skin = new Skin(Gdx.files.internal("skin/pump/data/pack.json"), atlas);
+        atlas = new TextureAtlas(Gdx.files.internal("skin/shop/data/shop.pack"));
+        skin = new Skin(Gdx.files.internal("skin/shop/data/shop.json"), atlas);
 
         alice_150_F6EB86_stroke_5_9A8C0D  = generate_alice_150_F6EB86_stroke_5_9A8C0D();
         alice_150_7BEFE6_stroke_5_089086 = generate_alice_150_7BEFE6_stroke_5_089086();
