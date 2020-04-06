@@ -651,7 +651,7 @@ public class TestPack {
 
         out.add(new DonatOffer(
                 "Бесплатные монеты!",
-                "Получите бесплатно 1000 монет за просмотр короткой рекламы.",
+                "Получите бесплатно 1000 монет за просмотр рекламы.",
                 true,
                 0,
                 new Image(atlas.findRegion("coin_1000_offer"))
@@ -664,7 +664,7 @@ public class TestPack {
 
         out.add(new DonatOffer(
                 "Бесплатные алмазы!",
-                "Получите бесплатно 10 алмазов за просмотр короткой рекламы.",
+                "Получите бесплатно 10 алмазов за просмотр рекламы.",
                 true,
                 0,
                 new Image(atlas.findRegion("diamond_10_offer"))

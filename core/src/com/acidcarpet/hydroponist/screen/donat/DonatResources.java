@@ -19,9 +19,11 @@ public class DonatResources {
     private static BitmapFont alice_64_AFAFAF_stroke_5_444444; // Grey Small
 
     private static BitmapFont alice_48_EDD929_stroke_5_9A8C0D; // Gold Title
+    private static BitmapFont alice_30_EDD929_stroke_5_9A8C0D; // Gold Price
     private static BitmapFont alice_24_9A8C0D; // Gold Description
 
     private static BitmapFont alice_48_1ADED2_stroke_5_089086; // Diamond Title
+    private static BitmapFont alice_30_1ADED2_stroke_5_089086; // Diamond Price
     private static BitmapFont alice_24_089086; // Diamond Description
 
     private static TextureAtlas atlas;
@@ -40,9 +42,11 @@ public class DonatResources {
         alice_64_AFAFAF_stroke_5_444444 = generate_alice_64_AFAFAF_stroke_5_444444();
 
         alice_48_EDD929_stroke_5_9A8C0D = generate_alice_48_EDD929_stroke_5_9A8C0D();
+        alice_30_EDD929_stroke_5_9A8C0D = generate_alice_30_EDD929_stroke_5_9A8C0D();
         alice_24_9A8C0D = generate_alice_24_9A8C0D();
 
         alice_48_1ADED2_stroke_5_089086 = generate_alice_48_1ADED2_stroke_5_089086();
+        alice_30_1ADED2_stroke_5_089086 = generate_alice_30_1ADED2_stroke_5_089086();
         alice_24_089086 = generate_alice_24_089086();
 
     }
@@ -95,6 +99,12 @@ public class DonatResources {
     public static BitmapFont getAlice_24_089086() {
         return alice_24_089086;
     }
+    public static BitmapFont getAlice_30_EDD929_stroke_5_9A8C0D() {
+        return alice_30_EDD929_stroke_5_9A8C0D;
+    }
+    public static BitmapFont getAlice_30_1ADED2_stroke_5_089086() {
+        return alice_30_1ADED2_stroke_5_089086;
+    }
 
     public static TextureAtlas getAtlas() {
         return atlas;
@@ -110,10 +120,10 @@ public class DonatResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 150;
-        parameter.color.add(new Color(246,235,134,1));
+        parameter.color = new Color(246/255f,235/255f,134/255f,1.0f) ;
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
-        parameter.borderColor.add(new Color(154, 140, 13,1));
+        parameter.borderColor = new Color(154/255f, 140/255f, 13/255f,1.0f);
         parameter.borderWidth = 5;
         out  = generator.generateFont(parameter);
         generator.dispose();
@@ -127,10 +137,10 @@ public class DonatResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 150;
-        parameter.color.add(new Color(123,239,230,1));
+        parameter.color = new Color(123/255f,239/255f,230/255f,1.0f);
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
-        parameter.borderColor.add(new Color(8, 144, 134,1));
+        parameter.borderColor = (new Color(8/255f, 144/255f, 134/255f,1.0f));
         parameter.borderWidth = 5;
         out  = generator.generateFont(parameter);
         generator.dispose();
@@ -144,10 +154,10 @@ public class DonatResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 64;
-        parameter.color.add(new Color(246,235,134,1));
+        parameter.color = (new Color(246/255f,235/255f,134/255f,1f));
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
-        parameter.borderColor.add(new Color(154, 140, 13,1));
+        parameter.borderColor = (new Color(154/255f, 140/255f, 13/255f,1f));
         parameter.borderWidth = 5;
         out  = generator.generateFont(parameter);
         generator.dispose();
@@ -161,10 +171,10 @@ public class DonatResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 64;
-        parameter.color.add(new Color(123,239,230,1));
+        parameter.color = (new Color(123/255f,239/255f,230/255f,1));
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
-        parameter.borderColor.add(new Color(8, 144, 134,1));
+        parameter.borderColor = (new Color(8/255f, 144/255f, 134/255f,1));
         parameter.borderWidth = 5;
         out  = generator.generateFont(parameter);
         generator.dispose();
@@ -178,10 +188,10 @@ public class DonatResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 64;
-        parameter.color.add(new Color(175,175,175,1));
+        parameter.color = (new Color(175/255f,175/255f,175/255f,1));
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
-        parameter.borderColor.add(new Color(68, 68, 68,1));
+        parameter.borderColor = (new Color(68/255f, 68/255f, 68/255f,1));
         parameter.borderWidth = 5;
         out  = generator.generateFont(parameter);
         generator.dispose();
@@ -196,10 +206,27 @@ public class DonatResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 48;
-        parameter.color.add(new Color(237,217,41,1));
+        parameter.color = (new Color(237/255f,217/255f,41/255f,1));
         parameter.characters = GameConstants.FONT_CHARACTERS;
-        parameter.borderColor.add(new Color(154, 140,13, 1));
+        parameter.borderColor = (new Color(154/255f, 140/255f,13/255f, 1));
         parameter.borderWidth = 5;
+        parameter.borderStraight = true;
+        out  = generator.generateFont(parameter);
+        generator.dispose();
+
+        return out;
+    }
+    private static BitmapFont generate_alice_30_EDD929_stroke_5_9A8C0D(){
+        BitmapFont out;
+
+        FileHandle fontFile = Gdx.files.internal("Alice-Regular.ttf");
+        FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
+        FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
+        parameter.size = 30;
+        parameter.color = (new Color(237/255f,217/255f,41/255f,1));
+        parameter.characters = GameConstants.FONT_CHARACTERS;
+        parameter.borderColor = (new Color(154/255f, 140/255f,13/255f, 1));
+        parameter.borderWidth = 1;
         parameter.borderStraight = true;
         out  = generator.generateFont(parameter);
         generator.dispose();
@@ -212,8 +239,8 @@ public class DonatResources {
         FileHandle fontFile = Gdx.files.internal("Alice-Regular.ttf");
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
-        parameter.size = 48;
-        parameter.color.add(new Color(154, 140,13, 1));
+        parameter.size = 24;
+        parameter.color = (new Color(154/255f, 140/255f,13/255f, 1));
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
         out  = generator.generateFont(parameter);
@@ -228,9 +255,26 @@ public class DonatResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 48;
-        parameter.color.add(new Color(26,222,210,1));
+        parameter.color = (new Color(26/255f,222/255f,210/255f,1));
         parameter.characters = GameConstants.FONT_CHARACTERS;
-        parameter.borderColor.add(new Color(8, 144,134, 1));
+        parameter.borderColor = (new Color(8/255f, 144/255f,134/255f, 1));
+        parameter.borderWidth = 5;
+        parameter.borderStraight = true;
+        out  = generator.generateFont(parameter);
+        generator.dispose();
+
+        return out;
+    }
+    private static BitmapFont generate_alice_30_1ADED2_stroke_5_089086(){
+        BitmapFont out;
+
+        FileHandle fontFile = Gdx.files.internal("Alice-Regular.ttf");
+        FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
+        FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
+        parameter.size = 30;
+        parameter.color = (new Color(26/255f,222/255f,210/255f,1));
+        parameter.characters = GameConstants.FONT_CHARACTERS;
+        parameter.borderColor = (new Color(8/255f, 144/255f,134/255f, 1));
         parameter.borderWidth = 5;
         parameter.borderStraight = true;
         out  = generator.generateFont(parameter);
@@ -244,8 +288,8 @@ public class DonatResources {
         FileHandle fontFile = Gdx.files.internal("Alice-Regular.ttf");
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
-        parameter.size = 48;
-        parameter.color.add(new Color(8, 144,134, 1));
+        parameter.size = 24;
+        parameter.color = (new Color(8/255f, 144/255f,134/255f, 1));
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
         out  = generator.generateFont(parameter);

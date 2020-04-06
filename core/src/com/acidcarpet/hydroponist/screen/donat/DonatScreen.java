@@ -1,9 +1,6 @@
 package com.acidcarpet.hydroponist.screen.donat;
 
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
-import com.acidcarpet.hydroponist.screen.shop.EquipOffer;
-import com.acidcarpet.hydroponist.screen.shop.EquipShop;
-import com.acidcarpet.hydroponist.screen.shop.ShopResources;
 import com.acidcarpet.hydroponist.storage.Inventory;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
@@ -36,8 +33,10 @@ public class DonatScreen implements Screen {
     BitmapFont alice_64_AFAFAF_stroke_5_444444; // Grey Small
 
     BitmapFont alice_48_EDD929_stroke_5_9A8C0D; // Gold Title
+    BitmapFont alice_30_EDD929_stroke_5_9A8C0D; // Gold Price
     BitmapFont alice_24_9A8C0D; // Gold Description
     BitmapFont alice_48_1ADED2_stroke_5_089086; // Diamond Title
+    BitmapFont alice_30_1ADED2_stroke_5_089086; // Diamond Price
     BitmapFont alice_24_089086; // Diamond Description
 
     public DonatScreen(Game game){
@@ -62,8 +61,10 @@ public class DonatScreen implements Screen {
         alice_64_AFAFAF_stroke_5_444444=DonatResources.getAlice_64_AFAFAF_stroke_5_444444();
 
         alice_48_EDD929_stroke_5_9A8C0D=DonatResources.getAlice_48_EDD929_stroke_5_9A8C0D();
+        alice_30_EDD929_stroke_5_9A8C0D =DonatResources.getAlice_30_EDD929_stroke_5_9A8C0D();
         alice_24_9A8C0D=DonatResources.getAlice_24_9A8C0D();
         alice_48_1ADED2_stroke_5_089086=DonatResources.getAlice_48_1ADED2_stroke_5_089086();
+        alice_30_1ADED2_stroke_5_089086 =DonatResources.getAlice_30_1ADED2_stroke_5_089086();
         alice_24_089086=DonatResources.getAlice_24_089086();
 
         Image background = new Image(atlas.findRegion("background"));
@@ -215,12 +216,13 @@ public class DonatScreen implements Screen {
             background = new Image(atlas.findRegion("ad_pane"));
 
             buttonStyle = new TextButton.TextButtonStyle();
-            buttonStyle.font = alice_64_F6EB86_stroke_5_9A8C0D;
+            buttonStyle.font = alice_30_1ADED2_stroke_5_089086;
             buttonStyle.up = new TextureRegionDrawable(atlas.findRegion("ad_buy_button_enable"));
             buttonStyle.down = new TextureRegionDrawable(atlas.findRegion("ad_buy_button_pressed"));
             buttonStyle.disabled = new TextureRegionDrawable(atlas.findRegion("ad_buy_button_disable"));
 
-            buy_button = new TextButton("Смотреть рекламу", buttonStyle);
+
+            buy_button = new TextButton("Смотреть \nрекламу", buttonStyle);
 
             title_labelStyle = new Label.LabelStyle();
             title_labelStyle.font = alice_48_EDD929_stroke_5_9A8C0D;
@@ -234,7 +236,8 @@ public class DonatScreen implements Screen {
             background = new Image(atlas.findRegion("money_pane"));
 
             buttonStyle = new TextButton.TextButtonStyle();
-            buttonStyle.font = alice_64_F6EB86_stroke_5_9A8C0D;
+            buttonStyle.font = alice_30_EDD929_stroke_5_9A8C0D;
+
             buttonStyle.up = new TextureRegionDrawable(atlas.findRegion("money_buy_button_enable"));
             buttonStyle.down = new TextureRegionDrawable(atlas.findRegion("money_buy_button_pressed"));
             buttonStyle.disabled = new TextureRegionDrawable(atlas.findRegion("money_buy_button_disable"));
@@ -256,6 +259,7 @@ public class DonatScreen implements Screen {
         icon.setBounds(15, 15, 170, 170);
         icon.setName("item_icon");
         out.addActor(icon);
+
 
 
         buy_button.setBounds(1080-15-170, 15, 170, 170);
