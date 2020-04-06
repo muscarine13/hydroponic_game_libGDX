@@ -44,6 +44,7 @@ public abstract class Offer {
             }
 
 
+            items = set_items();
         }
     }
 
@@ -66,6 +67,7 @@ public abstract class Offer {
             }
 
 
+            items = set_items();
         }
     }
 
