@@ -45,7 +45,7 @@ FAN_N_fan_icon
   orig: 340, 340
   offset: 0, 0
   index: -1
-start_kit
+coin_1000_offer
   rotate: false
   xy: 1084, 1021
   size: 500, 500
@@ -59,7 +59,7 @@ FAN_A_fan_icon
   orig: 340, 340
   offset: 0, 0
   index: -1
-bottle_kit
+diamond_1000_offer
   rotate: false
   xy: 1084, 519
   size: 500, 500
@@ -134,7 +134,7 @@ LED_200_lamp_icon
   orig: 340, 340
   offset: 0, 0
   index: -1
-testplanta_malco_offer
+diamond_100_offer
   rotate: false
   xy: 1084, 1523
   size: 500, 500
@@ -148,7 +148,7 @@ CYCLONE_pump_icon
   orig: 340, 340
   offset: 0, 0
   index: -1
-normal_kit
+start_kit
   rotate: false
   xy: 1084, 1021
   size: 500, 500
@@ -162,39 +162,46 @@ WIND_pump_icon
   orig: 340, 340
   offset: 0, 0
   index: -1
+diamond_500_offer
+  rotate: false
+  xy: 1084, 519
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+FAN_N_fan_on
+  rotate: false
+  xy: 1084, 217
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+FAN_P_fan_on
+  rotate: false
+  xy: 1386, 217
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
 FAN_P_fan_icon
   rotate: false
-  xy: 1605, 657
+  xy: 1688, 657
   size: 340, 340
   orig: 340, 340
   offset: 0, 0
   index: -1
 MAXI_pot_icon
   rotate: false
-  xy: 1605, 315
+  xy: 1688, 315
   size: 340, 340
   orig: 340, 340
   offset: 0, 0
   index: -1
-FAN_N_fan_on
+FAN_A_fan_on
   rotate: false
-  xy: 1605, 13
+  xy: 1688, 13
   size: 300, 300
   orig: 300, 300
-  offset: 0, 0
-  index: -1
-MIDDLE_pot_icon
-  rotate: false
-  xy: 1084, 679
-  size: 340, 340
-  orig: 340, 340
-  offset: 0, 0
-  index: -1
-TORNADO_pump_icon
-  rotate: false
-  xy: 1084, 337
-  size: 340, 340
-  orig: 340, 340
   offset: 0, 0
   index: -1
 
@@ -237,23 +244,23 @@ pH_down
   orig: 600, 600
   offset: 0, 0
   index: -1
-FAN_P_fan_on
+MIDDLE_pot_icon
   rotate: false
-  xy: 1605, 119
-  size: 300, 300
-  orig: 300, 300
+  xy: 1605, 79
+  size: 340, 340
+  orig: 340, 340
   offset: 0, 0
   index: -1
-FAN_A_fan_on
+TORNADO_pump_icon
   rotate: false
-  xy: 1686, 721
-  size: 300, 300
-  orig: 300, 300
+  xy: 1686, 681
+  size: 340, 340
+  orig: 340, 340
   offset: 0, 0
   index: -1
 CYCLONE_compressor_on
   rotate: false
-  xy: 1686, 569
+  xy: 1686, 529
   size: 300, 150
   orig: 300, 150
   offset: 0, 0
@@ -666,6 +673,13 @@ micro_Mo
   orig: 600, 600
   offset: 0, 0
   index: -1
+bottle_kit
+  rotate: false
+  xy: 1405, 299
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
 
 pack10.png
 format: RGBA8888
@@ -673,37 +687,65 @@ filter: Nearest,Nearest
 repeat: none
 Middle_bloom_alive
   rotate: false
-  xy: 1, 1005
+  xy: 1, 1007
   size: 700, 1000
   orig: 700, 1000
   offset: 0, 0
   index: -1
 Malco_vegetation_alive
   rotate: false
-  xy: 1, 3
+  xy: 1, 5
   size: 700, 1000
   orig: 700, 1000
   offset: 0, 0
   index: -1
 Golyama_post_bloom_alive
   rotate: false
-  xy: 703, 1005
+  xy: 703, 1007
   size: 700, 1000
   orig: 700, 1000
   offset: 0, 0
   index: -1
 MINI_pot
   rotate: false
-  xy: 703, 503
+  xy: 703, 505
   size: 700, 500
   orig: 700, 500
   offset: 0, 0
   index: -1
 MIDDLE_pot
   rotate: false
-  xy: 703, 1
+  xy: 703, 3
   size: 700, 500
   orig: 700, 500
+  offset: 0, 0
+  index: -1
+testplanta_malco_offer
+  rotate: false
+  xy: 1405, 1507
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+diamond_250_offer
+  rotate: false
+  xy: 1405, 1005
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+diamond_10_offer
+  rotate: false
+  xy: 1405, 503
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+normal_kit
+  rotate: false
+  xy: 1405, 1
+  size: 500, 500
+  orig: 500, 500
   offset: 0, 0
   index: -1
 
@@ -716,5 +758,12 @@ MAXI_pot
   xy: 1, 1
   size: 700, 500
   orig: 700, 500
+  offset: 0, 0
+  index: -1
+diamond_50_offer
+  rotate: false
+  xy: 703, 1
+  size: 500, 500
+  orig: 500, 500
   offset: 0, 0
   index: -1

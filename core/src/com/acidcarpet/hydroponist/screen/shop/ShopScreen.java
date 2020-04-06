@@ -1,26 +1,17 @@
 package com.acidcarpet.hydroponist.screen.shop;
 
-import com.acidcarpet.hydroponist.equipment.Box;
-import com.acidcarpet.hydroponist.equipment.Pot;
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
-import com.acidcarpet.hydroponist.screen.pot.PotResources;
 import com.acidcarpet.hydroponist.storage.Inventory;
-import com.acidcarpet.hydroponist.storage.Offer;
-import com.acidcarpet.hydroponist.storage.Shop;
-import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
@@ -187,8 +178,8 @@ public class ShopScreen implements Screen {
         Table table = new Table();
         table.defaults().width(1080).height(200);
 
-        for(Offer current_offer : Shop.getInstance().getOffers()){
-            table.add(generate_item(current_offer));
+        for(EquipOffer current_Equip_offer : EquipShop.getInstance().getEquipOffers()){
+            table.add(generate_item(current_Equip_offer));
             table.row();
         }
 
@@ -202,7 +193,7 @@ public class ShopScreen implements Screen {
 
         return out;
     }
-    public Group generate_item(final Offer offer){
+    public Group generate_item(final EquipOffer equipOffer){
         Group out = new Group();
 
         Image background = new Image(atlas.findRegion("item_pane"));
@@ -210,7 +201,7 @@ public class ShopScreen implements Screen {
         background.setName("item_pane");
         out.addActor(background);
 
-        Image icon = offer.getIcon();
+        Image icon = equipOffer.getIcon();
         icon.setBounds(15, 15, 170, 170);
         icon.setName("item_icon");
         out.addActor(icon);
@@ -220,14 +211,14 @@ public class ShopScreen implements Screen {
         coin_buttonStyle.up = new TextureRegionDrawable(atlas.findRegion("coin_buy_button_enable"));
         coin_buttonStyle.down = new TextureRegionDrawable(atlas.findRegion("coin_buy_button_pressed"));
         coin_buttonStyle.disabled = new TextureRegionDrawable(atlas.findRegion("coin_buy_button_disable"));
-        TextButton coin_buy_button = new TextButton(offer.getCoin_price()+"", coin_buttonStyle);
+        TextButton coin_buy_button = new TextButton(equipOffer.getCoin_price()+"", coin_buttonStyle);
         coin_buy_button.setBounds(1080-15-200, 200-15-80, 200, 80);
         coin_buy_button.setName("coin_buy_button");
-        if(offer.may_buy_coin()){
+        if(equipOffer.may_buy_coin()){
             coin_buy_button.addListener(new ClickListener() {
                 @Override
                 public void clicked(InputEvent event, float x, float y) {
-                    coin_buy_button_clicked(offer);
+                    coin_buy_button_clicked(equipOffer);
                 }
             });
             coin_buy_button.setDisabled(false);
@@ -241,14 +232,14 @@ public class ShopScreen implements Screen {
         diamond_buttonStyle.up = new TextureRegionDrawable(atlas.findRegion("diamond_buy_button_enable"));
         diamond_buttonStyle.down = new TextureRegionDrawable(atlas.findRegion("diamond_buy_button_pressed"));
         diamond_buttonStyle.disabled = new TextureRegionDrawable(atlas.findRegion("diamond_buy_button_disable"));
-        TextButton diamond_buy_button = new TextButton(offer.getDiamond_price()+"",diamond_buttonStyle);
+        TextButton diamond_buy_button = new TextButton(equipOffer.getDiamond_price()+"",diamond_buttonStyle);
         diamond_buy_button.setBounds(1080-15-200, 15, 200, 80);
         diamond_buy_button.setName("diamond_buy_button");
-        if(offer.may_buy_coin()){
+        if(equipOffer.may_buy_coin()){
             diamond_buy_button.addListener(new ClickListener() {
                 @Override
                 public void clicked(InputEvent event, float x, float y) {
-                    diamond_buy_button_clicked(offer);
+                    diamond_buy_button_clicked(equipOffer);
                 }
             });
             diamond_buy_button.setDisabled(false);
@@ -261,7 +252,7 @@ public class ShopScreen implements Screen {
         Label.LabelStyle title_labelStyle = new Label.LabelStyle();
         title_labelStyle.font = alice_48_392200;
         Label coin_label = new Label(
-                offer.getTitle() + "",
+                equipOffer.getTitle() + "",
                 title_labelStyle
         );
         coin_label.setAlignment(Align.center);
@@ -273,7 +264,7 @@ public class ShopScreen implements Screen {
         Label.LabelStyle description_labelStyle = new Label.LabelStyle();
         description_labelStyle.font = alice_24_392200;
         Label diamond_label = new Label(
-                offer.getTitle() + "",
+                equipOffer.getDescription() + "",
                 description_labelStyle
         );
         diamond_label.setAlignment(Align.center);
@@ -309,11 +300,11 @@ public class ShopScreen implements Screen {
         return out;
     }
 
-    public synchronized void coin_buy_button_clicked(Offer offer){
-        offer.buy_coin();
+    public synchronized void coin_buy_button_clicked(EquipOffer equipOffer){
+        equipOffer.buy_coin();
     }
-    public synchronized void diamond_buy_button_clicked(Offer offer){
-        offer.buy_diamond();
+    public synchronized void diamond_buy_button_clicked(EquipOffer equipOffer){
+        equipOffer.buy_diamond();
     }
     public synchronized void back_button_click(){
         game.setScreen(new BoxScreen(game));

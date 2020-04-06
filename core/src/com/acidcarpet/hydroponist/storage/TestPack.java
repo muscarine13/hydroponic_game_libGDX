@@ -2,6 +2,9 @@ package com.acidcarpet.hydroponist.storage;
 
 import com.acidcarpet.hydroponist.equipment.*;
 import com.acidcarpet.hydroponist.plant.*;
+import com.acidcarpet.hydroponist.screen.donat.DonatOffer;
+import com.acidcarpet.hydroponist.screen.seedling.SeedlingOffer;
+import com.acidcarpet.hydroponist.screen.shop.EquipOffer;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
@@ -539,10 +542,10 @@ public class TestPack {
         );
     }
 
-    public List<Offer> get_offers(){
-        List<Offer> out = new ArrayList();
+    public List<EquipOffer> get_offers(){
+        List<EquipOffer> out = new ArrayList();
 
-        out.add(new Offer(
+        out.add(new EquipOffer(
                 "Набор новичка",
                 "В этот набор входит все, что нужно начинающему садоводу. Осталось только купить растение)",
                 4800,
@@ -550,7 +553,7 @@ public class TestPack {
                 new Image(atlas.findRegion("start_kit"))
         ) {
             @Override
-            List<Storable> set_items() {
+            public List<Storable> set_items() {
                 List<Storable> out = new ArrayList<>();
                 out.add(get_LED_65_lamp());
                 out.add(get_FAN_N_fan());
@@ -560,7 +563,7 @@ public class TestPack {
             }
         });
 
-        out.add(new Offer(
+        out.add(new EquipOffer(
                 "Набор любителя",
                 "Если вы уже не новичок и что-то понимаете в растениях, то этот набор, несомненно, ваш выбор!",
                 10500,
@@ -568,7 +571,7 @@ public class TestPack {
                 new Image(atlas.findRegion("normal_kit"))
         ) {
             @Override
-            List<Storable> set_items() {
+            public List<Storable> set_items() {
                 List<Storable> out = new ArrayList<>();
                 out.add(get_LED_200_lamp());
                 out.add(get_FAN_A_fan());
@@ -577,7 +580,7 @@ public class TestPack {
                 return out;
             }
         });
-        out.add(new Offer(
+        out.add(new EquipOffer(
                 "Набор профессионала",
                 "Профессиональный набор оборудования. Дорого и очень сердито.",
                 22000,
@@ -585,7 +588,7 @@ public class TestPack {
                 new Image(atlas.findRegion("pro_kit"))
         ) {
             @Override
-            List<Storable> set_items() {
+            public List<Storable> set_items() {
                 List<Storable> out = new ArrayList<>();
                 out.add(get_LED_1000_lamp());
                 out.add(get_FAN_P_fan());
@@ -594,7 +597,7 @@ public class TestPack {
                 return out;
             }
         });
-        out.add(new Offer(
+        out.add(new EquipOffer(
                 "Набор бутылей",
                 "Читерный набор для выращивания. Все элементы по отдельности в каждой банке и сервисные жидкости. В набор так же входит обычная вода.",
                 50000,
@@ -602,7 +605,7 @@ public class TestPack {
                 new Image(atlas.findRegion("bottle_kit"))
         ) {
             @Override
-            List<Storable> set_items() {
+            public List<Storable> set_items() {
                 List<Storable> out = new ArrayList<>();
                 out.add(get_water_bottle());
                 out.add(get_pH_down_bottle());
@@ -625,8 +628,8 @@ public class TestPack {
 
         return out;
     }
-    public List<SeedlingOffer> get_seedlings(){
-        List<SeedlingOffer> out = new ArrayList<>();
+    public List<com.acidcarpet.hydroponist.screen.seedling.SeedlingOffer> get_seedlings(){
+        List<com.acidcarpet.hydroponist.screen.seedling.SeedlingOffer> out = new ArrayList<>();
 
         out.add(new SeedlingOffer(
                 "Testplanta Malco",
@@ -636,8 +639,117 @@ public class TestPack {
                 new Image(atlas.findRegion("testplanta_malco_offer"))
         ) {
             @Override
-            Plant get_plant() {
+            public Plant get_plant() {
                 return get_Malco_plant();
+            }
+        });
+
+        return out;
+    }
+    public List<DonatOffer> get_donats(){
+        List<DonatOffer> out = new ArrayList<>();
+
+        out.add(new DonatOffer(
+                "Бесплатные монеты!",
+                "Получите бесплатно 1000 монет за просмотр короткой рекламы.",
+                true,
+                0,
+                new Image(atlas.findRegion("coin_1000_offer"))
+        ) {
+            @Override
+            public void work() {
+                Inventory.getInstance().setGold(Inventory.getInstance().getGold()+1000);
+            }
+        });
+
+        out.add(new DonatOffer(
+                "Бесплатные алмазы!",
+                "Получите бесплатно 10 алмазов за просмотр короткой рекламы.",
+                true,
+                0,
+                new Image(atlas.findRegion("diamond_10_offer"))
+        ) {
+            @Override
+            public void work() {
+                Inventory.getInstance().setDiamond(Inventory.getInstance().getDiamond()+10);
+            }
+        });
+
+        out.add(new DonatOffer(
+                "10 алмазов!",
+                "Получите 10 алмазов всего за 30 рублей.",
+                false,
+                30,
+                new Image(atlas.findRegion("diamond_10_offer"))
+        ) {
+            @Override
+            public void work() {
+                Inventory.getInstance().setDiamond(Inventory.getInstance().getDiamond()+10);
+            }
+        });
+
+        out.add(new DonatOffer(
+                "50 алмазов!",
+                "Получите 50 алмазов всего за 120 рублей.",
+                false,
+                120,
+                new Image(atlas.findRegion("diamond_50_offer"))
+        ) {
+            @Override
+            public void work() {
+                Inventory.getInstance().setDiamond(Inventory.getInstance().getDiamond()+50);
+            }
+        });
+
+        out.add(new DonatOffer(
+                "100 алмазов!",
+                "Получите 100 алмазов всего за 200 рублей.",
+                false,
+                200,
+                new Image(atlas.findRegion("diamond_100_offer"))
+        ) {
+            @Override
+            public void work() {
+                Inventory.getInstance().setDiamond(Inventory.getInstance().getDiamond()+100);
+            }
+        });
+
+        out.add(new DonatOffer(
+                "250 алмазов!",
+                "Получите 250 алмазов всего за 500 рублей.",
+                false,
+                500,
+                new Image(atlas.findRegion("diamond_250_offer"))
+        ) {
+            @Override
+            public void work() {
+                Inventory.getInstance().setDiamond(Inventory.getInstance().getDiamond()+500);
+            }
+        });
+
+        out.add(new DonatOffer(
+                "500 алмазов!",
+                "Получите 500 алмазов всего за 750 рублей.",
+                false,
+                750,
+                new Image(atlas.findRegion("diamond_500_offer"))
+        ) {
+            @Override
+            public void work() {
+                Inventory.getInstance().setDiamond(Inventory.getInstance().getDiamond()+750);
+            }
+        });
+
+        out.add(new DonatOffer(
+                "1000 алмазов!",
+                "Получите 1000 алмазов всего за 1100 рублей.",
+                false,
+                1100,
+                new Image(atlas.findRegion("diamond_1000_offer"))
+        ) {
+            @Override
+            public void work() {
+                Inventory.getInstance().setDiamond(Inventory.getInstance().getDiamond()+1000);
             }
         });
 

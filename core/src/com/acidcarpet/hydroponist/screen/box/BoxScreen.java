@@ -1,6 +1,7 @@
 package com.acidcarpet.hydroponist.screen.box;
 
 import com.acidcarpet.hydroponist.equipment.Box;
+import com.acidcarpet.hydroponist.screen.donat.DonatScreen;
 import com.acidcarpet.hydroponist.screen.fan.FanScreen;
 import com.acidcarpet.hydroponist.screen.lamp.LampScreen;
 import com.acidcarpet.hydroponist.screen.plant.PlantScreen;
@@ -151,7 +152,7 @@ public class BoxScreen implements Screen {
         game.setScreen(new SeedlingScreen(game));
     }
     private void donation_button_click(){
-        System.out.println("donat_button click!");
+        game.setScreen(new DonatScreen(game));
     }
     private void settings_button_click(){
         System.out.println("settings_button click!");

@@ -1,7 +1,8 @@
-package com.acidcarpet.hydroponist.storage;
+package com.acidcarpet.hydroponist.screen.seedling;
 
 import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.plant.Plant;
+import com.acidcarpet.hydroponist.storage.Inventory;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public abstract class SeedlingOffer {
 
     private int coin_price;
     public boolean may_buy_coin(){
-        if(coin_price<=Inventory.getInstance().getGold()){
+        if(coin_price<= Inventory.getInstance().getGold()){
             return true;
         }else{
             return false;
@@ -61,7 +62,7 @@ public abstract class SeedlingOffer {
 
     private Image icon;
 
-    abstract Plant get_plant();
+    public abstract Plant get_plant();
 
     public String getTitle() {
         return title;

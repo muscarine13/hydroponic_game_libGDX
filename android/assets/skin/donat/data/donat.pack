@@ -59,6 +59,13 @@ money_buy_button_disable
   orig: 170, 170
   offset: 0, 0
   index: -1
+ad_buy_button_disable
+  rotate: false
+  xy: 1083, 1325
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
 ad_buy_button_enable
   rotate: false
   xy: 1797, 1873
@@ -66,23 +73,16 @@ ad_buy_button_enable
   orig: 170, 170
   offset: 0, 0
   index: -1
-ad_buy_button_disable
+money_buy_button_pressed
   rotate: false
   xy: 1083, 1153
   size: 170, 170
   orig: 170, 170
   offset: 0, 0
   index: -1
-money_buy_button_pressed
-  rotate: false
-  xy: 1255, 1325
-  size: 170, 170
-  orig: 170, 170
-  offset: 0, 0
-  index: -1
 ad_buy_button_pressed
   rotate: false
-  xy: 1083, 981
+  xy: 1255, 1325
   size: 170, 170
   orig: 170, 170
   offset: 0, 0

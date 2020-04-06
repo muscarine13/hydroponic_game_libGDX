@@ -1,6 +1,7 @@
 package com.acidcarpet.hydroponist;
 
 import com.acidcarpet.hydroponist.equipment.Box;
+import com.acidcarpet.hydroponist.screen.donat.DonatResources;
 import com.acidcarpet.hydroponist.screen.seedling.SeedlingResources;
 import com.acidcarpet.hydroponist.screen.shop.ShopResources;
 import com.acidcarpet.hydroponist.storage.TestPack;
@@ -19,6 +20,7 @@ public class GameEngine extends Game {
 
 	@Override
 	public void create () {
+
 		TestPack.getInstance().set_atlas();
 
 		BoxResources.set_all();
@@ -29,6 +31,7 @@ public class GameEngine extends Game {
 		PumpResources.set_all();
 		ShopResources.set_all();
 		SeedlingResources.set_all();
+		DonatResources.set_all();
 
 
 		new Thread(){
@@ -73,5 +76,7 @@ public class GameEngine extends Game {
 		PumpResources.dispose_all();
 		ShopResources.dispose_all();
 		SeedlingResources.dispose_all();
+		DonatResources.dispose_all();
+
 	}
 }

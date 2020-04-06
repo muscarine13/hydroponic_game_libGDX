@@ -1,7 +1,10 @@
-package com.acidcarpet.hydroponist.screen.seedling;
+package com.acidcarpet.hydroponist.screen.donat;
 
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
-import com.acidcarpet.hydroponist.storage.*;
+import com.acidcarpet.hydroponist.screen.shop.EquipOffer;
+import com.acidcarpet.hydroponist.screen.shop.EquipShop;
+import com.acidcarpet.hydroponist.screen.shop.ShopResources;
+import com.acidcarpet.hydroponist.storage.Inventory;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -16,7 +19,8 @@ import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
-public class SeedlingScreen implements Screen {
+public class DonatScreen implements Screen {
+
     long last_update;
 
     Game game;
@@ -27,34 +31,40 @@ public class SeedlingScreen implements Screen {
 
     BitmapFont alice_150_F6EB86_stroke_5_9A8C0D; // Gold Big
     BitmapFont alice_150_7BEFE6_stroke_5_089086; // Diamond Big
-
     BitmapFont alice_64_F6EB86_stroke_5_9A8C0D; // Gold Small
     BitmapFont alice_64_7BEFE6_stroke_5_089086; // Diamond Small
     BitmapFont alice_64_AFAFAF_stroke_5_444444; // Grey Small
 
-    BitmapFont alice_48_176115; // Green Title
-    BitmapFont alice_24_176115; // Green Description
+    BitmapFont alice_48_EDD929_stroke_5_9A8C0D; // Gold Title
+    BitmapFont alice_24_9A8C0D; // Gold Description
+    BitmapFont alice_48_1ADED2_stroke_5_089086; // Diamond Title
+    BitmapFont alice_24_089086; // Diamond Description
 
-    public SeedlingScreen(Game game){
+    public DonatScreen(Game game){
+
         this.game = game;
         last_update = 1;
 
     }
+
     @Override
     public void show() {
         stage = new Stage(new ExtendViewport(1080, 1920));
 
-        atlas = SeedlingResources.getAtlas();
-        skin = SeedlingResources.getSkin();
+        atlas = DonatResources.getAtlas();
+        skin = DonatResources.getSkin();
         Gdx.input.setInputProcessor(stage);
 
-        alice_150_F6EB86_stroke_5_9A8C0D= SeedlingResources.getAlice_150_F6EB86_stroke_5_9A8C0D();
-        alice_150_7BEFE6_stroke_5_089086=SeedlingResources.getAlice_150_7BEFE6_stroke_5_089086();
-        alice_64_F6EB86_stroke_5_9A8C0D=SeedlingResources.getAlice_64_F6EB86_stroke_5_9A8C0D();
-        alice_64_7BEFE6_stroke_5_089086=SeedlingResources.getAlice_64_7BEFE6_stroke_5_089086();
-        alice_64_AFAFAF_stroke_5_444444=SeedlingResources.getAlice_64_AFAFAF_stroke_5_444444();
-        alice_48_176115=SeedlingResources.getAlice_48_176115();
-        alice_24_176115=SeedlingResources.getAlice_24_176115();
+        alice_150_F6EB86_stroke_5_9A8C0D= DonatResources.getAlice_150_F6EB86_stroke_5_9A8C0D();
+        alice_150_7BEFE6_stroke_5_089086=DonatResources.getAlice_150_7BEFE6_stroke_5_089086();
+        alice_64_F6EB86_stroke_5_9A8C0D=DonatResources.getAlice_64_F6EB86_stroke_5_9A8C0D();
+        alice_64_7BEFE6_stroke_5_089086=DonatResources.getAlice_64_7BEFE6_stroke_5_089086();
+        alice_64_AFAFAF_stroke_5_444444=DonatResources.getAlice_64_AFAFAF_stroke_5_444444();
+
+        alice_48_EDD929_stroke_5_9A8C0D=DonatResources.getAlice_48_EDD929_stroke_5_9A8C0D();
+        alice_24_9A8C0D=DonatResources.getAlice_24_9A8C0D();
+        alice_48_1ADED2_stroke_5_089086=DonatResources.getAlice_48_1ADED2_stroke_5_089086();
+        alice_24_089086=DonatResources.getAlice_24_089086();
 
         Image background = new Image(atlas.findRegion("background"));
         background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
@@ -68,7 +78,7 @@ public class SeedlingScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        if(last_update!=Inventory.last_update()){
+        if(last_update!= Inventory.last_update()){
 
             try{    stage.getRoot().findActor("resources_pane").clearListeners();                }catch (Exception e){ System.out.println(e.getMessage());}
             try{    stage.getRoot().removeActor(stage.getRoot().findActor("resources_pane"));    }catch (Exception e){ System.out.println(e.getMessage());}
@@ -111,7 +121,7 @@ public class SeedlingScreen implements Screen {
 
     @Override
     public void dispose() {
-
+        stage.dispose();
     }
 
     public Group generate_resources_pane(){
@@ -164,7 +174,6 @@ public class SeedlingScreen implements Screen {
 
     }
 
-
     public Group generate_items_pane(){
         Group out = new Group();
 
@@ -176,7 +185,7 @@ public class SeedlingScreen implements Screen {
         Table table = new Table();
         table.defaults().width(1080).height(200);
 
-        for(SeedlingOffer current_offer : SeedlingShop.getInstance().getSeedlingOffers()){
+        for(DonatOffer current_offer : DonatShop.getInstance().getDonatOffers()){
             table.add(generate_item(current_offer));
             table.row();
         }
@@ -191,85 +200,90 @@ public class SeedlingScreen implements Screen {
 
         return out;
     }
-    public Group generate_item(final SeedlingOffer offer){
+    public Group generate_item(final DonatOffer donatOffer){
         Group out = new Group();
 
-        Image background = new Image(atlas.findRegion("seedling_pane"));
+        Image background;
+        TextButton.TextButtonStyle buttonStyle;
+        TextButton buy_button;
+        Label.LabelStyle title_labelStyle;
+
+        Label.LabelStyle description_labelStyle;
+
+        if(donatOffer.free){
+
+            background = new Image(atlas.findRegion("ad_pane"));
+
+            buttonStyle = new TextButton.TextButtonStyle();
+            buttonStyle.font = alice_64_F6EB86_stroke_5_9A8C0D;
+            buttonStyle.up = new TextureRegionDrawable(atlas.findRegion("ad_buy_button_enable"));
+            buttonStyle.down = new TextureRegionDrawable(atlas.findRegion("ad_buy_button_pressed"));
+            buttonStyle.disabled = new TextureRegionDrawable(atlas.findRegion("ad_buy_button_disable"));
+
+            buy_button = new TextButton("Смотреть рекламу", buttonStyle);
+
+            title_labelStyle = new Label.LabelStyle();
+            title_labelStyle.font = alice_48_EDD929_stroke_5_9A8C0D;
+
+            description_labelStyle = new Label.LabelStyle();
+            description_labelStyle.font = alice_24_9A8C0D;
+
+
+        }else{
+
+            background = new Image(atlas.findRegion("money_pane"));
+
+            buttonStyle = new TextButton.TextButtonStyle();
+            buttonStyle.font = alice_64_F6EB86_stroke_5_9A8C0D;
+            buttonStyle.up = new TextureRegionDrawable(atlas.findRegion("money_buy_button_enable"));
+            buttonStyle.down = new TextureRegionDrawable(atlas.findRegion("money_buy_button_pressed"));
+            buttonStyle.disabled = new TextureRegionDrawable(atlas.findRegion("money_buy_button_disable"));
+
+            buy_button = new TextButton(donatOffer.price+" руб.", buttonStyle);
+
+            title_labelStyle = new Label.LabelStyle();
+            title_labelStyle.font = alice_48_1ADED2_stroke_5_089086;
+
+            description_labelStyle = new Label.LabelStyle();
+            description_labelStyle.font = alice_24_089086;
+        }
+
         background.setPosition(0, 0);
-        background.setName("seedling_pane");
+        background.setName("item_pane");
         out.addActor(background);
 
-        Image icon = offer.getIcon();
+        Image icon = donatOffer.getIcon();
         icon.setBounds(15, 15, 170, 170);
         icon.setName("item_icon");
         out.addActor(icon);
 
-        TextButton.TextButtonStyle coin_buttonStyle = new TextButton.TextButtonStyle();
-        coin_buttonStyle.font = alice_64_F6EB86_stroke_5_9A8C0D;
-        coin_buttonStyle.up = new TextureRegionDrawable(atlas.findRegion("coin_buy_button_enable"));
-        coin_buttonStyle.down = new TextureRegionDrawable(atlas.findRegion("coin_buy_button_pressed"));
-        coin_buttonStyle.disabled = new TextureRegionDrawable(atlas.findRegion("coin_buy_button_disable"));
-        TextButton coin_buy_button = new TextButton(offer.getCoin_price()+"", coin_buttonStyle);
-        coin_buy_button.setBounds(1080-15-200, 200-15-80, 200, 80);
-        coin_buy_button.setName("coin_buy_button");
-        if(offer.may_buy_coin()){
-            coin_buy_button.addListener(new ClickListener() {
+
+        buy_button.setBounds(1080-15-170, 15, 170, 170);
+        buy_button.setName("buy_button");
+
+            buy_button.addListener(new ClickListener() {
                 @Override
                 public void clicked(InputEvent event, float x, float y) {
-                    coin_buy_button_clicked(offer);
+                    offer_clicked(donatOffer);
                 }
             });
-            coin_buy_button.setDisabled(false);
-        }else{
-            coin_buy_button.setDisabled(true);
-        }
-        out.addActor(coin_buy_button);
 
-        TextButton.TextButtonStyle diamond_buttonStyle = new TextButton.TextButtonStyle();
-        diamond_buttonStyle.font = alice_64_F6EB86_stroke_5_9A8C0D;
-        diamond_buttonStyle.up = new TextureRegionDrawable(atlas.findRegion("diamond_buy_button_enable"));
-        diamond_buttonStyle.down = new TextureRegionDrawable(atlas.findRegion("diamond_buy_button_pressed"));
-        diamond_buttonStyle.disabled = new TextureRegionDrawable(atlas.findRegion("diamond_buy_button_disable"));
-        TextButton diamond_buy_button = new TextButton(offer.getDiamond_price()+"",diamond_buttonStyle);
-        diamond_buy_button.setBounds(1080-15-200, 15, 200, 80);
-        diamond_buy_button.setName("diamond_buy_button");
-        if(offer.may_buy_coin()){
-            diamond_buy_button.addListener(new ClickListener() {
-                @Override
-                public void clicked(InputEvent event, float x, float y) {
-                    diamond_buy_button_clicked(offer);
-                }
-            });
-            diamond_buy_button.setDisabled(false);
-        }else{
-            diamond_buy_button.setDisabled(true);
-        }
-        out.addActor(diamond_buy_button);
+        out.addActor(buy_button);
+
+        Label title_label = new Label(donatOffer.getTitle() + "",title_labelStyle);
+        title_label.setAlignment(Align.center);
+        title_label.setName("title_label");
+        title_label.setWrap(false);
+        title_label.setBounds(15+170, 200-15-55, 680, 55);
+        out.addActor(title_label);
 
 
-        Label.LabelStyle title_labelStyle = new Label.LabelStyle();
-        title_labelStyle.font = alice_48_176115;
-        Label coin_label = new Label(
-                offer.getTitle() + "",
-                title_labelStyle
-        );
-        coin_label.setAlignment(Align.center);
-        coin_label.setName("title_label");
-        coin_label.setWrap(true);
-        coin_label.setBounds(15+170, 200-15-55, 680, 55);
-        out.addActor(coin_label);
-
-        Label.LabelStyle description_labelStyle = new Label.LabelStyle();
-        description_labelStyle.font = alice_24_176115;
-        Label diamond_label = new Label(
-                offer.getTitle() + "",
-                description_labelStyle
-        );
-        diamond_label.setAlignment(Align.center);
-        diamond_label.setName("title_label");
-        diamond_label.setWrap(true);
-        diamond_label.setBounds(15+170, 15, 680, 125);
-        out.addActor(diamond_label);
+        Label description_label = new Label(donatOffer.getDescription() + "", description_labelStyle);
+        description_label.setAlignment(Align.center);
+        description_label.setName("description_label");
+        description_label.setWrap(true);
+        description_label.setBounds(15+170, 15, 680, 125);
+        out.addActor(description_label);
 
         return out;
     }
@@ -298,17 +312,11 @@ public class SeedlingScreen implements Screen {
         return out;
     }
 
-    public void back_button_click(){
-game.setScreen(new BoxScreen(game));
-    }
-    public void coin_buy_button_clicked(SeedlingOffer offer){
-
-        offer.buy_coin();
-        Inventory.update();
-    }
-    public void diamond_buy_button_clicked(SeedlingOffer offer){
-        offer.buy_diamond();
-        Inventory.update();
+    public synchronized void offer_clicked(DonatOffer donatOffer){
+        donatOffer.work();
     }
 
+    public synchronized void back_button_click(){
+        game.setScreen(new BoxScreen(game));
+    }
 }

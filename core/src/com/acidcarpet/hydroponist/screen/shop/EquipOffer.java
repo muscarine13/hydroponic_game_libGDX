@@ -1,16 +1,18 @@
-package com.acidcarpet.hydroponist.storage;
+package com.acidcarpet.hydroponist.screen.shop;
 
+import com.acidcarpet.hydroponist.storage.Inventory;
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 import java.util.List;
 
-public abstract class Offer {
+public abstract class EquipOffer {
 
-    public Offer(String title,
-                 String description,
-                 int coin_price,
-                 int diamond_price,
-                 Image icon){
+    public EquipOffer(String title,
+                      String description,
+                      int coin_price,
+                      int diamond_price,
+                      Image icon){
 
         this.coin_price = coin_price;
         this.diamond_price = diamond_price;
@@ -27,7 +29,7 @@ public abstract class Offer {
 
     private int coin_price;
     public boolean may_buy_coin(){
-        if(coin_price<=Inventory.getInstance().getGold()){
+        if(coin_price<= Inventory.getInstance().getGold()){
             return true;
         }else{
             return false;
@@ -75,7 +77,7 @@ public abstract class Offer {
 
     private Image icon;
 
-    abstract List<Storable> set_items();
+    public abstract List<Storable> set_items();
 
     public String getTitle() {
         return title;

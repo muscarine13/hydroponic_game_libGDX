@@ -2,8 +2,8 @@
 
   com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle : {
     default:{}
+
     back_button: { up:back_button_enable, down:back_button_pressed, disabled:back_button_disable }
-    ad_button: {up: ad_button_enable, down:ad_button_pressed, disabled:ad_button_disable}
 
   }
 
