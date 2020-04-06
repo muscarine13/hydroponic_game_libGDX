@@ -1,0 +1,134 @@
+
+donat.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+background
+  rotate: false
+  xy: 1, 123
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+coin_pane
+  rotate: false
+  xy: 1083, 1893
+  size: 540, 150
+  orig: 540, 150
+  offset: 0, 0
+  index: -1
+diamond_pane
+  rotate: false
+  xy: 1083, 1741
+  size: 540, 150
+  orig: 540, 150
+  offset: 0, 0
+  index: -1
+back_button_disable
+  rotate: false
+  xy: 1, 1
+  size: 560, 120
+  orig: 560, 120
+  offset: 0, 0
+  index: -1
+back_button_pressed
+  rotate: false
+  xy: 1083, 1619
+  size: 560, 120
+  orig: 560, 120
+  offset: 0, 0
+  index: -1
+back_button_enable
+  rotate: false
+  xy: 1083, 1497
+  size: 560, 120
+  orig: 560, 120
+  offset: 0, 0
+  index: -1
+money_buy_button_enable
+  rotate: false
+  xy: 1625, 1873
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+money_buy_button_disable
+  rotate: false
+  xy: 1083, 1325
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+ad_buy_button_enable
+  rotate: false
+  xy: 1797, 1873
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+ad_buy_button_disable
+  rotate: false
+  xy: 1083, 1153
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+money_buy_button_pressed
+  rotate: false
+  xy: 1255, 1325
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+ad_buy_button_pressed
+  rotate: false
+  xy: 1083, 981
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+
+donat2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+items_background
+  rotate: false
+  xy: 1, 405
+  size: 1080, 1610
+  orig: 1080, 1610
+  offset: 0, 0
+  index: -1
+money_pane
+  rotate: false
+  xy: 1, 203
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+ad_pane
+  rotate: false
+  xy: 1, 1
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+
+donat3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+buttons_background
+  rotate: false
+  xy: 1, 153
+  size: 1080, 160
+  orig: 1080, 160
+  offset: 0, 0
+  index: -1
+resources_background
+  rotate: false
+  xy: 1, 1
+  size: 1080, 150
+  orig: 1080, 150
+  offset: 0, 0
+  index: -1

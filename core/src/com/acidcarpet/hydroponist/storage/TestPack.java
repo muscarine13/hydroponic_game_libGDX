@@ -625,6 +625,24 @@ public class TestPack {
 
         return out;
     }
+    public List<SeedlingOffer> get_seedlings(){
+        List<SeedlingOffer> out = new ArrayList<>();
+
+        out.add(new SeedlingOffer(
+                "Testplanta Malco",
+                "Саженец маленькогово тестового деревца, похожего на алоэ. Растет быстро и приносит неплохой урожай.",
+                2500,
+                50,
+                new Image(atlas.findRegion("testplanta_malco_offer"))
+        ) {
+            @Override
+            Plant get_plant() {
+                return get_Malco_plant();
+            }
+        });
+
+        return out;
+    }
 
     public Plant get_Malco_plant(){
         return new Plant(
