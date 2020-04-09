@@ -34,15 +34,14 @@ public class FanResources {
         alice_40_black = createFont(40, Color.BLACK);
         alice_28_555555 = createFont(28, new Color(55, 55, 55, 1));
 
-
         FileHandle fontFile = Gdx.files.internal("Alice-Regular.ttf");
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 36;
-        parameter.color.add(new Color(37,37,37,1));
+        parameter.color = new Color(37/255f,37/255f,37/255f,1);
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
-        parameter.borderColor.add(Color.BLACK);
+        parameter.borderColor = Color.BLACK;
         parameter.borderWidth = 2;
 
         alice_36_373737_stroke_black  = generator.generateFont(parameter);
@@ -62,9 +61,8 @@ public class FanResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = size;
-        parameter.color.add(color);
+        parameter.color = color;
         parameter.characters = GameConstants.FONT_CHARACTERS;
-
 
         BitmapFont font  = generator.generateFont(parameter);
 

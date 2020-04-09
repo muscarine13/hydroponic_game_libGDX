@@ -24,7 +24,7 @@ public class PotResources {
 
         alice_48_green = createFont(48, Color.GREEN);
         alice_48_black = createFont(48, Color.BLACK);
-        alice_72_8F8F8F_stroke_black = createFont(72, new Color(143, 143, 143 ,1));
+        alice_72_8F8F8F_stroke_black = createFont(72, new Color(143/255f, 143/255f, 143/255f ,1));
 
     }
     public static void dispose_all(){
@@ -39,7 +39,7 @@ public class PotResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = size;
-        parameter.color.add(color);
+        parameter.color = color;
         parameter.characters = GameConstants.FONT_CHARACTERS;
 
 

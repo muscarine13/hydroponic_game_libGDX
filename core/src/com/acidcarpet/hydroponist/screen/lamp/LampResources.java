@@ -28,10 +28,10 @@ public class LampResources {
 
         alice_48_green = createFont(48, Color.GREEN);
 
-        alice_36_white = createFont(36, new Color().set(203, 203, 203, 1));
+        alice_36_white = createFont(36, new Color().set(203/255f, 203/255f, 203/255f, 1));
         alice_25_black = createFont(25, Color.BLACK);
         alice_40_black = createFont(40, Color.BLACK);
-        alice_28_555555 = createFont(28, new Color(55, 55, 55, 1));
+        alice_28_555555 = createFont(28, new Color(55/255f, 55/255f, 55/255f, 1));
 
     }
     public static void dispose_all(){
@@ -46,7 +46,7 @@ public class LampResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = size;
-        parameter.color.add(color);
+        parameter.color = color;
         parameter.characters = GameConstants.FONT_CHARACTERS;
 
 

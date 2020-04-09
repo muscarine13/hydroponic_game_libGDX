@@ -38,7 +38,7 @@ public class PlantResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = size;
-        parameter.color.add(color);
+        parameter.color = color;
         parameter.characters = GameConstants.FONT_CHARACTERS;
 
 

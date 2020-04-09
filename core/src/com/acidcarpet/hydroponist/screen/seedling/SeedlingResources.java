@@ -51,9 +51,8 @@ public class SeedlingResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = size;
-        parameter.color.add(color);
+        parameter.color = color;
         parameter.characters = GameConstants.FONT_CHARACTERS;
-
 
         BitmapFont font  = generator.generateFont(parameter);
 
@@ -97,10 +96,10 @@ public class SeedlingResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 150;
-        parameter.color.add(new Color(246,235,134,1));
+        parameter.color = new Color(246/255f,235/255f,134/255f,1);
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
-        parameter.borderColor.add(new Color(154, 140, 13,1));
+        parameter.borderColor = new Color(154/255f, 140/255f, 13/255f,1);
         parameter.borderWidth = 5;
         out  = generator.generateFont(parameter);
         generator.dispose();
@@ -114,10 +113,10 @@ public class SeedlingResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 150;
-        parameter.color.add(new Color(123,239,230,1));
+        parameter.color = new Color(123/255f,239/255f,230/255f,1);
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
-        parameter.borderColor.add(new Color(8, 144, 134,1));
+        parameter.borderColor  = new Color(8/255f, 144/255f, 134/255f,1);
         parameter.borderWidth = 5;
         out  = generator.generateFont(parameter);
         generator.dispose();
@@ -131,10 +130,10 @@ public class SeedlingResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 64;
-        parameter.color.add(new Color(246,235,134,1));
+        parameter.color = new Color(246/255f,235/255f,134/255f,1);
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
-        parameter.borderColor.add(new Color(154, 140, 13,1));
+        parameter.borderColor = new Color(154/255f, 140/255f, 13/255f,1);
         parameter.borderWidth = 5;
         out  = generator.generateFont(parameter);
         generator.dispose();
@@ -148,10 +147,10 @@ public class SeedlingResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 64;
-        parameter.color.add(new Color(123,239,230,1));
+        parameter.color = new Color(123/255f,239/255f,230/255f,1);
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
-        parameter.borderColor.add(new Color(8, 144, 134,1));
+        parameter.borderColor = new Color(8/255f, 144/255f, 134/255f,1);
         parameter.borderWidth = 5;
         out  = generator.generateFont(parameter);
         generator.dispose();
@@ -165,10 +164,10 @@ public class SeedlingResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 64;
-        parameter.color.add(new Color(175,175,175,1));
+        parameter.color = new Color(175/255f,175/255f,175/255f,1);
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
-        parameter.borderColor.add(new Color(68, 68, 68,1));
+        parameter.borderColor = new Color(68/255f, 68/255f, 68/255f,1);
         parameter.borderWidth = 5;
         out  = generator.generateFont(parameter);
         generator.dispose();
@@ -182,7 +181,7 @@ public class SeedlingResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 48;
-        parameter.color.add(new Color(23,27,91,1));
+        parameter.color = new Color(23/255f,27/255f,91/255f,1);
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
         out  = generator.generateFont(parameter);
@@ -197,7 +196,7 @@ public class SeedlingResources {
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
         FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter.size = 24;
-        parameter.color.add(new Color(23,27,91,1));
+        parameter.color = new Color(23/255f,27/255f,91/255f,1);
         parameter.characters = GameConstants.FONT_CHARACTERS;
         parameter.borderStraight = true;
         out  = generator.generateFont(parameter);
