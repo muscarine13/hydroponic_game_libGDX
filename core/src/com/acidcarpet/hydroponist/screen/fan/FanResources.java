@@ -11,50 +11,39 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 public class FanResources {
 
-    private static BitmapFont alice_48_green;
-    private static BitmapFont alice_36_white;
-    private static BitmapFont alice_25_black;
-    private static BitmapFont alice_40_black;
-    private static BitmapFont alice_28_555555;
-    private static BitmapFont alice_36_373737_stroke_black;
-
-
     private static TextureAtlas atlas;
     private static Skin skin;
 
-    public static void set_all(){
 
-        atlas = new TextureAtlas(Gdx.files.internal("skin/fan/data/pack.pack"));
-        skin = new Skin(Gdx.files.internal("skin/fan/data/pack.json"), atlas);
+    private static BitmapFont alice_72_797E55;
+    private static BitmapFont alice_62_797E55;
+    private static BitmapFont alice_36_797E55;
 
-        alice_48_green = createFont(48, Color.GREEN);
+    private static BitmapFont alice_48_A5D3FE;
+    private static BitmapFont alice_48_CFFAD0;
 
-        alice_36_white = createFont(36, new Color().set(203, 203, 203, 1));
-        alice_25_black = createFont(25, Color.BLACK);
-        alice_40_black = createFont(40, Color.BLACK);
-        alice_28_555555 = createFont(28, new Color(55, 55, 55, 1));
 
-        FileHandle fontFile = Gdx.files.internal("Alice-Regular.ttf");
-        FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
-        FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
-        parameter.size = 36;
-        parameter.color = new Color(37/255f,37/255f,37/255f,1);
-        parameter.characters = GameConstants.FONT_CHARACTERS;
-        parameter.borderStraight = true;
-        parameter.borderColor = Color.BLACK;
-        parameter.borderWidth = 2;
+    public static void set_all() {
 
-        alice_36_373737_stroke_black  = generator.generateFont(parameter);
-        generator.dispose();
+        atlas = new TextureAtlas(Gdx.files.internal("skin/fan/data/fan.pack"));
+        skin = new Skin(Gdx.files.internal("skin/fan/data/fan.json"), atlas);
 
+        alice_72_797E55 = createFont(72, new Color(121 / 255f, 126 / 255f, 85 / 255f, 1));
+        alice_62_797E55 = createFont(62, new Color(121 / 255f, 126 / 255f, 85 / 255f, 1));
+        alice_36_797E55 = createFont(36, new Color(121 / 255f, 126 / 255f, 85 / 255f, 1));
+
+        alice_48_A5D3FE = createFont(48, new Color(165 / 255f, 211 / 255f, 254 / 255f, 1));
+        alice_48_CFFAD0 = createFont(48, new Color(207 / 255f, 250 / 255f, 208 / 255f, 1));
 
     }
-    public static void dispose_all(){
+
+    public static void dispose_all() {
 
         atlas.dispose();
         skin.dispose();
 
     }
+
     private static BitmapFont createFont(int size, Color color) {
 
         FileHandle fontFile = Gdx.files.internal("Alice-Regular.ttf");
@@ -64,7 +53,7 @@ public class FanResources {
         parameter.color = color;
         parameter.characters = GameConstants.FONT_CHARACTERS;
 
-        BitmapFont font  = generator.generateFont(parameter);
+        BitmapFont font = generator.generateFont(parameter);
 
         generator.dispose();
         return font;
@@ -73,26 +62,26 @@ public class FanResources {
     public static TextureAtlas getAtlas() {
         return atlas;
     }
+
     public static Skin getSkin() {
         return skin;
     }
 
-    public static BitmapFont getAlice_48_green() {
-        return alice_48_green;
+    public static BitmapFont getAlice_72_797E55() {
+        return alice_72_797E55;
     }
-    public static BitmapFont getAlice_36_white() {
-        return alice_36_white;
+    public static BitmapFont getAlice_62_797E55() {
+        return alice_62_797E55;
     }
-    public static BitmapFont getAlice_25_black() {
-        return alice_25_black;
+    public static BitmapFont getAlice_36_797E55() {
+        return alice_36_797E55;
     }
-    public static BitmapFont getAlice_40_black() {
-        return alice_40_black;
+    public static BitmapFont getAlice_48_A5D3FE() {
+        return alice_48_A5D3FE;
     }
-    public static BitmapFont getAlice_28_555555() {
-        return alice_28_555555;
-    }
-    public static BitmapFont getAlice_36_373737_stroke_black() {
-        return alice_36_373737_stroke_black;
+    public static BitmapFont getAlice_48_CFFAD0() {
+        return alice_48_CFFAD0;
     }
 }
+
+

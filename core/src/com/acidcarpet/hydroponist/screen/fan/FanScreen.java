@@ -36,12 +36,12 @@ public class FanScreen implements Screen {
     TextureAtlas atlas;
     Stage stage;
 
-    BitmapFont alice_48_green;
-    BitmapFont alice_36_white;
-    BitmapFont alice_36_373737_stroke_black;
-    BitmapFont alice_25_black;
-    BitmapFont alice_40_black;
-    BitmapFont alice_28_555555;
+      BitmapFont alice_72_797E55;
+      BitmapFont alice_62_797E55;
+      BitmapFont alice_36_797E55;
+
+      BitmapFont alice_48_A5D3FE;
+      BitmapFont alice_48_CFFAD0;
 
     public FanScreen(Game game){
         this.game = game;
@@ -69,250 +69,6 @@ public class FanScreen implements Screen {
         game.setScreen(new BoxScreen(game));
     }
 
-    private Group generate_infopane(){
-        Group out = new Group();
-
-        Image background = new Image(atlas.findRegion("infopane_background"));
-        background.setPosition(0 , 0);
-        background.setName("infopane_background");
-        out.addActor(background);
-
-        if(Box.getInstance().getFan()!=null){// лампа есть и надо получить ее новую карточку
-
-            Image item_icon = Box.getInstance().getFan().get_image_item();
-            item_icon.setBounds(20, 490, 300, 300);
-            item_icon.setName("infopane_item_image");
-            out.addActor(item_icon);
-
-            Label title_label = new  Label(
-                    Box.getInstance().getFan().getName(),
-                    new LabelStyle(alice_48_green, Color.GREEN)
-            );
-            title_label.setWrap(true);
-            title_label.setAlignment(Align.center);
-            title_label.setBounds(340, 490, 700, 300);
-            title_label.setName("infopane_name_label");
-            out.addActor(title_label);
-
-            Label description_label = new   Label(
-                    Box.getInstance().getFan().getDescription(),
-                    new LabelStyle(alice_36_white, Color.GREEN)
-            );
-            description_label.setWrap(true);
-            description_label.setAlignment(Align.center);
-            description_label.setBounds(20, 170, 1040, 300);
-            description_label.setName("infopane_description_label");
-            out.addActor(description_label);
-
-            Image co2_icon = new Image(atlas.findRegion("co2_icon"));
-            co2_icon.setBounds(20, 20, 150, 150);
-            co2_icon.setName("infopane_co2_icon");
-            out.addActor(co2_icon);
-            Label co2_label = new Label(
-                    ""+Box.getInstance().getFan().getCO2_production(),
-                    new LabelStyle(alice_40_black,  Color.BLACK)
-            );
-            co2_label.setAlignment(Align.right);
-            co2_label.setBounds(20, 20, 140, 150);
-            co2_label.setName("infopane_co2_label");
-            out.addActor(co2_label);
-
-            Image temp_icon = new Image((atlas.findRegion("temperature_icon")));
-            temp_icon.setName("infopane_temp_icon");
-            temp_icon.setBounds(20+150+20, 20, 150, 150);
-            out.addActor(temp_icon);
-            Label temp_label = new Label(
-                    "-"+format("%.2f", Box.getInstance().getFan().getT_reduce()),
-                    new LabelStyle(alice_40_black,  Color.BLACK)
-            );
-            temp_label.setAlignment(Align.right);
-            temp_label.setBounds(20+150+20, 20, 140, 150);
-            temp_label.setName("infopane_temp_label");
-            out.addActor(temp_label);
-
-            ImageButton takeoff_button = new ImageButton(skin, "takeoff_button");
-            takeoff_button.setName("infopane_takeoff_button");
-            takeoff_button.setBounds(910, 20, 150, 150);
-            takeoff_button.addListener(new ClickListener() {
-                @Override
-                public void clicked(InputEvent event, float x, float y) {
-                    takeoff_click();
-                }
-            });
-            out.addActor(takeoff_button);
-
-
-            if(Box.getInstance().getFan().isOn()){
-                ImageButton off_button = new ImageButton(skin, "off_button");
-                off_button.setName("infopane_power_button");
-                off_button.setBounds(740, 20, 150, 150);
-                off_button.addListener(new ClickListener() {
-                    @Override
-                    public void clicked(InputEvent event, float x, float y) {
-                        off_click();
-                    }
-                });
-                out.addActor(off_button);
-            }else{
-                ImageButton on_button = new ImageButton(skin, "on_button");
-                on_button.setName("infopane_power_button");
-                on_button.setBounds(740, 20, 150, 150);
-                on_button.addListener(new ClickListener() {
-                    @Override
-                    public void clicked(InputEvent event, float x, float y) {
-                        on_click();
-                    }
-                });
-                out.addActor(on_button);
-            }
-
-
-        }
-        else{// лампы нет никакой и нужна заглушка
-
-            Label title_label = new   Label(
-                    "ПУСТО",
-                    new LabelStyle(alice_48_green, Color.GREEN)
-            );
-            title_label.setWrap(true);
-            title_label.setAlignment(Align.center);
-            title_label.setBounds(340, 490, 700, 300);
-            title_label.setName("infopane_name_label");
-            out.addActor(title_label);
-
-
-            Label description_label = new   Label(
-                    "В данный момент у вас нет активного вентилятора. Растение не будет получать необходимый объем цо2 для роста и жизни. Так же не будет понижаться температура внутри бокса.",
-                    new LabelStyle(alice_36_white, Color.GREEN)
-            );
-            description_label.setWrap(true);
-            description_label.setAlignment(Align.center);
-            description_label.setBounds(20, 20, 1040, 450);
-            description_label.setName("infopane_description_label");
-            out.addActor(description_label);
-
-        }
-
-
-        out.setName("infopane");
-        out.setPosition(40, 1070);
-
-        return out;
-
-    }
-
-    private Group generate_item(final Fan fan){
-        Group out = new Group();
-        //out.setTouchable(Touchable.disabled);
-        try {
-
-            Image item_icon = fan.get_image_item();
-            //item_icon.setTouchable(Touchable.disabled);
-            item_icon.setName("item_icon");
-            item_icon.setBounds(0, 0, 340, 340);
-            out.addActor(item_icon);
-
-            ImageButton equip = new ImageButton(skin, "equip_button");
-            equip.setBounds(0, 0, 120, 120);
-            equip.setName("item_equip_button");
-            equip.addListener(new ClickListener() {
-                @Override
-                public void clicked(InputEvent event, float x, float y) {
-
-                    item_equip_click(fan);
-                }
-            });
-            out.addActor(equip);
-
-
-            ImageButton delete = new ImageButton(skin, "delete_button");
-            delete.setBounds(340 - 120, 0, 120, 120);
-            delete.setName("item_delete_button");
-            delete.addListener(new ClickListener() {
-                @Override
-                public void clicked(InputEvent event, float x, float y) {
-                    item_delete_click(fan);
-                }
-            });
-            out.addActor(delete);
-
-            Image item_frontpane = new Image(atlas.findRegion("item_frontpane"));
-            item_frontpane.setPosition(0, 0);
-            item_frontpane.setName("item_frontpane");
-            item_frontpane.setTouchable(Touchable.disabled);
-            out.addActor(item_frontpane);
-
-            Label co2_label = new Label(
-                    fan.getCO2_production() + "",
-                    new LabelStyle(alice_28_555555, Color.BLACK)
-            );
-            co2_label.setAlignment(Align.right);
-            co2_label.setName("item_co2_label");
-            co2_label.setWrap(true);
-            co2_label.setBounds(0, 250, 80, 90);
-            out.addActor(co2_label);
-
-            Label temp_label = new Label(
-                    "+"+fan.getT_reduce(),
-                    new LabelStyle(alice_28_555555, Color.BLACK)
-            );
-            temp_label.setAlignment(Align.right);
-            temp_label.setName("item_temp_label");
-            temp_label.setWrap(true);
-            temp_label.setBounds(250, 250, 80, 90);
-            out.addActor(temp_label);
-
-            Label name_label = new Label(
-                    fan.getName(),
-                    new LabelStyle(alice_36_373737_stroke_black, Color.BLACK)
-            );
-            name_label.setAlignment(Align.center);
-            name_label.setName("item_name_label");
-            name_label.setWrap(true);
-            name_label.setTouchable(Touchable.disabled);
-            name_label.setBounds(0, 0, 340, 340);
-            out.addActor(name_label);
-        }catch (Exception e){
-            e.printStackTrace();
-            return null;
-        }
-
-        return out;
-    }
-    private Group generate_scrollpane(){
-        Group out = new Group();
-
-        Image background = new Image(atlas.findRegion("scrollpane_background"));
-        background.setPosition(0 , 0);
-        background.setName("scrollpane_background");
-        out.addActor(background);
-
-        Table table = new Table();
-        table.defaults().width(340).height(340);
-
-        int i = 0;
-        for(Storable current_fan : Inventory.getInstance().get_list(Inventory.Type.FAN)){
-            if(i>=3) {
-                i=0;
-                table.row();
-            }
-            table.add(generate_item((Fan)current_fan));
-            i++;
-
-        }
-
-        ScrollPane pane = new ScrollPane(table);
-        pane.setScrollingDisabled(true, false);
-        pane.setBounds(0 ,0 ,1080 , 740);
-        out.addActor(pane);
-
-        out.setName("scrollpane");
-        out.setPosition(40, 310);
-
-        return out;
-    }
-
-
     @Override
     public void show() {
 
@@ -322,30 +78,21 @@ public class FanScreen implements Screen {
         skin = FanResources.getSkin();
         Gdx.input.setInputProcessor(stage);
 
-        alice_48_green = FanResources.getAlice_48_green();
-        alice_36_white = FanResources.getAlice_36_white();
-        alice_25_black = FanResources.getAlice_25_black();
-        alice_40_black = FanResources.getAlice_40_black();
-        alice_28_555555 = FanResources.getAlice_28_555555();
-        alice_36_373737_stroke_black = FanResources.getAlice_36_373737_stroke_black();
+         alice_72_797E55 = FanResources.getAlice_72_797E55();
+         alice_62_797E55 = FanResources.getAlice_62_797E55();
+         alice_36_797E55 = FanResources.getAlice_36_797E55();
+
+         alice_48_A5D3FE = FanResources.getAlice_48_A5D3FE();
+         alice_48_CFFAD0 = FanResources.getAlice_48_CFFAD0();
 
         Image background = new Image(atlas.findRegion("background"));
         background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
         background.setName("background");
         stage.addActor(background);
 
-        ImageButton back_button = new ImageButton(skin, "back_button");
-        back_button.setPosition((1080/2)-350+40, 40);
-        back_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                back_button_click();
-            }
-        });
-        stage.addActor(back_button);
-
-        stage.addActor(generate_infopane());
-        stage.addActor(generate_scrollpane());
+        stage.addActor(generate_fan_pane());
+        stage.addActor(generate_items_pane());
+        stage.addActor(generate_buttons_pane());
     }
 
     @Override
@@ -353,19 +100,19 @@ public class FanScreen implements Screen {
 
         if(box_last_update !=Box.get_last_update()){
 
-            try{    stage.getRoot().findActor("infopane").clearListeners();                 } catch(Exception e){ e.printStackTrace();}
-            try{    stage.getRoot().removeActor(stage.getRoot().findActor("infopane"));     } catch(Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().findActor("fan_pane").clearListeners();                 } catch(Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("fan_pane"));     } catch(Exception e){ e.printStackTrace();}
 
-            try{    stage.addActor(generate_infopane());                                           } catch(Exception e){ e.printStackTrace();}
+            try{    stage.addActor(generate_fan_pane());                                           } catch(Exception e){ e.printStackTrace();}
 
             box_last_update = Box.get_last_update();
         }
 
         if(inventory_last_update!=Inventory.last_update()){
-            try{    stage.getRoot().findActor("scrollpane").clearListeners();               } catch(Exception e){ e.printStackTrace();}
-            try{    stage.getRoot().removeActor(stage.getRoot().findActor("scrollpane"));   } catch(Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().findActor("items_pane").clearListeners();               } catch(Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("items_pane"));   } catch(Exception e){ e.printStackTrace();}
 
-            try{    stage.addActor(generate_scrollpane());                                         } catch(Exception e){ e.printStackTrace();}
+            try{    stage.addActor(generate_items_pane());                                         } catch(Exception e){ e.printStackTrace();}
 
             inventory_last_update = Inventory.last_update();
         }
@@ -398,5 +145,218 @@ public class FanScreen implements Screen {
     public void dispose() {
         stage.dispose();
     }
+
+    private Group generate_fan_pane(){
+        Group out = new Group();
+
+        Image background = new Image(atlas.findRegion("fan_background"));
+        background.setBounds(0 , 0, 1080, 450);
+        background.setName("fan_background");
+        out.addActor(background);
+
+        if(Box.getInstance().getFan()!=null){
+
+            Image fan_pane = new Image(atlas.findRegion("fan_pane"));
+            fan_pane.setPosition(0, 0);
+            fan_pane.setName("fan_pane");
+            out.addActor(fan_pane);
+
+            LabelStyle title_style = new LabelStyle();
+            title_style.font = alice_72_797E55;
+            Label title_label = new  Label(Box.getInstance().getFan().getName(),title_style);
+            title_label.setWrap(false);
+            title_label.setAlignment(Align.center);
+            title_label.setBounds(0, 450-120, 1080, 120);
+            title_label.setName("title_label");
+            out.addActor(title_label);
+
+            LabelStyle description_style = new LabelStyle();
+            description_style.font = alice_36_797E55;
+            Label description_label = new Label(Box.getInstance().getFan().getDescription(), description_style);
+            description_label.setWrap(true);
+            description_label.setAlignment(Align.center);
+            description_label.setBounds(20, 450-120-250, 1040, 250);
+            description_label.setName("description_label");
+            out.addActor(description_label);
+
+            LabelStyle temperature_style = new LabelStyle();
+            temperature_style.font = alice_48_A5D3FE;
+            Label temperature_label = new   Label("-"+Box.getInstance().getFan().getT_reduce()+"C  ", temperature_style);
+            temperature_label.setWrap(false);
+            temperature_label.setAlignment(Align.right);
+            temperature_label.setBounds(215, 15, 325, 80);
+            temperature_label.setName("temperature_label");
+            out.addActor(temperature_label);
+
+            LabelStyle oxygen_style = new LabelStyle();
+            oxygen_style.font = alice_48_CFFAD0;
+            Label oxygen_label = new   Label(""+(int)(Box.getInstance().getFan().getCO2_production()*1000)+"ml/s ", oxygen_style);
+            oxygen_label.setWrap(false);
+            oxygen_label.setAlignment(Align.right);
+            oxygen_label.setBounds(215+325, 15, 325, 80);
+            oxygen_label.setName("oxygen_label");
+            out.addActor(oxygen_label);
+
+            ImageButton take_off_button = new ImageButton(skin, "take_off_button");
+            take_off_button.setName("take_off_button");
+            take_off_button.setPosition(15, 15);
+            take_off_button.addListener(new ClickListener() {
+                @Override
+                public void clicked(InputEvent event, float x, float y) {
+                    takeoff_click();
+                }
+            });
+            out.addActor(take_off_button);
+
+
+            if(Box.getInstance().getFan().isOn()){
+                ImageButton off_button = new ImageButton(skin, "off_button");
+                off_button.setName("power_button");
+                off_button.setPosition(1080-15-200, 15);
+                off_button.addListener(new ClickListener() {
+                    @Override
+                    public void clicked(InputEvent event, float x, float y) {
+                        off_click();
+                    }
+                });
+                out.addActor(off_button);
+            }else{
+                ImageButton on_button = new ImageButton(skin, "on_button");
+                on_button.setName("power_button");
+                on_button.setPosition(1080-15-200, 15);
+                on_button.addListener(new ClickListener() {
+                    @Override
+                    public void clicked(InputEvent event, float x, float y) {
+                        on_click();
+                    }
+                });
+                out.addActor(on_button);
+            }
+
+        }
+
+        out.setName("fan_pane");
+        out.setPosition(40, 1920-450);
+
+        return out;
+    }
+
+    private Group generate_items_pane(){
+        Group out = new Group();
+
+        Image background = new Image(atlas.findRegion("items_background"));
+        background.setPosition(0 , 0);
+        background.setName("items_background");
+        out.addActor(background);
+
+        Table table = new Table();
+        table.defaults().width(1080).height(230);
+
+
+
+        for(Storable current_fan : Inventory.getInstance().get_list(Inventory.Type.FAN)){
+
+            table.add(generate_item((Fan)current_fan));
+            table.row();
+
+        }
+
+        ScrollPane pane = new ScrollPane(table);
+        pane.setScrollingDisabled(true, false);
+        pane.setBounds(0 ,0 ,1080 , 1310);
+        out.addActor(pane);
+
+        out.setName("items_pane");
+        out.setPosition(40, 1920-1310-450);
+
+        return out;
+    }
+    private Group generate_item(final Fan fan){
+        Group out = new Group();
+
+        Image item_pane = new Image(atlas.findRegion("sub_fan_pane"));
+        item_pane.setPosition(0, 0);
+        item_pane.setName("sub_fan_pane");
+        item_pane.setTouchable(Touchable.disabled);
+        out.addActor(item_pane);
+
+        LabelStyle title_style = new LabelStyle();
+        title_style.font = alice_62_797E55;
+        Label title_label = new  Label(fan.getName(),title_style);
+        title_label.setWrap(false);
+        title_label.setAlignment(Align.center);
+        title_label.setBounds(0, 220-120, 1080, 120);
+        title_label.setName("title_label");
+        out.addActor(title_label);
+
+        LabelStyle temperature_style = new LabelStyle();
+        temperature_style.font = alice_48_A5D3FE;
+        Label temperature_label = new   Label("-"+fan.getT_reduce()+"C ", temperature_style);
+        temperature_label.setWrap(false);
+        temperature_label.setAlignment(Align.right);
+        temperature_label.setBounds(215, 15, 325, 80);
+        temperature_label.setName("temperature_label");
+        out.addActor(temperature_label);
+
+        LabelStyle oxygen_style = new LabelStyle();
+        oxygen_style.font = alice_48_CFFAD0;
+        Label oxygen_label = new   Label(""+(int)(fan.getCO2_production()*1000)+"ml/s ", oxygen_style);
+        oxygen_label.setWrap(false);
+        oxygen_label.setAlignment(Align.right);
+        oxygen_label.setBounds(215+325, 15, 325, 80);
+        oxygen_label.setName("oxygen_label");
+        out.addActor(oxygen_label);
+
+        ImageButton equip_button = new ImageButton(skin, "equip_button");
+        equip_button.setPosition(1080-200-15, 15);
+        equip_button.setName("equip_button");
+        equip_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+
+                item_equip_click(fan);
+            }
+        });
+        out.addActor(equip_button);
+
+        ImageButton delete_button = new ImageButton(skin, "delete_button");
+        delete_button.setPosition(15, 15);
+        delete_button.setName("delete_button");
+        delete_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                item_delete_click(fan);
+            }
+        });
+        out.addActor(delete_button);
+
+        return out;
+    }
+
+    private Group generate_buttons_pane(){
+        Group out = new Group();
+
+        Image background = new Image(atlas.findRegion("buttons_background"));
+        background.setPosition(0 , 0);
+        background.setName("buttons_background");
+        out.addActor(background);
+
+        ImageButton back_button = new ImageButton(skin, "back_button");
+        back_button.setPosition(1080/2-560/2, 20);
+        back_button.setName("back_button");
+        back_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                back_button_click();
+            }
+        });
+        out.addActor(back_button);
+
+        out.setName("buttons_pane");
+        out.setPosition(40, 0);
+        return out;
+    }
+
+
 
 }
