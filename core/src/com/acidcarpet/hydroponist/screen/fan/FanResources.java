@@ -42,6 +42,13 @@ public class FanResources {
         atlas.dispose();
         skin.dispose();
 
+        alice_72_797E55.dispose();
+        alice_62_797E55.dispose();
+        alice_36_797E55.dispose();
+
+        alice_48_A5D3FE.dispose();
+        alice_48_CFFAD0.dispose();
+
     }
 
     private static BitmapFont createFont(int size, Color color) {
