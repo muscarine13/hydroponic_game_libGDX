@@ -22,7 +22,6 @@ import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
 import java.util.Date;
-
 import static java.lang.String.*;
 
 public class FanScreen implements Screen {
@@ -64,6 +63,7 @@ public class FanScreen implements Screen {
     }
     private void item_delete_click(Fan fan){
         Inventory.getInstance().delete(fan);
+        Inventory.update();
     }
     private void back_button_click(){
         game.setScreen(new BoxScreen(game));
