@@ -10,49 +10,38 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 public class PumpResources {
-    private static BitmapFont alice_48_green;
-    private static BitmapFont alice_36_white;
-    private static BitmapFont alice_25_black;
-    private static BitmapFont alice_40_black;
-    private static BitmapFont alice_28_555555;
-    private static BitmapFont alice_36_373737_stroke_black;
 
+    private static BitmapFont alice_72_797E55;
+    private static BitmapFont alice_62_797E55;
+    private static BitmapFont alice_36_797E55;
+
+    private static BitmapFont alice_48_ACE5F8;
 
     private static TextureAtlas atlas;
     private static Skin skin;
 
     public static void set_all(){
 
-        atlas = new TextureAtlas(Gdx.files.internal("skin/pump/data/pack.pack"));
-        skin = new Skin(Gdx.files.internal("skin/pump/data/pack.json"), atlas);
+        atlas = new TextureAtlas(Gdx.files.internal("skin/pump/data/pump.pack"));
+        skin = new Skin(Gdx.files.internal("skin/pump/data/pump.json"), atlas);
 
-        alice_48_green = createFont(48, Color.GREEN);
+        alice_72_797E55 = createFont(72, new Color(121 / 255f, 126 / 255f, 85 / 255f, 1));
+        alice_62_797E55 = createFont(62, new Color(121 / 255f, 126 / 255f, 85 / 255f, 1));
+        alice_36_797E55 = createFont(36, new Color(121 / 255f, 126 / 255f, 85 / 255f, 1));
 
-        alice_36_white = createFont(36, new Color().set(203/255f, 203/255f, 203/255f, 1));
-        alice_25_black = createFont(25, Color.BLACK);
-        alice_40_black = createFont(40, Color.BLACK);
-        alice_28_555555 = createFont(28, new Color(55/255f, 55/255f, 55/255f, 1));
-
-
-        FileHandle fontFile = Gdx.files.internal("Alice-Regular.ttf");
-        FreeTypeFontGenerator generator = new FreeTypeFontGenerator(fontFile);
-        FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
-        parameter.size = 36;
-        parameter.color.add(new Color(37,37,37,1));
-        parameter.characters = GameConstants.FONT_CHARACTERS;
-        parameter.borderStraight = true;
-        parameter.borderColor = Color.BLACK;
-        parameter.borderWidth = 2;
-
-        alice_36_373737_stroke_black  = generator.generateFont(parameter);
-        generator.dispose();
-
+        alice_48_ACE5F8 = createFont(48, new Color(172 / 255f, 229 / 255f, 248 / 255f, 1));
 
     }
     public static void dispose_all(){
 
         atlas.dispose();
         skin.dispose();
+
+        alice_72_797E55 = createFont(72, new Color(121 / 255f, 126 / 255f, 85 / 255f, 1));
+        alice_62_797E55 = createFont(62, new Color(121 / 255f, 126 / 255f, 85 / 255f, 1));
+        alice_36_797E55 = createFont(36, new Color(121 / 255f, 126 / 255f, 85 / 255f, 1));
+
+        alice_48_ACE5F8 = createFont(48, new Color(172 / 255f, 229 / 255f, 248 / 255f, 1));
 
     }
     private static BitmapFont createFont(int size, Color color) {
@@ -63,7 +52,6 @@ public class PumpResources {
         parameter.size = size;
         parameter.color = color;
         parameter.characters = GameConstants.FONT_CHARACTERS;
-
 
         BitmapFont font  = generator.generateFont(parameter);
 
@@ -78,22 +66,16 @@ public class PumpResources {
         return skin;
     }
 
-    public static BitmapFont getAlice_48_green() {
-        return alice_48_green;
+    public static BitmapFont getAlice_72_797E55() {
+        return alice_72_797E55;
     }
-    public static BitmapFont getAlice_36_white() {
-        return alice_36_white;
+    public static BitmapFont getAlice_62_797E55() {
+        return alice_62_797E55;
     }
-    public static BitmapFont getAlice_25_black() {
-        return alice_25_black;
+    public static BitmapFont getAlice_36_797E55() {
+        return alice_36_797E55;
     }
-    public static BitmapFont getAlice_40_black() {
-        return alice_40_black;
-    }
-    public static BitmapFont getAlice_28_555555() {
-        return alice_28_555555;
-    }
-    public static BitmapFont getAlice_36_373737_stroke_black() {
-        return alice_36_373737_stroke_black;
+    public static BitmapFont getAlice_48_ACE5F8() {
+        return alice_48_ACE5F8;
     }
 }

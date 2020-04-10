@@ -1,0 +1,183 @@
+
+pump.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+background
+  rotate: false
+  xy: 1, 123
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+back_button_disable
+  rotate: false
+  xy: 1, 1
+  size: 560, 120
+  orig: 560, 120
+  offset: 0, 0
+  index: -1
+back_button_pressed
+  rotate: false
+  xy: 1083, 1923
+  size: 560, 120
+  orig: 560, 120
+  offset: 0, 0
+  index: -1
+back_button_enable
+  rotate: false
+  xy: 1083, 1801
+  size: 560, 120
+  orig: 560, 120
+  offset: 0, 0
+  index: -1
+equip_button_disable
+  rotate: false
+  xy: 563, 41
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+delete_button_enable
+  rotate: false
+  xy: 1645, 1963
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+take_off_button_disable
+  rotate: false
+  xy: 1847, 1963
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+take_off_button_pressed
+  rotate: false
+  xy: 1083, 1719
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+on_button_disable
+  rotate: false
+  xy: 765, 41
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+take_off_button_enable
+  rotate: false
+  xy: 1645, 1881
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+on_button_pressed
+  rotate: false
+  xy: 1847, 1881
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+equip_button_enable
+  rotate: false
+  xy: 1083, 1637
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+delete_button_pressed
+  rotate: false
+  xy: 1285, 1719
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+on_button_enable
+  rotate: false
+  xy: 1083, 1555
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+off_button_pressed
+  rotate: false
+  xy: 1285, 1637
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+equip_button_pressed
+  rotate: false
+  xy: 1083, 1473
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+delete_button_disable
+  rotate: false
+  xy: 1285, 1555
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+off_button_disable
+  rotate: false
+  xy: 1083, 1391
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+off_button_enable
+  rotate: false
+  xy: 1285, 1473
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+
+pump2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+items_background
+  rotate: false
+  xy: 1, 671
+  size: 1080, 1310
+  orig: 1080, 1310
+  offset: 0, 0
+  index: -1
+pump_pane
+  rotate: false
+  xy: 1, 219
+  size: 1080, 450
+  orig: 1080, 450
+  offset: 0, 0
+  index: -1
+sub_pump_pane
+  rotate: false
+  xy: 1, 1
+  size: 1080, 216
+  orig: 1080, 216
+  offset: 0, 0
+  index: -1
+
+pump3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pump_background
+  rotate: false
+  xy: 1, 163
+  size: 1080, 450
+  orig: 1080, 450
+  offset: 0, 0
+  index: -1
+buttons_background
+  rotate: false
+  xy: 1, 1
+  size: 1080, 160
+  orig: 1080, 160
+  offset: 0, 0
+  index: -1
