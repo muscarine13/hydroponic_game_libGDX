@@ -13,24 +13,30 @@ public class PotResources {
     private static TextureAtlas atlas;
     private static Skin skin;
 
-    private static BitmapFont alice_48_green;
-    private static BitmapFont alice_48_black;
-    private static BitmapFont alice_72_8F8F8F_stroke_black;
+    private static BitmapFont alice_72_8F51F5;
+    private static BitmapFont alice_62_797E55;
+
+    private static BitmapFont alice_72_30155B;
 
     public static void set_all(){
 
-        atlas = new TextureAtlas(Gdx.files.internal("skin/pot/data/pot_screen.pack"));
-        skin = new Skin(Gdx.files.internal("skin/pot/data/pot_screen.json"), atlas);
+        atlas = new TextureAtlas(Gdx.files.internal("skin/pot/data/pot.pack"));
+        skin = new Skin(Gdx.files.internal("skin/pot/data/pot.json"), atlas);
 
-        alice_48_green = createFont(48, Color.GREEN);
-        alice_48_black = createFont(48, Color.BLACK);
-        alice_72_8F8F8F_stroke_black = createFont(72, new Color(143/255f, 143/255f, 143/255f ,1));
+        alice_72_8F51F5 = createFont(72, new Color(143/255f,81/255f,245/255f, 1));
+        alice_62_797E55 = createFont(62, new Color(121/255f,126/255f,85/255f, 1));
+
+        alice_72_30155B = createFont(72, new Color(48/255f,21/255f,91/255f, 1));
 
     }
     public static void dispose_all(){
 
         atlas.dispose();
         skin.dispose();
+
+        alice_72_8F51F5.dispose();
+        alice_62_797E55.dispose();
+        alice_72_30155B.dispose();
 
     }
     private static BitmapFont createFont(int size, Color color) {
@@ -56,13 +62,13 @@ public class PotResources {
         return skin;
     }
 
-    public static BitmapFont getAlice_48_green() {
-        return alice_48_green;
+    public static BitmapFont getAlice_72_8F51F5() {
+        return alice_72_8F51F5;
     }
-    public static BitmapFont getAlice_48_black() {
-        return alice_48_black;
+    public static BitmapFont getAlice_62_797E55() {
+        return alice_62_797E55;
     }
-    public static BitmapFont getAlice_72_8F8F8F_stroke_black() {
-        return alice_72_8F8F8F_stroke_black;
+    public static BitmapFont getAlice_72_30155B() {
+        return alice_72_30155B;
     }
 }

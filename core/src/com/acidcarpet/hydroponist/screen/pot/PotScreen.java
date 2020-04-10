@@ -26,6 +26,8 @@ public class PotScreen implements Screen {
 
     Game game;
 
+    PotScreens type;
+
     Skin skin;
     TextureAtlas atlas;
     Stage stage;
@@ -33,41 +35,28 @@ public class PotScreen implements Screen {
     long box_last_update;
     long inventory_last_update;
 
+    BitmapFont alice_72_8F51F5;
+    BitmapFont alice_62_797E55;
 
-    BitmapFont alice_48_green;
-    BitmapFont alice_48_black;
-    BitmapFont alice_72_8F8F8F_stroke_black;
+    BitmapFont alice_72_30155B;
+
 
     public PotScreen(Game game){
         this.game = game;
         box_last_update = 1;
         inventory_last_update = 1;
+        type = PotScreens.BOTTLE;
     }
 
     public void take_off_button_click(){
         Box.getInstance().take_off_pot();
 
     }
-    public void drop_100ml_button_click(){
-        if(Box.getInstance().getPot()!=null){
-            Box.getInstance().getPot().drain(0.1);
-        }
+    public void pot_fil_button_click(){
 
     }
-    public void drop_1l_button_click(){
-        if(Box.getInstance().getPot()!=null){
-            Box.getInstance().getPot().drain(1.0);
-        }
-    }
-    public void drop_10l_button_click(){
-        if(Box.getInstance().getPot()!=null){
-            Box.getInstance().getPot().drain(10.0);
-        }
-    }
-    public void drop_all2_button_click(){
-        if(Box.getInstance().getPot()!=null){
-            Box.getInstance().getPot().drain(Box.getInstance().getPot().getCurrent_volume());
-        }
+    public void pot_drop_button_click(){
+
     }
     public void pro_help_button_click(){
 
@@ -98,6 +87,21 @@ public class PotScreen implements Screen {
         }
     }
 
+    public void pot_button_click(){
+
+        type = PotScreens.POT;
+        inventory_last_update = 1;
+    }
+    public void bottle_button_click(){
+
+        type = PotScreens.BOTTLE;
+        inventory_last_update = 1;
+    }
+
+    public void bottle_fil_button_click(Bottle bottle){
+
+    }
+
     public void delete_button_clicked(Pot pot){
         Inventory.getInstance().delete(pot);
         Box.update();
@@ -107,18 +111,7 @@ public class PotScreen implements Screen {
         Box.getInstance().equip(pot);
 
     }
-
-    public void drop_1ml_button_click(Bottle bottle){
-        bottle.drop_to_pot(0.001f);
-
-    }
-    public void drop_10ml_button_click(Bottle bottle){
-        bottle.drop_to_pot(0.01f);
-    }
-    public void drop_all_button_click(Bottle bottle){
-        bottle.drop_to_pot(bottle.getCurrent_volume());
-    }
-    public  void delete2_button_click(Bottle bottle){
+    public  void delete_button_clicked(Bottle bottle){
         Inventory.getInstance().delete(bottle);
         Box.update();
     }
@@ -136,49 +129,45 @@ public class PotScreen implements Screen {
         skin = PotResources.getSkin();
         Gdx.input.setInputProcessor(stage);
 
-        alice_48_green = PotResources.getAlice_48_green();
-        alice_48_black = PotResources.getAlice_48_black();
-        alice_72_8F8F8F_stroke_black = PotResources.getAlice_72_8F8F8F_stroke_black();
+        alice_72_8F51F5 = PotResources.getAlice_72_8F51F5();
+        alice_62_797E55 = PotResources.getAlice_62_797E55();
+
+        alice_72_30155B = PotResources.getAlice_72_30155B();
 
         Image background = new Image(atlas.findRegion("background"));
         background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
         background.setName("background");
         stage.addActor(background);
 
-        ImageButton back_button = new ImageButton(skin, "back_button");
-        back_button.setPosition((1080/2)-350+40, 40);
-        back_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                back_button_click();
-            }
-        });
+        stage.addActor(generate_pot_pane());
+        stage.addActor(generate_items_pane());
+        stage.addActor(generate_tabs_pane());
+        stage.addActor(generate_buttons_pane());
 
-        stage.addActor(back_button);
     }
 
     @Override
     public void render(float delta) {
         if(Box.get_last_update()!= box_last_update){
 
-            try{    stage.getRoot().findActor("info_pane").clearListeners();                }catch (Exception e){ e.printStackTrace();}
-            try{    stage.getRoot().removeActor(stage.getRoot().findActor("info_pane"));    }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().findActor("pot_pane").clearListeners();                }catch (Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("pot_pane"));    }catch (Exception e){ e.printStackTrace();}
 
-            try{    stage.addActor(generate_info_pane());                                          }catch (Exception e){ e.printStackTrace();}
+            try{    stage.addActor(generate_pot_pane());                                          }catch (Exception e){ e.printStackTrace();}
 
             box_last_update = Box.get_last_update();
 
         }
 
         if(Inventory.last_update()!=inventory_last_update) {
-            try {   stage.getRoot().findActor("bottle_pane").clearListeners();} catch (Exception e) { e.printStackTrace(); }
-            try {   stage.getRoot().removeActor(stage.getRoot().findActor("bottle_pane")); } catch (Exception e) { e.printStackTrace(); }
-            try { stage.getRoot().findActor("pot_pane").clearListeners(); } catch (Exception e) { e.printStackTrace(); }
-            try { stage.getRoot().removeActor(stage.getRoot().findActor("pot_pane")); } catch (Exception e) { e.printStackTrace(); }
+            try {   stage.getRoot().findActor("items_pane").clearListeners();} catch (Exception e) { e.printStackTrace(); }
+            try {   stage.getRoot().removeActor(stage.getRoot().findActor("items_pane")); } catch (Exception e) { e.printStackTrace(); }
+            try { stage.getRoot().findActor("tabs_pane").clearListeners(); } catch (Exception e) { e.printStackTrace(); }
+            try { stage.getRoot().removeActor(stage.getRoot().findActor("tabs_pane")); } catch (Exception e) { e.printStackTrace(); }
 
 
-            try { stage.addActor(generate_bottle_pane()); } catch (Exception e) { e.printStackTrace(); }
-            try { stage.addActor(generate_pot_pane()); } catch (Exception e) { e.printStackTrace(); }
+            try { stage.addActor(generate_items_pane()); } catch (Exception e) { e.printStackTrace(); }
+            try { stage.addActor(generate_tabs_pane()); } catch (Exception e) { e.printStackTrace(); }
 
             inventory_last_update = Inventory.last_update();
         }
@@ -212,478 +201,419 @@ public class PotScreen implements Screen {
 
     }
 
-    private Group generate_info_pane(){
+    private Group generate_pot_pane(){
 
         Group out = new Group();
 
-        Image background = new Image(atlas.findRegion("info_pane_background"));
+        Image background = new Image(atlas.findRegion("pot_background"));
         background.setPosition(0, 0);
-        background.setName("info_pane_background");
+        background.setName("pot_background");
         out.addActor(background);
 
 
         if(Box.getInstance().getPot()!=null){
 
+            Image pane = new Image(atlas.findRegion("pot_pane"));
+            pane.setPosition(0, 0);
+            pane.setName("pot_pane");
+            out.addActor(pane);
+
+            //Название
+            Label.LabelStyle title_style = new Label.LabelStyle();
+            title_style.font = alice_72_8F51F5;
             Label name_label = new Label(
                     Box.getInstance().getPot().getName() + "",
-                    new Label.LabelStyle(alice_48_green, Color.GREEN)
+                    title_style
             );
             name_label.setAlignment(Align.center);
-            name_label.setName("info_pane_name");
+            name_label.setName("title_label");
             name_label.setWrap(true);
-            name_label.setBounds(20, 670-20-117, 1040, 117);
+            name_label.setBounds(0, 530-85, 1080, 85);
             out.addActor(name_label);
 
-            Group macro = generate_macro_sub_pane();
-            macro.setPosition(20, 670-20-117-20-300);
-            out.addActor(macro);
+            //Объем горшка прогрессбар
+            Image pot_bar;
+            int pot_volume_percent =
+                    (int)
+                            ((Box.getInstance().getPot().getCurrent_volume()
+                            /
+                            Box.getInstance().getPot().getMaximum_volume())*100);
 
-            Group micro = generate_micro_sub_pane();
-            micro.setPosition(1080-20-300, 670-20-117-20-300);
-            out.addActor(micro);
+            if(pot_volume_percent<=0){
+                pot_bar = new Image(atlas.findRegion("pot_0_bar"));
+            }else if (pot_volume_percent>0&&pot_volume_percent<=10){
+                pot_bar = new Image(atlas.findRegion("pot_10_bar"));
+            }else if (pot_volume_percent>10&&pot_volume_percent<=20){
+                pot_bar = new Image(atlas.findRegion("pot_20_bar"));
+            }else if (pot_volume_percent>20&&pot_volume_percent<=30){
+                pot_bar = new Image(atlas.findRegion("pot_30_bar"));
+            }else if (pot_volume_percent>30&&pot_volume_percent<=40){
+                pot_bar = new Image(atlas.findRegion("pot_40_bar"));
+            }else if (pot_volume_percent>40&&pot_volume_percent<=50){
+                pot_bar = new Image(atlas.findRegion("pot_50_bar"));
+            }else if (pot_volume_percent>50&&pot_volume_percent<=60){
+                pot_bar = new Image(atlas.findRegion("pot_60_bar"));
+            }else if (pot_volume_percent>60&&pot_volume_percent<=70){
+                pot_bar = new Image(atlas.findRegion("pot_70_bar"));
+            }else if (pot_volume_percent>70&&pot_volume_percent<=80){
+                pot_bar = new Image(atlas.findRegion("pot_80_bar"));
+            }else if (pot_volume_percent>80&&pot_volume_percent<=90){
+                pot_bar = new Image(atlas.findRegion("pot_90_bar"));
+            }else if (pot_volume_percent>90&&pot_volume_percent<=100){
+                pot_bar = new Image(atlas.findRegion("pot_100_bar"));
+            }else
+            {
+                pot_bar = new Image(atlas.findRegion("pot_100_bar"));
+            }
 
-            Group pot = generate_pot_level_sub_pane();
-            pot.setPosition((1080/2)-(350/2), 670-20-117-20-300);
-            out.addActor(pot);
+            pot_bar.setPosition(15, 15);
+            pot_bar.setName("pot_bar");
+            out.addActor(pot_bar);
 
-            Group buttons = generate_button_sub_pane();
-            buttons.setPosition(30, 20);
-            out.addActor(buttons);
+            Label.LabelStyle elements_style = new Label.LabelStyle();
+            elements_style.font = alice_72_30155B;
 
-        }else{
+            Label maximum_label = new Label((int)(Box.getInstance().getPot().getMaximum_volume()*1000)+" ml",
+                    elements_style);
+            maximum_label.setAlignment(Align.center);
+            maximum_label.setName("maximum_label");
+            maximum_label.setWrap(false);
+            maximum_label.setBounds(15, 15+350-80-80, 350, 80);
+            out.addActor(maximum_label);
 
-            Label name_label = new Label(
-                    "ПУСТО",
-                    new Label.LabelStyle(alice_48_green, Color.GREEN)
-            );
-            name_label.setAlignment(Align.center);
-            name_label.setName("info_pane_name");
-            name_label.setWrap(true);
-            name_label.setBounds(20+40, 670-117-20, 1040, 117);
-            out.addActor(name_label);
-        }
+            Label current_label = new Label((int)(Box.getInstance().getPot().getCurrent_volume()*1000)+" ml",
+                    elements_style);
+            current_label.setAlignment(Align.center);
+            current_label.setName("current_label");
+            current_label.setWrap(false);
+            current_label.setBounds(15, 15, 350, 80);
+            out.addActor(current_label);
 
-
-        out.setName("info_pane");
-        out.setPosition(0+40, 1920-40-670);
-        return out;
-    }
-
-    private Group generate_macro_sub_pane(){
-
-        Group out = new Group();
-
-        Image macro_frame = new Image(atlas.findRegion("macro_frame"));
-        macro_frame.setBounds(0, 0, 300, 300);
-        macro_frame.setName("macro_frame");
-        out.addActor(macro_frame);
-
-        if(Box.getInstance().getPot()!=null){
-
-            Label N_label = new Label(
-                    Box.getInstance().getPot().getN() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            N_label.setAlignment(Align.center);
-            N_label.setName("macro_frame_N");
-            N_label.setWrap(true);
-            N_label.setBounds(15, 150, 100, 100);
+            Label N_label =
+                    new Label(Box.getInstance().getPot().getN()+" ", elements_style);
+            N_label.setAlignment(Align.right);
+            N_label.setName("N_label");
+            N_label.setWrap(false);
+            N_label.setBounds(15, 15+350, 175, 80);
             out.addActor(N_label);
 
-            Label P_label = new Label(
-                    Box.getInstance().getPot().getP() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            P_label.setAlignment(Align.center);
-            P_label.setName("macro_frame_P");
-            P_label.setWrap(true);
-            P_label.setBounds(100, 300-100, 100, 100);
+            Label P_label =
+                    new Label(Box.getInstance().getPot().getP()+" ", elements_style);
+            P_label.setAlignment(Align.right);
+            P_label.setName("P_label");
+            P_label.setWrap(false);
+            P_label.setBounds(15+175, 15+350, 175, 80);
             out.addActor(P_label);
 
-            Label K_label = new Label(
-                    Box.getInstance().getPot().getK() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            K_label.setAlignment(Align.center);
-            K_label.setName("macro_frame_K");
-            K_label.setWrap(true);
-            K_label.setBounds(300-100-15, 150, 100, 100);
+            Label K_label =
+                    new Label(Box.getInstance().getPot().getK()+" ", elements_style);
+            K_label.setAlignment(Align.right);
+            K_label.setName("K_label");
+            K_label.setWrap(false);
+            K_label.setBounds(15+175+175, 15+350, 175, 80);
             out.addActor(K_label);
 
-            Label S_label = new Label(
-                    Box.getInstance().getPot().getS() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            S_label.setAlignment(Align.center);
-            S_label.setName("macro_frame_S");
-            S_label.setWrap(true);
-            S_label.setBounds(15, 150-100, 100, 100);
+            Label S_label =
+                    new Label(Box.getInstance().getPot().getS()+" ", elements_style);
+            S_label.setAlignment(Align.right);
+            S_label.setName("S_label");
+            S_label.setWrap(false);
+            S_label.setBounds(15+175+175+175, 15+350, 175, 80);
             out.addActor(S_label);
-            Label Mg_label = new Label(
-                    Box.getInstance().getPot().getMg() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            Mg_label.setAlignment(Align.center);
-            Mg_label.setName("macro_frame_Mg");
-            Mg_label.setWrap(true);
-            Mg_label.setBounds(100, 0, 100, 100);
+
+            Label Mg_label =
+                    new Label(Box.getInstance().getPot().getMg()+" ", elements_style);
+            Mg_label.setAlignment(Align.right);
+            Mg_label.setName("Mg_label");
+            Mg_label.setWrap(false);
+            Mg_label.setBounds(15+175+175+175+175, 15+350, 175, 80);
             out.addActor(Mg_label);
 
-            Label Ca_label = new Label(
-                    Box.getInstance().getPot().getCa() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            Ca_label.setAlignment(Align.center);
-            Ca_label.setName("macro_frame_Ca");
-            Ca_label.setWrap(true);
-            Ca_label.setBounds(300-100-15, 150-100, 100, 100);
+            Label Ca_label =
+                    new Label(Box.getInstance().getPot().getCa()+" ", elements_style);
+            Ca_label.setAlignment(Align.right);
+            Ca_label.setName("Ca_label");
+            Ca_label.setWrap(false);
+            Ca_label.setBounds(15+175+175+175+175+175, 15+350, 175, 80);
             out.addActor(Ca_label);
 
-        }
-
-        out.setName("macro_sub_pane");
-        return out;
-    }
-    private Group generate_micro_sub_pane(){
-        Group out = new Group();
-
-        Image macro_frame = new Image(atlas.findRegion("micro_frame"));
-        macro_frame.setBounds(0, 0, 300, 300);
-        macro_frame.setName("micro_frame");
-        out.addActor(macro_frame);
-
-        if(Box.getInstance().getPot()!=null){
-
-            Label B_label = new Label(
-                    Box.getInstance().getPot().getB() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            B_label.setAlignment(Align.center);
-            B_label.setName("micro_frame_B");
-            B_label.setWrap(true);
-            B_label.setBounds(15, 150, 100, 100);
+            Label B_label =
+                    new Label(Box.getInstance().getPot().getB()+" ", elements_style);
+            B_label.setAlignment(Align.right);
+            B_label.setName("B_label");
+            B_label.setWrap(false);
+            B_label.setBounds(15, 15+350-80, 175, 80);
             out.addActor(B_label);
 
-            Label Cu_label = new Label(
-                    Box.getInstance().getPot().getCu() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            Cu_label.setAlignment(Align.center);
-            Cu_label.setName("micro_frame_Cu");
-            Cu_label.setWrap(true);
-            Cu_label.setBounds(100, 300-100, 100, 100);
+            Label Cu_label =
+                    new Label(Box.getInstance().getPot().getCu()+" ", elements_style);
+            Cu_label.setAlignment(Align.right);
+            Cu_label.setName("Cu_label");
+            Cu_label.setWrap(false);
+            Cu_label.setBounds(15+175, 15+350-80, 175, 80);
             out.addActor(Cu_label);
 
-            Label Fe_label = new Label(
-                    Box.getInstance().getPot().getFe() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            Fe_label.setAlignment(Align.center);
-            Fe_label.setName("micro_frame_Fe");
-            Fe_label.setWrap(true);
-            Fe_label.setBounds(300-100-15, 150, 100, 100);
+            Label Fe_label =
+                    new Label(Box.getInstance().getPot().getFe()+" ", elements_style);
+            Fe_label.setAlignment(Align.right);
+            Fe_label.setName("Fe_label");
+            Fe_label.setWrap(false);
+            Fe_label.setBounds(15+175+175, 15+350-80, 175, 80);
             out.addActor(Fe_label);
 
-            Label Mn_label = new Label(
-                    Box.getInstance().getPot().getMn() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            Mn_label.setAlignment(Align.center);
-            Mn_label.setName("micro_frame_Mn");
-            Mn_label.setWrap(true);
-            Mn_label.setBounds(15, 150-100, 100, 100);
+            Label Mn_label =
+                    new Label(Box.getInstance().getPot().getMn()+" ", elements_style);
+            Mn_label.setAlignment(Align.right);
+            Mn_label.setName("Mn_label");
+            Mn_label.setWrap(false);
+            Mn_label.setBounds(15+175+175+175, 15+350-80, 175, 80);
             out.addActor(Mn_label);
 
-            Label Mo_label = new Label(
-                    Box.getInstance().getPot().getMo() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            Mo_label.setAlignment(Align.center);
-            Mo_label.setName("micro_frame_Mo");
-            Mo_label.setWrap(true);
-            Mo_label.setBounds(100, 0, 100, 100);
+            Label Mo_label =
+                    new Label(Box.getInstance().getPot().getMo()+" ", elements_style);
+            Mo_label.setAlignment(Align.right);
+            Mo_label.setName("Mo_label");
+            Mo_label.setWrap(false);
+            Mo_label.setBounds(15+175+175+175+175, 15+350-80, 175, 80);
             out.addActor(Mo_label);
 
-            Label Zn_label = new Label(
-                    Box.getInstance().getPot().getZn() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            Zn_label.setAlignment(Align.center);
-            Zn_label.setName("micro_frame_Zn");
-            Zn_label.setWrap(true);
-            Zn_label.setBounds(300-100-15, 150-100, 100, 100);
+            Label Zn_label =
+                    new Label(Box.getInstance().getPot().getZn()+" ", elements_style);
+            Zn_label.setAlignment(Align.right);
+            Zn_label.setName("Zn_label");
+            Zn_label.setWrap(false);
+            Zn_label.setBounds(15+175+175+175+175+175, 15+350-80, 175, 80);
             out.addActor(Zn_label);
 
+            Image pH_bar;
+            if(Box.getInstance().getPot().getCurrent_pH()<=0){
+                pH_bar = new Image(atlas.findRegion("pH_0_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>0&&Box.getInstance().getPot().getCurrent_pH()<=1){
+                pH_bar = new Image(atlas.findRegion("pH_1_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>1&&Box.getInstance().getPot().getCurrent_pH()<=2){
+                pH_bar = new Image(atlas.findRegion("pH_2_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>2&&Box.getInstance().getPot().getCurrent_pH()<=3){
+                pH_bar = new Image(atlas.findRegion("pH_3_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>3&&Box.getInstance().getPot().getCurrent_pH()<=4){
+                pH_bar = new Image(atlas.findRegion("pH_4_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>4&&Box.getInstance().getPot().getCurrent_pH()<=5){
+                pH_bar = new Image(atlas.findRegion("pH_5_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>5&&Box.getInstance().getPot().getCurrent_pH()<=6){
+                pH_bar = new Image(atlas.findRegion("pH_6_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>6&&Box.getInstance().getPot().getCurrent_pH()<=7){
+                pH_bar = new Image(atlas.findRegion("pH_7_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>7&&Box.getInstance().getPot().getCurrent_pH()<=8){
+                pH_bar = new Image(atlas.findRegion("pH_8_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>8&&Box.getInstance().getPot().getCurrent_pH()<=9){
+                pH_bar = new Image(atlas.findRegion("pH_9_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>9&&Box.getInstance().getPot().getCurrent_pH()<=10){
+                pH_bar = new Image(atlas.findRegion("pH_10_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>10&&Box.getInstance().getPot().getCurrent_pH()<=11){
+                pH_bar = new Image(atlas.findRegion("pH_11_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>11&&Box.getInstance().getPot().getCurrent_pH()<=12){
+                pH_bar = new Image(atlas.findRegion("pH_12_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>12&&Box.getInstance().getPot().getCurrent_pH()<=13){
+                pH_bar = new Image(atlas.findRegion("pH_13_bar"));
+            }else if(Box.getInstance().getPot().getCurrent_pH()>13&&Box.getInstance().getPot().getCurrent_pH()<=14){
+                pH_bar = new Image(atlas.findRegion("pH_14_bar"));
+            }else
+            {
+                pH_bar = new Image(atlas.findRegion("pH_14_bar"));
+            }
+            pH_bar.setPosition(15+350, 15);
+            pH_bar.setName("pH_bar");
+            out.addActor(pH_bar);
+
+            Image ppm_bar;
+            if(Box.getInstance().getPot().get_all_ppm()<=0){
+                ppm_bar = new Image(atlas.findRegion("ppm_0_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>0&&Box.getInstance().getPot().get_all_ppm()<=100){
+                ppm_bar = new Image(atlas.findRegion("ppm_100_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>100&&Box.getInstance().getPot().get_all_ppm()<=200){
+                ppm_bar = new Image(atlas.findRegion("ppm_200_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>200&&Box.getInstance().getPot().get_all_ppm()<=300){
+                ppm_bar = new Image(atlas.findRegion("ppm_300_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>300&&Box.getInstance().getPot().get_all_ppm()<=400){
+                ppm_bar = new Image(atlas.findRegion("ppm_400_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>400&&Box.getInstance().getPot().get_all_ppm()<=500){
+                ppm_bar = new Image(atlas.findRegion("ppm_500_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>500&&Box.getInstance().getPot().get_all_ppm()<=600){
+                ppm_bar = new Image(atlas.findRegion("ppm_600_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>600&&Box.getInstance().getPot().get_all_ppm()<=700){
+                ppm_bar = new Image(atlas.findRegion("ppm_700_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>700&&Box.getInstance().getPot().get_all_ppm()<=800){
+                ppm_bar = new Image(atlas.findRegion("ppm_800_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>800&&Box.getInstance().getPot().get_all_ppm()<=900){
+                ppm_bar = new Image(atlas.findRegion("ppm_900_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>900&&Box.getInstance().getPot().get_all_ppm()<=1000){
+                ppm_bar = new Image(atlas.findRegion("ppm_1000_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>1000&&Box.getInstance().getPot().get_all_ppm()<=1100){
+                ppm_bar = new Image(atlas.findRegion("ppm_1100_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>1100&&Box.getInstance().getPot().get_all_ppm()<=1200){
+                ppm_bar = new Image(atlas.findRegion("ppm_1200_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>1200&&Box.getInstance().getPot().get_all_ppm()<=1300){
+                ppm_bar = new Image(atlas.findRegion("ppm_1300_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>1300&&Box.getInstance().getPot().get_all_ppm()<=1400){
+                ppm_bar = new Image(atlas.findRegion("ppm_1400_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>1400&&Box.getInstance().getPot().get_all_ppm()<=1500){
+                ppm_bar = new Image(atlas.findRegion("ppm_1500_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>1500&&Box.getInstance().getPot().get_all_ppm()<=1600){
+                ppm_bar = new Image(atlas.findRegion("ppm_1600_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>1600&&Box.getInstance().getPot().get_all_ppm()<=1700){
+                ppm_bar = new Image(atlas.findRegion("ppm_1600_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>1700&&Box.getInstance().getPot().get_all_ppm()<=1800){
+                ppm_bar = new Image(atlas.findRegion("ppm_1800_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>1800&&Box.getInstance().getPot().get_all_ppm()<=1900){
+                ppm_bar = new Image(atlas.findRegion("ppm_1900_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>1900&&Box.getInstance().getPot().get_all_ppm()<=2000){
+                ppm_bar = new Image(atlas.findRegion("ppm_2000_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>2000&&Box.getInstance().getPot().get_all_ppm()<=2100){
+                ppm_bar = new Image(atlas.findRegion("ppm_2100_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>2100&&Box.getInstance().getPot().get_all_ppm()<=2200){
+                ppm_bar = new Image(atlas.findRegion("ppm_2200_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>2200&&Box.getInstance().getPot().get_all_ppm()<=2300){
+                ppm_bar = new Image(atlas.findRegion("ppm_2300_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>2300&&Box.getInstance().getPot().get_all_ppm()<=2400){
+                ppm_bar = new Image(atlas.findRegion("ppm_2400_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>2400&&Box.getInstance().getPot().get_all_ppm()<=2500){
+                ppm_bar = new Image(atlas.findRegion("ppm_2500_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>2500&&Box.getInstance().getPot().get_all_ppm()<=2600){
+                ppm_bar = new Image(atlas.findRegion("ppm_2600_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>2600&&Box.getInstance().getPot().get_all_ppm()<=2700){
+                ppm_bar = new Image(atlas.findRegion("ppm_2700_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>2700&&Box.getInstance().getPot().get_all_ppm()<=2800){
+                ppm_bar = new Image(atlas.findRegion("ppm_2800_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>2800&&Box.getInstance().getPot().get_all_ppm()<=2900){
+                ppm_bar = new Image(atlas.findRegion("ppm_2900_bar"));
+            }else if(Box.getInstance().getPot().get_all_ppm()>2900&&Box.getInstance().getPot().get_all_ppm()<=3000){
+                ppm_bar = new Image(atlas.findRegion("ppm_3000_bar"));
+            }else
+                {
+                ppm_bar = new Image(atlas.findRegion("ppm_3000_bar"));
+            }
+            ppm_bar.setPosition(15+350, 15+80);
+            ppm_bar.setName("ppm_bar");
+            out.addActor(ppm_bar);
+
+            ImageButton pro_help_button = new ImageButton(skin, "pro_help_button");
+            pro_help_button.setPosition(350+15, 260+15-80);
+            pro_help_button.setName("pro_help_button");
+            pro_help_button.addListener(new ClickListener() {
+                @Override
+                public void clicked(InputEvent event, float x, float y) {
+                    pro_help_button_click();
+                }
+            });
+            out.addActor(pro_help_button);
+
+            ImageButton take_off_button = new ImageButton(skin, "take_off_button");
+            take_off_button.setPosition(350+175+15, 15);
+            take_off_button.setName("take_off_button");
+            take_off_button.addListener(new ClickListener() {
+                @Override
+                public void clicked(InputEvent event, float x, float y) {
+                    take_off_button_click();
+                }
+            });
+            out.addActor(take_off_button);
+
+            ImageButton pot_fil_button = new ImageButton(skin, "pot_fil_button");
+            pot_fil_button.setPosition(1080-15-200, 15+100);
+            pot_fil_button.setName("pot_fil_button");
+            pot_fil_button.addListener(new ClickListener() {
+                @Override
+                public void clicked(InputEvent event, float x, float y) {
+                    pot_fil_button_click();
+                }
+            });
+            out.addActor(pot_fil_button);
+
+            ImageButton pot_drop_button = new ImageButton(skin, "pot_drop_button");
+            pot_drop_button.setPosition(1080-15-200, 15);
+            pot_drop_button.setName("pot_drop_button");
+            pot_drop_button.addListener(new ClickListener() {
+                @Override
+                public void clicked(InputEvent event, float x, float y) {
+                    pot_drop_button_click();
+                }
+            });
+            out.addActor(pot_drop_button);
         }
-
-        out.setName("micro_sub_pane");
-        return out;
-    }
-    private Group generate_pot_level_sub_pane(){
-
-        Group out = new Group();
-
-        if(Box.getInstance().getPot()!=null){
-
-            int percent = (int) ((
-                            Box.getInstance().getPot().getCurrent_volume()
-                            /
-                            Box.getInstance().getPot().getMaximum_volume()
-                            )
-                            *100)
-                    ;
-
-            if(percent==0){
-                Image pot_level_pane = new Image(atlas.findRegion("volume_0%_pot_icon"));
-                pot_level_pane.setPosition(0, 0);
-                pot_level_pane.setName("pot_level_pane");
-                out.addActor(pot_level_pane);
-            }else
-            if (percent>=1&&percent<=10){
-                Image pot_level_pane = new Image(atlas.findRegion("volume_10%_pot_icon"));
-                pot_level_pane.setPosition(0, 0);
-                pot_level_pane.setName("pot_level_pane");
-                out.addActor(pot_level_pane);
-            }else
-            if (percent>=11&&percent<=20){
-                Image pot_level_pane = new Image(atlas.findRegion("volume_20%_pot_icon"));
-                pot_level_pane.setPosition(0, 0);
-                pot_level_pane.setName("pot_level_pane");
-                out.addActor(pot_level_pane);
-            }else
-            if (percent>=21&&percent<=30){
-                Image pot_level_pane = new Image(atlas.findRegion("volume_30%_pot_icon"));
-                pot_level_pane.setPosition(0, 0);
-                pot_level_pane.setName("pot_level_pane");
-                out.addActor(pot_level_pane);
-            }else
-            if (percent>=31&&percent<=40){
-                Image pot_level_pane = new Image(atlas.findRegion("volume_40%_pot_icon"));
-                pot_level_pane.setPosition(0, 0);
-                pot_level_pane.setName("pot_level_pane");
-                out.addActor(pot_level_pane);
-            }else
-            if (percent>=41&&percent<=50){
-                Image pot_level_pane = new Image(atlas.findRegion("volume_50%_pot_icon"));
-                pot_level_pane.setPosition(0, 0);
-                pot_level_pane.setName("pot_level_pane");
-                out.addActor(pot_level_pane);
-            }else
-            if (percent>=51&&percent<=60){
-                Image pot_level_pane = new Image(atlas.findRegion("volume_60%_pot_icon"));
-                pot_level_pane.setPosition(0, 0);
-                pot_level_pane.setName("pot_level_pane");
-                out.addActor(pot_level_pane);
-            }else
-            if (percent>=61&&percent<=70){
-                Image pot_level_pane = new Image(atlas.findRegion("volume_70%_pot_icon"));
-                pot_level_pane.setPosition(0, 0);
-                pot_level_pane.setName("pot_level_pane");
-                out.addActor(pot_level_pane);
-            }else
-            if (percent>=71&&percent<=80){
-                Image pot_level_pane = new Image(atlas.findRegion("volume_80%_pot_icon"));
-                pot_level_pane.setPosition(0, 0);
-                pot_level_pane.setName("pot_level_pane");
-                out.addActor(pot_level_pane);
-            }else
-            if (percent>=81&&percent<=90){
-                Image pot_level_pane = new Image(atlas.findRegion("volume_90%_pot_icon"));
-                pot_level_pane.setPosition(0, 0);
-                pot_level_pane.setName("pot_level_pane");
-                out.addActor(pot_level_pane);
-            }else
-            if (percent>=91&&percent<=100){
-                Image pot_level_pane = new Image(atlas.findRegion("volume_100%_pot_icon"));
-                pot_level_pane.setPosition(0, 0);
-                pot_level_pane.setName("pot_level_pane");
-                out.addActor(pot_level_pane);
-            }else{
-                Image pot_level_pane = new Image(atlas.findRegion("volume_0%_pot_icon"));
-                pot_level_pane.setPosition(0, 0);
-                pot_level_pane.setName("pot_level_pane");
-                out.addActor(pot_level_pane);
-            }
-
-
-            Image ph_icon = new Image(atlas.findRegion("ph_icon"));
-            ph_icon.setPosition(0, 300-100);
-            ph_icon.setName("ph_icon");
-            out.addActor(ph_icon);
-
-            Image ppm_icon = new Image(atlas.findRegion("ppm_icon"));
-            ppm_icon.setPosition(350-100, 300-100);
-            ppm_icon.setName("ppm_icon");
-            out.addActor(ppm_icon);
-
-            Label ph_label = new Label(
-                    Box.getInstance().getPot().getCurrent_pH() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            ph_label.setAlignment(Align.center);
-            ph_label.setName("ph_label");
-            ph_label.setWrap(true);
-            ph_label.setBounds(0, 300-100, 100, 100);
-            out.addActor(ph_label);
-
-            Label ppm_label = new Label(
-                    Box.getInstance().getPot().get_all_ppm() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            ppm_label.setAlignment(Align.center);
-            ppm_label.setName("ppm_label");
-            ppm_label.setWrap(true);
-            ppm_label.setBounds(350-100, 300-100, 100, 100);
-            out.addActor(ppm_label);
-
-            Label volume_label = new Label(
-                    Box.getInstance().getPot().getCurrent_volume()+"/"+Box.getInstance().getPot().getMaximum_volume(),
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
-            volume_label.setAlignment(Align.center);
-            volume_label.setName("volume_label");
-            volume_label.setWrap(true);
-            volume_label.setBounds(0, 0, 350, 120);
-            out.addActor(volume_label);
-
-
-
-        }else{
-            Image pot_level_pane = new Image(atlas.findRegion("0%_pot_icon"));
-            pot_level_pane.setPosition(0, 0);
-            pot_level_pane.setName("pot_level_pane");
-            out.addActor(pot_level_pane);
-
-        }
-
-        out.setName("pot_level_pane");
-        return out;
-    }
-    private Group generate_button_sub_pane(){
-
-        Group out = new Group();
-
-        ImageButton takeoff_button = new ImageButton(skin, "takeoff_button");
-        takeoff_button.setBounds(0, 0, 150, 150);
-        takeoff_button.setName("take_off_button");
-        takeoff_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                take_off_button_click();
-            }
-        });
-        out.addActor(takeoff_button);
-
-        ImageButton drop_100ml_button = new ImageButton(skin, "drop_100ml_button");
-        drop_100ml_button.setBounds(150+20, 0, 150, 150);
-        drop_100ml_button.setName("100ml_button");
-        drop_100ml_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-               drop_100ml_button_click();
-            }
-        });
-        out.addActor(drop_100ml_button);
-
-        ImageButton drop_1l_button = new ImageButton(skin, "drop_1l_button");
-        drop_1l_button.setBounds(150+20+150+20, 0, 150, 150);
-        drop_1l_button.setName("1l_button");
-        drop_1l_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                drop_1l_button_click();
-            }
-        });
-        out.addActor(drop_1l_button);
-
-        ImageButton drop_10l_button = new ImageButton(skin, "drop_10l_button");
-        drop_10l_button.setBounds(150+20+150+20+150+20, 0, 150, 150);
-        drop_10l_button.setName("10l_button");
-        drop_10l_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                drop_10l_button_click();
-            }
-        });
-        out.addActor(drop_10l_button);
-
-        ImageButton drop_all2_button = new ImageButton(skin, "drop_all2_button");
-        drop_all2_button.setBounds(150+20+150+20+150+20+150+20, 0, 150, 150);
-        drop_all2_button.setName("all2_button");
-        drop_all2_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                drop_all2_button_click();
-            }
-        });
-        out.addActor(drop_all2_button);
-
-        ImageButton pro_help_button = new ImageButton(skin, "pro_help_button");
-        pro_help_button.setBounds(150+20+150+20+150+20+150+20+150+20, 0, 150, 150);
-        pro_help_button.setName("pro_help_button");
-        pro_help_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-               pro_help_button_click();
-            }
-        });
-        out.addActor(pro_help_button);
-
-        return out;
-    }
-
-    private Group generate_pot_pane() {
-
-        Group out = new Group();
-
-        Image background = new Image(atlas.findRegion("pot_pane_background"));
-        background.setPosition(0, 0);
-        background.setName("pot_pane_background");
-        out.addActor(background);
-
-        Table table = new Table();
-        table.defaults().width(340).height(340);
-
-        for(Storable current_pot : Inventory.getInstance().get_list(Inventory.Type.POT)){
-            table.add(generate_pot_item_sub_pane((Pot)current_pot));
-        }
-
-        ScrollPane pane = new ScrollPane(table);
-        pane.setScrollingDisabled(false, true);
-        pane.setBounds(0 ,0 ,1080 , 340);
-        out.addActor(pane);
 
         out.setName("pot_pane");
-        out.setPosition(0+40, 1920-40-670-20-340);
+        out.setPosition(0+40, 1920-530);
         return out;
     }
-    private Group generate_pot_item_sub_pane(final Pot pot) {
-        System.out.println(pot.getInfo());
+
+    private Group generate_items_pane() {
+
         Group out = new Group();
 
-        Image pot_image = pot.get_icon_pot();
-        pot_image.setBounds(5, 5, 330, 330);
-        pot_image.setName("item_icon");
-        out.addActor(pot_image);
+        Image background = new Image(atlas.findRegion("items_background"));
+        background.setPosition(0, 0);
+        background.setName("items_background");
+        out.addActor(background);
 
-        Image front_pane = new Image(atlas.findRegion("small_front_pane"));
-        front_pane.setBounds(0, 0, 340, 340);
-        front_pane.setName("item_frame");
-        out.addActor(front_pane);
+        Table table;
+        table = new Table();
 
-        final ImageButton equip_button = new ImageButton(skin, "equip_button");
-        equip_button.setBounds(0, 0, 120, 120);
-        equip_button.setName("equip_button");
-        equip_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                equip_button_clicked(pot);
+        switch (type){
+            case POT:
+            table.defaults().width(1080).height(230);
+
+            for(Storable current_pot : Inventory.getInstance().get_list(Inventory.Type.POT)){
+                table.add(generate_item((Pot)current_pot));
+                table.row();
             }
-        });
-        out.addActor(equip_button);
 
-        final ImageButton delete_button = new ImageButton(skin, "delete_button");
-        delete_button.setBounds(340 - 120, 0, 120, 120);
+                break;
+
+            case BOTTLE:
+            table.defaults().width(1080).height(300);
+
+            for(Storable current_bottle : Inventory.getInstance().get_list(Inventory.Type.BOTTLE)){
+                table.add(generate_item((Bottle)current_bottle));
+                table.row();
+            }
+
+
+                break;
+        }
+
+
+        ScrollPane pane = new ScrollPane(table);
+        pane.setScrollingDisabled(true, false);
+        pane.setBounds(0 ,0 ,1080 , 1080);
+        out.addActor(pane);
+
+        out.setName("items_pane");
+        out.setPosition(40, 1920-530-1080);
+        return out;
+    }
+    private Group generate_item(final Pot pot){
+        Group out = new Group();
+
+
+
+        Image background = new Image(atlas.findRegion("sub_pot_pane"));
+        background.setPosition(0, 0);
+        background.setName("sub_pot_pane");
+        out.addActor(background);
+
+        Label.LabelStyle title_style = new Label.LabelStyle();
+        title_style.font = alice_62_797E55;
+        Label name_label = new Label(
+                pot.getName() + "",
+                title_style
+        );
+        name_label.setAlignment(Align.center);
+        name_label.setName("title_label");
+        name_label.setWrap(true);
+        name_label.setBounds(0, 230-120, 1080, 120);
+        out.addActor(name_label);
+        
+        ImageButton delete_button = new ImageButton(skin, "delete_button");
+        delete_button.setPosition(15, 15);
         delete_button.setName("delete_button");
         delete_button.addListener(new ClickListener() {
             @Override
@@ -693,253 +623,275 @@ public class PotScreen implements Screen {
         });
         out.addActor(delete_button);
 
+        ImageButton equip_button = new ImageButton(skin, "equip_button");
+        equip_button.setPosition(1080-15-200, 15);
+        equip_button.setName("equip_button");
+        equip_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                equip_button_clicked(pot);
+            }
+        });
+        out.addActor(equip_button);
 
-            Label volume_label = new Label(
-                    pot.getMaximum_volume() + "",
-                    new Label.LabelStyle(alice_48_black, Color.BLACK)
-            );
+        Image pot_bar;
+        double percent = (pot.getCurrent_volume()/pot.getMaximum_volume())*100;
 
-        volume_label.setAlignment(Align.center);
-        volume_label.setName("volume_label");
-        volume_label.setWrap(true);
-        volume_label.setBounds(0, 340 - 100, 100, 100);
-        out.addActor(volume_label);
-
-
-
-        return out;
-    }
-
-    private Group generate_bottle_pane() {
-
-        Group out = new Group();
-
-        Image background = new Image(atlas.findRegion("bottle_pane_background"));
-        background.setPosition(0, 0);
-        background.setName("bottle_pane_background");
-        out.addActor(background);
-
-        Table table = new Table();
-        table.defaults().width(600).height(600);
-
-
-        for(Storable current_bottle : Inventory.getInstance().get_list(Inventory.Type.BOTTLE)){
-            table.add(generate_bottle_item_sub_pane((Bottle)current_bottle));
+        if(percent<=0){
+            pot_bar = new Image(atlas.findRegion("sub_pot_0_bar"));
+        }else if(percent>0&&percent<=10){
+            pot_bar = new Image(atlas.findRegion("sub_pot_10_bar"));
+        }else if(percent>10&&percent<=20){
+            pot_bar = new Image(atlas.findRegion("sub_pot_20_bar"));
+        }else if(percent>20&&percent<=30){
+            pot_bar = new Image(atlas.findRegion("sub_pot_30_bar"));
+        }else if(percent>30&&percent<=40){
+            pot_bar = new Image(atlas.findRegion("sub_pot_40_bar"));
+        }else if(percent>40&&percent<=50){
+            pot_bar = new Image(atlas.findRegion("sub_pot_50_bar"));
+        }else if(percent>50&&percent<=60){
+            pot_bar = new Image(atlas.findRegion("sub_pot_60_bar"));
+        }else if(percent>60&&percent<=70){
+            pot_bar = new Image(atlas.findRegion("sub_pot_70_bar"));
+        }else if(percent>70&&percent<=80){
+            pot_bar = new Image(atlas.findRegion("sub_pot_80_bar"));
+        }else if(percent>80&&percent<=90){
+            pot_bar = new Image(atlas.findRegion("sub_pot_90_bar"));
+        }else if(percent>90&&percent<=100){
+            pot_bar = new Image(atlas.findRegion("sub_pot_100_bar"));
+        }else
+            {
+            pot_bar = new Image(atlas.findRegion("sub_pot_100_bar"));
         }
 
-        ScrollPane pane = new ScrollPane(table);
-        pane.setScrollingDisabled(false, true);
-        pane.setBounds(0 ,0 ,1080 , 600);
-        out.addActor(pane);
+        pot_bar.setPosition(15+200, 15);
+        pot_bar.setName("pot_bar");
+        out.addActor(pot_bar);
 
-        out.setName("bottle_pane");
-        out.setPosition(0+40, 1920-40-670-20-340-20-600);
         return out;
     }
-    private Group generate_bottle_item_sub_pane(final Bottle bottle){
+    private Group generate_item(final Bottle bottle){
         Group out = new Group();
 
-        Image bottle_icon = bottle.get_bottle_icon();
-        bottle_icon.setBounds(0, 0, 600,600);
-        bottle_icon.setName("bottle_icon");
-        out.addActor(bottle_icon);
 
-        Image front_pane = new Image(atlas.findRegion("big_front_pane"));
-        front_pane.setBounds(0, 0, 600, 600);
-        front_pane.setName("item_frame");
-        out.addActor(front_pane);
 
-        final ImageButton delete2_button = new ImageButton(skin, "delete2_button");
-        delete2_button.setBounds(600-150, 150, 150, 150);
-        delete2_button.setName("delete2_button");
-        delete2_button.addListener(new ClickListener() {
+        Image background = new Image(atlas.findRegion("bottle_pane"));
+        background.setPosition(0, 0);
+        background.setName("bottle_pane");
+        out.addActor(background);
+
+        Label.LabelStyle title_style = new Label.LabelStyle();
+        title_style.font = alice_62_797E55;
+        Label name_label = new Label(
+                bottle.getName() + "",
+                title_style
+        );
+        name_label.setAlignment(Align.center);
+        name_label.setName("title_label");
+        name_label.setWrap(true);
+        name_label.setBounds(0, 300-120, 1080, 120);
+        out.addActor(name_label);
+
+        ImageButton delete_button = new ImageButton(skin, "delete_button");
+        delete_button.setPosition(15, 15);
+        delete_button.setName("delete_button");
+        delete_button.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                delete2_button_click(bottle);
+                delete_button_clicked(bottle);
             }
         });
-        out.addActor(delete2_button);
+        out.addActor(delete_button);
 
-        final ImageButton drop_all_button = new ImageButton(skin, "drop_all_button");
-        drop_all_button.setBounds(600-150, 150+150, 150, 150);
-        drop_all_button.setName("delete2_button");
-        drop_all_button.addListener(new ClickListener() {
+        ImageButton bottle_fil_button = new ImageButton(skin, "bottle_fil_button");
+        bottle_fil_button.setPosition(1080-15-200, 15+80);
+        bottle_fil_button.setName("bottle_fil_button");
+        bottle_fil_button.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                drop_all_button_click(bottle);
+                bottle_fil_button_click(bottle);
             }
         });
-        out.addActor(drop_all_button);
+        out.addActor(bottle_fil_button);
 
-        final ImageButton drop_1ml_button = new ImageButton(skin, "drop_1ml_button");
-        drop_1ml_button.setBounds(0, 150+150, 150, 150);
-        drop_1ml_button.setName("drop_1ml_button");
-        drop_1ml_button.addListener(new ClickListener() {
+        Image bottle_bar;
+        double percent = (bottle.getCurrent_volume()/bottle.getMaximum_volume())*100;
+
+        if(percent<=0){
+            bottle_bar = new Image(atlas.findRegion("bottle_0_bar"));
+        }else if(percent>0&&percent<=10){
+            bottle_bar = new Image(atlas.findRegion("bottle_10_bar"));
+        }else if(percent>10&&percent<=20){
+            bottle_bar = new Image(atlas.findRegion("bottle_20_bar"));
+        }else if(percent>20&&percent<=30){
+            bottle_bar = new Image(atlas.findRegion("bottle_30_bar"));
+        }else if(percent>30&&percent<=40){
+            bottle_bar = new Image(atlas.findRegion("bottle_40_bar"));
+        }else if(percent>40&&percent<=50){
+            bottle_bar = new Image(atlas.findRegion("bottle_50_bar"));
+        }else if(percent>50&&percent<=60){
+            bottle_bar = new Image(atlas.findRegion("bottle_60_bar"));
+        }else if(percent>60&&percent<=70){
+            bottle_bar = new Image(atlas.findRegion("bottle_70_bar"));
+        }else if(percent>70&&percent<=80){
+            bottle_bar = new Image(atlas.findRegion("bottle_80_bar"));
+        }else if(percent>80&&percent<=90){
+            bottle_bar = new Image(atlas.findRegion("bottle_90_bar"));
+        }else if(percent>90&&percent<=100){
+            bottle_bar = new Image(atlas.findRegion("bottle_100_bar"));
+        }else
+        {
+            bottle_bar = new Image(atlas.findRegion("bottle_100_bar"));
+        }
+        bottle_bar.setPosition(15+200+175, 15+80);
+        bottle_bar.setName("bottle_bar");
+        out.addActor(bottle_bar);
+
+
+        Image pH_bar;
+        if(bottle.getpH()<=0){
+            pH_bar = new Image(atlas.findRegion("pH_0_bar"));
+        }else if(bottle.getpH()>0&&bottle.getpH()<=1){
+            pH_bar = new Image(atlas.findRegion("pH_1_bar"));
+        }else if(bottle.getpH()>1&&bottle.getpH()<=2){
+            pH_bar = new Image(atlas.findRegion("pH_2_bar"));
+        }else if(bottle.getpH()>2&&bottle.getpH()<=3){
+            pH_bar = new Image(atlas.findRegion("pH_3_bar"));
+        }else if(bottle.getpH()>3&&bottle.getpH()<=4){
+            pH_bar = new Image(atlas.findRegion("pH_4_bar"));
+        }else if(bottle.getpH()>4&&bottle.getpH()<=5){
+            pH_bar = new Image(atlas.findRegion("pH_5_bar"));
+        }else if(bottle.getpH()>5&&bottle.getpH()<=6){
+            pH_bar = new Image(atlas.findRegion("pH_6_bar"));
+        }else if(bottle.getpH()>6&&bottle.getpH()<=7){
+            pH_bar = new Image(atlas.findRegion("pH_7_bar"));
+        }else if(bottle.getpH()>7&&bottle.getpH()<=8){
+            pH_bar = new Image(atlas.findRegion("pH_8_bar"));
+        }else if(bottle.getpH()>8&&bottle.getpH()<=9){
+            pH_bar = new Image(atlas.findRegion("pH_9_bar"));
+        }else if(bottle.getpH()>9&&bottle.getpH()<=10){
+            pH_bar = new Image(atlas.findRegion("pH_10_bar"));
+        }else if(bottle.getpH()>10&&bottle.getpH()<=11){
+            pH_bar = new Image(atlas.findRegion("pH_11_bar"));
+        }else if(bottle.getpH()>11&&bottle.getpH()<=12){
+            pH_bar = new Image(atlas.findRegion("pH_12_bar"));
+        }else if(bottle.getpH()>12&&bottle.getpH()<=13){
+            pH_bar = new Image(atlas.findRegion("pH_13_bar"));
+        }else if(bottle.getpH()>13&&bottle.getpH()<=14){
+            pH_bar = new Image(atlas.findRegion("pH_14_bar"));
+        }else
+        {
+            pH_bar = new Image(atlas.findRegion("pH_14_bar"));
+        }
+        pH_bar.setPosition(15+200, 15+80);
+        pH_bar.setName("pH_bar");
+        out.addActor(pH_bar);
+
+        Image macro_main;
+        switch (bottle.macro_main()){
+            case N: macro_main = new Image(atlas.findRegion("N_icon")); break;
+            case P: macro_main = new Image(atlas.findRegion("P_icon")); break;
+            case K: macro_main = new Image(atlas.findRegion("K_icon")); break;
+            default: macro_main = new Image(atlas.findRegion("empty_element_icon"));
+        }
+        macro_main.setPosition(15+200, 15);
+        macro_main.setName("macro_main");
+        out.addActor(macro_main);
+
+        Image macro_secondary;
+        switch (bottle.macro_secondary()){
+            case S: macro_secondary = new Image(atlas.findRegion("S_icon")); break;
+            case Mg: macro_secondary = new Image(atlas.findRegion("Mg_icon")); break;
+            case Ca: macro_secondary = new Image(atlas.findRegion("Ca_icon")); break;
+            default: macro_secondary = new Image(atlas.findRegion("empty_element_icon"));
+        }
+        macro_secondary.setPosition(15+200+175, 15);
+        macro_secondary.setName("macro_secondary");
+        out.addActor(macro_secondary);
+
+        Image micro_main;
+        switch (bottle.micro_main()){
+            case B: micro_main = new Image(atlas.findRegion("B_icon")); break;
+            case Cu: micro_main = new Image(atlas.findRegion("Cu_icon")); break;
+            case Fe: micro_main = new Image(atlas.findRegion("Fe_icon")); break;
+            default: micro_main = new Image(atlas.findRegion("empty_element_icon"));
+        }
+        micro_main.setPosition(15+200+175+175, 15);
+        micro_main.setName("micro_main");
+        out.addActor(micro_main);
+
+        Image micro_secondary;
+        switch (bottle.micro_secondary()){
+            case Mn: micro_secondary = new Image(atlas.findRegion("Mn_icon")); break;
+            case Mo: micro_secondary = new Image(atlas.findRegion("Mo_icon")); break;
+            case Zn: micro_secondary = new Image(atlas.findRegion("Zn_icon")); break;
+            default: micro_secondary = new Image(atlas.findRegion("empty_element_icon"));
+        }
+        micro_secondary.setPosition(15+200+175+175+175, 15);
+        micro_secondary.setName("micro_secondary");
+        out.addActor(micro_secondary);
+        return out;
+    }
+
+    private Group generate_tabs_pane(){
+        Group out = new Group();
+
+        Image background = new Image(atlas.findRegion("tabs_background"));
+        background.setPosition(0 , 0);
+        background.setName("tabs_background");
+        out.addActor(background);
+
+        ImageButton pot_button = new ImageButton(skin, "pot_button");
+        pot_button.setPosition(300, 15);
+        pot_button.setName("pot_button");
+        pot_button.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                drop_1ml_button_click(bottle);
+                pot_button_click();
             }
         });
-        out.addActor(drop_1ml_button);
+        if(type==PotScreens.POT) pot_button.setDisabled(true);
+        out.addActor(pot_button);
 
-        final ImageButton drop_10ml_button = new ImageButton(skin, "drop_10ml_button");
-        drop_10ml_button.setBounds(0, 150, 150, 150);
-        drop_10ml_button.setName("drop_10ml_button");
-        drop_10ml_button.addListener(new ClickListener() {
+
+        ImageButton bottle_button = new ImageButton(skin, "bottle_button");
+        bottle_button.setPosition(1080-300-170, 15);
+        bottle_button.setName("bottle_button");
+        bottle_button.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
-                drop_10ml_button_click(bottle);
+                bottle_button_click();
             }
         });
-        out.addActor(drop_10ml_button);
+        if(type==PotScreens.BOTTLE) bottle_button.setDisabled(true);
+        out.addActor(bottle_button);
 
+        out.setName("tabs_pane");
+        out.setPosition(40, 160);
+        return out;
+    }
 
+    private Group generate_buttons_pane(){
+        Group out = new Group();
 
-        Label N_label = new Label(
-                bottle.getPercent_N() + "%",
-                new Label.LabelStyle(alice_48_black, Color.BLACK)
-        );
-        N_label.setAlignment(Align.center);
-        N_label.setName("N_label");
-        N_label.setWrap(true);
-        N_label.setBounds(0, 500, 100, 100);
-        out.addActor(N_label);
+        Image background = new Image(atlas.findRegion("buttons_background"));
+        background.setPosition(0 , 0);
+        background.setName("buttons_background");
+        out.addActor(background);
 
-        Label P_label = new Label(
-                bottle.getPercent_P() + "%",
-                new Label.LabelStyle(alice_48_black, Color.BLACK)
-        );
-        P_label.setAlignment(Align.center);
-        P_label.setName("P_label");
-        P_label.setWrap(true);
-        P_label.setBounds(100, 500, 100, 100);
-        out.addActor(P_label);
+        ImageButton back_button = new ImageButton(skin, "back_button");
+        back_button.setPosition(1080/2-560/2, 20);
+        back_button.setName("back_button");
+        back_button.addListener(new ClickListener() {
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                back_button_click();
+            }
+        });
+        out.addActor(back_button);
 
-        Label K_label = new Label(
-                bottle.getPercent_K() + "%",
-                new Label.LabelStyle(alice_48_black, Color.BLACK)
-        );
-        K_label.setAlignment(Align.center);
-        K_label.setName("K_label");
-        K_label.setWrap(true);
-        K_label.setBounds(200, 500, 100, 100);
-        out.addActor(K_label);
-
-        Label S_label = new Label(
-                bottle.getPercent_S() + "%",
-                new Label.LabelStyle(alice_48_black, Color.BLACK)
-        );
-        S_label.setAlignment(Align.center);
-        S_label.setName("S_label");
-        S_label.setWrap(true);
-        S_label.setBounds(300, 500, 100, 100);
-        out.addActor(S_label);
-
-        Label Mg_label = new Label(
-                bottle.getPercent_Mg() + "%",
-                new Label.LabelStyle(alice_48_black, Color.BLACK)
-        );
-        Mg_label.setAlignment(Align.center);
-        Mg_label.setName("Mg_label");
-        Mg_label.setWrap(true);
-        Mg_label.setBounds(400, 500, 100, 100);
-        out.addActor(Mg_label);
-
-        Label Ca_label = new Label(
-                bottle.getPercent_Ca() + "%",
-                new Label.LabelStyle(alice_48_black, Color.BLACK)
-        );
-        Ca_label.setAlignment(Align.center);
-        Ca_label.setName("Ca_label");
-        Ca_label.setWrap(true);
-        Ca_label.setBounds(500, 500, 100, 100);
-        out.addActor(Ca_label);
-
-
-
-        Label B_label = new Label(
-                bottle.getPercent_B() + "%",
-                new Label.LabelStyle(alice_48_black, Color.BLACK)
-        );
-        B_label.setAlignment(Align.center);
-        B_label.setName("B_label");
-        B_label.setWrap(true);
-        B_label.setBounds(0, 0, 100, 100);
-        out.addActor(B_label);
-
-        Label Cu_label = new Label(
-                bottle.getPercent_Cu() + "%",
-                new Label.LabelStyle(alice_48_black, Color.BLACK)
-        );
-        Cu_label.setAlignment(Align.center);
-        Cu_label.setName("B_label");
-        Cu_label.setWrap(true);
-        Cu_label.setBounds(100, 0, 100, 100);
-        out.addActor(Cu_label);
-
-        Label Fe_label = new Label(
-                bottle.getPercent_Fe() + "%",
-                new Label.LabelStyle(alice_48_black, Color.BLACK)
-        );
-        Fe_label.setAlignment(Align.center);
-        Fe_label.setName("Fe_label");
-        Fe_label.setWrap(true);
-        Fe_label.setBounds(200, 0, 100, 100);
-        out.addActor(Fe_label);
-
-        Label Mn_label = new Label(
-                bottle.getPercent_Mn() + "%",
-                new Label.LabelStyle(alice_48_black, Color.BLACK)
-        );
-        Mn_label.setAlignment(Align.center);
-        Mn_label.setName("Mn_label");
-        Mn_label.setWrap(true);
-        Mn_label.setBounds(300, 0, 100, 100);
-        out.addActor(Mn_label);
-
-        Label Mo_label = new Label(
-                bottle.getPercent_Mo() + "%",
-                new Label.LabelStyle(alice_48_black, Color.BLACK)
-        );
-        Mo_label.setAlignment(Align.center);
-        Mo_label.setName("Mo_label");
-        Mo_label.setWrap(true);
-        Mo_label.setBounds(400, 0, 100, 100);
-        out.addActor(Mo_label);
-
-        Label Zn_label = new Label(
-                bottle.getPercent_Zn() + "%",
-                new Label.LabelStyle(alice_48_black, Color.BLACK)
-        );
-        Zn_label.setAlignment(Align.center);
-        Zn_label.setName("Zn_label");
-        Zn_label.setWrap(true);
-        Zn_label.setBounds(500, 0, 100, 100);
-        out.addActor(Zn_label);
-
-        Label remain_label = new Label(
-                (int) (bottle.getCurrent_volume()*1000)+"ml.",
-                new Label.LabelStyle(alice_72_8F8F8F_stroke_black, Color.BLACK)
-        );
-        remain_label.setAlignment(Align.center);
-        remain_label.setName("remain_label");
-        remain_label.setWrap(true);
-        remain_label.setBounds(0, 120, 600, 100);
-        remain_label.setTouchable(Touchable.disabled);
-        out.addActor(remain_label);
-
-//        Label name_label = new Label(
-//                bottle.getName()+"",
-//                new Label.LabelStyle(alice_72_8F8F8F_stroke_black, Color.BLACK)
-//        );
-//        name_label.setAlignment(Align.center);
-//        name_label.setName("name_label");
-//        name_label.setWrap(true);
-//        name_label.setBounds(0, 600-170, 600, 100);
-//        name_label.setTouchable(Touchable.disabled);
-//        out.addActor(name_label);
-
-
+        out.setName("buttons_pane");
+        out.setPosition(40, 0);
         return out;
     }
 

@@ -1,0 +1,988 @@
+
+pot.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+background
+  rotate: false
+  xy: 1, 125
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+back_button_disable
+  rotate: false
+  xy: 1, 3
+  size: 560, 120
+  orig: 560, 120
+  offset: 0, 0
+  index: -1
+back_button_pressed
+  rotate: false
+  xy: 563, 3
+  size: 560, 120
+  orig: 560, 120
+  offset: 0, 0
+  index: -1
+sub_pot_0_bar
+  rotate: false
+  xy: 1083, 1965
+  size: 650, 80
+  orig: 650, 80
+  offset: 0, 0
+  index: -1
+sub_pot_40_bar
+  rotate: false
+  xy: 1083, 1883
+  size: 650, 80
+  orig: 650, 80
+  offset: 0, 0
+  index: -1
+sub_pot_90_bar
+  rotate: false
+  xy: 1083, 1801
+  size: 650, 80
+  orig: 650, 80
+  offset: 0, 0
+  index: -1
+sub_pot_10_bar
+  rotate: false
+  xy: 1083, 1719
+  size: 650, 80
+  orig: 650, 80
+  offset: 0, 0
+  index: -1
+sub_pot_20_bar
+  rotate: false
+  xy: 1083, 1637
+  size: 650, 80
+  orig: 650, 80
+  offset: 0, 0
+  index: -1
+sub_pot_50_bar
+  rotate: false
+  xy: 1083, 1555
+  size: 650, 80
+  orig: 650, 80
+  offset: 0, 0
+  index: -1
+sub_pot_60_bar
+  rotate: false
+  xy: 1083, 1473
+  size: 650, 80
+  orig: 650, 80
+  offset: 0, 0
+  index: -1
+sub_pot_70_bar
+  rotate: false
+  xy: 1083, 1391
+  size: 650, 80
+  orig: 650, 80
+  offset: 0, 0
+  index: -1
+sub_pot_80_bar
+  rotate: false
+  xy: 1083, 1309
+  size: 650, 80
+  orig: 650, 80
+  offset: 0, 0
+  index: -1
+sub_pot_30_bar
+  rotate: false
+  xy: 1083, 1227
+  size: 650, 80
+  orig: 650, 80
+  offset: 0, 0
+  index: -1
+sub_pot_100_bar
+  rotate: false
+  xy: 1083, 1145
+  size: 650, 80
+  orig: 650, 80
+  offset: 0, 0
+  index: -1
+back_button_enable
+  rotate: false
+  xy: 1083, 1023
+  size: 560, 120
+  orig: 560, 120
+  offset: 0, 0
+  index: -1
+bottle_20_bar
+  rotate: false
+  xy: 1083, 941
+  size: 475, 80
+  orig: 475, 80
+  offset: 0, 0
+  index: -1
+bottle_10_bar
+  rotate: false
+  xy: 1083, 859
+  size: 475, 80
+  orig: 475, 80
+  offset: 0, 0
+  index: -1
+bottle_40_bar
+  rotate: false
+  xy: 1083, 777
+  size: 475, 80
+  orig: 475, 80
+  offset: 0, 0
+  index: -1
+bottle_100_bar
+  rotate: false
+  xy: 1083, 695
+  size: 475, 80
+  orig: 475, 80
+  offset: 0, 0
+  index: -1
+pot_40_bar
+  rotate: false
+  xy: 1125, 433
+  size: 350, 260
+  orig: 350, 260
+  offset: 0, 0
+  index: -1
+pot_30_bar
+  rotate: false
+  xy: 1477, 433
+  size: 350, 260
+  orig: 350, 260
+  offset: 0, 0
+  index: -1
+bottle_70_bar
+  rotate: false
+  xy: 1560, 941
+  size: 475, 80
+  orig: 475, 80
+  offset: 0, 0
+  index: -1
+pot_button_pressed
+  rotate: false
+  xy: 1645, 1023
+  size: 170, 120
+  orig: 170, 120
+  offset: 0, 0
+  index: -1
+bottle_80_bar
+  rotate: false
+  xy: 1560, 859
+  size: 475, 80
+  orig: 475, 80
+  offset: 0, 0
+  index: -1
+bottle_60_bar
+  rotate: false
+  xy: 1560, 777
+  size: 475, 80
+  orig: 475, 80
+  offset: 0, 0
+  index: -1
+bottle_0_bar
+  rotate: false
+  xy: 1560, 695
+  size: 475, 80
+  orig: 475, 80
+  offset: 0, 0
+  index: -1
+pot_drop_button_pressed
+  rotate: false
+  xy: 1829, 593
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+coin_buy_button-4
+  rotate: false
+  xy: 1829, 491
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+pot_fil_button_disable
+  rotate: false
+  xy: 1829, 491
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+pot_fil_button_enable
+  rotate: false
+  xy: 1829, 389
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+coin_buy_button
+  rotate: false
+  xy: 1829, 389
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+pot_20_bar
+  rotate: false
+  xy: 1125, 171
+  size: 350, 260
+  orig: 350, 260
+  offset: 0, 0
+  index: -1
+pot_70_bar
+  rotate: false
+  xy: 1477, 171
+  size: 350, 260
+  orig: 350, 260
+  offset: 0, 0
+  index: -1
+pot_fil_button_pressed
+  rotate: false
+  xy: 1829, 287
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+coin_buy_button-2
+  rotate: false
+  xy: 1829, 287
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+pot_drop_button_disable
+  rotate: false
+  xy: 1829, 185
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+pot_drop_button_enable
+  rotate: false
+  xy: 1829, 83
+  size: 200, 100
+  orig: 200, 100
+  offset: 0, 0
+  index: -1
+pot_button_enable
+  rotate: false
+  xy: 1125, 49
+  size: 170, 120
+  orig: 170, 120
+  offset: 0, 0
+  index: -1
+bottle_button_disable
+  rotate: false
+  xy: 1297, 49
+  size: 170, 120
+  orig: 170, 120
+  offset: 0, 0
+  index: -1
+bottle_50_bar
+  rotate: false
+  xy: 1469, 1
+  size: 475, 80
+  orig: 475, 80
+  offset: 0, 0
+  index: -1
+pro_help_button_pressed
+  rotate: false
+  xy: 1469, 89
+  size: 350, 80
+  orig: 350, 80
+  offset: 0, 0
+  index: -1
+equip_button_disable
+  rotate: false
+  xy: 1735, 1965
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+delete_button_enable
+  rotate: false
+  xy: 1735, 1883
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+take_off_button_disable
+  rotate: false
+  xy: 1735, 1801
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+take_off_button_pressed
+  rotate: false
+  xy: 1735, 1719
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+bottle_fil_button_pressed
+  rotate: false
+  xy: 1735, 1637
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+take_off_button_enable
+  rotate: false
+  xy: 1735, 1555
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+diamond_buy_button
+  rotate: false
+  xy: 1735, 1555
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+equip_button_enable
+  rotate: false
+  xy: 1735, 1473
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+delete_button_pressed
+  rotate: false
+  xy: 1735, 1391
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+bottle_fil_button_enable
+  rotate: false
+  xy: 1735, 1309
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+pot_button_disable
+  rotate: false
+  xy: 1735, 1187
+  size: 170, 120
+  orig: 170, 120
+  offset: 0, 0
+  index: -1
+coin_buy_button-5
+  rotate: false
+  xy: 1817, 1105
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+coin_buy_button-3
+  rotate: false
+  xy: 1817, 1105
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+coin_buy_button-6
+  rotate: false
+  xy: 1817, 1105
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+coin_buy_button-1
+  rotate: false
+  xy: 1817, 1105
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+equip_button_pressed
+  rotate: false
+  xy: 1817, 1023
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+
+pot2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+items_background
+  rotate: false
+  xy: 1, 935
+  size: 1080, 1080
+  orig: 1080, 1080
+  offset: 0, 0
+  index: -1
+pot_background
+  rotate: false
+  xy: 1, 403
+  size: 1080, 530
+  orig: 1080, 530
+  offset: 0, 0
+  index: -1
+bottle_pane
+  rotate: false
+  xy: 1, 101
+  size: 1080, 300
+  orig: 1080, 300
+  offset: 0, 0
+  index: -1
+pot_10_bar
+  rotate: false
+  xy: 1083, 1755
+  size: 350, 260
+  orig: 350, 260
+  offset: 0, 0
+  index: -1
+pot_80_bar
+  rotate: false
+  xy: 1083, 1493
+  size: 350, 260
+  orig: 350, 260
+  offset: 0, 0
+  index: -1
+pot_60_bar
+  rotate: false
+  xy: 1435, 1755
+  size: 350, 260
+  orig: 350, 260
+  offset: 0, 0
+  index: -1
+pot_0_bar
+  rotate: false
+  xy: 1083, 1231
+  size: 350, 260
+  orig: 350, 260
+  offset: 0, 0
+  index: -1
+pot_90_bar
+  rotate: false
+  xy: 1435, 1493
+  size: 350, 260
+  orig: 350, 260
+  offset: 0, 0
+  index: -1
+pot_50_bar
+  rotate: false
+  xy: 1083, 969
+  size: 350, 260
+  orig: 350, 260
+  offset: 0, 0
+  index: -1
+pot_100_bar
+  rotate: false
+  xy: 1435, 1231
+  size: 350, 260
+  orig: 350, 260
+  offset: 0, 0
+  index: -1
+bottle_90_bar
+  rotate: false
+  xy: 1, 19
+  size: 475, 80
+  orig: 475, 80
+  offset: 0, 0
+  index: -1
+bottle_30_bar
+  rotate: false
+  xy: 478, 19
+  size: 475, 80
+  orig: 475, 80
+  offset: 0, 0
+  index: -1
+pro_help_button_disable
+  rotate: false
+  xy: 1083, 887
+  size: 350, 80
+  orig: 350, 80
+  offset: 0, 0
+  index: -1
+pro_help_button_enable
+  rotate: false
+  xy: 1435, 1149
+  size: 350, 80
+  orig: 350, 80
+  offset: 0, 0
+  index: -1
+Frame 64
+  rotate: false
+  xy: 1083, 805
+  size: 327, 80
+  orig: 327, 80
+  offset: 0, 0
+  index: -1
+bottle_button_pressed
+  rotate: false
+  xy: 1787, 1895
+  size: 170, 120
+  orig: 170, 120
+  offset: 0, 0
+  index: -1
+bottle_button_enable
+  rotate: false
+  xy: 1435, 1027
+  size: 170, 120
+  orig: 170, 120
+  offset: 0, 0
+  index: -1
+bottle_fil_button_disable
+  rotate: false
+  xy: 1083, 723
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+delete_button_disable
+  rotate: false
+  xy: 1083, 641
+  size: 200, 80
+  orig: 200, 80
+  offset: 0, 0
+  index: -1
+ppm_1900_bar
+  rotate: false
+  xy: 1607, 1067
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_1400_bar
+  rotate: false
+  xy: 1083, 559
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_1_bar
+  rotate: false
+  xy: 1083, 477
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_2900_bar
+  rotate: false
+  xy: 1083, 395
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+Mo_icon
+  rotate: false
+  xy: 1083, 313
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_1200_bar
+  rotate: false
+  xy: 1083, 231
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+Mg_icon
+  rotate: false
+  xy: 1083, 149
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+empty_element_icon
+  rotate: false
+  xy: 1787, 1813
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+N_icon
+  rotate: false
+  xy: 1787, 1731
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_400_bar
+  rotate: false
+  xy: 1787, 1649
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_8_bar
+  rotate: false
+  xy: 1787, 1567
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_4_bar
+  rotate: false
+  xy: 1787, 1485
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_1700_bar
+  rotate: false
+  xy: 1787, 1403
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_7_bar
+  rotate: false
+  xy: 1787, 1321
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_6_bar
+  rotate: false
+  xy: 1787, 1239
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_700_bar
+  rotate: false
+  xy: 1787, 1157
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_1100_bar
+  rotate: false
+  xy: 1435, 945
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_3_bar
+  rotate: false
+  xy: 1435, 863
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+K_icon
+  rotate: false
+  xy: 1083, 67
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_600_bar
+  rotate: false
+  xy: 1612, 985
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_13_bar
+  rotate: false
+  xy: 1612, 903
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+Fe_icon
+  rotate: false
+  xy: 1612, 821
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+B_icon
+  rotate: false
+  xy: 1412, 781
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_2200_bar
+  rotate: false
+  xy: 1589, 739
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_800_bar
+  rotate: false
+  xy: 1787, 1075
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_500_bar
+  rotate: false
+  xy: 1789, 993
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_1500_bar
+  rotate: false
+  xy: 1789, 911
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_1600_bar
+  rotate: false
+  xy: 1789, 829
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_0_bar
+  rotate: false
+  xy: 1789, 747
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_2800_bar
+  rotate: false
+  xy: 1766, 665
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+Ca_icon
+  rotate: false
+  xy: 1285, 699
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_14_bar
+  rotate: false
+  xy: 1285, 617
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_2700_bar
+  rotate: false
+  xy: 1260, 535
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_3000_bar
+  rotate: false
+  xy: 1260, 453
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_100_bar
+  rotate: false
+  xy: 1260, 371
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_2_bar
+  rotate: false
+  xy: 1260, 289
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_10_bar
+  rotate: false
+  xy: 1260, 207
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_300_bar
+  rotate: false
+  xy: 1260, 125
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_900_bar
+  rotate: false
+  xy: 1260, 43
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_2400_bar
+  rotate: false
+  xy: 1462, 657
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_9_bar
+  rotate: false
+  xy: 1462, 575
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+S_icon
+  rotate: false
+  xy: 1437, 493
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_12_bar
+  rotate: false
+  xy: 1437, 411
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+Cu_icon
+  rotate: false
+  xy: 1437, 329
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_2600_bar
+  rotate: false
+  xy: 1437, 247
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_1800_bar
+  rotate: false
+  xy: 1437, 165
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_2100_bar
+  rotate: false
+  xy: 1437, 83
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_1000_bar
+  rotate: false
+  xy: 1437, 1
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_2000_bar
+  rotate: false
+  xy: 1639, 583
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_5_bar
+  rotate: false
+  xy: 1816, 583
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_0_bar
+  rotate: false
+  xy: 1639, 501
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+P_icon
+  rotate: false
+  xy: 1816, 501
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_2300_bar
+  rotate: false
+  xy: 1614, 419
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_200_bar
+  rotate: false
+  xy: 1614, 337
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+Mn_icon
+  rotate: false
+  xy: 1791, 419
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+Zn_icon
+  rotate: false
+  xy: 1614, 255
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_2500_bar
+  rotate: false
+  xy: 1791, 337
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+pH_11_bar
+  rotate: false
+  xy: 1614, 173
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+ppm_1300_bar
+  rotate: false
+  xy: 1791, 255
+  size: 175, 80
+  orig: 175, 80
+  offset: 0, 0
+  index: -1
+
+pot3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pot_pane
+  rotate: false
+  xy: 1, 547
+  size: 1080, 530
+  orig: 1080, 530
+  offset: 0, 0
+  index: -1
+sub_pot_pane
+  rotate: false
+  xy: 1, 315
+  size: 1080, 230
+  orig: 1080, 230
+  offset: 0, 0
+  index: -1
+buttons_background
+  rotate: false
+  xy: 1, 153
+  size: 1080, 160
+  orig: 1080, 160
+  offset: 0, 0
+  index: -1
+tabs_background
+  rotate: false
+  xy: 1, 1
+  size: 1080, 150
+  orig: 1080, 150
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,19 @@
+{
+
+  com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle : {
+    default:{}
+
+    bottle_fil_button: { up:bottle_fil_button_enable, down:bottle_fil_button_pressed, disabled:bottle_fil_button_disable}
+    pot_fil_button: { up:pot_fil_button_enable, down:pot_fil_button_pressed, disabled:pot_fil_button_disable}
+    pot_drop_button: { up:pot_drop_button_enable, down:pot_drop_button_pressed, disabled:pot_drop_button_disable}
+    delete_button: { up:delete_button_enable, down:delete_button_pressed, disabled:delete_button_disable }
+    equip_button: { up:equip_button_enable, down:equip_button_pressed, disabled:equip_button_disable }
+    back_button: { up:back_button_enable, down:back_button_pressed, disabled:back_button_disable }
+    take_off_button: { up:take_off_button_enable, down:take_off_button_pressed, disabled:take_off_button_disable }
+    pro_help_button: { up:pro_help_button_enable, down:pro_help_button_pressed, disabled:pro_help_button_disable }
+    pot_button: {up:pot_button_enable, down:pot_button_pressed, disabled:pot_button_disable}
+    bottle_button: {up:bottle_button_enable, down:bottle_button_pressed, disabled:bottle_button_disable}
+
+  }
+
+}

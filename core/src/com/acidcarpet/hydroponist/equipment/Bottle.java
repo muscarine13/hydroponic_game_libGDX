@@ -1,5 +1,6 @@
 package com.acidcarpet.hydroponist.equipment;
 
+import com.acidcarpet.hydroponist.Elements;
 import com.acidcarpet.hydroponist.storage.Buyable;
 import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
@@ -228,6 +229,35 @@ public class Bottle implements Storable, Buyable {
     private Image bottle_icon;
     public Image get_bottle_icon() {
         return bottle_icon;
+    }
+
+    public Elements macro_main(){
+        if(percent_N>percent_P&&percent_N>percent_K) return Elements.N;
+        if(percent_P>percent_N&&percent_P>percent_K) return Elements.P;
+        if(percent_K>percent_N&&percent_K>percent_P) return Elements.K;
+
+        return Elements.EMPTY;
+    }
+    public Elements macro_secondary(){
+        if(percent_S>percent_Mg&&percent_S>percent_Ca) return Elements.S;
+        if(percent_Mg>percent_S&&percent_Mg>percent_Ca) return Elements.Mg;
+        if(percent_Ca>percent_S&&percent_Ca>percent_Mg) return Elements.Ca;
+
+        return Elements.EMPTY;
+    }
+    public Elements micro_main(){
+        if(percent_B>percent_Cu&&percent_B>percent_Fe) return Elements.B;
+        if(percent_Cu>percent_B&&percent_Cu>percent_Fe) return Elements.Cu;
+        if(percent_Fe>percent_B&&percent_Fe>percent_Cu) return Elements.Fe;
+
+        return Elements.EMPTY;
+    }
+    public Elements micro_secondary(){
+        if(percent_Mn>percent_Mo&&percent_Mn>percent_Zn) return Elements.Mn;
+        if(percent_Mo>percent_Mn&&percent_Mo>percent_Zn) return Elements.Mo;
+        if(percent_Zn>percent_Mn&&percent_Zn>percent_Mo) return Elements.Zn;
+
+        return Elements.EMPTY;
     }
 
     @Override
