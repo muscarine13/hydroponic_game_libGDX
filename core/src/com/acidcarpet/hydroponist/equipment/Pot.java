@@ -31,7 +31,7 @@ public class Pot implements Storable {
             int ppm_Zn
     ){
 
-        this.pH = round(((this.pH*this.current_volume) +(pH*volume)) /(current_volume+volume), 1);
+        this.pH = ((this.pH*this.current_volume) +(pH*volume)) /(current_volume+volume);
 
         this.N =(int) (((this.N*this.current_volume)   + (ppm_N*volume)) / (current_volume+volume));
         this.P =(int) (((this.P*this.current_volume)   + (ppm_P*volume)) / (current_volume+volume));
@@ -46,7 +46,7 @@ public class Pot implements Storable {
         this.Mo =(int) (((this.Mo*this.current_volume) + (ppm_Mo*volume)) / (current_volume+volume));
         this.Zn =(int)(((this.Zn*this.current_volume)  + (ppm_Zn*volume)) / (current_volume+volume));
 
-        current_volume=round(current_volume+volume, 3);
+        current_volume=current_volume+volume;
         if (current_volume>maximum_volume)current_volume=maximum_volume;
         Box.update();
 

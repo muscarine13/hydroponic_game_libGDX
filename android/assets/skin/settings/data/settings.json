@@ -1,0 +1,23 @@
+{
+
+  com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle : {
+    default:{}
+    back_button: { up:back_button_enable, down:back_button_pressed, disabled:back_button_disable }
+
+    red_music_button: { up:red_music_button_enable, down:red_music_button_pressed, disabled:red_music_button_disable }
+    green_music_button: { up:green_music_button_enable, down:green_music_button_pressed, disabled:green_music_button_disable }
+
+    red_sound_button: { up:red_sound_button_enable, down:red_sound_button_pressed, disabled:red_sound_button_disable }
+    green_sound_button: { up:green_sound_button_enable, down:green_sound_button_pressed, disabled:green_sound_button_disable }
+
+    red_vibration_button: { up:red_vibration_button_enable, down:red_vibration_button_pressed, disabled:red_vibration_button_disable }
+    green_vibration_button: { up:green_vibration_button_enable, down:green_vibration_button_pressed, disabled:green_vibration_button_disable }
+
+    green_reset_button: { up:green_reset_button_enable, down:green_reset_button_pressed, disabled:green_reset_button_disable }
+    green_about_button: { up:green_about_button_enable, down:green_about_button_pressed, disabled:green_about_button_disable }
+    green_study_button: { up:green_study_button_enable, down:green_study_button_pressed, disabled:green_study_button_disable }
+  }
+
+
+
+}

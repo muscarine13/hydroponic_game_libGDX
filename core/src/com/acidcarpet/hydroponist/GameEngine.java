@@ -3,6 +3,7 @@ package com.acidcarpet.hydroponist;
 import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.screen.donat.DonatResources;
 import com.acidcarpet.hydroponist.screen.seedling.SeedlingResources;
+import com.acidcarpet.hydroponist.screen.settings.SettingsResources;
 import com.acidcarpet.hydroponist.screen.shop.ShopResources;
 import com.acidcarpet.hydroponist.storage.TestPack;
 import com.acidcarpet.hydroponist.screen.box.BoxResources;
@@ -32,6 +33,7 @@ public class GameEngine extends Game {
 		ShopResources.set_all();
 		SeedlingResources.set_all();
 		DonatResources.set_all();
+		SettingsResources.set_all();
 
 
 		new Thread(){
@@ -77,6 +79,7 @@ public class GameEngine extends Game {
 		ShopResources.dispose_all();
 		SeedlingResources.dispose_all();
 		DonatResources.dispose_all();
+		SettingsResources.dispose_all();
 
 	}
 }

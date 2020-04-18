@@ -1,0 +1,256 @@
+
+settings.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+background
+  rotate: false
+  xy: 1, 123
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+back_button_disable
+  rotate: false
+  xy: 1, 1
+  size: 560, 120
+  orig: 560, 120
+  offset: 0, 0
+  index: -1
+back_button_pressed
+  rotate: false
+  xy: 1083, 1923
+  size: 560, 120
+  orig: 560, 120
+  offset: 0, 0
+  index: -1
+back_button_enable
+  rotate: false
+  xy: 1083, 1801
+  size: 560, 120
+  orig: 560, 120
+  offset: 0, 0
+  index: -1
+
+settings2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+buttons_background
+  rotate: false
+  xy: 1, 1819
+  size: 1080, 160
+  orig: 1080, 160
+  offset: 0, 0
+  index: -1
+red_sound_button_disable
+  rotate: false
+  xy: 1, 1617
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_sound_button_disable
+  rotate: false
+  xy: 1, 1617
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+red_music_button_disable
+  rotate: false
+  xy: 1, 1415
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_music_button_disable
+  rotate: false
+  xy: 1, 1415
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_music_button_pressed
+  rotate: false
+  xy: 1, 1213
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_study_button_pressed
+  rotate: false
+  xy: 1, 1011
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_vibration_button_disable
+  rotate: false
+  xy: 1, 809
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+red_vibration_button_disable
+  rotate: false
+  xy: 1, 809
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_music_button_enable
+  rotate: false
+  xy: 1, 607
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_study_button_enable
+  rotate: false
+  xy: 1, 405
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+red_sound_button_pressed
+  rotate: false
+  xy: 1, 203
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+red_music_button_pressed
+  rotate: false
+  xy: 1, 1
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+
+settings3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+green_sound_button_pressed
+  rotate: false
+  xy: 1, 1819
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_reset_button_disable
+  rotate: false
+  xy: 1, 1617
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_vibration_button_enable
+  rotate: false
+  xy: 1, 1415
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_sound_button_enable
+  rotate: false
+  xy: 1, 1213
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_vibration_button_pressed
+  rotate: false
+  xy: 1, 1011
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_study_button_disable
+  rotate: false
+  xy: 1, 809
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+red_music_button_enable
+  rotate: false
+  xy: 1, 607
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_about_button_pressed
+  rotate: false
+  xy: 1, 405
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_reset_button_pressed
+  rotate: false
+  xy: 1, 203
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_about_button_disable
+  rotate: false
+  xy: 1, 1
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+
+settings4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+items_background
+  rotate: false
+  xy: 1, 203
+  size: 1080, 1760
+  orig: 1080, 1760
+  offset: 0, 0
+  index: -1
+red_sound_button_enable
+  rotate: false
+  xy: 1, 1
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+
+settings5.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+red_vibration_button_enable
+  rotate: false
+  xy: 1, 607
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+red_vibration_button_pressed
+  rotate: false
+  xy: 1, 405
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_reset_button_enable
+  rotate: false
+  xy: 1, 203
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1
+green_about_button_enable
+  rotate: false
+  xy: 1, 1
+  size: 1080, 200
+  orig: 1080, 200
+  offset: 0, 0
+  index: -1

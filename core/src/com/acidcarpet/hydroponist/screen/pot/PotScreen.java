@@ -21,8 +21,12 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
+import java.util.Date;
+
 
 public class PotScreen implements Screen {
+
+    Thread fil_thread;
 
     Game game;
 
@@ -52,10 +56,15 @@ public class PotScreen implements Screen {
         Box.getInstance().take_off_pot();
 
     }
-    public void pot_fil_button_click(){
+    public void pot_fil_button_click(ImageButton button){
+
+
+
 
     }
-    public void pot_drop_button_click(){
+    public void pot_drop_button_click(ImageButton button){
+
+
 
     }
     public void pro_help_button_click(){
@@ -99,7 +108,7 @@ public class PotScreen implements Screen {
     }
 
     public void bottle_fil_button_click(Bottle bottle){
-
+        bottle.drop_to_pot(0.001);
     }
 
     public void delete_button_clicked(Pot pot){
@@ -517,24 +526,36 @@ public class PotScreen implements Screen {
             });
             out.addActor(take_off_button);
 
-            ImageButton pot_fil_button = new ImageButton(skin, "pot_fil_button");
+            final ImageButton pot_fil_button = new ImageButton(skin, "pot_fil_button");
             pot_fil_button.setPosition(1080-15-200, 15+100);
             pot_fil_button.setName("pot_fil_button");
             pot_fil_button.addListener(new ClickListener() {
                 @Override
                 public void clicked(InputEvent event, float x, float y) {
-                    pot_fil_button_click();
+                    pot_fil_button_click(pot_fil_button);
+                }
+
+                @Override
+                public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+
+                    return super.touchDown(event, x, y, pointer, button);
+                }
+
+                @Override
+                public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
+
+                    super.touchUp(event, x, y, pointer, button);
                 }
             });
             out.addActor(pot_fil_button);
 
-            ImageButton pot_drop_button = new ImageButton(skin, "pot_drop_button");
+            final ImageButton pot_drop_button = new ImageButton(skin, "pot_drop_button");
             pot_drop_button.setPosition(1080-15-200, 15);
             pot_drop_button.setName("pot_drop_button");
             pot_drop_button.addListener(new ClickListener() {
                 @Override
                 public void clicked(InputEvent event, float x, float y) {
-                    pot_drop_button_click();
+                    pot_drop_button_click(pot_drop_button);
                 }
             });
             out.addActor(pot_drop_button);
@@ -611,7 +632,7 @@ public class PotScreen implements Screen {
         name_label.setWrap(true);
         name_label.setBounds(0, 230-120, 1080, 120);
         out.addActor(name_label);
-        
+
         ImageButton delete_button = new ImageButton(skin, "delete_button");
         delete_button.setPosition(15, 15);
         delete_button.setName("delete_button");
@@ -896,4 +917,69 @@ public class PotScreen implements Screen {
     }
 
 
+    public class ButtonTimerFil implements Runnable{
+        private ImageButton button;
+
+        public ButtonTimerFil(ImageButton button){
+            this.button = button;
+        }
+
+        @Override
+        public void run() {
+            while (!Thread.currentThread().isInterrupted()) {
+
+
+                if (button.isPressed()) {
+                    Box.getInstance().getPot().pour(
+                            0.001,
+                            5.5,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0);
+                } else {
+                    Thread.currentThread().interrupt();
+                }
+
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+        }
+    }
+
+    public class ButtonTimerDrop extends Thread{
+        private ImageButton button;
+
+        public ButtonTimerDrop(ImageButton button){
+            this.button = button;
+        }
+
+        @Override
+        public void run() {
+            if(button.isPressed()){
+                Box.getInstance().getPot().drain(0.001);
+            }else{
+                Thread.currentThread().interrupt();
+            }
+
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }
