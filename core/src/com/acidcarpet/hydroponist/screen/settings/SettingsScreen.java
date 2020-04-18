@@ -243,7 +243,7 @@ public class SettingsScreen implements Screen {
         Settings.change_vibration();
     }
     public void reset_button_click(){
-        
+
     }
     public void about_button_click(){
 

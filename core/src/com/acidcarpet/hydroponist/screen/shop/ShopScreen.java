@@ -235,7 +235,7 @@ public class ShopScreen implements Screen {
         TextButton diamond_buy_button = new TextButton(equipOffer.getDiamond_price()+"",diamond_buttonStyle);
         diamond_buy_button.setBounds(1080-15-200, 15, 200, 80);
         diamond_buy_button.setName("diamond_buy_button");
-        if(equipOffer.may_buy_coin()){
+        if(equipOffer.may_buy_diamond()){
             diamond_buy_button.addListener(new ClickListener() {
                 @Override
                 public void clicked(InputEvent event, float x, float y) {
