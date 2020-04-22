@@ -120,7 +120,7 @@ public class PotScreen implements Screen {
         Box.getInstance().equip(pot);
 
     }
-    public  void delete_button_clicked(Bottle bottle){
+    public void delete_button_clicked(Bottle bottle){
         Inventory.getInstance().delete(bottle);
         Box.update();
     }
@@ -959,7 +959,6 @@ public class PotScreen implements Screen {
 
         }
     }
-
     public class ButtonTimerDrop extends Thread{
         private ImageButton button;
 
