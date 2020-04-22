@@ -7,6 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public class Lamp {
     private TextureAtlas atlas;
+
     private Type type;
     private Tier tier;
     private TemperatureQuality temperatureQuality;
@@ -19,7 +20,7 @@ public class Lamp {
     private boolean on;
 
     protected Lamp(Type type, Tier tier, TemperatureQuality temperatureQuality, EnergyQuality energyQuality) {
-        atlas = TestPack.getInstance().get_atlas();
+
 
         this.type = type;
         this.tier = tier;
@@ -40,7 +41,6 @@ public class Lamp {
                         Wrench.random_double(temperatureQuality.minPercent, temperatureQuality.maxPercent));
         if(temperature == 0) temperature = 1;
     }
-
 
     public synchronized boolean consume(double energy){
         if(energy_current>=energy){
@@ -77,13 +77,38 @@ public class Lamp {
 
         return out;
     }
-    public Image get_image(){
+    public Image get_on_image(){
+        return new Image(atlas.findRegion(type.id+"_"+tier.name+"_on"));
+    }
+    public Image get_off_image(){
+        return new Image(atlas.findRegion(type.id+"_"+tier.name+"_off"));
+    }
+    public Image get_light_image(){
+        return new Image(atlas.findRegion(type.id+"_"+tier.name+"_light"));
+    }
 
-        TextureAtlas atlas = TestPack.getInstance().get_atlas();
-        if(on)
-            return new Image(atlas.findRegion(type.id+"_"+tier.name+"_on"));
-        else
-            return new Image(atlas.findRegion(type.id+"_"+tier.name+"_off"));
-
+    public Type getType() {
+        return type;
+    }
+    public Tier getTier() {
+        return tier;
+    }
+    public TemperatureQuality getTemperatureQuality() {
+        return temperatureQuality;
+    }
+    public EnergyQuality getEnergyQuality() {
+        return energyQuality;
+    }
+    public int getEnergy_production() {
+        return energy_production;
+    }
+    public double getTemperature() {
+        return temperature;
+    }
+    public int getEnergy_current() {
+        return energy_current;
+    }
+    public boolean isOn() {
+        return on;
     }
 }
