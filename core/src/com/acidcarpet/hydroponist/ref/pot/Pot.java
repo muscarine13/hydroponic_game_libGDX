@@ -1,10 +1,35 @@
 package com.acidcarpet.hydroponist.ref.pot;
 
-import java.awt.*;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public class Pot {
 
+    TextureAtlas atlas;
+
     private Level level;
+    public synchronized void level_up(){
+        if(level==null) level = Level.LVL_MIN;
+        if(level==Level.LVL_MAX) return;
+
+        for (int i  = 0; i<Level.values().length; i++){
+            if(Level.values()[i] == level){
+                level = Level.values()[i+1];
+            }
+        }
+
+    }
+    public synchronized void level_down(){
+        if(level==null) level = Level.LVL_MIN;
+        if(level==Level.LVL_MIN) return;
+
+        for (int i  = 0; i<Level.values().length; i++){
+            if(Level.values()[i] == level){
+                level = Level.values()[i-1];
+            }
+        }
+
+    }
 
     public int get_maximum_volume(){
         return level.maximum_volume;
@@ -47,7 +72,7 @@ public class Pot {
         if(pH<this.pH) ph_down();
 
         this.volume+=volume;
-        if (this.volume>get_maximum_volume()) volume==volume;
+        if (this.volume>get_maximum_volume()) this.volume=volume;
 
 
     }
@@ -70,7 +95,7 @@ public class Pot {
     }
 
     public Image get_image(){
-        return new com.badlogic.gdx.scenes.scene2d.ui.Image(atlas.findRegion("pot_"+tier.name));
+        return new Image(atlas.findRegion("pot_"+level.name));
     }
 
     private int ppm_N;
@@ -85,6 +110,26 @@ public class Pot {
     private int ppm_Mn;
     private int ppm_Mo;
     private int ppm_Zn;
+
+public int get_all_ppm(){
+            return (
+            ppm_N+
+            ppm_P+
+            ppm_K+
+
+            ppm_S+
+            ppm_Mg+
+            ppm_Ca+
+
+            ppm_B+
+            ppm_Cu+
+            ppm_Fe+
+
+            ppm_Mn+
+            ppm_Mo+
+            ppm_Zn
+            );
+}
 
     public int get_N() {
         return ppm_N;
