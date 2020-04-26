@@ -1,9 +1,15 @@
 package com.acidcarpet.hydroponist.ref.pot;
 
+import com.acidcarpet.hydroponist.Elements;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public class Pot {
+    private static Pot instance;
+    public static Pot getInstance(){
+        if(instance==null) instance = new Pot();
+        return instance;
+    }
 
     TextureAtlas atlas;
 
@@ -97,7 +103,6 @@ public class Pot {
     public Image get_image(){
         return new Image(atlas.findRegion("pot_"+level.name));
     }
-
     private int ppm_N;
     private int ppm_P;
     private int ppm_K;
@@ -110,8 +115,7 @@ public class Pot {
     private int ppm_Mn;
     private int ppm_Mo;
     private int ppm_Zn;
-
-public int get_all_ppm(){
+    public int get_all_ppm(){
             return (
             ppm_N+
             ppm_P+
@@ -130,7 +134,6 @@ public int get_all_ppm(){
             ppm_Zn
             );
 }
-
     public int get_N() {
         return ppm_N;
     }
@@ -203,7 +206,42 @@ public int get_all_ppm(){
     public void set_Zn(int ppm_Zn) {
         this.ppm_Zn = ppm_Zn;
     }
+    public Level getLevel() {
+        return level;
+    }
+    public int getVolume() {
+        return volume;
+    }
+    public double getpH() {
+        return pH;
+    }
 
+    public Elements macro_main(){
+        if(ppm_N>ppm_P&&ppm_N>ppm_K) return Elements.N;
+        if(ppm_P>ppm_N&&ppm_P>ppm_K) return Elements.P;
+        if(ppm_K>ppm_N&&ppm_K>ppm_P) return Elements.K;
 
+        return Elements.EMPTY;
+    }
+    public Elements macro_secondary(){
+        if(ppm_S>ppm_Mg&&ppm_S>ppm_Ca) return Elements.S;
+        if(ppm_Mg>ppm_S&&ppm_Mg>ppm_Ca) return Elements.Mg;
+        if(ppm_Ca>ppm_S&&ppm_Ca>ppm_Mg) return Elements.Ca;
 
+        return Elements.EMPTY;
+    }
+    public Elements micro_main(){
+        if(ppm_B>ppm_Cu&&ppm_B>ppm_Fe) return Elements.B;
+        if(ppm_Cu>ppm_B&&ppm_Cu>ppm_Fe) return Elements.Cu;
+        if(ppm_Fe>ppm_B&&ppm_Fe>ppm_Cu) return Elements.Fe;
+
+        return Elements.EMPTY;
+    }
+    public Elements micro_secondary(){
+        if(ppm_Mn>ppm_Mo&&ppm_Mn>ppm_Zn) return Elements.Mn;
+        if(ppm_Mo>ppm_Mn&&ppm_Mo>ppm_Zn) return Elements.Mo;
+        if(ppm_Zn>ppm_Mn&&ppm_Zn>ppm_Mo) return Elements.Zn;
+
+        return Elements.EMPTY;
+    }
 }

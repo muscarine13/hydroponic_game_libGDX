@@ -2,13 +2,13 @@ package com.acidcarpet.hydroponist.ref.plant;
 
 import com.acidcarpet.hydroponist.Elements;
 
-public enum PreBloomType {
-    P(Elements.P),
-    K(Elements.K);
+public enum  SeedType {
+    N(Elements.N),
+    D(Elements.EMPTY);
 
     Elements elements;
 
-    PreBloomType(Elements elements) {
+    SeedType(Elements elements) {
         this.elements = elements;
     }
 }

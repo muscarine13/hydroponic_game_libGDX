@@ -1,6 +1,14 @@
 package com.acidcarpet.hydroponist.ref.plant;
 
+import com.acidcarpet.hydroponist.Elements;
+
 public enum  PostBloomType {
-    P,
-    D
+    P(Elements.P),
+    D(Elements.EMPTY);
+
+    Elements elements;
+
+    PostBloomType(Elements elements) {
+        this.elements = elements;
+    }
 }
