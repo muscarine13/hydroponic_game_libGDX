@@ -5,6 +5,84 @@ public class Bottle {
 
     PH_TYPE ph_type;
 
+    public String name(){
+
+        String out;
+
+        out = volumeType.latin+" "+macroSecondaryType.latin+" "+macroPrimaryType.latin+" continet "+microPrimaryType.latin+" "+microSecondaryType.latin+" ("+purityType.latin+")";
+
+        return out;
+
+    }
+
+    public String description(){
+
+        String out = "";
+
+        switch (purityType){
+            case PERCENT_10: out+="Непригодное";break;
+            case PERCENT_20: out+="Грязное";break;
+            case PERCENT_30: out+="Загрязненное";break;
+            case PERCENT_40: out+="Техническое";break;
+            case PERCENT_50: out+="Очищенное";break;
+            case PERCENT_60: out+="Лабораторное";break;
+            case PERCENT_70: out+="Чистое";break;
+            case PERCENT_80: out+="Чистое специальное";break;
+            case PERCENT_95: out+="Абсолютное";break;
+
+        }
+
+        switch (macroPrimaryType){
+            case N: out+=" питательное удобрение";break;
+            case P: out+=" удобрение для цветения";break;
+            case K: out+=" удобрение для вегетации";break;
+            case D: out+=" вспомогательное удобрение";break;
+        }
+
+        switch (macroSecondaryType){
+            case S:out+=" на основе серы";break;
+            case Mg:out+=" на основе магния";break;
+            case Ca:out+=" на основе кальция";break;
+            case D: out+=" на водной основе";break;
+        }
+
+        out+=" c содержанием";
+
+        switch (microPrimaryType){
+            case B:out+=" бора";break;
+            case Cu:out+=" меди";break;
+            case Fe:out+=" железа";break;
+            case D:out+=" набора кислот";break;
+        }
+
+        out+=" и";
+
+        switch (microSecondaryType){
+            case Mn:out+=" марганца";break;
+            case Mo:out+=" молибдена";break;
+            case Zn:out+=" цинка";break;
+            case D:out+=" набора оснований";break;
+        }
+
+        out+=" объемом";
+
+        switch (volumeType){
+            case VOLUME_100:out+=" 100 мл.";break;
+            case VOLUME_500:out+=" 500 мл.";break;
+            case VOLUME_1000:out+=" 1000 мл.";break;
+            case VOLUME_2500:out+=" 2500 мл.";break;
+            case VOLUME_5000:out+=" 5000 мл.";break;
+        }
+
+
+
+
+
+
+        return out;
+
+    }
+
 
     private VolumeType volumeType;
     private PurityType purityType;
@@ -74,7 +152,7 @@ public class Bottle {
             ph_type = PH_TYPE.NEUTRAL;
         }
 
-        if(microPrimaryType.equals(MicroPrimaryType.D)&&microSecondaryType.equals(MicroSecondaryType.D){
+        if(microPrimaryType.equals(MicroPrimaryType.D)&&microSecondaryType.equals(MicroSecondaryType.D)){
             ph_type = PH_TYPE.NEUTRAL;
         }
     }
