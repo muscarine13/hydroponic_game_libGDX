@@ -1,7 +1,6 @@
 package com.acidcarpet.hydroponist.ref.plant.leave;
 
 public class Leave {
-    public static final int temperature = 25;
 
     private LeavesType type;
 

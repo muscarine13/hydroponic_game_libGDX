@@ -244,4 +244,7 @@ public class Pot {
 
         return Elements.EMPTY;
     }
+    public void second(){
+
+    }
 }
