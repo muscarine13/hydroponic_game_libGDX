@@ -115,25 +115,39 @@ public class Pot {
     private int ppm_Mn;
     private int ppm_Mo;
     private int ppm_Zn;
+
     public int get_all_ppm(){
-            return (
-            ppm_N+
-            ppm_P+
-            ppm_K+
+        return (
+                ppm_N+
+                        ppm_P+
+                        ppm_K+
 
-            ppm_S+
-            ppm_Mg+
-            ppm_Ca+
+                        ppm_S+
+                        ppm_Mg+
+                        ppm_Ca+
 
-            ppm_B+
-            ppm_Cu+
-            ppm_Fe+
+                        ppm_B+
+                        ppm_Cu+
+                        ppm_Fe+
 
-            ppm_Mn+
-            ppm_Mo+
-            ppm_Zn
-            );
-}
+                        ppm_Mn+
+                        ppm_Mo+
+                        ppm_Zn
+        );
+    }
+    public int get_macro_primary_ppm(){
+        return ppm_N+ppm_K+ppm_P;
+    }
+    public int get_macro_secondary_ppm(){
+        return ppm_S+ppm_Mg+ppm_Ca;
+    }
+    public int get_micro_primary_ppm(){
+        return ppm_B+ppm_Cu+ppm_Fe;
+    }
+    public int get_micro_secondary_ppm(){
+        return ppm_Mn+ppm_Mo+ppm_Zn;
+    }
+
     public int get_N() {
         return ppm_N;
     }

@@ -16,10 +16,10 @@ public enum LifetimeType {
     int diamond_minimum;
     int diamond_maximum;
 
-    LifetimeType(int seconds, int coin_minimum, int coit_maximum, int diamond_minimum, int diamond_maximum) {
+    LifetimeType(int seconds, int coin_minimum, int coin_maximum, int diamond_minimum, int diamond_maximum) {
         this.seconds = seconds;
         this.coin_minimum = coin_minimum;
-        this.coin_maximum = coit_maximum;
+        this.coin_maximum = coin_maximum;
         this.diamond_minimum = diamond_minimum;
         this.diamond_maximum = diamond_maximum;
     }

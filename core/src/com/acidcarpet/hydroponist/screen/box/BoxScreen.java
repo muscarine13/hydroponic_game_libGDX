@@ -4,7 +4,7 @@ import com.acidcarpet.hydroponist.equipment.Box;
 import com.acidcarpet.hydroponist.screen.donat.DonatScreen;
 import com.acidcarpet.hydroponist.screen.fan.FanScreen;
 import com.acidcarpet.hydroponist.screen.lamp.LampScreen;
-import com.acidcarpet.hydroponist.screen.plant.PlantScreen;
+import com.acidcarpet.hydroponist.screen.deprecated.plant.PlantScreen;
 import com.acidcarpet.hydroponist.screen.pot.PotScreen;
 import com.acidcarpet.hydroponist.screen.pump.PumpScreen;
 import com.acidcarpet.hydroponist.screen.seedling.SeedlingScreen;

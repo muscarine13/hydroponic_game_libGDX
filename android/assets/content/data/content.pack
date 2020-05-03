@@ -1,0 +1,9666 @@
+
+content.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+plant_png/Ca_Mg_seed_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_seed_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_harvest_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_seed_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_pre_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_vegetation_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_seed_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_seed_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_bloom_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_post_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_bloom_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_harvest_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_pre_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_vegetation_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_post_vegetation_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_seed_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_seed_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_pre_bloom_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_harvest_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_post_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_harvest_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_harvest_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_Cu_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_vegetation_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_pre_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_bloom_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_harvest_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_harvest_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_B_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_bloom_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_post_vegetation_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_pre_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Ca_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_bloom_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_post_vegetation_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_post_vegetation_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_B_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_Fe_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_pre_vegetation_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_harvest_Cu_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_seed_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_vegetation_Fe_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_Cu_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_bloom_Fe_D
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Mg_pre_vegetation_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_Mg_seed_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_S_post_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_harvest_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_Ca_bloom_B_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_post_vegetation_D_Mo
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Ca_pre_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_bloom_Fe_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_D_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/S_Mg_vegetation_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_pre_vegetation_Cu_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Ca_S_post_bloom_B_Zn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+plant_png/Mg_S_seed_D_Mn
+  rotate: false
+  xy: 1, 1
+  size: 700, 1000
+  orig: 700, 1000
+  offset: 0, 0
+  index: -1
+
+content2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+fan_png/fan_I_on
+  rotate: false
+  xy: 1, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_VI_on
+  rotate: false
+  xy: 1, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_IV_on
+  rotate: false
+  xy: 1, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_VIII_on
+  rotate: false
+  xy: 1, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_IX_on
+  rotate: false
+  xy: 1, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_VII_on
+  rotate: false
+  xy: 1, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_V_on
+  rotate: false
+  xy: 1, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_III_on
+  rotate: false
+  xy: 1, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_II_on
+  rotate: false
+  xy: 1, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_VII_off
+  rotate: false
+  xy: 503, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_IX_off
+  rotate: false
+  xy: 503, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_VIII_off
+  rotate: false
+  xy: 503, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_IV_off
+  rotate: false
+  xy: 503, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_I_off
+  rotate: false
+  xy: 503, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_V_off
+  rotate: false
+  xy: 503, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_III_off
+  rotate: false
+  xy: 503, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_II_off
+  rotate: false
+  xy: 503, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+fan_png/fan_VI_off
+  rotate: false
+  xy: 503, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+
+content3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pot_png/pot_VIII_on
+  rotate: false
+  xy: 1, 1
+  size: 700, 500
+  orig: 700, 500
+  offset: 0, 0
+  index: -1
+pot_png/pot_IV_on
+  rotate: false
+  xy: 1, 1
+  size: 700, 500
+  orig: 700, 500
+  offset: 0, 0
+  index: -1
+pot_png/pot_I_on
+  rotate: false
+  xy: 1, 1
+  size: 700, 500
+  orig: 700, 500
+  offset: 0, 0
+  index: -1
+pot_png/pot_III_on
+  rotate: false
+  xy: 1, 1
+  size: 700, 500
+  orig: 700, 500
+  offset: 0, 0
+  index: -1
+pot_png/pot_II_on
+  rotate: false
+  xy: 1, 1
+  size: 700, 500
+  orig: 700, 500
+  offset: 0, 0
+  index: -1
+pot_png/pot_VI_on
+  rotate: false
+  xy: 1, 1
+  size: 700, 500
+  orig: 700, 500
+  offset: 0, 0
+  index: -1
+pot_png/pot_V_on
+  rotate: false
+  xy: 1, 1
+  size: 700, 500
+  orig: 700, 500
+  offset: 0, 0
+  index: -1
+pot_png/pot_X_on
+  rotate: false
+  xy: 1, 1
+  size: 700, 500
+  orig: 700, 500
+  offset: 0, 0
+  index: -1
+pot_png/pot_IX_on
+  rotate: false
+  xy: 1, 1
+  size: 700, 500
+  orig: 700, 500
+  offset: 0, 0
+  index: -1
+pot_png/pot_VII_on
+  rotate: false
+  xy: 1, 1
+  size: 700, 500
+  orig: 700, 500
+  offset: 0, 0
+  index: -1
+
+content4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+lamp_png/incandescent_VI_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_III_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_I_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/halide_V_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_VI_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_II_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_IX_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/halide_IV_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_X_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_II_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_VII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_I_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_III_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_V_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_VII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_IX_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_V_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_X_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/halide_II_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_V_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_I_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_VIII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_VI_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_X_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/halide_III_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/halide_VII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/halide_VI_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_III_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_VII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_VIII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_V_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_IV_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_IV_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_I_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/halide_I_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_III_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_VII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_VIII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_II_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_IV_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_III_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_VIII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_I_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_I_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_IX_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/halide_X_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_V_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_IV_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_VI_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_IX_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_VIII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_V_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_X_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_VIII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_II_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_VII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_II_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_VIII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_II_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_I_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_VIII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_IX_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/halide_VIII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_VII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_VI_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_V_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_IV_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_VI_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_IX_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_I_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_VII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_IV_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_II_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_IX_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/halide_IX_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_III_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_III_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_VI_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_X_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_X_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_II_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_IV_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_X_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_III_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_IV_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_IX_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_VII_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_X_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_VI_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_V_light
+  rotate: false
+  xy: 1, 1
+  size: 1080, 1920
+  orig: 1080, 1920
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_X_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_V_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_II_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_IX_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_IX_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_IV_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_I_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_II_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_VII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_VII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_VII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_III_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_V_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_I_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_III_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_VIII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_I_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_VI_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_VII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_V_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_IV_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_VIII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_X_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_III_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_VII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_X_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_VIII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_VII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_IV_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_V_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_X_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_II_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_X_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_II_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_I_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_VIII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_VI_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_I_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_VIII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_VII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_VI_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_II_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_IV_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_III_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_V_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_III_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_VIII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_V_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_I_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_I_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_VI_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_VII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_III_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_III_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_VI_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_VI_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_IX_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_X_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_IV_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_I_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_IX_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_II_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_X_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_X_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_VI_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_IV_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_IX_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_VII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_VI_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_I_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_IV_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_VIII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_IV_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_III_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_IV_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_V_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_II_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_II_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_IX_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_VIII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_III_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_II_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_VI_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_IX_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_IX_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_V_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_IX_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_VIII_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_V_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_X_off
+  rotate: false
+  xy: 1083, 1721
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_VIII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_I_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_X_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_IV_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_VI_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_I_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_II_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_IX_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_VI_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_V_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_IV_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_X_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_V_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_VII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_IX_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_IV_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_IV_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_VI_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_VII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_X_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_IV_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_VI_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_VIII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_IX_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_X_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_III_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_IX_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_V_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_II_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_V_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_IV_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_III_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_VIII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_V_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_III_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_I_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_V_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_I_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_VI_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_II_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_IX_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_VII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_IX_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_II_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_III_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_IX_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_VIII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_VIII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_IV_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_VII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_I_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_IV_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_VIII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_VI_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_II_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_VIII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_X_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_VII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_VI_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_V_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_III_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_V_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_I_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_VI_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_VIII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_III_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_I_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_I_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_X_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_X_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/metal_halide_IX_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_II_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_III_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_VIII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_VI_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_full_IX_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_VII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_III_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/halide_X_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_VII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_I_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_II_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_VII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_II_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/daylight_VII_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_red_III_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/incandescent_V_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/dnat_IV_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/led_blue_X_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1
+lamp_png/fluorescent_II_on
+  rotate: false
+  xy: 1083, 1519
+  size: 800, 200
+  orig: 800, 200
+  offset: 0, 0
+  index: -1

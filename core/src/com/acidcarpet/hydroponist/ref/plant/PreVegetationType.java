@@ -4,7 +4,7 @@ import com.acidcarpet.hydroponist.Elements;
 
 public enum PreVegetationType {
     N(Elements.N),
-    D(Elements.EMPTY);
+    K(Elements.K);
     Elements elements;
 
     PreVegetationType(Elements elements) {

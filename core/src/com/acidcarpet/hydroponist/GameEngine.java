@@ -10,7 +10,7 @@ import com.acidcarpet.hydroponist.screen.box.BoxResources;
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.screen.fan.FanResources;
 import com.acidcarpet.hydroponist.screen.lamp.LampResources;
-import com.acidcarpet.hydroponist.screen.plant.PlantResources;
+import com.acidcarpet.hydroponist.screen.deprecated.plant.PlantResources;
 import com.acidcarpet.hydroponist.screen.pot.PotResources;
 import com.acidcarpet.hydroponist.screen.pump.PumpResources;
 import com.badlogic.gdx.Game;
