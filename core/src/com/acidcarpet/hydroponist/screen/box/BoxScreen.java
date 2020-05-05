@@ -5,6 +5,7 @@ import com.acidcarpet.hydroponist.screen.donat.DonatScreen;
 import com.acidcarpet.hydroponist.screen.fan.FanScreen;
 import com.acidcarpet.hydroponist.screen.lamp.LampScreen;
 import com.acidcarpet.hydroponist.screen.deprecated.plant.PlantScreen;
+import com.acidcarpet.hydroponist.screen.plant.PlantScreen;
 import com.acidcarpet.hydroponist.screen.pot.PotScreen;
 import com.acidcarpet.hydroponist.screen.pump.PumpScreen;
 import com.acidcarpet.hydroponist.screen.seedling.SeedlingScreen;
@@ -165,11 +166,13 @@ public class BoxScreen implements Screen {
     public Group generate_lamp(){
         Group out = new Group();
 
+        if(Box.getInstance().getLamp()==null) return out;
+
         Image current_lamp;
         Image current_light;
 
-        if(Box.getInstance().getLamp()!=null){
-            current_lamp = Box.getInstance().getLamp().get_image_lamp();
+       if(Box.getInstance().getLamp().isOn())
+            current_lamp = Box.getInstance().getLamp().
             current_lamp.setPosition(140, 1720);
             current_lamp.addListener(new ClickListener() {
                 @Override
@@ -181,19 +184,7 @@ public class BoxScreen implements Screen {
             current_light = Box.getInstance().getLamp().get_image_light();
 
 
-        }else{
-            current_lamp = new Image(atlas.findRegion("lamp_empty"));
-            current_lamp.setPosition(140, 1720);
-            current_lamp.addListener(new ClickListener() {
-                @Override
-                public void clicked(InputEvent event, float x, float y) {
-                    lamp_click();
-                }
-            });
 
-            current_light = new Image(atlas.findRegion("light_empty"));
-
-        }
         current_light.setBounds(-40, 0, stage.getWidth(), current_light.getHeight());
         current_light.setTouchable(Touchable.disabled);
 

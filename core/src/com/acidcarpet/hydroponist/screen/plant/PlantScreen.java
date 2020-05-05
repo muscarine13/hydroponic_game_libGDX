@@ -1,26 +1,28 @@
 package com.acidcarpet.hydroponist.screen.plant;
 
-import com.acidcarpet.hydroponist.ref.box.Box;
+import com.acidcarpet.hydroponist.box.Box;
 import com.acidcarpet.hydroponist.screen.pot.PotResources;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.Screen;
-import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
-import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.*;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
 public class PlantScreen extends InputAdapter implements Screen {
+    private static boolean refresh;
+    public static void update(){
+        refresh = true;
+    }
+
 
     Game game;
 
@@ -57,26 +59,61 @@ public class PlantScreen extends InputAdapter implements Screen {
         Image background = new Image(atlas.findRegion("background"));
         background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
         background.setName("background");
-        stage.addActor(background);
+        //stage.addActor(background);
 
         stage.addActor(generate_plant_pane());
-        
-        stage.addActor(generate_flower_pane());
-        stage.addActor(generate_leaves_pane());
-        stage.addActor(generate_roots_pane());
+
+        Table table = new Table();
+
+        table.add(generate_flowers_pane());
+        table.row();
+        table.add(generate_leaves_pane());
+        table.row();
+        table.add(generate_roots_pane());
+        table.row();
+
+        ScrollPane pane = new ScrollPane(table);
+        pane.setScrollingDisabled(true, false);
+        pane.setBounds(0 ,160 ,1080 , 1100);
+
+        stage.addActor(pane);
+
         stage.addActor(generate_buttons_pane());
     }
 
     @Override
     public void render(float delta) {
 
+        if(refresh){
+
+            try{    stage.getRoot().findActor("plant_pane").clearListeners();                 } catch(Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("plant_pane"));     } catch(Exception e){ e.printStackTrace();}
+
+            try{    stage.addActor(generate_plant_pane());                                           } catch(Exception e){ e.printStackTrace();}
 
 
+            for (Actor actor: stage.getActors()){
+                if(actor.getName().equals("flower_pane")){
+                    actor= generate_flowers_pane();
+                }
+                if(actor.getName().equals("leave_pane")){
+                    actor=generate_leaves_pane();
+                }
+                if(actor.getName().equals("root_pane")){
+                    actor=generate_roots_pane();
+                }
 
-        Gdx.gl.glClearColor(1, 0, 0, 1);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT | GL20.GL_DEPTH_BUFFER_BIT);
+            }
+
+
+        }
+
+
+        stage.act(delta);
+        stage.draw();
 
     }
+
 
     @Override
     public void resize(int width, int height) {
@@ -376,7 +413,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         return out;
     }
 
-    private Group generate_flower_pane(){
+    private Group generate_flowers_pane(){
         Group out = new Group();
         out.setName("flower_pane");
 
@@ -496,7 +533,6 @@ public class PlantScreen extends InputAdapter implements Screen {
 
         return out;
     }
-
     private Group generate_leaves_pane(){
         Group out = new Group();
         out.setName("leave_pane");
@@ -600,7 +636,6 @@ public class PlantScreen extends InputAdapter implements Screen {
         return out;
 
     }
-
     public Group generate_roots_pane(){
         Group out = new Group();
         out.setName("root_pane");
@@ -697,6 +732,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         return out;
 
     }
+
     private Group generate_buttons_pane(){
         Group out = new Group();
 
@@ -727,7 +763,7 @@ public class PlantScreen extends InputAdapter implements Screen {
 
     }
     private void back_button_click(){
-        
+
     }
 
 }

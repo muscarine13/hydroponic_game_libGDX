@@ -1,501 +1,609 @@
 package com.acidcarpet.hydroponist.plant;
 
-import com.acidcarpet.hydroponist.equipment.Box;
-import com.acidcarpet.hydroponist.equipment.WaterPack;
-import com.acidcarpet.hydroponist.storage.Storable;
+import com.acidcarpet.hydroponist.ContentPack;
+import com.acidcarpet.hydroponist.Elements;
+import com.acidcarpet.hydroponist.Wrench;
+
+
+import com.acidcarpet.hydroponist.box.Box;
+import com.acidcarpet.hydroponist.plant.flower.Flower;
+import com.acidcarpet.hydroponist.plant.flower.FlowersType;
+import com.acidcarpet.hydroponist.plant.leave.Leave;
+import com.acidcarpet.hydroponist.plant.leave.LeavesType;
+import com.acidcarpet.hydroponist.plant.root.Root;
+import com.acidcarpet.hydroponist.plant.root.RootsType;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
-import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public abstract class Plant implements Storable {
-    private String name;
+public class Plant {
 
-    private int gold_price;
-    private int diamond_price;
-    @Override
-    public int coin_price() {
-        return gold_price;
+    LifetimeType lifetimeType;
+    GenusType genusType;
+    VisumType visumType;
+
+    LeavesType leavesType;
+    RootsType rootsType;
+    FlowersType flowersType;
+
+    SeedType seedType;
+    PreVegetationType preVegetationType;
+    PostVegetationType postVegetationType;
+
+    PreBloomType preBloomType;
+    PostBloomType postBloomType;
+
+
+    public Plant(LifetimeType lifetimeType, GenusType genusType, VisumType visumType, LeavesType leavesType, RootsType rootsType, FlowersType flowersType, SeedType seedType, PreVegetationType preVegetationType, PostVegetationType postVegetationType, PreBloomType preBloomType, PostBloomType postBloomType) {
+        this.lifetimeType = lifetimeType;
+        this.genusType = genusType;
+        this.visumType = visumType;
+        this.leavesType = leavesType;
+        this.rootsType = rootsType;
+        this.seedType = seedType;
+        this.preVegetationType = preVegetationType;
+        this.postVegetationType = postVegetationType;
+        this.preBloomType = preBloomType;
+        this.postBloomType = postBloomType;
+        this.flowersType = flowersType;
+
+        leaves = new ArrayList<>();
+        roots = new ArrayList<>();
+        flowers = new ArrayList<>();
+        stage = Stages.SEED;
+
+        bounty_coin = Wrench.random_int(lifetimeType.coin_minimum, lifetimeType.coin_maximum);
+        bounty_diamond = Wrench.random_int(lifetimeType.diamond_minimum, lifetimeType.diamond_maximum);
     }
 
-    @Override
-    public int diamond_price() {
-        return diamond_price;
-    }
-
-    private boolean alive;
-    public boolean isAlive() {
-        return alive;
-    }
-
-    private boolean grow_up;
-    public synchronized void setGrowUp(boolean grow_up){
-        this.grow_up = grow_up;
-    }
-    public synchronized void try_grow_up() {
-        if (grow_up == true) {
-
-
-            if (get_current_stage().getLeaves_add() > 0) {
-                for (int i = 0; i < get_current_stage().getLeaves_add(); i++) {
-                    leaves.add(get_new_leave());
-                }
-            }
-            if (get_current_stage().getRoots_add() > 0) {
-                for (int i = 0; i < get_current_stage().getRoots_add(); i++) {
-                    roots.add(get_new_root());
-                }
-            }
-            if (get_current_stage().getProducts_add() > 0) {
-                for (int i = 0; i < get_current_stage().getProducts_add(); i++) {
-                    products.add(get_new_product());
-                }
-            }
-
-            grow_up = false;
-        }
-    }
-
-    private int current_health;
-    private int maximum_health;
-    public synchronized void hit(){
-        current_health--;
-        if(current_health<=0){
-            current_health = 0;
-            alive=false;
-        }
-
-    }
-    public synchronized void heal(){
-        if(alive){
-            current_health++;
-            if(current_health>=maximum_health) current_health = maximum_health;
-        }
-    }
-
-    private List<PlantStage> stages;
-    public synchronized PlantStage get_current_stage(){
-        for (PlantStage stage : stages){
-            if(stage.isActive()){
-                return stage;
-            }
-        }
-        return null;
-    }
-    public synchronized boolean current_stage_second(){
-        if(!alive) return false;
-        if(get_current_stage()!=null){
-            get_current_stage().second();
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    private List<Root> roots;
-    public synchronized boolean roots_second(){
-        if(!alive) return false;
-
-        if(!roots.isEmpty()){
-
-            for (Root root : roots){
-                if(root.isAlive()){
-                    if(root.may_absorb()){
-                        water+=root.getWater_volume_multiplier()*root.getLength();
-                        Box.getInstance().getPot().drain(root.getWater_volume_multiplier()*root.getLength());
-
-                        if((Box.getInstance().getPot().getN()>=get_current_stage().getPpm_N_min()&&Box.getInstance().getPot().getN()<=get_current_stage().getPpm_N_max())){
-                            N_problem_points--;
-                            if(N_problem_points<=0) {
-                                N_problem_points=0;
-                                heal();
-                            }
-                        }else{
-                            N_problem_points++;
-                            if(N_problem_points>=100) {
-                                N_problem_points=100;
-                                hit();
-                            }
-                        }
-                        if((Box.getInstance().getPot().getP()>=get_current_stage().getPpm_P_min()&&Box.getInstance().getPot().getP()<=get_current_stage().getPpm_P_max())){
-                            P_problem_points--;
-                            if(P_problem_points<=0) {
-                                P_problem_points=0;
-                                heal();
-                            }
-                        }else{
-                            P_problem_points++;
-                            if(P_problem_points>=100) {
-                                P_problem_points=100;
-                                hit();
-
-                            }
-                        }
-                        if((Box.getInstance().getPot().getK()>=get_current_stage().getPpm_K_min()&&Box.getInstance().getPot().getK()<=get_current_stage().getPpm_K_max())){
-                            K_problem_points--;
-                            if(K_problem_points<=0) {
-                                K_problem_points=0;
-                                heal();
-                            }
-                        }else{
-                            K_problem_points++;
-                            if(K_problem_points>=100) {
-                                K_problem_points=100;
-                                hit();
-                            }
-                        }
-
-                        if((Box.getInstance().getPot().getS()>=get_current_stage().getPpm_S_min()&&Box.getInstance().getPot().getS()<=get_current_stage().getPpm_S_max())){
-                            S_problem_points--;
-                            if(S_problem_points<=0) {
-                                S_problem_points=0;
-                                heal();
-                            }
-                        }else{
-                            S_problem_points++;
-                            if(S_problem_points>=100) {
-                                S_problem_points=100;
-                                hit();
-                            }
-                        }
-                        if((Box.getInstance().getPot().getMg()>=get_current_stage().getPpm_Mg_min()&&Box.getInstance().getPot().getMg()<=get_current_stage().getPpm_Mg_max())){
-                            Mg_problem_points--;
-                            if(Mg_problem_points<=0) {
-                                Mg_problem_points=0;
-                                heal();
-                            }
-                        }else{
-                            Mg_problem_points++;
-                            if(Mg_problem_points>=100) {
-                                Mg_problem_points=100;
-                                hit();
-                            }
-                        }
-                        if((Box.getInstance().getPot().getCa()>=get_current_stage().getPpm_Ca_min()&&Box.getInstance().getPot().getCa()<=get_current_stage().getPpm_Ca_max())){
-                            Ca_problem_points--;
-                            if(Ca_problem_points<=0) {
-                                Ca_problem_points=0;
-                                heal();
-                            }
-                        }else{
-                            Ca_problem_points++;
-                            if(Ca_problem_points>=100) {
-                                Ca_problem_points=100;
-                                hit();
-                            }
-                        }
-
-                        if((Box.getInstance().getPot().getB()>=get_current_stage().getPpm_B_min()&&Box.getInstance().getPot().getB()<=get_current_stage().getPpm_B_max())){
-                            B_problem_points--;
-                            if(B_problem_points<=0) {
-                                B_problem_points=0;
-                                heal();
-                            }
-                        }else{
-                            B_problem_points++;
-                            if(B_problem_points>=100) {
-                                B_problem_points=100;
-                               hit();
-                            }
-                        }
-                        if((Box.getInstance().getPot().getCu()>=get_current_stage().getPpm_Cu_min()&&Box.getInstance().getPot().getCu()<=get_current_stage().getPpm_Cu_max())){
-                            Cu_problem_points--;
-                            if(Cu_problem_points<=0) {
-                                Cu_problem_points=0;
-                                heal();
-                            }
-                        }else{
-                            Cu_problem_points++;
-                            if(Cu_problem_points>=100) {
-                                Cu_problem_points=100;
-                               hit();
-                            }
-                        }
-                        if((Box.getInstance().getPot().getFe()>=get_current_stage().getPpm_Fe_min()&&Box.getInstance().getPot().getFe()<=get_current_stage().getPpm_Fe_max())){
-                            Fe_problem_points--;
-                            if(Fe_problem_points<=0) {
-                                Fe_problem_points=0;
-                                heal();
-                            }
-                        }else{
-                            Fe_problem_points++;
-                            if(Fe_problem_points>=100) {
-                                Fe_problem_points=100;
-                                hit();
-                            }
-                        }
-
-                        if((Box.getInstance().getPot().getMn()>=get_current_stage().getPpm_Mn_min()&&Box.getInstance().getPot().getMn()<=get_current_stage().getPpm_Mn_max())){
-                            Mn_problem_points--;
-                            if(Mn_problem_points<=0) {
-                                Mn_problem_points=0;
-                                heal();
-                            }
-                        }else{
-                            Mn_problem_points++;
-                            if(Mn_problem_points>=100) {
-                                Mn_problem_points=100;
-                                hit();
-                            }
-                        }
-                        if((Box.getInstance().getPot().getMo()>=get_current_stage().getPpm_Mo_min()&&Box.getInstance().getPot().getMo()<=get_current_stage().getPpm_Mo_max())){
-                            Mo_problem_points--;
-                            if(Mo_problem_points<=0) {
-                                Mo_problem_points=0;
-                                heal();
-                            }
-                        }else{
-                            Mo_problem_points++;
-                            if(Mo_problem_points>=100) {
-                                Mo_problem_points=100;
-                                hit();
-                            }
-                        }
-                        if((Box.getInstance().getPot().getZn()>=get_current_stage().getPpm_Zn_min()&&Box.getInstance().getPot().getZn()<=get_current_stage().getPpm_Zn_max())){
-                            Zn_problem_points--;
-                            if(Zn_problem_points<=0) {
-                                Zn_problem_points=0;
-                                heal();
-                            }
-                        }else{
-                            Zn_problem_points++;
-                            if(Zn_problem_points>=100) {
-                                Zn_problem_points=100;
-                                hit();
-                            }
-                        }
-
-                        root.heal();
-                        root.grow();
-                    }else{
-                        root.hit();
-                    }
-                }
-
-            }
-            return true;
-
-        }else {
-            return false;
-        }
-    }
+    private Stages stage;
 
     private List<Leave> leaves;
-    public synchronized boolean leaves_second(){
-        if(!alive) return false;
+    private List<Root> roots;
+    private List<Flower> flowers;
 
-        if(!leaves.isEmpty()){
-            for (Leave leave : leaves){
-               if(leave.isAlive()){
-                   if(leave.may_photosynthesis()){
+    private int bounty_coin;
+    private int bounty_diamond;
 
-                       water-=leave.getWater_consumption()*(leave.getHeight()*leave.getWidth());
+    private int maximum_score;
+    private int current_score;
 
-                       if(Box.getInstance().getLamp()!=null){
+    private int water;
 
+    private int light;
+    private int dark;
 
-                           if(
-                                   Box.getInstance().getLamp().isOn()
-                                           &&
-                                   Box.getInstance().getLamp().reduce_lm(leave.getLm_consumption()*(int)(leave.getWidth()*leave.getHeight())))
-                           {
-                               light_energy+=(int)(leave.getLight_energy_production()*(leave.getHeight()*leave.getWidth()));
-                           }else{
-                               dark_energy+=(int)(leave.getDark_energy_production()*(leave.getHeight()*leave.getWidth()));
-                           }
-                       }else{
-                           dark_energy+=(int)(leave.getDark_energy_production()*(leave.getHeight()*leave.getWidth()));
-                       }
+    private int light_energy;
+    private int dark_energy;
 
-                       leave.heal();
-                       leave.grow();
-                   }else{
-                       leave.hit();
-                   }
-               }
-            }
-            return true;
-        }else{
-            return false;
+    private int seed_remain;
+    private int pre_vegetation_remain;
+    private int vegetation_remain;
+    private int post_vegetation_remain;
+    private int pre_bloom_remain;
+    private int bloom_remain;
+    private int post_bloom_remain;
+
+    public Elements current_macro_primary(){
+        switch (stage){
+            case SEED:              return seedType.elements;
+            case PRE_VEGETATION:    return preVegetationType.elements;
+            case VEGETATION:        return Elements.K;
+            case POST_VEGETATION:   return postVegetationType.elements;
+            case PRE_BLOOM:         return preBloomType.elements;
+            case BLOOM:             return Elements.P;
+            case POST_BLOOM:        return postBloomType.elements;
+
+            default: return Elements.EMPTY;
         }
+    }
+    public Elements current_macro_secondary(){
+        switch (stage){
 
+            case PRE_VEGETATION:
+            case VEGETATION:
+            case POST_VEGETATION:
+                return genusType.vegetation_element;
 
+            case PRE_BLOOM:
+            case BLOOM:
+            case POST_BLOOM:
+                return genusType.bloom_element;
+
+            default:
+                return Elements.EMPTY;
+        }
     }
 
-    private List<Product> products;
-    public synchronized boolean products_second(){
-        if(!alive) return false;
+    public Elements current_micro_primary(){
+        return visumType.micro_primary;
+    }
+    public Elements current_micro_secondary(){
+        return visumType.micro_secondary;
+    }
 
-        if(!products.isEmpty()){
+    private void roots_action(){
+        if(stage==Stages.HARVEST) return;
 
-            for (Product product : products){
-                if(may_grow_product((int)product.getLight_energy(), (int)product.getDark_energy())){
-                    product.grow();
+        for(Root root: roots){
+            maximum_score+=3;
+
+            if(Box.getInstance().getPot().getpH()>root.min_pH()&& Box.getInstance().getPot().getpH()<root.max_pH()){
+                current_score++;
+            }
+            if(Box.getInstance().getPot().drain(root.water_production())){
+                water+=root.water_production();
+                current_score++;
+            }
+            if(Box.getInstance().getPot().get_all_ppm()>stage.minimum_ppm&& Box.getInstance().getPot().get_all_ppm()<stage.maximum_ppm){
+                current_score++;
+
+                double macro_primary_percent = (double)Box.getInstance().getPot().get_macro_primary_ppm()/(double)Box.getInstance().getPot().get_all_ppm();
+                double macro_secondary_percent = (double)Box.getInstance().getPot().get_macro_secondary_ppm()/(double)Box.getInstance().getPot().get_all_ppm();
+                double micro_primary_percent = (double)Box.getInstance().getPot().get_micro_primary_ppm()/(double)Box.getInstance().getPot().get_all_ppm();
+                double micro_secondary_percent = (double)Box.getInstance().getPot().get_micro_secondary_ppm()/(double)Box.getInstance().getPot().get_all_ppm();
+
+                maximum_score+=4;
+                if(macro_primary_percent>0.4&&macro_primary_percent<0.6) current_score++;
+                if(macro_secondary_percent>0.2&&macro_secondary_percent<0.4) current_score++;
+                if((micro_primary_percent>0.05&&micro_primary_percent<0.15)||micro_primary_percent==0) current_score++;
+                if((micro_secondary_percent>0.05&&micro_secondary_percent<0.15)||micro_secondary_percent==0) current_score++;
+            }
+
+            maximum_score+=4;
+            if(Box.getInstance().getPot().macro_main()==current_macro_primary()) current_score++;
+            if(Box.getInstance().getPot().macro_secondary()==current_macro_secondary()) current_score++;
+            if(Box.getInstance().getPot().micro_main()==current_micro_primary()) current_score++;
+            if(Box.getInstance().getPot().micro_secondary()==current_micro_secondary()) current_score++;
+
+
+        }
+
+    }
+    private void leaves_action(){
+        if(stage==Stages.HARVEST) return;
+
+        maximum_score+=4;
+
+        for(Leave leave : leaves){
+            int temperature =(int) (
+                    Box.temperature
+                            -
+                            Box.getInstance().getFan().getTemperature()
+                            +
+                            Box.getInstance().getLamp().getTemperature());
+            if(temperature>leave.minimum_temperature()&&temperature<leave.maximum_temperature()){
+                current_score++;
+            }
+
+            if(Box.getInstance().getFan().consume(leave.oxygen_consumption())){
+                current_score++;
+            }
+
+
+
+            if(Box.getInstance().getLamp().consume(leave.energy_consumption())){
+                if (Box.getInstance().getLamp().isOn()) {
+                    light_energy+=leave.light_energy();
+                    light++;
+                }
+                else {
+                    dark_energy+=leave.dark_energy();
+                    dark++;
+                }
+                double percent_day = light/(light+dark);
+                double percent_leave = genusType.percent_day;
+                double difference = percent_leave - percent_day;
+
+                if(difference<0.2&&difference>-0.2){
+                    current_score++;
                 }
 
-            }
-            return true;
-        }else{
-            return true;
-        }
-    }
-    public synchronized boolean may_grow_product(int light_energy, int dark_energy){
-        if(this.light_energy>=light_energy && this.dark_energy>=dark_energy){
-            this.light_energy-=light_energy;
-            this.dark_energy-=dark_energy;
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    public synchronized void second(){
-
-        if(alive) {
-            if(current_health<=0) {
-                alive = false;
-                current_health=0;
-            }else {
-                current_stage_second();
-                try_grow_up();
-
-                roots_second();
-                leaves_second();
-                products_second();
-
-                Box.update();
+                if(water>=leave.water_consumption()){
+                    water-=leave.water_consumption();
+                    current_score++;
+                }
             }
         }
 
-    }
 
-    double water;
-
-    int dark_energy;
-    int light_energy;
-
-    public Plant(String name, int maximum_health, int gold_price, int diamond_price){
-        alive = true;
-        this.name = name;
-
-        this.gold_price = gold_price;
-        this.diamond_price = diamond_price;
-
-        water = 0;
-
-        leaves = new LinkedList<>();
-        roots = new LinkedList<>();
-        products = new LinkedList<>();
-
-        stages = set_stages();
-
-        this.maximum_health = maximum_health;
-        current_health=maximum_health/2;
-
-        N_problem_points = 0;
-        K_problem_points = 0;
-        B_problem_points = 0;
-        Ca_problem_points = 0;
-        Cu_problem_points = 0;
-        Fe_problem_points = 0;
-        Mn_problem_points = 0;
-        Mo_problem_points = 0;
-        Zn_problem_points = 0;
-        P_problem_points = 0;
-        Mg_problem_points = 0;
-        S_problem_points = 0;
-
-        grow_up = true;
 
     }
+    private void flowers_action(){
+        if(stage==Stages.HARVEST) return;
 
-    private double N_problem_points;
-    private double P_problem_points;
-    private double K_problem_points;
-    private double S_problem_points;
-    private double Mg_problem_points;
-    private double Ca_problem_points;
-    private double B_problem_points;
-    private double Cu_problem_points;
-    private double Fe_problem_points;
-    private double Mn_problem_points;
-    private double Mo_problem_points;
-    private double Zn_problem_points;
-    public double getN_problem_points() {
-        return N_problem_points;
+        if(flowers.isEmpty()) {
+            for (Flower flower : flowers){
+                if(flower.light_energy_consumption()<=light_energy&&
+                flower.dark_energy_consumption()<=dark_energy){
+                    light_energy-=flower.light_energy_consumption();
+                    dark_energy-=flower.dark_energy_consumption();
+                    flower.grow();
+                }
+            }
+        }
     }
-    public double getP_problem_points() {
-        return P_problem_points;
+    private void grow(){
+
+        if(stage==Stages.HARVEST) return;
+
+        if(stage==Stages.SEED){
+
+            if(Wrench.try_percent(2)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
+
+        }
+        if(stage==Stages.PRE_VEGETATION){
+
+            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
+
+            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
+
+        }
+        if(stage==Stages.VEGETATION){
+
+            if(Wrench.try_percent(10)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(10)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(10)) leaves.add(new Leave(leavesType));
+
+            if(Wrench.try_percent(5)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(5)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(5)) roots.add(new Root(rootsType));
+
+        }
+        if(stage==Stages.POST_VEGETATION){
+
+            if(Wrench.try_percent(10)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
+
+            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
+
+        }
+        if(stage==Stages.PRE_BLOOM){
+
+            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
+
+            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
+
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+
+        }
+        if(stage==Stages.BLOOM){
+
+            if(Wrench.try_percent(4)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(3)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(2)) leaves.add(new Leave(leavesType));
+
+            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
+
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+
+        }
+        if(stage==Stages.POST_BLOOM){
+
+            if(Wrench.try_percent(1)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(1)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(1)) leaves.add(new Leave(leavesType));
+
+            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
+
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+
+        }
+
+        Collections.shuffle(leaves);
+        Collections.shuffle(roots);
+        Collections.shuffle(flowers);
+
+        for(Leave leave : leaves){
+            if(Wrench.try_percent(5)) leave.grow();
+        }
+        for (Root root : roots){
+            if(Wrench.try_percent(5)) root.grow();
+        }
+
+
     }
-    public double getK_problem_points() {
-        return K_problem_points;
-    }
-    public double getS_problem_points() {
-        return S_problem_points;
-    }
-    public double getMg_problem_points() {
-        return Mg_problem_points;
-    }
-    public double getCa_problem_points() {
-        return Ca_problem_points;
-    }
-    public double getB_problem_points() {
-        return B_problem_points;
-    }
-    public double getCu_problem_points() {
-        return Cu_problem_points;
-    }
-    public double getFe_problem_points() {
-        return Fe_problem_points;
-    }
-    public double getMn_problem_points() {
-        return Mn_problem_points;
-    }
-    public double getMo_problem_points() {
-        return Mo_problem_points;
-    }
-    public double getZn_problem_points() {
-        return Zn_problem_points;
+    public void change_stage(){
+        if(stage==Stages.HARVEST) return;
+
+        if(seed_remain!=0){
+            seed_remain--;
+            if(seed_remain==0){
+                if(pre_vegetation_remain>0) stage = Stages.PRE_VEGETATION;
+                else stage = Stages.VEGETATION;
+            }
+            return;
+        }
+        if(pre_vegetation_remain!=0){
+            pre_vegetation_remain--;
+            if(pre_vegetation_remain==0){
+                stage = Stages.VEGETATION;
+            }
+            return;
+        }
+        if(vegetation_remain!=0){
+            vegetation_remain--;
+            if(vegetation_remain==0){
+                if(post_vegetation_remain>0){
+                    stage = Stages.POST_VEGETATION;
+                }else{
+                    if(pre_bloom_remain>0) stage = Stages.PRE_BLOOM;
+                    else stage = Stages.BLOOM;
+                }
+            }
+            return;
+        }
+        if(post_vegetation_remain!=0){
+            post_vegetation_remain--;
+            if(post_vegetation_remain==0){
+                if(pre_bloom_remain>0) stage = Stages.PRE_BLOOM;
+                else stage = Stages.BLOOM;
+            }
+            return;
+        }
+        if(pre_bloom_remain!=0){
+            pre_bloom_remain--;
+            if(pre_bloom_remain==0){
+                stage = Stages.BLOOM;
+            }
+            return;
+
+        }
+        if(bloom_remain!=0){
+            bloom_remain--;
+            if(bloom_remain==0){
+                if(post_bloom_remain>0) stage = Stages.POST_BLOOM;
+                else stage = Stages.HARVEST;
+            }
+            return;
+        }
+        if(post_bloom_remain!=0){
+            post_bloom_remain--;
+            if(post_bloom_remain==0){
+                stage = Stages.HARVEST;
+            }
+            return;
+        }
     }
 
-    public abstract List<PlantStage> set_stages(); // Получить все стадии растения
-    public Image get_image_plant(){
-        if(alive) return get_current_stage().getStage_alive_image();
-        else return get_current_stage().getStage_dead_image();
+    public int get_dark_energy(){
+        return dark_energy;
+    }
+    public int get_light_energy(){
+        return light_energy;
+    }
+    public int get_bounty_coin(){
+        return (int)((double)bounty_coin*((double)current_score/(double)maximum_score));
+    }
+    public int get_bounty_diamond(){
+        return (int)((double)bounty_diamond*((double)current_score/(double)maximum_score));
     }
 
-    public abstract Leave get_new_leave(); // Получить новый обьект листочка
-    public abstract Root get_new_root(); // Получить новый обьект корешочка
-    public abstract Product get_new_product(); // Получить новый обьект цветочка или плода или проччего продукта
+    public double get_percent_day(){
+        return ((double)light/((double)light+(double)dark))*100;
+    }
+    public double get_percent_hp(){
+        return ((double)current_score/(double)maximum_score)*100;
+    }
 
-    public String getName() {
-        return name;
+    public Image get_image(){
+        String genus;
+        String visum;
+        String stage_name;
+
+        genus = this.genusType.code;
+        visum = this.visumType.code;
+
+        switch (stage){
+            case SEED: stage_name = "seed"; break;
+            case PRE_VEGETATION:stage_name = "pre_vegetation"; break;
+            case VEGETATION:stage_name = "vegetation"; break;
+            case POST_VEGETATION:stage_name = "post_vegetation"; break;
+            case PRE_BLOOM:stage_name = "pre_bloom"; break;
+            case BLOOM:stage_name = "bloom"; break;
+            case POST_BLOOM:stage_name = "post_bloom"; break;
+            case HARVEST:stage_name = "harvest"; break;
+            default: stage_name = "seed";
+
+        }
+
+        return new Image(ContentPack.getAtlas().findRegion(genus+"_"+stage_name+"_"+visum));
     }
-    public int getCurrent_health() {
-        return current_health;
+    public String get_name(){
+        return genusType.name+" "+visumType;
     }
-    public int getMaximum_health() {
-        return maximum_health;
+
+    public int getSeed_remain() {
+        return seed_remain;
     }
-    public List<PlantStage> getStages() {
-        return stages;
+    public int getPre_vegetation_remain() {
+        return pre_vegetation_remain;
+    }
+    public int getVegetation_remain() {
+        return vegetation_remain;
+    }
+    public int getPost_vegetation_remain() {
+        return post_vegetation_remain;
+    }
+    public int getPre_bloom_remain() {
+        return pre_bloom_remain;
+    }
+    public int getBloom_remain() {
+        return bloom_remain;
+    }
+    public int getPost_bloom_remain() {
+        return post_bloom_remain;
+    }
+
+    public List<Leave> getLeaves() {
+        return leaves;
     }
     public List<Root> getRoots() {
         return roots;
     }
-    public List<Leave> getLeaves() {
-        return leaves;
+    public List<Flower> getFlowers() {
+        return flowers;
     }
-    public List<Product> getProducts() {
-        return products;
+
+    public LifetimeType getLifetimeType() {
+        return lifetimeType;
     }
-    public double getWater() {
-        return water;
+    public GenusType getGenusType() {
+        return genusType;
     }
-    public int getDark_energy() {
-        return dark_energy;
+    public VisumType getVisumType() {
+        return visumType;
     }
-    public int getLight_energy() {
-        return light_energy;
+    public LeavesType getLeavesType() {
+        return leavesType;
+    }
+    public RootsType getRootsType() {
+        return rootsType;
+    }
+    public FlowersType getFlowersType() {
+        return flowersType;
+    }
+    public SeedType getSeedType() {
+        return seedType;
+    }
+    public PreVegetationType getPreVegetationType() {
+        return preVegetationType;
+    }
+    public PostVegetationType getPostVegetationType() {
+        return postVegetationType;
+    }
+    public PreBloomType getPreBloomType() {
+        return preBloomType;
+    }
+    public PostBloomType getPostBloomType() {
+        return postBloomType;
+    }
+
+    public synchronized void second(){
+            roots_action();
+            leaves_action();
+            flowers_action();
+            grow();
+            change_stage();
+
+
+    }
+
+    public int flower_numerus(){
+        if(flowers==null) return 0;
+        if(flowers.isEmpty()) return 0;
+
+        return flowers.size();
+
+    }
+    public int flower_melius(){
+        if(flowers==null) return 0;
+        if(flowers.isEmpty()) return 0;
+
+        int out = 0;
+
+        for(Flower flower : flowers){
+            out+=flower.getLvl();
+        }
+        return out;
+    }
+
+    public int leave_numerus(){
+        if(leaves==null) return 0;
+        if(leaves.isEmpty()) return 0;
+
+        return leaves.size();
+    }
+    public int leave_regio(){
+        if(leaves==null) return 0;
+        if(leaves.isEmpty()) return 0;
+
+        int out = 0;
+
+        for(Leave leave : leaves){
+            out+=leave.cm();
+        }
+        return out;
+    }
+
+    public int root_latus(){
+        if(roots==null) return 0;
+        if(roots.isEmpty()) return 0;
+
+        int out = 0;
+
+        for(Root root : roots){
+            out+=root.getSide_roots();
+        }
+        return out;
+    }
+    public int root_prima(){
+        if(roots==null) return 0;
+        if(roots.isEmpty()) return 0;
+
+        return roots.size();
+    }
+    public int root_water(){
+        if(roots==null) return 0;
+        if(roots.isEmpty()) return 0;
+
+        int out = 0;
+
+        for(Root root : roots){
+            out+=root.water_production();
+        }
+        return out;
+    }
+
+    public int flower_coin(){
+        int out = 0;
+
+        for(Flower flower : flowers){
+            out+=flower.getCoin();
+        }
+        return out;
+    }
+    public int flower_diamond(){
+        int out = 0;
+
+        for(Flower flower : flowers){
+            out+=flower.getDiamond();
+        }
+        return out;
     }
 }
