@@ -1,8 +1,7 @@
 package com.acidcarpet.hydroponist.screen.lamp;
 
-import com.acidcarpet.hydroponist.equipment.Box;
-import com.acidcarpet.hydroponist.equipment.Fan;
-import com.acidcarpet.hydroponist.equipment.Lamp;
+import com.acidcarpet.hydroponist.box.Box;
+import com.acidcarpet.hydroponist.lamp.Lamp;
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.storage.Inventory;
 import com.acidcarpet.hydroponist.storage.Storable;
@@ -27,11 +26,14 @@ import java.util.Date;
 import static java.lang.String.*;
 
 public class LampScreen implements Screen {
+    private static boolean refresh;
+    public static void update(){
+        refresh = true;
+    }
 
     Game game;
 
-    long box_last_update;
-    long inventory_last_update;
+
 
     Skin skin;
     TextureAtlas atlas;
@@ -47,21 +49,21 @@ public class LampScreen implements Screen {
 
     public LampScreen(Game game){
         this.game = game;
-        box_last_update = 1;
-        inventory_last_update =1;
     }
 
     private void takeoff_click(){
-        Box.getInstance().take_off_lamp();
+        Inventory.getInstance().add(Box.getInstance().getLamp());
+        Box.getInstance().setLamp(null);
     }
     private void off_click(){
-        Box.getInstance().getLamp().set_off();
+        Box.getInstance().getLamp().setOn(false);
     }
     private void on_click(){
-        Box.getInstance().getLamp().set_on();
+        Box.getInstance().getLamp().setOn(true);
     }
     private void item_equip_click(Lamp lamp){
-        Box.getInstance().equip(lamp);
+       Box.getInstance().setLamp(lamp);
+       Inventory.getInstance().delete(lamp);
     }
     private void item_delete_click(Lamp lamp){
         Inventory.getInstance().delete(lamp);
@@ -99,23 +101,19 @@ public class LampScreen implements Screen {
     @Override
     public void render(float delta) {
 
-        if(box_last_update !=Box.get_last_update()){
+        if(refresh){
 
             try{    stage.getRoot().findActor("lamp_pane").clearListeners();                 } catch(Exception e){ e.printStackTrace();}
             try{    stage.getRoot().removeActor(stage.getRoot().findActor("lamp_pane"));     } catch(Exception e){ e.printStackTrace();}
 
             try{    stage.addActor(generate_lamp_pane());                                           } catch(Exception e){ e.printStackTrace();}
 
-            box_last_update = Box.get_last_update();
-        }
-
-        if(inventory_last_update!=Inventory.last_update()){
             try{    stage.getRoot().findActor("items_pane").clearListeners();               } catch(Exception e){ e.printStackTrace();}
             try{    stage.getRoot().removeActor(stage.getRoot().findActor("items_pane"));   } catch(Exception e){ e.printStackTrace();}
 
             try{    stage.addActor(generate_items_pane());                                         } catch(Exception e){ e.printStackTrace();}
 
-            inventory_last_update = Inventory.last_update();
+            refresh=false;
         }
 
         stage.act(delta);
@@ -165,7 +163,7 @@ public class LampScreen implements Screen {
 
             LabelStyle title_style = new LabelStyle();
             title_style.font = alice_72_797E55;
-            Label title_label = new  Label(Box.getInstance().getLamp().getName(),title_style);
+            Label title_label = new  Label(Box.getInstance().getLamp().get_name(),title_style);
             title_label.setWrap(false);
             title_label.setAlignment(Align.center);
             title_label.setBounds(0, 450-120, 1080, 120);
@@ -174,7 +172,7 @@ public class LampScreen implements Screen {
 
             LabelStyle description_style = new LabelStyle();
             description_style.font = alice_36_797E55;
-            Label description_label = new Label(Box.getInstance().getLamp().getDescription(), description_style);
+            Label description_label = new Label(Box.getInstance().getLamp().get_description(), description_style);
             description_label.setWrap(true);
             description_label.setAlignment(Align.center);
             description_label.setBounds(20, 450-120-250, 1040, 250);
@@ -183,7 +181,7 @@ public class LampScreen implements Screen {
 
             LabelStyle temperature_style = new LabelStyle();
             temperature_style.font = alice_48_F09191;
-            Label temperature_label = new   Label("+"+Box.getInstance().getLamp().getT_add()+"C  ", temperature_style);
+            Label temperature_label = new   Label("+"+Box.getInstance().getLamp().getTemperature()+"C  ", temperature_style);
             temperature_label.setWrap(false);
             temperature_label.setAlignment(Align.right);
             temperature_label.setBounds(215, 15, 325, 80);
@@ -192,7 +190,7 @@ public class LampScreen implements Screen {
 
             LabelStyle light_style = new LabelStyle();
             light_style.font = alice_48_FFEF5E;
-            Label light_label = new   Label(""+(int)(Box.getInstance().getLamp().getLm_production())+"W ", light_style);
+            Label light_label = new   Label(""+(int)(Box.getInstance().getLamp().getEnergy_production())+"W ", light_style);
             light_label.setWrap(false);
             light_label.setAlignment(Align.right);
             light_label.setBounds(215+325, 15, 325, 80);
@@ -282,7 +280,7 @@ public class LampScreen implements Screen {
 
         LabelStyle title_style = new LabelStyle();
         title_style.font = alice_62_797E55;
-        Label title_label = new  Label(lamp.getName(),title_style);
+        Label title_label = new  Label(lamp.get_name(),title_style);
         title_label.setWrap(false);
         title_label.setAlignment(Align.center);
         title_label.setBounds(0, 220-120, 1080, 120);
@@ -291,7 +289,7 @@ public class LampScreen implements Screen {
 
         LabelStyle temperature_style = new LabelStyle();
         temperature_style.font = alice_48_F09191;
-        Label temperature_label = new   Label("+"+lamp.getT_add()+"C ", temperature_style);
+        Label temperature_label = new   Label("+"+lamp.getTemperature()+"C ", temperature_style);
         temperature_label.setWrap(false);
         temperature_label.setAlignment(Align.right);
         temperature_label.setBounds(215, 15, 325, 80);
@@ -300,7 +298,7 @@ public class LampScreen implements Screen {
 
         LabelStyle light_style = new LabelStyle();
         light_style.font = alice_48_FFEF5E;
-        Label light_label = new   Label(""+(int)(lamp.getLm_production())+"W ", light_style);
+        Label light_label = new   Label(""+(int)(lamp.getEnergy_production())+"W ", light_style);
         light_label.setWrap(false);
         light_label.setAlignment(Align.right);
         light_label.setBounds(215+325, 15, 325, 80);

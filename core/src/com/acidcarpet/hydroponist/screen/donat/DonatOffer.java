@@ -8,8 +8,8 @@ public abstract class DonatOffer {
             String title,
             String description,
             boolean free,
-            int price,
-            Image icon
+            int price
+
     ){
 
         this.title = title;
@@ -18,13 +18,13 @@ public abstract class DonatOffer {
         this.free = free;
 
         this.price = price;
-        this.icon = icon;
+
     }
 
     String title;
     String description;
     boolean free;
-    Image icon;
+
     int price;
 
     public abstract void work();
@@ -38,9 +38,7 @@ public abstract class DonatOffer {
     public boolean isFree() {
         return free;
     }
-    public Image getIcon() {
-        return icon;
-    }
+
     public int getPrice() {
         return price;
     }

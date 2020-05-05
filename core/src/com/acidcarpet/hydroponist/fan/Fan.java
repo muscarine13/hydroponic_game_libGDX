@@ -1,9 +1,10 @@
 package com.acidcarpet.hydroponist.fan;
 import com.acidcarpet.hydroponist.Wrench;
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
-public class Fan {
+public class Fan implements Storable {
     private TextureAtlas atlas;
 
     private Tier tier;
@@ -15,6 +16,11 @@ public class Fan {
     private int air_current;
 
     private boolean on;
+
+    public void setOn(boolean on) {
+        this.on = on;
+    }
+
 
     protected Fan(Tier tier, TemperatureQuality temperatureQuality, EnergyQuality energyQuality ) {
 
@@ -95,4 +101,6 @@ public class Fan {
     public int getAir_production() {
         return air_production;
     }
+
+
 }

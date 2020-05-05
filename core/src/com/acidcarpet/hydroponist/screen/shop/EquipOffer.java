@@ -11,8 +11,8 @@ public abstract class EquipOffer {
     public EquipOffer(String title,
                       String description,
                       int coin_price,
-                      int diamond_price,
-                      Image icon){
+                      int diamond_price
+                   ){
 
         this.coin_price = coin_price;
         this.diamond_price = diamond_price;
@@ -20,7 +20,7 @@ public abstract class EquipOffer {
         this.title = title;
         this.description = description;
 
-        this.icon = icon;
+
         this.items = set_items();
     }
 
@@ -75,7 +75,7 @@ public abstract class EquipOffer {
 
     private List<Storable> items;
 
-    private Image icon;
+
 
     public abstract List<Storable> set_items();
 
@@ -94,8 +94,6 @@ public abstract class EquipOffer {
     public List<Storable> getItems() {
         return items;
     }
-    public Image getIcon() {
-        return icon;
-    }
+
 
 }

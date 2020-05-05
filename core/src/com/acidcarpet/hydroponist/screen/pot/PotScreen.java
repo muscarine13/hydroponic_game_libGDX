@@ -1,8 +1,9 @@
 package com.acidcarpet.hydroponist.screen.pot;
 
-import com.acidcarpet.hydroponist.equipment.Bottle;
-import com.acidcarpet.hydroponist.equipment.Box;
-import com.acidcarpet.hydroponist.equipment.Pot;
+
+import com.acidcarpet.hydroponist.bottle.Bottle;
+import com.acidcarpet.hydroponist.box.Box;
+import com.acidcarpet.hydroponist.pot.Pot;
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.storage.Inventory;
 import com.acidcarpet.hydroponist.storage.Storable;
@@ -25,6 +26,10 @@ import java.util.Date;
 
 
 public class PotScreen implements Screen {
+    private static boolean refresh;
+    public static void update(){
+        refresh = true;
+    }
 
     Thread fil_thread;
 
@@ -36,9 +41,6 @@ public class PotScreen implements Screen {
     TextureAtlas atlas;
     Stage stage;
 
-    long box_last_update;
-    long inventory_last_update;
-
     BitmapFont alice_72_8F51F5;
     BitmapFont alice_62_797E55;
 
@@ -47,13 +49,11 @@ public class PotScreen implements Screen {
 
     public PotScreen(Game game){
         this.game = game;
-        box_last_update = 1;
-        inventory_last_update = 1;
         type = PotScreens.BOTTLE;
     }
 
     public void take_off_button_click(){
-        Box.getInstance().take_off_pot();
+        ///
 
     }
     public void pot_fil_button_click(ImageButton button){
@@ -69,60 +69,55 @@ public class PotScreen implements Screen {
     }
     public void pro_help_button_click(){
 
-        if(Box.getInstance().getPlant()!=null&&Box.getInstance().getPot()!=null){
-            Box.getInstance().getPot().drain(Box.getInstance().getPot().getCurrent_volume());
+        if(Box.getInstance().getPot()==null)return;
+        if(Box.getInstance().getPlant()==null) return;
 
-            Box.getInstance().getPot().pour(
-                    Box.getInstance().getPot().getMaximum_volume(),
-                    5.5,
-                    Box.getInstance().getPlant().get_current_stage().getPpm_N_max()-1,
-                    Box.getInstance().getPlant().get_current_stage().getPpm_P_max()-1,
-                    Box.getInstance().getPlant().get_current_stage().getPpm_K_max()-1,
+        Box.getInstance().getPot().drain(Box.getInstance().getPot().get_current_volume());
 
-                    Box.getInstance().getPlant().get_current_stage().getPpm_S_max()-1,
-                    Box.getInstance().getPlant().get_current_stage().getPpm_Mg_max()-1,
-                    Box.getInstance().getPlant().get_current_stage().getPpm_Ca_max()-1,
-
-                    Box.getInstance().getPlant().get_current_stage().getPpm_B_max()-1,
-                    Box.getInstance().getPlant().get_current_stage().getPpm_Cu_max()-1,
-                    Box.getInstance().getPlant().get_current_stage().getPpm_Fe_max()-1,
-
-                    Box.getInstance().getPlant().get_current_stage().getPpm_Mn_max()-1,
-                    Box.getInstance().getPlant().get_current_stage().getPpm_Mo_max()-1,
-                    Box.getInstance().getPlant().get_current_stage().getPpm_Zn_max()-1
-
-            );
-
-        }
+        Box.getInstance().getPot().pro_help();
     }
 
     public void pot_button_click(){
 
         type = PotScreens.POT;
-        inventory_last_update = 1;
+
     }
     public void bottle_button_click(){
 
         type = PotScreens.BOTTLE;
-        inventory_last_update = 1;
+
     }
 
     public void bottle_fil_button_click(Bottle bottle){
-        bottle.drop_to_pot(0.001);
+        bottle.drain();
+        Pot.getInstance().fil(
+                1,
+                bottle.getpH(),
+                bottle.getPpm_N(),
+                bottle.getPpm_P(),
+                bottle.getPpm_K(),
+                bottle.getPpm_S(),
+                bottle.getPpm_Mg(),
+                bottle.getPpm_Ca(),
+                bottle.getPpm_B(),
+                bottle.getPpm_Cu(),
+                bottle.getPpm_Fe(),
+                bottle.getPpm_Mn(),
+                bottle.getPpm_Mo(),
+                bottle.getPpm_Zn()
+        );
     }
 
     public void delete_button_clicked(Pot pot){
-        Inventory.getInstance().delete(pot);
-        Box.update();
+        ///
 
     }
     public void equip_button_clicked(Pot pot){
-        Box.getInstance().equip(pot);
+      ///
 
     }
     public void delete_button_clicked(Bottle bottle){
         Inventory.getInstance().delete(bottle);
-        Box.update();
     }
 
     void back_button_click(){
@@ -157,18 +152,14 @@ public class PotScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        if(Box.get_last_update()!= box_last_update){
+        if(refresh){
 
             try{    stage.getRoot().findActor("pot_pane").clearListeners();                }catch (Exception e){ e.printStackTrace();}
             try{    stage.getRoot().removeActor(stage.getRoot().findActor("pot_pane"));    }catch (Exception e){ e.printStackTrace();}
 
             try{    stage.addActor(generate_pot_pane());                                          }catch (Exception e){ e.printStackTrace();}
 
-            box_last_update = Box.get_last_update();
 
-        }
-
-        if(Inventory.last_update()!=inventory_last_update) {
             try {   stage.getRoot().findActor("items_pane").clearListeners();} catch (Exception e) { e.printStackTrace(); }
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("items_pane")); } catch (Exception e) { e.printStackTrace(); }
             try { stage.getRoot().findActor("tabs_pane").clearListeners(); } catch (Exception e) { e.printStackTrace(); }
@@ -178,7 +169,7 @@ public class PotScreen implements Screen {
             try { stage.addActor(generate_items_pane()); } catch (Exception e) { e.printStackTrace(); }
             try { stage.addActor(generate_tabs_pane()); } catch (Exception e) { e.printStackTrace(); }
 
-            inventory_last_update = Inventory.last_update();
+            refresh = false;
         }
 
         stage.act(delta);
@@ -231,7 +222,7 @@ public class PotScreen implements Screen {
             Label.LabelStyle title_style = new Label.LabelStyle();
             title_style.font = alice_72_8F51F5;
             Label name_label = new Label(
-                    Box.getInstance().getPot().getName() + "",
+                      "ТЕКСТ КАКОЙ ТО",
                     title_style
             );
             name_label.setAlignment(Align.center);
@@ -244,9 +235,9 @@ public class PotScreen implements Screen {
             Image pot_bar;
             int pot_volume_percent =
                     (int)
-                            ((Box.getInstance().getPot().getCurrent_volume()
+                            ((Box.getInstance().getPot().get_current_volume()
                             /
-                            Box.getInstance().getPot().getMaximum_volume())*100);
+                            Box.getInstance().getPot().get_maximum_volume())*100);
 
             if(pot_volume_percent<=0){
                 pot_bar = new Image(atlas.findRegion("pot_0_bar"));
@@ -282,7 +273,7 @@ public class PotScreen implements Screen {
             Label.LabelStyle elements_style = new Label.LabelStyle();
             elements_style.font = alice_72_30155B;
 
-            Label maximum_label = new Label((int)(Box.getInstance().getPot().getMaximum_volume()*1000)+" ml",
+            Label maximum_label = new Label((int)(Box.getInstance().getPot().get_maximum_volume()*1000)+" ml",
                     elements_style);
             maximum_label.setAlignment(Align.center);
             maximum_label.setName("maximum_label");
@@ -290,7 +281,7 @@ public class PotScreen implements Screen {
             maximum_label.setBounds(15, 15+350-80-80, 350, 80);
             out.addActor(maximum_label);
 
-            Label current_label = new Label((int)(Box.getInstance().getPot().getCurrent_volume()*1000)+" ml",
+            Label current_label = new Label((int)(Box.getInstance().getPot().get_current_volume()*1000)+" ml",
                     elements_style);
             current_label.setAlignment(Align.center);
             current_label.setName("current_label");
@@ -299,7 +290,7 @@ public class PotScreen implements Screen {
             out.addActor(current_label);
 
             Label N_label =
-                    new Label(Box.getInstance().getPot().getN()+" ", elements_style);
+                    new Label(Box.getInstance().getPot().get_N()+" ", elements_style);
             N_label.setAlignment(Align.right);
             N_label.setName("N_label");
             N_label.setWrap(false);
@@ -307,7 +298,7 @@ public class PotScreen implements Screen {
             out.addActor(N_label);
 
             Label P_label =
-                    new Label(Box.getInstance().getPot().getP()+" ", elements_style);
+                    new Label(Box.getInstance().getPot().get_P()+" ", elements_style);
             P_label.setAlignment(Align.right);
             P_label.setName("P_label");
             P_label.setWrap(false);
@@ -315,7 +306,7 @@ public class PotScreen implements Screen {
             out.addActor(P_label);
 
             Label K_label =
-                    new Label(Box.getInstance().getPot().getK()+" ", elements_style);
+                    new Label(Box.getInstance().getPot().get_K()+" ", elements_style);
             K_label.setAlignment(Align.right);
             K_label.setName("K_label");
             K_label.setWrap(false);
@@ -323,7 +314,7 @@ public class PotScreen implements Screen {
             out.addActor(K_label);
 
             Label S_label =
-                    new Label(Box.getInstance().getPot().getS()+" ", elements_style);
+                    new Label(Box.getInstance().getPot().get_S()+" ", elements_style);
             S_label.setAlignment(Align.right);
             S_label.setName("S_label");
             S_label.setWrap(false);
@@ -331,7 +322,7 @@ public class PotScreen implements Screen {
             out.addActor(S_label);
 
             Label Mg_label =
-                    new Label(Box.getInstance().getPot().getMg()+" ", elements_style);
+                    new Label(Box.getInstance().getPot().get_Mg()+" ", elements_style);
             Mg_label.setAlignment(Align.right);
             Mg_label.setName("Mg_label");
             Mg_label.setWrap(false);
@@ -339,7 +330,7 @@ public class PotScreen implements Screen {
             out.addActor(Mg_label);
 
             Label Ca_label =
-                    new Label(Box.getInstance().getPot().getCa()+" ", elements_style);
+                    new Label(Box.getInstance().getPot().get_Ca()+" ", elements_style);
             Ca_label.setAlignment(Align.right);
             Ca_label.setName("Ca_label");
             Ca_label.setWrap(false);
@@ -347,7 +338,7 @@ public class PotScreen implements Screen {
             out.addActor(Ca_label);
 
             Label B_label =
-                    new Label(Box.getInstance().getPot().getB()+" ", elements_style);
+                    new Label(Box.getInstance().getPot().get_B()+" ", elements_style);
             B_label.setAlignment(Align.right);
             B_label.setName("B_label");
             B_label.setWrap(false);
@@ -355,7 +346,7 @@ public class PotScreen implements Screen {
             out.addActor(B_label);
 
             Label Cu_label =
-                    new Label(Box.getInstance().getPot().getCu()+" ", elements_style);
+                    new Label(Box.getInstance().getPot().get_Cu()+" ", elements_style);
             Cu_label.setAlignment(Align.right);
             Cu_label.setName("Cu_label");
             Cu_label.setWrap(false);
@@ -363,7 +354,7 @@ public class PotScreen implements Screen {
             out.addActor(Cu_label);
 
             Label Fe_label =
-                    new Label(Box.getInstance().getPot().getFe()+" ", elements_style);
+                    new Label(Box.getInstance().getPot().get_Fe()+" ", elements_style);
             Fe_label.setAlignment(Align.right);
             Fe_label.setName("Fe_label");
             Fe_label.setWrap(false);
@@ -371,7 +362,7 @@ public class PotScreen implements Screen {
             out.addActor(Fe_label);
 
             Label Mn_label =
-                    new Label(Box.getInstance().getPot().getMn()+" ", elements_style);
+                    new Label(Box.getInstance().getPot().get_Mn()+" ", elements_style);
             Mn_label.setAlignment(Align.right);
             Mn_label.setName("Mn_label");
             Mn_label.setWrap(false);
@@ -379,7 +370,7 @@ public class PotScreen implements Screen {
             out.addActor(Mn_label);
 
             Label Mo_label =
-                    new Label(Box.getInstance().getPot().getMo()+" ", elements_style);
+                    new Label(Box.getInstance().getPot().get_Mo()+" ", elements_style);
             Mo_label.setAlignment(Align.right);
             Mo_label.setName("Mo_label");
             Mo_label.setWrap(false);
@@ -387,7 +378,7 @@ public class PotScreen implements Screen {
             out.addActor(Mo_label);
 
             Label Zn_label =
-                    new Label(Box.getInstance().getPot().getZn()+" ", elements_style);
+                    new Label(Box.getInstance().getPot().get_Zn()+" ", elements_style);
             Zn_label.setAlignment(Align.right);
             Zn_label.setName("Zn_label");
             Zn_label.setWrap(false);
@@ -395,35 +386,35 @@ public class PotScreen implements Screen {
             out.addActor(Zn_label);
 
             Image pH_bar;
-            if(Box.getInstance().getPot().getCurrent_pH()<=0){
+            if(Box.getInstance().getPot().getpH()<=0){
                 pH_bar = new Image(atlas.findRegion("pH_0_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>0&&Box.getInstance().getPot().getCurrent_pH()<=1){
+            }else if(Box.getInstance().getPot().getpH()>0&&Box.getInstance().getPot().getpH()<=1){
                 pH_bar = new Image(atlas.findRegion("pH_1_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>1&&Box.getInstance().getPot().getCurrent_pH()<=2){
+            }else if(Box.getInstance().getPot().getpH()>1&&Box.getInstance().getPot().getpH()<=2){
                 pH_bar = new Image(atlas.findRegion("pH_2_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>2&&Box.getInstance().getPot().getCurrent_pH()<=3){
+            }else if(Box.getInstance().getPot().getpH()>2&&Box.getInstance().getPot().getpH()<=3){
                 pH_bar = new Image(atlas.findRegion("pH_3_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>3&&Box.getInstance().getPot().getCurrent_pH()<=4){
+            }else if(Box.getInstance().getPot().getpH()>3&&Box.getInstance().getPot().getpH()<=4){
                 pH_bar = new Image(atlas.findRegion("pH_4_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>4&&Box.getInstance().getPot().getCurrent_pH()<=5){
+            }else if(Box.getInstance().getPot().getpH()>4&&Box.getInstance().getPot().getpH()<=5){
                 pH_bar = new Image(atlas.findRegion("pH_5_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>5&&Box.getInstance().getPot().getCurrent_pH()<=6){
+            }else if(Box.getInstance().getPot().getpH()>5&&Box.getInstance().getPot().getpH()<=6){
                 pH_bar = new Image(atlas.findRegion("pH_6_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>6&&Box.getInstance().getPot().getCurrent_pH()<=7){
+            }else if(Box.getInstance().getPot().getpH()>6&&Box.getInstance().getPot().getpH()<=7){
                 pH_bar = new Image(atlas.findRegion("pH_7_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>7&&Box.getInstance().getPot().getCurrent_pH()<=8){
+            }else if(Box.getInstance().getPot().getpH()>7&&Box.getInstance().getPot().getpH()<=8){
                 pH_bar = new Image(atlas.findRegion("pH_8_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>8&&Box.getInstance().getPot().getCurrent_pH()<=9){
+            }else if(Box.getInstance().getPot().getpH()>8&&Box.getInstance().getPot().getpH()<=9){
                 pH_bar = new Image(atlas.findRegion("pH_9_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>9&&Box.getInstance().getPot().getCurrent_pH()<=10){
+            }else if(Box.getInstance().getPot().getpH()>9&&Box.getInstance().getPot().getpH()<=10){
                 pH_bar = new Image(atlas.findRegion("pH_10_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>10&&Box.getInstance().getPot().getCurrent_pH()<=11){
+            }else if(Box.getInstance().getPot().getpH()>10&&Box.getInstance().getPot().getpH()<=11){
                 pH_bar = new Image(atlas.findRegion("pH_11_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>11&&Box.getInstance().getPot().getCurrent_pH()<=12){
+            }else if(Box.getInstance().getPot().getpH()>11&&Box.getInstance().getPot().getpH()<=12){
                 pH_bar = new Image(atlas.findRegion("pH_12_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>12&&Box.getInstance().getPot().getCurrent_pH()<=13){
+            }else if(Box.getInstance().getPot().getpH()>12&&Box.getInstance().getPot().getpH()<=13){
                 pH_bar = new Image(atlas.findRegion("pH_13_bar"));
-            }else if(Box.getInstance().getPot().getCurrent_pH()>13&&Box.getInstance().getPot().getCurrent_pH()<=14){
+            }else if(Box.getInstance().getPot().getpH()>13&&Box.getInstance().getPot().getpH()<=14){
                 pH_bar = new Image(atlas.findRegion("pH_14_bar"));
             }else
             {
@@ -624,7 +615,7 @@ public class PotScreen implements Screen {
         Label.LabelStyle title_style = new Label.LabelStyle();
         title_style.font = alice_62_797E55;
         Label name_label = new Label(
-                pot.getName() + "",
+                "YTGJYZNYSQ NYTRCN 2",
                 title_style
         );
         name_label.setAlignment(Align.center);
@@ -656,7 +647,7 @@ public class PotScreen implements Screen {
         out.addActor(equip_button);
 
         Image pot_bar;
-        double percent = (pot.getCurrent_volume()/pot.getMaximum_volume())*100;
+        double percent = ((double)pot.get_current_volume()/pot.get_maximum_volume())*100;
 
         if(percent<=0){
             pot_bar = new Image(atlas.findRegion("sub_pot_0_bar"));
@@ -704,7 +695,7 @@ public class PotScreen implements Screen {
         Label.LabelStyle title_style = new Label.LabelStyle();
         title_style.font = alice_62_797E55;
         Label name_label = new Label(
-                bottle.getName() + "",
+                bottle.name() + "",
                 title_style
         );
         name_label.setAlignment(Align.center);
@@ -736,7 +727,7 @@ public class PotScreen implements Screen {
         out.addActor(bottle_fil_button);
 
         Image bottle_bar;
-        double percent = (bottle.getCurrent_volume()/bottle.getMaximum_volume())*100;
+        double percent = (bottle.getCurrent_volume()/bottle.getVolumeType().getVolume())*100;
 
         if(percent<=0){
             bottle_bar = new Image(atlas.findRegion("bottle_0_bar"));
@@ -809,7 +800,7 @@ public class PotScreen implements Screen {
         out.addActor(pH_bar);
 
         Image macro_main;
-        switch (bottle.macro_main()){
+        switch (bottle.getMacroPrimaryType()){
             case N: macro_main = new Image(atlas.findRegion("N_icon")); break;
             case P: macro_main = new Image(atlas.findRegion("P_icon")); break;
             case K: macro_main = new Image(atlas.findRegion("K_icon")); break;
@@ -820,7 +811,7 @@ public class PotScreen implements Screen {
         out.addActor(macro_main);
 
         Image macro_secondary;
-        switch (bottle.macro_secondary()){
+        switch (bottle.getMacroSecondaryType()){
             case S: macro_secondary = new Image(atlas.findRegion("S_icon")); break;
             case Mg: macro_secondary = new Image(atlas.findRegion("Mg_icon")); break;
             case Ca: macro_secondary = new Image(atlas.findRegion("Ca_icon")); break;
@@ -831,7 +822,7 @@ public class PotScreen implements Screen {
         out.addActor(macro_secondary);
 
         Image micro_main;
-        switch (bottle.micro_main()){
+        switch (bottle.getMicroPrimaryType()){
             case B: micro_main = new Image(atlas.findRegion("B_icon")); break;
             case Cu: micro_main = new Image(atlas.findRegion("Cu_icon")); break;
             case Fe: micro_main = new Image(atlas.findRegion("Fe_icon")); break;
@@ -842,7 +833,7 @@ public class PotScreen implements Screen {
         out.addActor(micro_main);
 
         Image micro_secondary;
-        switch (bottle.micro_secondary()){
+        switch (bottle.getMicroSecondaryType()){
             case Mn: micro_secondary = new Image(atlas.findRegion("Mn_icon")); break;
             case Mo: micro_secondary = new Image(atlas.findRegion("Mo_icon")); break;
             case Zn: micro_secondary = new Image(atlas.findRegion("Zn_icon")); break;
@@ -917,68 +908,5 @@ public class PotScreen implements Screen {
     }
 
 
-    public class ButtonTimerFil implements Runnable{
-        private ImageButton button;
 
-        public ButtonTimerFil(ImageButton button){
-            this.button = button;
-        }
-
-        @Override
-        public void run() {
-            while (!Thread.currentThread().isInterrupted()) {
-
-
-                if (button.isPressed()) {
-                    Box.getInstance().getPot().pour(
-                            0.001,
-                            5.5,
-                            0,
-                            0,
-                            0,
-                            0,
-                            0,
-                            0,
-                            0,
-                            0,
-                            0,
-                            0,
-                            0,
-                            0);
-                } else {
-                    Thread.currentThread().interrupt();
-                }
-
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-            }
-
-        }
-    }
-    public class ButtonTimerDrop extends Thread{
-        private ImageButton button;
-
-        public ButtonTimerDrop(ImageButton button){
-            this.button = button;
-        }
-
-        @Override
-        public void run() {
-            if(button.isPressed()){
-                Box.getInstance().getPot().drain(0.001);
-            }else{
-                Thread.currentThread().interrupt();
-            }
-
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 }

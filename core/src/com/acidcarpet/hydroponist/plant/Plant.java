@@ -60,6 +60,10 @@ public class Plant {
 
     private Stages stage;
 
+    public Stages getStage() {
+        return stage;
+    }
+
     private List<Leave> leaves;
     private List<Root> roots;
     private List<Flower> flowers;

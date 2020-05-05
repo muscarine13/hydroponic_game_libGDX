@@ -47,12 +47,6 @@ public class Inventory {
         storage.put(Type.BOTTLE.line, bottle_array);
 
 
-        add(TestPack.getInstance().get_FAN_A_fan());
-        add(TestPack.getInstance().get_FAN_A_fan());
-        add(TestPack.getInstance().get_FAN_A_fan());
-        add(TestPack.getInstance().get_FAN_A_fan());
-
-
         gold = 155850;
         diamond = 5670;
 

@@ -11,15 +11,26 @@ import com.acidcarpet.hydroponist.screen.seedling.SeedlingScreen;
 import com.acidcarpet.hydroponist.screen.settings.SettingsScreen;
 import com.acidcarpet.hydroponist.screen.shop.ShopScreen;
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.Group;
+import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
+import com.badlogic.gdx.utils.viewport.ExtendViewport;
+
+import java.util.Date;
 
 public class BoxScreen implements Screen {
+    private static boolean refresh;
+    public static void update(){
+        refresh = true;
+    }
     Game game;
 
     long last_update;
@@ -56,11 +67,9 @@ public class BoxScreen implements Screen {
     @Override
     public void render(float delta) {
 
-        if(last_update!= Box.get_last_update()){
+        if(refresh){
 
 
-            try {   stage.getRoot().findActor("pump").clearListeners();                         }catch (Exception e){e.printStackTrace();}
-            try {   stage.getRoot().removeActor(stage.getRoot().findActor("pump"));             }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().findActor("plant").clearListeners();                        }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("plant"));            }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().findActor("pot").clearListeners();                          }catch (Exception e){e.printStackTrace();}
@@ -82,8 +91,6 @@ public class BoxScreen implements Screen {
             try {   stage.getRoot().findActor("room_button").clearListeners();                  }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("room_button"));      }catch (Exception e){e.printStackTrace();}
 
-
-            try {   stage.getRoot().addActor( generate_pump());                                        }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor( generate_plant());                                       }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor( generate_pot());                                         }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor( generate_fan());                                         }catch (Exception e){e.printStackTrace();}
@@ -95,7 +102,7 @@ public class BoxScreen implements Screen {
             try {   stage.getRoot().addActor(generate_settings_button());                              }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor(generate_room_button());                                  }catch (Exception e){e.printStackTrace();}
 
-            last_update = Box.get_last_update();
+            refresh = false;
         }
 
         stage.act(delta);
@@ -158,35 +165,47 @@ public class BoxScreen implements Screen {
     public Group generate_lamp(){
         Group out = new Group();
 
-        if(Box.getInstance().getLamp()==null) return out;
+        if(Box.getInstance().getLamp()==null) {
+
+            return out;
+        }
 
         Image current_lamp;
         Image current_light;
 
-       if(Box.getInstance().getLamp().isOn())
-            current_lamp = Box.getInstance().getLamp().
-            current_lamp.setPosition(140, 1720);
-            current_lamp.addListener(new ClickListener() {
-                @Override
-                public void clicked(InputEvent event, float x, float y) {
-                    lamp_click();
-                }
-            });
+       if(Box.getInstance().getLamp().isOn()){
+           current_lamp = Box.getInstance().getLamp().get_on_image();
+           current_lamp.setPosition(140, 1720);
+           current_lamp.addListener(new ClickListener() {
+               @Override
+               public void clicked(InputEvent event, float x, float y) {
+                   lamp_click();
+               }
+           });
+           out.addActor(current_lamp);
 
-            current_light = Box.getInstance().getLamp().get_image_light();
+           current_light = Box.getInstance().getLamp().get_light_image();
+           current_light.setBounds(-40, 0, stage.getWidth(), current_light.getHeight());
+           current_light.setTouchable(Touchable.disabled);
+           out.addActor(current_light);
+
+       }
+       else {
+           current_lamp = Box.getInstance().getLamp().get_off_image();
+           current_lamp.setPosition(140, 1720);
+           current_lamp.addListener(new ClickListener() {
+               @Override
+               public void clicked(InputEvent event, float x, float y) {
+                   lamp_click();
+               }
+           });
+           out.addActor(current_lamp);
 
 
-
-        current_light.setBounds(-40, 0, stage.getWidth(), current_light.getHeight());
-        current_light.setTouchable(Touchable.disabled);
-
-
-        out.addActor(current_light);
-        out.addActor(current_lamp);
+       }
 
         out.setPosition(0+40,0);
         out.setName("lamp");
-
 
         return out;
     }
@@ -194,7 +213,12 @@ public class BoxScreen implements Screen {
         Image current_fan;
 
         if(Box.getInstance().getFan()!=null){
-            current_fan = Box.getInstance().getFan().get_image_fan();
+            if(Box.getInstance().getFan().isOn()){
+                current_fan = Box.getInstance().getFan().get_on_image();
+            }else{
+                current_fan = Box.getInstance().getFan().get_off_image();
+            }
+
 
         }else{
             current_fan = new Image(atlas.findRegion("fan_empty"));
@@ -216,7 +240,7 @@ public class BoxScreen implements Screen {
         Image current_plant;
 
         if(Box.getInstance().getPlant()!=null){
-            current_plant = Box.getInstance().getPlant().get_image_plant();
+            current_plant = Box.getInstance().getPlant().get_image();
 
         }else{
             current_plant = new Image(atlas.findRegion("plant_empty"));
@@ -239,7 +263,7 @@ public class BoxScreen implements Screen {
         Image current_pot;
 
         if(Box.getInstance().getPot()!=null){
-            current_pot = Box.getInstance().getPot().get_image_pot();
+            current_pot = Box.getInstance().getPot().get_image();
 
         }else{
             current_pot = new Image(atlas.findRegion("pot_empty"));
@@ -258,29 +282,7 @@ public class BoxScreen implements Screen {
 
         return current_pot;
     }
-    public Image generate_pump(){
-        Image current_pump;
 
-        if(Box.getInstance().getPump()!=null){
-            current_pump = Box.getInstance().getPump().get_image_pump();
-
-        }else{
-            current_pump = new Image(atlas.findRegion("compressor_empty"));
-
-        }
-
-        current_pump.setPosition(780+40, 0);
-        current_pump.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                compressor_click();
-            }
-        });
-
-        current_pump.setName("pump");
-
-        return current_pump;
-    }
     //
     public ImageButton generate_x3_button(){
         ImageButton out = new ImageButton(skin, "x3_button");

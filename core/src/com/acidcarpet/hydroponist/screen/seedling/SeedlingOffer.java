@@ -1,6 +1,7 @@
 package com.acidcarpet.hydroponist.screen.seedling;
 
 
+import com.acidcarpet.hydroponist.box.Box;
 import com.acidcarpet.hydroponist.plant.Plant;
 import com.acidcarpet.hydroponist.storage.Inventory;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
@@ -11,8 +12,8 @@ public abstract class SeedlingOffer {
     public SeedlingOffer(String title,
                          String description,
                          int coin_price,
-                         int diamond_price,
-                         Image icon){
+                         int diamond_price
+                         ){
 
         this.coin_price = coin_price;
         this.diamond_price = diamond_price;
@@ -20,7 +21,7 @@ public abstract class SeedlingOffer {
         this.title = title;
         this.description = description;
 
-        this.icon = icon;
+
     }
 
     private String title;
@@ -60,7 +61,6 @@ public abstract class SeedlingOffer {
         }
     }
 
-    private Image icon;
 
     public abstract Plant get_plant();
 
@@ -76,7 +76,5 @@ public abstract class SeedlingOffer {
     public int getDiamond_price() {
         return diamond_price;
     }
-    public Image getIcon() {
-        return icon;
-    }
+
 }

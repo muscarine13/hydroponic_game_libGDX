@@ -6,8 +6,4 @@ import java.util.Map;
 
 public interface Storable {
 
-    int coin_price();
-    int diamond_price();
-
-
 }

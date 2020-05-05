@@ -7,7 +7,7 @@ import com.acidcarpet.hydroponist.screen.plant.PlantResources;
 import com.acidcarpet.hydroponist.screen.seedling.SeedlingResources;
 import com.acidcarpet.hydroponist.screen.settings.SettingsResources;
 import com.acidcarpet.hydroponist.screen.shop.ShopResources;
-import com.acidcarpet.hydroponist.storage.TestPack;
+
 import com.acidcarpet.hydroponist.screen.box.BoxResources;
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.screen.fan.FanResources;
@@ -23,8 +23,6 @@ public class GameEngine extends Game {
 
 	@Override
 	public void create () {
-
-		TestPack.getInstance().set_atlas();
 
 		BoxResources.set_all();
 		FanResources.set_all();
@@ -69,8 +67,6 @@ public class GameEngine extends Game {
 	
 	@Override
 	public void dispose () {
-
-		TestPack.getInstance().dispose_atlas();
 
 		BoxResources.dispose_all();
 		FanResources.dispose_all();

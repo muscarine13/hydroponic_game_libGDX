@@ -20,4 +20,16 @@ public enum Stages {
     int minimum_ppm;
     int maximum_ppm;
     double time_multiplier;
+
+    public int getMinimum_ppm() {
+        return minimum_ppm;
+    }
+
+    public int getMaximum_ppm() {
+        return maximum_ppm;
+    }
+
+    public double getTime_multiplier() {
+        return time_multiplier;
+    }
 }

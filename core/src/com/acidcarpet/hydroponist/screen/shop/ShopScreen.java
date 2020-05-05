@@ -201,10 +201,7 @@ public class ShopScreen implements Screen {
         background.setName("item_pane");
         out.addActor(background);
 
-        Image icon = equipOffer.getIcon();
-        icon.setBounds(15, 15, 170, 170);
-        icon.setName("item_icon");
-        out.addActor(icon);
+
 
         TextButton.TextButtonStyle coin_buttonStyle = new TextButton.TextButtonStyle();
         coin_buttonStyle.font = alice_64_F6EB86_stroke_5_9A8C0D;

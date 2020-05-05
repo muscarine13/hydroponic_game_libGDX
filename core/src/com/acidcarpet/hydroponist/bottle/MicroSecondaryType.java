@@ -8,7 +8,7 @@ public enum MicroSecondaryType {
     Zn("spodium", 0.2, 0.2, 0.6, 0.25, "Zn"),
     D("alcaline", 0, 0, 0, 0.25, "pH+");
 
-    public final double volume = 0.1;
+    public static final double volume = 0.1;
 
     String latin;
     double Mn_percent;
@@ -27,7 +27,31 @@ public enum MicroSecondaryType {
         this.latin_short = latin_short;
     }
 
-    public double getVolume() {
+    public static double getVolume() {
         return volume;
+    }
+
+    public String getLatin() {
+        return latin;
+    }
+
+    public double getMn_percent() {
+        return Mn_percent;
+    }
+
+    public double getMo_percent() {
+        return Mo_percent;
+    }
+
+    public double getZn_percent() {
+        return Zn_percent;
+    }
+
+    public double getChance() {
+        return chance;
+    }
+
+    public String getLatin_short() {
+        return latin_short;
     }
 }

@@ -1,10 +1,11 @@
 package com.acidcarpet.hydroponist.lamp;
 
 import com.acidcarpet.hydroponist.Wrench;
+import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
-public class Lamp {
+public class Lamp implements Storable {
     private TextureAtlas atlas;
 
     private com.acidcarpet.hydroponist.lamp.Type type;
@@ -17,6 +18,10 @@ public class Lamp {
     private int energy_current;
 
     private boolean on;
+
+    public void setOn(boolean on) {
+        this.on = on;
+    }
 
     protected Lamp(com.acidcarpet.hydroponist.lamp.Type type, Tier tier, com.acidcarpet.hydroponist.lamp.TemperatureQuality temperatureQuality, com.acidcarpet.hydroponist.lamp.EnergyQuality energyQuality) {
 

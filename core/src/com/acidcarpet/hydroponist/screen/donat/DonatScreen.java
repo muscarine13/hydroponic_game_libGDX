@@ -255,10 +255,7 @@ public class DonatScreen implements Screen {
         background.setName("item_pane");
         out.addActor(background);
 
-        Image icon = donatOffer.getIcon();
-        icon.setBounds(15, 15, 170, 170);
-        icon.setName("item_icon");
-        out.addActor(icon);
+
 
 
 

@@ -1,6 +1,7 @@
 package com.acidcarpet.hydroponist.screen.fan;
 
 import com.acidcarpet.hydroponist.box.Box;
+import com.acidcarpet.hydroponist.fan.Fan;
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.storage.Inventory;
 import com.acidcarpet.hydroponist.storage.Storable;
@@ -20,15 +21,15 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.Align;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
-import java.util.Date;
-import static java.lang.String.*;
 
 public class FanScreen implements Screen {
-
+private static boolean refresh;
+private static void update(){
+    refresh = true;
+}
     Game game;
 
-    long box_last_update;
-    long inventory_last_update;
+
 
     Skin skin;
     TextureAtlas atlas;
@@ -43,22 +44,23 @@ public class FanScreen implements Screen {
 
     public FanScreen(Game game){
         this.game = game;
-        box_last_update = 1;
-        inventory_last_update = 1;
+
 
     }
 
     private void takeoff_click(){
-        Box.getInstance().take_off_fan();
+        Inventory.getInstance().add(Box.getInstance().getFan());
+        Box.getInstance().setFan(null);
     }
     private void off_click(){
-        Box.getInstance().getFan().set_off();
+        Box.getInstance().getFan().setOn(false);
     }
     private void on_click(){
-        Box.getInstance().getFan().set_on();
+        Box.getInstance().getFan().setOn(true);
     }
     private void item_equip_click(Fan fan){
-        Box.getInstance().equip(fan);
+        Box.getInstance().setFan(fan);
+        Inventory.getInstance().delete(fan);
     }
     private void item_delete_click(Fan fan){
         Inventory.getInstance().delete(fan);
@@ -97,23 +99,20 @@ public class FanScreen implements Screen {
     @Override
     public void render(float delta) {
 
-        if(box_last_update !=Box.get_last_update()){
+        if(refresh){
 
             try{    stage.getRoot().findActor("fan_pane").clearListeners();                 } catch(Exception e){ e.printStackTrace();}
             try{    stage.getRoot().removeActor(stage.getRoot().findActor("fan_pane"));     } catch(Exception e){ e.printStackTrace();}
 
             try{    stage.addActor(generate_fan_pane());                                           } catch(Exception e){ e.printStackTrace();}
 
-            box_last_update = Box.get_last_update();
-        }
 
-        if(inventory_last_update!=Inventory.last_update()){
             try{    stage.getRoot().findActor("items_pane").clearListeners();               } catch(Exception e){ e.printStackTrace();}
             try{    stage.getRoot().removeActor(stage.getRoot().findActor("items_pane"));   } catch(Exception e){ e.printStackTrace();}
 
             try{    stage.addActor(generate_items_pane());                                         } catch(Exception e){ e.printStackTrace();}
 
-            inventory_last_update = Inventory.last_update();
+            refresh = false;
         }
 
         stage.act(delta);
@@ -162,7 +161,7 @@ public class FanScreen implements Screen {
 
             LabelStyle title_style = new LabelStyle();
             title_style.font = alice_72_797E55;
-            Label title_label = new  Label(Box.getInstance().getFan().getName(),title_style);
+            Label title_label = new  Label(Box.getInstance().getFan().get_name(),title_style);
             title_label.setWrap(false);
             title_label.setAlignment(Align.center);
             title_label.setBounds(0, 450-120, 1080, 120);
@@ -171,7 +170,7 @@ public class FanScreen implements Screen {
 
             LabelStyle description_style = new LabelStyle();
             description_style.font = alice_36_797E55;
-            Label description_label = new Label(Box.getInstance().getFan().getDescription(), description_style);
+            Label description_label = new Label(Box.getInstance().getFan().get_description(), description_style);
             description_label.setWrap(true);
             description_label.setAlignment(Align.center);
             description_label.setBounds(20, 450-120-250, 1040, 250);
@@ -180,7 +179,7 @@ public class FanScreen implements Screen {
 
             LabelStyle temperature_style = new LabelStyle();
             temperature_style.font = alice_48_A5D3FE;
-            Label temperature_label = new   Label("-"+Box.getInstance().getFan().getT_reduce()+"C  ", temperature_style);
+            Label temperature_label = new   Label("-"+Box.getInstance().getFan().getTemperature()+"C  ", temperature_style);
             temperature_label.setWrap(false);
             temperature_label.setAlignment(Align.right);
             temperature_label.setBounds(215, 15, 325, 80);
@@ -189,7 +188,7 @@ public class FanScreen implements Screen {
 
             LabelStyle oxygen_style = new LabelStyle();
             oxygen_style.font = alice_48_CFFAD0;
-            Label oxygen_label = new   Label(""+(int)(Box.getInstance().getFan().getCO2_production()*1000)+"ml/s ", oxygen_style);
+            Label oxygen_label = new   Label(""+(int)(Box.getInstance().getFan().getAir_production())+"ml/s ", oxygen_style);
             oxygen_label.setWrap(false);
             oxygen_label.setAlignment(Align.right);
             oxygen_label.setBounds(215+325, 15, 325, 80);
@@ -281,7 +280,7 @@ public class FanScreen implements Screen {
 
         LabelStyle title_style = new LabelStyle();
         title_style.font = alice_62_797E55;
-        Label title_label = new  Label(fan.getName(),title_style);
+        Label title_label = new  Label(fan.get_name(),title_style);
         title_label.setWrap(false);
         title_label.setAlignment(Align.center);
         title_label.setBounds(0, 220-120, 1080, 120);
@@ -290,7 +289,7 @@ public class FanScreen implements Screen {
 
         LabelStyle temperature_style = new LabelStyle();
         temperature_style.font = alice_48_A5D3FE;
-        Label temperature_label = new   Label("-"+fan.getT_reduce()+"C ", temperature_style);
+        Label temperature_label = new   Label("-"+fan.getTemperature()+"C ", temperature_style);
         temperature_label.setWrap(false);
         temperature_label.setAlignment(Align.right);
         temperature_label.setBounds(215, 15, 325, 80);
@@ -299,7 +298,7 @@ public class FanScreen implements Screen {
 
         LabelStyle oxygen_style = new LabelStyle();
         oxygen_style.font = alice_48_CFFAD0;
-        Label oxygen_label = new   Label(""+(int)(fan.getCO2_production()*1000)+"ml/s ", oxygen_style);
+        Label oxygen_label = new   Label(""+(int)(fan.getAir_production())+"ml/s ", oxygen_style);
         oxygen_label.setWrap(false);
         oxygen_label.setAlignment(Align.right);
         oxygen_label.setBounds(215+325, 15, 325, 80);

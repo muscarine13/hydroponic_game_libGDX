@@ -7,7 +7,7 @@ public enum MacroSecondaryType {
     Ca("calcium pulveris", 0, 0.3, 0.7, 0.25),
     D("aqua", 0, 0, 0, 0.25);
 
-    public final double volume = 0.3;
+    public static final double volume = 0.3;
 
     String latin;
     double S_percent;
@@ -31,7 +31,27 @@ public enum MacroSecondaryType {
         Ca_percent = ca_percent;
     }
 
-    public double getVolume() {
+    public static double getVolume() {
         return volume;
+    }
+
+    public String getLatin() {
+        return latin;
+    }
+
+    public double getS_percent() {
+        return S_percent;
+    }
+
+    public double getMg_percent() {
+        return Mg_percent;
+    }
+
+    public double getCa_percent() {
+        return Ca_percent;
+    }
+
+    public double getChance() {
+        return chance;
     }
 }

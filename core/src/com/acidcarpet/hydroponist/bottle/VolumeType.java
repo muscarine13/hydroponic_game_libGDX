@@ -19,4 +19,20 @@ public enum VolumeType {
         this.chance = chance;
         this.volume_text = volume_text;
     }
+
+    public String getLatin() {
+        return latin;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public double getChance() {
+        return chance;
+    }
+
+    public String getVolume_text() {
+        return volume_text;
+    }
 }

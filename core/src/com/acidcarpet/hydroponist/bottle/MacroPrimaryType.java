@@ -7,7 +7,7 @@ public enum MacroPrimaryType {
     K("enim herba", 0.1, 0.3, 0.6, 0.25),
     D("et stercora", 0, 0, 0, 0.25);
 
-    public final double volume = 0.5;
+    public static final double volume = 0.5;
 
     String latin;
     double N_percent;
@@ -31,7 +31,27 @@ public enum MacroPrimaryType {
         K_percent = k_percent;
     }
 
-    public double getVolume() {
+    public static double getVolume() {
         return volume;
+    }
+
+    public String getLatin() {
+        return latin;
+    }
+
+    public double getN_percent() {
+        return N_percent;
+    }
+
+    public double getP_percent() {
+        return P_percent;
+    }
+
+    public double getK_percent() {
+        return K_percent;
+    }
+
+    public double getChance() {
+        return chance;
     }
 }

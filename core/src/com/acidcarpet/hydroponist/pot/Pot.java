@@ -1,6 +1,12 @@
 package com.acidcarpet.hydroponist.pot;
 
 import com.acidcarpet.hydroponist.Elements;
+import com.acidcarpet.hydroponist.bottle.MacroPrimaryType;
+import com.acidcarpet.hydroponist.bottle.MacroSecondaryType;
+import com.acidcarpet.hydroponist.bottle.MicroPrimaryType;
+import com.acidcarpet.hydroponist.bottle.MicroSecondaryType;
+import com.acidcarpet.hydroponist.box.Box;
+import com.acidcarpet.hydroponist.plant.Plant;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
@@ -84,6 +90,123 @@ public class Pot {
     }
     public synchronized void fil(){
         fil(1, 6.6,0,0,0,0,0,0,0,0,0,0,0,0);
+    }
+    public synchronized void pro_help(){
+
+
+        if(Box.getInstance().getPlant()==null) return;
+
+        int stage_ppm = Box.getInstance().getPlant().getStage().getMinimum_ppm()+
+                (Box.getInstance().getPlant().getStage().getMaximum_ppm()-Box.getInstance().getPlant().getStage().getMinimum_ppm());
+
+        int macro_primary_ppm = (int)((double)stage_ppm* MacroPrimaryType.getVolume());
+        int macro_secondary_ppm = (int)((double)stage_ppm* MacroSecondaryType.getVolume());
+        int micro_primary_ppm = (int)((double)stage_ppm* MicroPrimaryType.getVolume());
+        int micro_secondary_ppm = (int)((double)stage_ppm* MicroSecondaryType.getVolume());
+
+        int N;
+        int P;
+        int K;
+
+        MacroPrimaryType macro_primary_type;
+        switch (Box.getInstance().getPlant().current_macro_primary()){
+            case N:
+                macro_primary_type = MacroPrimaryType.N; break;
+            case P:
+                macro_primary_type = MacroPrimaryType.P; break;
+            case K:
+                macro_primary_type = MacroPrimaryType.K; break;
+            default:
+                macro_primary_type = MacroPrimaryType.D; break;
+
+        }
+        N=(int)(macro_primary_ppm*macro_primary_type.getN_percent());
+        P=(int)(macro_primary_ppm*macro_primary_type.getP_percent());
+        K=(int)(macro_primary_ppm*macro_primary_type.getK_percent());
+
+        int S;
+        int Mg;
+        int Ca;
+
+        MacroSecondaryType macro_secondary_type;
+        switch (Box.getInstance().getPlant().current_macro_primary()){
+            case S:
+                macro_secondary_type = MacroSecondaryType.S; break;
+            case Mg:
+                macro_secondary_type = MacroSecondaryType.Mg; break;
+            case Ca:
+                macro_secondary_type = MacroSecondaryType.Ca; break;
+            default:
+                macro_secondary_type = MacroSecondaryType.D; break;
+
+        }
+        S=(int)(macro_secondary_ppm*macro_secondary_type.getS_percent());
+        Mg=(int)(macro_secondary_ppm*macro_secondary_type.getMg_percent());
+        Ca=(int)(macro_secondary_ppm*macro_secondary_type.getCa_percent());
+
+        int B;
+        int Cu;
+        int Fe;
+        MicroPrimaryType micro_primary_type;
+        switch (Box.getInstance().getPlant().current_micro_primary()){
+            case B:
+                micro_primary_type = MicroPrimaryType.B; break;
+            case Cu:
+                micro_primary_type = MicroPrimaryType.Cu; break;
+            case Fe:
+                micro_primary_type = MicroPrimaryType.Fe; break;
+            default:
+                micro_primary_type = MicroPrimaryType.D; break;
+
+
+        }
+        B=(int)(micro_primary_ppm*micro_primary_type.getB_percent());
+        Cu=(int)(micro_primary_ppm*micro_primary_type.getCu_percent());
+        Fe=(int)(micro_primary_ppm*micro_primary_type.getFe_percent());
+
+        int Mn;
+        int Mo;
+        int Zn;
+        MicroSecondaryType micro_secondary_type;
+        switch (Box.getInstance().getPlant().current_micro_secondary()){
+            case Mn:
+                micro_secondary_type = MicroSecondaryType.Mn; break;
+            case Mo:
+                micro_secondary_type = MicroSecondaryType.Mo; break;
+            case Zn:
+                micro_secondary_type = MicroSecondaryType.Zn; break;
+            default:
+                micro_secondary_type = MicroSecondaryType.D; break;
+
+        }
+        Mn=(int)(micro_secondary_ppm*micro_secondary_type.getMn_percent());
+        Mo=(int)(micro_secondary_ppm*micro_secondary_type.getMo_percent());
+        Zn=(int)(micro_secondary_ppm*micro_secondary_type.getZn_percent());
+
+        double pH;
+        pH = Box.getInstance().getPlant().getRootsType().getPh_min()+(Box.getInstance().getPlant().getRootsType().getPh_max()-Box.getInstance().getPlant().getRootsType().getPh_min());
+
+
+        this.volume = this.level.maximum_volume;
+        this.pH = pH;
+
+        this.ppm_N = N;
+        this.ppm_P = P;
+        this.ppm_K = K;
+
+        this.ppm_S = S;
+        this.ppm_Mg = Mg;
+        this.ppm_Ca = Ca;
+
+        this.ppm_B = B;
+        this.ppm_Cu = Cu;
+        this.ppm_Fe = Fe;
+
+        this.ppm_Mn = Mn;
+        this.ppm_Mo = Mo;
+        this.ppm_Zn = Zn;
+
+
     }
 
     private double pH;
