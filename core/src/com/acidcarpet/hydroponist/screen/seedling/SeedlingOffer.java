@@ -1,6 +1,6 @@
 package com.acidcarpet.hydroponist.screen.seedling;
 
-import com.acidcarpet.hydroponist.equipment.Box;
+
 import com.acidcarpet.hydroponist.plant.Plant;
 import com.acidcarpet.hydroponist.storage.Inventory;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;

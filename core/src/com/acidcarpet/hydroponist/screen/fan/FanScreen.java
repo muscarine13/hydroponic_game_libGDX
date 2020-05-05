@@ -1,7 +1,6 @@
 package com.acidcarpet.hydroponist.screen.fan;
 
-import com.acidcarpet.hydroponist.equipment.Box;
-import com.acidcarpet.hydroponist.equipment.Fan;
+import com.acidcarpet.hydroponist.box.Box;
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.storage.Inventory;
 import com.acidcarpet.hydroponist.storage.Storable;

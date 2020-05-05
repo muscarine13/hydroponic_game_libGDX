@@ -1,31 +1,23 @@
 package com.acidcarpet.hydroponist.screen.box;
 
-import com.acidcarpet.hydroponist.equipment.Box;
+
+import com.acidcarpet.hydroponist.box.Box;
 import com.acidcarpet.hydroponist.screen.donat.DonatScreen;
 import com.acidcarpet.hydroponist.screen.fan.FanScreen;
 import com.acidcarpet.hydroponist.screen.lamp.LampScreen;
-import com.acidcarpet.hydroponist.screen.deprecated.plant.PlantScreen;
 import com.acidcarpet.hydroponist.screen.plant.PlantScreen;
 import com.acidcarpet.hydroponist.screen.pot.PotScreen;
-import com.acidcarpet.hydroponist.screen.pump.PumpScreen;
 import com.acidcarpet.hydroponist.screen.seedling.SeedlingScreen;
 import com.acidcarpet.hydroponist.screen.settings.SettingsScreen;
 import com.acidcarpet.hydroponist.screen.shop.ShopScreen;
 import com.badlogic.gdx.Game;
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.Group;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.Touchable;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.badlogic.gdx.utils.viewport.ExtendViewport;
-
-import java.util.Date;
 
 public class BoxScreen implements Screen {
     Game game;
@@ -64,7 +56,7 @@ public class BoxScreen implements Screen {
     @Override
     public void render(float delta) {
 
-        if(last_update!=Box.get_last_update()){
+        if(last_update!= Box.get_last_update()){
 
 
             try {   stage.getRoot().findActor("pump").clearListeners();                         }catch (Exception e){e.printStackTrace();}
@@ -141,7 +133,7 @@ public class BoxScreen implements Screen {
     private void plant_click(){game.setScreen(new PlantScreen(game));}
     private void fan_click(){game.setScreen(new FanScreen(game));}
     private void pot_click(){game.setScreen(new PotScreen(game));}
-    private void compressor_click(){game.setScreen(new PumpScreen(game));}
+
     private void lamp_click(){game.setScreen(new LampScreen(game));}
 
     private void x3_button_click(){

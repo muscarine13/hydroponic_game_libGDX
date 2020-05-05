@@ -1,7 +1,9 @@
 package com.acidcarpet.hydroponist;
 
-import com.acidcarpet.hydroponist.equipment.Box;
+
+import com.acidcarpet.hydroponist.box.Box;
 import com.acidcarpet.hydroponist.screen.donat.DonatResources;
+import com.acidcarpet.hydroponist.screen.plant.PlantResources;
 import com.acidcarpet.hydroponist.screen.seedling.SeedlingResources;
 import com.acidcarpet.hydroponist.screen.settings.SettingsResources;
 import com.acidcarpet.hydroponist.screen.shop.ShopResources;
@@ -10,9 +12,9 @@ import com.acidcarpet.hydroponist.screen.box.BoxResources;
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.screen.fan.FanResources;
 import com.acidcarpet.hydroponist.screen.lamp.LampResources;
-import com.acidcarpet.hydroponist.screen.deprecated.plant.PlantResources;
+
 import com.acidcarpet.hydroponist.screen.pot.PotResources;
-import com.acidcarpet.hydroponist.screen.pump.PumpResources;
+
 import com.badlogic.gdx.Game;
 
 
@@ -29,7 +31,7 @@ public class GameEngine extends Game {
 		LampResources.set_all();
 		PlantResources.set_all();
 		PotResources.set_all();
-		PumpResources.set_all();
+
 		ShopResources.set_all();
 		SeedlingResources.set_all();
 		DonatResources.set_all();
@@ -75,7 +77,6 @@ public class GameEngine extends Game {
 		LampResources.dispose_all();
 		PlantResources.dispose_all();
 		PotResources.dispose_all();
-		PumpResources.dispose_all();
 		ShopResources.dispose_all();
 		SeedlingResources.dispose_all();
 		DonatResources.dispose_all();
