@@ -37,4 +37,16 @@ public class Root {
         out+=side_roots;
         return out;
     }
+
+    public double getLength() {
+        return length;
+    }
+
+    public int getSide_roots() {
+        return side_roots;
+    }
+
+    public RootsType getType() {
+        return type;
+    }
 }

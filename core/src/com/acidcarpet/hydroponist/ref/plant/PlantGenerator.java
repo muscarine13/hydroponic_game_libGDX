@@ -1,6 +1,8 @@
 package com.acidcarpet.hydroponist.ref.plant;
 
 import com.acidcarpet.hydroponist.Wrench;
+import com.acidcarpet.hydroponist.ref.plant.flower.Flower;
+import com.acidcarpet.hydroponist.ref.plant.flower.FlowersType;
 import com.acidcarpet.hydroponist.ref.plant.leave.LeavesType;
 import com.acidcarpet.hydroponist.ref.plant.root.RootsType;
 
@@ -16,6 +18,7 @@ public class PlantGenerator {
 
         LeavesType leavesType = generate_leavesType();
         RootsType rootsType = generate_rootsType();
+        FlowersType flowersType = generate_flowersType();
 
         SeedType seedType = generate_seedType();
         PreVegetationType preVegetationType = generate_preVegetationType();
@@ -23,7 +26,7 @@ public class PlantGenerator {
         PreBloomType preBloomType = generate_preBloomType();
         PostBloomType postBloomType = generate_postBloomType();
 
-        return new Plant(lifetimeType, genusType, visumType, leavesType, rootsType, seedType, preVegetationType, postVegetationType, preBloomType, postBloomType);
+        return new Plant(lifetimeType, genusType, visumType, leavesType, rootsType, flowersType, seedType, preVegetationType, postVegetationType, preBloomType, postBloomType);
     }
 
     public static LifetimeType generate_lifetimeType(){
@@ -40,6 +43,9 @@ public class PlantGenerator {
     }
     public static RootsType generate_rootsType(){
         return RootsType.values()[Wrench.random_int(0, RootsType.values().length-1)];
+    }
+    public static FlowersType generate_flowersType(){
+        return FlowersType.values()[Wrench.random_int(0, FlowersType.values().length-1)];
     }
 
     public static SeedType generate_seedType(){

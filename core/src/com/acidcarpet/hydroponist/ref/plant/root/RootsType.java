@@ -24,4 +24,20 @@ public enum RootsType {
         this.ph_min = ph_min;
         this.ph_max = ph_max;
     }
+
+    public double getLength() {
+        return length;
+    }
+
+    public int getMaximum_side_roots() {
+        return maximum_side_roots;
+    }
+
+    public double getPh_min() {
+        return ph_min;
+    }
+
+    public double getPh_max() {
+        return ph_max;
+    }
 }

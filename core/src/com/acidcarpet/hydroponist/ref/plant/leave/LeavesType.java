@@ -34,6 +34,39 @@ public enum LeavesType {
     int min_temperature;
     int max_temperature;
 
+    public double getPercent_height() {
+        return percent_height;
+    }
 
+    public double getPercent_width() {
+        return percent_width;
+    }
 
+    public double getEnergy_multiplier() {
+        return energy_multiplier;
+    }
+
+    public double getOxygen_multiplier() {
+        return oxygen_multiplier;
+    }
+
+    public double getWater_multiplier() {
+        return water_multiplier;
+    }
+
+    public int getLight_energy() {
+        return light_energy;
+    }
+
+    public int getDark_energy() {
+        return dark_energy;
+    }
+
+    public int getMin_temperature() {
+        return min_temperature;
+    }
+
+    public int getMax_temperature() {
+        return max_temperature;
+    }
 }

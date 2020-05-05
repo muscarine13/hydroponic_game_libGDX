@@ -86,6 +86,44 @@ public class Plant {
     private int bloom_remain;
     private int post_bloom_remain;
 
+    public Elements current_macro_primary(){
+        switch (stage){
+            case SEED:              return seedType.elements;
+            case PRE_VEGETATION:    return preVegetationType.elements;
+            case VEGETATION:        return Elements.K;
+            case POST_VEGETATION:   return postVegetationType.elements;
+            case PRE_BLOOM:         return preBloomType.elements;
+            case BLOOM:             return Elements.P;
+            case POST_BLOOM:        return postBloomType.elements;
+
+            default: return Elements.EMPTY;
+        }
+    }
+    public Elements current_macro_secondary(){
+        switch (stage){
+
+            case PRE_VEGETATION:
+            case VEGETATION:
+            case POST_VEGETATION:
+                return genusType.vegetation_element;
+
+            case PRE_BLOOM:
+            case BLOOM:
+            case POST_BLOOM:
+                return genusType.bloom_element;
+
+            default:
+                return Elements.EMPTY;
+        }
+    }
+
+    public Elements current_micro_primary(){
+        return visumType.micro_primary;
+    }
+    public Elements current_micro_secondary(){
+        return visumType.micro_secondary;
+    }
+
     private void roots_action(){
         if(stage==Stages.HARVEST) return;
 
@@ -115,111 +153,11 @@ public class Plant {
             }
 
             maximum_score+=4;
-            switch (stage){
-                case SEED:
-                    if(Box.getInstance().getPot().macro_main()==seedType.elements){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().macro_secondary()== Elements.EMPTY){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_main()==visumType.micro_primary){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_secondary()==visumType.micro_secondary){
-                        current_score++;
-                    }
-                    break;
+            if(Box.getInstance().getPot().macro_main()==current_macro_primary()) current_score++;
+            if(Box.getInstance().getPot().macro_secondary()==current_macro_secondary()) current_score++;
+            if(Box.getInstance().getPot().micro_main()==current_micro_primary()) current_score++;
+            if(Box.getInstance().getPot().micro_secondary()==current_micro_secondary()) current_score++;
 
-                case PRE_VEGETATION:
-                    if(Box.getInstance().getPot().macro_main()==preVegetationType.elements){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().macro_secondary()== genusType.vegetation_element){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_main()==visumType.micro_primary){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_secondary()==visumType.micro_secondary){
-                        current_score++;
-                    }
-                    break;
-
-                case VEGETATION:
-                    if(Box.getInstance().getPot().macro_main()==Elements.K){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().macro_secondary()== genusType.vegetation_element){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_main()==visumType.micro_primary){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_secondary()==visumType.micro_secondary){
-                        current_score++;
-                    }
-                    break;
-                case POST_VEGETATION:
-                    if(Box.getInstance().getPot().macro_main()==postVegetationType.elements){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().macro_secondary()== genusType.vegetation_element){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_main()==visumType.micro_primary){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_secondary()==visumType.micro_secondary){
-                        current_score++;
-                    }
-                    break;
-                case PRE_BLOOM:
-                    if(Box.getInstance().getPot().macro_main()==preBloomType.elements){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().macro_secondary()== genusType.bloom_element){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_main()==visumType.micro_primary){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_secondary()==visumType.micro_secondary){
-                        current_score++;
-                    }
-                    break;
-                case BLOOM:
-                    if(Box.getInstance().getPot().macro_main()==Elements.P){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().macro_secondary()== genusType.bloom_element){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_main()==visumType.micro_primary){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_secondary()==visumType.micro_secondary){
-                        current_score++;
-                    }
-                    break;
-                case POST_BLOOM:
-                    if(Box.getInstance().getPot().macro_main()==postBloomType.elements){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().macro_secondary()== genusType.bloom_element){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_main()==visumType.micro_primary){
-                        current_score++;
-                    }
-                    if(Box.getInstance().getPot().micro_secondary()==visumType.micro_secondary){
-                        current_score++;
-                    }
-                    break;
-                case HARVEST:
-
-                    break;
-            }
 
         }
 
@@ -479,6 +417,9 @@ public class Plant {
     public double get_percent_day(){
         return ((double)light/((double)light+(double)dark))*100;
     }
+    public double get_percent_hp(){
+        return ((double)current_score/(double)maximum_score)*100;
+    }
 
     public Image get_image(){
         String genus;
@@ -503,6 +444,9 @@ public class Plant {
 
         return new Image(ContentPack.getAtlas().findRegion(genus+"_"+stage_name+"_"+visum));
     }
+    public String get_name(){
+        return genusType.name+" "+visumType;
+    }
 
     public int getSeed_remain() {
         return seed_remain;
@@ -526,12 +470,140 @@ public class Plant {
         return post_bloom_remain;
     }
 
+    public List<Leave> getLeaves() {
+        return leaves;
+    }
+    public List<Root> getRoots() {
+        return roots;
+    }
+    public List<Flower> getFlowers() {
+        return flowers;
+    }
+
+    public LifetimeType getLifetimeType() {
+        return lifetimeType;
+    }
+    public GenusType getGenusType() {
+        return genusType;
+    }
+    public VisumType getVisumType() {
+        return visumType;
+    }
+    public LeavesType getLeavesType() {
+        return leavesType;
+    }
+    public RootsType getRootsType() {
+        return rootsType;
+    }
+    public FlowersType getFlowersType() {
+        return flowersType;
+    }
+    public SeedType getSeedType() {
+        return seedType;
+    }
+    public PreVegetationType getPreVegetationType() {
+        return preVegetationType;
+    }
+    public PostVegetationType getPostVegetationType() {
+        return postVegetationType;
+    }
+    public PreBloomType getPreBloomType() {
+        return preBloomType;
+    }
+    public PostBloomType getPostBloomType() {
+        return postBloomType;
+    }
+
     public synchronized void second(){
             roots_action();
             leaves_action();
+            flowers_action();
             grow();
             change_stage();
 
 
+    }
+
+    public int flower_numerus(){
+        if(flowers==null) return 0;
+        if(flowers.isEmpty()) return 0;
+
+        return flowers.size();
+
+    }
+    public int flower_melius(){
+        if(flowers==null) return 0;
+        if(flowers.isEmpty()) return 0;
+
+        int out = 0;
+
+        for(Flower flower : flowers){
+            out+=flower.getLvl();
+        }
+        return out;
+    }
+
+    public int leave_numerus(){
+        if(leaves==null) return 0;
+        if(leaves.isEmpty()) return 0;
+
+        return leaves.size();
+    }
+    public int leave_regio(){
+        if(leaves==null) return 0;
+        if(leaves.isEmpty()) return 0;
+
+        int out = 0;
+
+        for(Leave leave : leaves){
+            out+=leave.cm();
+        }
+        return out;
+    }
+
+    public int root_latus(){
+        if(roots==null) return 0;
+        if(roots.isEmpty()) return 0;
+
+        int out = 0;
+
+        for(Root root : roots){
+            out+=root.getSide_roots();
+        }
+        return out;
+    }
+    public int root_prima(){
+        if(roots==null) return 0;
+        if(roots.isEmpty()) return 0;
+
+        return roots.size();
+    }
+    public int root_water(){
+        if(roots==null) return 0;
+        if(roots.isEmpty()) return 0;
+
+        int out = 0;
+
+        for(Root root : roots){
+            out+=root.water_production();
+        }
+        return out;
+    }
+
+    public int flower_coin(){
+        int out = 0;
+
+        for(Flower flower : flowers){
+            out+=flower.getCoin();
+        }
+        return out;
+    }
+    public int flower_diamond(){
+        int out = 0;
+
+        for(Flower flower : flowers){
+            out+=flower.getDiamond();
+        }
+        return out;
     }
 }

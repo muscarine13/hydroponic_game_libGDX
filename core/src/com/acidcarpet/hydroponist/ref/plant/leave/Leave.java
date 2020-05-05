@@ -7,7 +7,7 @@ public class Leave {
     private double length;
     private double width;
 
-    private int cm(){
+    public int cm(){
         return (int)(1+(length*width));
     }
     public Leave(LeavesType type) {
