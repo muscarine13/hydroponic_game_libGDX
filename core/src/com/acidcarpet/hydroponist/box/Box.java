@@ -1,8 +1,11 @@
 package com.acidcarpet.hydroponist.box;
 
 import com.acidcarpet.hydroponist.fan.Fan;
+import com.acidcarpet.hydroponist.fan.FanGenerator;
 import com.acidcarpet.hydroponist.lamp.Lamp;
+import com.acidcarpet.hydroponist.lamp.LampGenerator;
 import com.acidcarpet.hydroponist.plant.Plant;
+import com.acidcarpet.hydroponist.plant.PlantGenerator;
 import com.acidcarpet.hydroponist.pot.Pot;
 
 public class Box {
@@ -11,6 +14,13 @@ public class Box {
     public static Box getInstance(){
         if(instance==null) instance = new Box();
         return instance;
+    }
+
+    Box(){
+        lamp = LampGenerator.generate_random();
+        pot = Pot.getInstance();
+        fan = FanGenerator.generate_random();
+        plant = PlantGenerator.generate_random();
     }
 
     private Lamp lamp;

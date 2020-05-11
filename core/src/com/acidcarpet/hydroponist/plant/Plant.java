@@ -12,6 +12,7 @@ import com.acidcarpet.hydroponist.plant.leave.Leave;
 import com.acidcarpet.hydroponist.plant.leave.LeavesType;
 import com.acidcarpet.hydroponist.plant.root.Root;
 import com.acidcarpet.hydroponist.plant.root.RootsType;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 import java.util.ArrayList;
@@ -19,6 +20,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class Plant {
+
+    TextureAtlas atlas;
 
     LifetimeType lifetimeType;
     GenusType genusType;
@@ -56,6 +59,8 @@ public class Plant {
 
         bounty_coin = Wrench.random_int(lifetimeType.coin_minimum, lifetimeType.coin_maximum);
         bounty_diamond = Wrench.random_int(lifetimeType.diamond_minimum, lifetimeType.diamond_maximum);
+
+        atlas = ContentPack.getPlant_atlas();
     }
 
     private Stages stage;
@@ -427,11 +432,10 @@ public class Plant {
 
     public Image get_image(){
         String genus;
-        String visum;
         String stage_name;
 
         genus = this.genusType.code;
-        visum = this.visumType.code;
+
 
         switch (stage){
             case SEED: stage_name = "seed"; break;
@@ -446,7 +450,7 @@ public class Plant {
 
         }
 
-        return new Image(ContentPack.getAtlas().findRegion(genus+"_"+stage_name+"_"+visum));
+        return new Image(atlas.findRegion(genus+"_"+stage_name));
     }
     public String get_name(){
         return genusType.name+" "+visumType;

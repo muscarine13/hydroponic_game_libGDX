@@ -1,5 +1,6 @@
 package com.acidcarpet.hydroponist.lamp;
 
+import com.acidcarpet.hydroponist.ContentPack;
 import com.acidcarpet.hydroponist.Wrench;
 import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -25,7 +26,7 @@ public class Lamp implements Storable {
 
     protected Lamp(com.acidcarpet.hydroponist.lamp.Type type, Tier tier, com.acidcarpet.hydroponist.lamp.TemperatureQuality temperatureQuality, com.acidcarpet.hydroponist.lamp.EnergyQuality energyQuality) {
 
-
+atlas = ContentPack.getLamp_atlas();
         this.type = type;
         this.tier = tier;
         this.temperatureQuality = temperatureQuality;

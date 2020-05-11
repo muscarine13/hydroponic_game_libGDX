@@ -61,6 +61,7 @@ public class BoxScreen implements Screen {
         background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
 
         stage.addActor(background);
+        refresh = true;
 
     }
 

@@ -1,5 +1,6 @@
 package com.acidcarpet.hydroponist.pot;
 
+import com.acidcarpet.hydroponist.ContentPack;
 import com.acidcarpet.hydroponist.Elements;
 import com.acidcarpet.hydroponist.bottle.MacroPrimaryType;
 import com.acidcarpet.hydroponist.bottle.MacroSecondaryType;
@@ -17,6 +18,10 @@ public class Pot {
         return instance;
     }
 
+    Pot(){
+        atlas = ContentPack.getPot_atlas();
+        level = Level.LVL_1;
+    }
     TextureAtlas atlas;
 
     private Level level;

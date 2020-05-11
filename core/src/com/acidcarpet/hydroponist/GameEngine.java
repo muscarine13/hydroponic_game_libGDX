@@ -24,6 +24,8 @@ public class GameEngine extends Game {
 	@Override
 	public void create () {
 
+
+
 		BoxResources.set_all();
 		FanResources.set_all();
 		LampResources.set_all();
@@ -39,9 +41,23 @@ public class GameEngine extends Game {
 		new Thread(){
 			@Override
 			public void run() {
+				try{
+					Thread.currentThread().sleep(4000);
+				}catch (Exception e){
+					e.printStackTrace();
+				}
+				ContentPack.set_all();
+			}
+		}.start();
+
+
+		new Thread(){
+			@Override
+			public void run() {
 				while (true){
 					if(Box.getInstance().getPlant()!=null) {
 						Box.getInstance().second();
+						BoxScreen.update();
 						//Box.getInstance().test_info();
 					}
 					try {
@@ -67,6 +83,8 @@ public class GameEngine extends Game {
 	
 	@Override
 	public void dispose () {
+
+		ContentPack.dispose_all();
 
 		BoxResources.dispose_all();
 		FanResources.dispose_all();

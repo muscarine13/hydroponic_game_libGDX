@@ -1,4 +1,5 @@
 package com.acidcarpet.hydroponist.fan;
+import com.acidcarpet.hydroponist.ContentPack;
 import com.acidcarpet.hydroponist.Wrench;
 import com.acidcarpet.hydroponist.storage.Storable;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -41,6 +42,8 @@ public class Fan implements Storable {
                         *
                         Wrench.random_double(temperatureQuality.minPercent, temperatureQuality.maxPercent));
         if(temperature == 0) temperature = 1;
+
+        atlas = ContentPack.getFan_atlas();
     }
 
     public synchronized boolean consume(double volume){
