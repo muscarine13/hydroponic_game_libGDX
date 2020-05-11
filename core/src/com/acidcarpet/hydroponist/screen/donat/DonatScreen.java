@@ -50,6 +50,7 @@ public class DonatScreen implements Screen {
     public void show() {
         stage = new Stage(new ExtendViewport(1080, 1920));
 
+        DonatResources.set_all();
         atlas = DonatResources.getAtlas();
         skin = DonatResources.getSkin();
         Gdx.input.setInputProcessor(stage);
@@ -123,6 +124,7 @@ public class DonatScreen implements Screen {
     @Override
     public void dispose() {
         stage.dispose();
+        DonatResources.dispose_all();
     }
 
     public Group generate_resources_pane(){

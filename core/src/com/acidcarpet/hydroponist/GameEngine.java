@@ -22,40 +22,13 @@ public class GameEngine extends Game {
 
 
 	@Override
-	public void create () {
+	public void create() {
 
-
-
-		BoxResources.set_all();
-		FanResources.set_all();
-		LampResources.set_all();
-		PlantResources.set_all();
-		PotResources.set_all();
-
-		ShopResources.set_all();
-		SeedlingResources.set_all();
-		DonatResources.set_all();
-		SettingsResources.set_all();
-
-
-		new Thread(){
+		new	Thread() {
 			@Override
-			public void run() {
-				try{
-					Thread.currentThread().sleep(4000);
-				}catch (Exception e){
-					e.printStackTrace();
-				}
-				ContentPack.set_all();
-			}
-		}.start();
-
-
-		new Thread(){
-			@Override
-			public void run() {
-				while (true){
-					if(Box.getInstance().getPlant()!=null) {
+			public void run () {
+				while (true) {
+					if (Box.getInstance().getPlant() != null) {
 						Box.getInstance().second();
 						BoxScreen.update();
 						//Box.getInstance().test_info();
@@ -69,15 +42,21 @@ public class GameEngine extends Game {
 
 			}
 		}.start();
-
-
-	setScreen(new BoxScreen(this));
+		setScreen(new BoxScreen(this));
 
 	}
+
+
+
+
+
+
+
 
 	@Override
 	public void render () {
 		super.render();
+
 
 	}
 	

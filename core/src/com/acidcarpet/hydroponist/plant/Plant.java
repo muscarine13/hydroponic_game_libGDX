@@ -60,7 +60,7 @@ public class Plant {
         bounty_coin = Wrench.random_int(lifetimeType.coin_minimum, lifetimeType.coin_maximum);
         bounty_diamond = Wrench.random_int(lifetimeType.diamond_minimum, lifetimeType.diamond_maximum);
 
-        atlas = ContentPack.getPlant_atlas();
+        atlas = ContentPack.getAll_atlas();
     }
 
     private Stages stage;

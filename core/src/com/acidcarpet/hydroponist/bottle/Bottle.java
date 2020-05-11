@@ -1,6 +1,7 @@
 package com.acidcarpet.hydroponist.bottle;
 
 import com.acidcarpet.hydroponist.storage.Storable;
+import com.acidcarpet.hydroponist.storage.Type;
 
 public class Bottle implements Storable {
 
@@ -277,5 +278,10 @@ public class Bottle implements Storable {
 
     public double getpH() {
         return pH;
+    }
+
+    @Override
+    public Type getStorableType() {
+        return Type.BOTTLE;
     }
 }

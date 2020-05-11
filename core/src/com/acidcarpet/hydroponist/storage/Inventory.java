@@ -34,15 +34,6 @@ public class Inventory {
         List<com.acidcarpet.hydroponist.storage.Storable> fan_array = new ArrayList<>();
         storage.put(Type.FAN.line, fan_array);
 
-        List<com.acidcarpet.hydroponist.storage.Storable> plant_array = new ArrayList<>();
-        storage.put(Type.PLANT.line, plant_array);
-
-        List<com.acidcarpet.hydroponist.storage.Storable> pot_array = new ArrayList<>();
-        storage.put(Type.POT.line, pot_array);
-
-        List<com.acidcarpet.hydroponist.storage.Storable> pump_array = new ArrayList<>();
-        storage.put(Type.PUMP.line, pump_array);
-
         List<com.acidcarpet.hydroponist.storage.Storable> bottle_array = new ArrayList<>();
         storage.put(Type.BOTTLE.line, bottle_array);
 
@@ -57,20 +48,14 @@ public class Inventory {
 
         Type item_type = null;
 
-        if(item_to_add.toString().equals("LAMP"))   item_type = Type.LAMP;
-        if(item_to_add.toString().equals("FAN"))    item_type = Type.FAN;
-        if(item_to_add.toString().equals("PLANT"))  item_type = Type.PLANT;
-        if(item_to_add.toString().equals("POT"))    item_type = Type.POT;
-        if(item_to_add.toString().equals("PUMP"))   item_type = Type.PUMP;
-        if(item_to_add.toString().equals("BOTTLE")) item_type = Type.BOTTLE;
+       item_type = item_to_add.getStorableType();
+
 
         if(item_type!=null){
            switch (item_type){
                case LAMP:   storage.get(Type.LAMP.line).add(item_to_add);  break;
                case FAN:    storage.get(Type.FAN.line).add(item_to_add);   break;
-               case PLANT:  storage.get(Type.PLANT.line).add(item_to_add); break;
-               case POT:    storage.get(Type.POT.line).add(item_to_add);   break;
-               case PUMP:   storage.get(Type.PUMP.line).add(item_to_add);  break;
+
                case BOTTLE: storage.get(Type.BOTTLE.line).add(item_to_add);break;
                default:
            }
@@ -84,9 +69,7 @@ public class Inventory {
             switch (type){
                 case LAMP:   storage.get(Type.LAMP.line).remove(index);  break;
                 case FAN:    storage.get(Type.FAN.line).remove(index);   break;
-                case PLANT:  storage.get(Type.PLANT.line).remove(index); break;
-                case POT:    storage.get(Type.POT.line).remove(index);   break;
-                case PUMP:   storage.get(Type.PUMP.line).remove(index);  break;
+
                 case BOTTLE: storage.get(Type.BOTTLE.line).remove(index);break;
                 default:
             }
@@ -114,9 +97,7 @@ public class Inventory {
             switch (type){
                 case LAMP:   return storage.get(Type.LAMP.line).get(index);
                 case FAN:    return storage.get(Type.FAN.line).get(index);
-                case PLANT:  return storage.get(Type.PLANT.line).get(index);
-                case POT:    return storage.get(Type.POT.line).get(index);
-                case PUMP:   return storage.get(Type.PUMP.line).get(index);
+
                 case BOTTLE: return storage.get(Type.BOTTLE.line).get(index);
                 default: return null;
             }
@@ -130,9 +111,7 @@ public class Inventory {
             switch (type){
                 case LAMP:   return storage.get(Type.LAMP.line).remove(index);
                 case FAN:    return storage.get(Type.FAN.line).remove(index);
-                case PLANT:  return storage.get(Type.PLANT.line).remove(index);
-                case POT:    return storage.get(Type.POT.line).remove(index);
-                case PUMP:   return storage.get(Type.PUMP.line).remove(index);
+
                 case BOTTLE: return storage.get(Type.BOTTLE.line).remove(index);
                 default: return null;
             }
@@ -146,9 +125,7 @@ public class Inventory {
             switch (type){
                 case LAMP:   return storage.get(Type.LAMP.line);
                 case FAN:    return storage.get(Type.FAN.line);
-                case PLANT:  return storage.get(Type.PLANT.line);
-                case POT:    return storage.get(Type.POT.line);
-                case PUMP:   return storage.get(Type.PUMP.line);
+
                 case BOTTLE: return storage.get(Type.BOTTLE.line);
                 default: return null;
             }
@@ -172,19 +149,6 @@ public class Inventory {
         update();
     }
 
-    public enum Type{
-        LAMP("LAMP"),
-        FAN("FAN"),
-        PLANT("PLANT"),
-        POT("POT"),
-        PUMP("PUMP"),
-        BOTTLE("BOTTLE");
 
-        Type(String line){
-            this.line = line;
-        }
-        String line;
-
-    }
 
 }

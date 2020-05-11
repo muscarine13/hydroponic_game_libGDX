@@ -5,6 +5,7 @@ import com.acidcarpet.hydroponist.lamp.Lamp;
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.storage.Inventory;
 import com.acidcarpet.hydroponist.storage.Storable;
+import com.acidcarpet.hydroponist.storage.Type;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -77,6 +78,7 @@ public class LampScreen implements Screen {
     public void show() {
         stage = new Stage(new ExtendViewport(1080, 1920));
 
+        LampResources.set_all();
         atlas = LampResources.getAtlas();
         skin = LampResources.getSkin();
         Gdx.input.setInputProcessor(stage);
@@ -144,6 +146,7 @@ public class LampScreen implements Screen {
     @Override
     public void dispose() {
         stage.dispose();
+        LampResources.dispose_all();
     }
 
     private Group generate_lamp_pane(){
@@ -252,7 +255,7 @@ public class LampScreen implements Screen {
         Table table = new Table();
         table.defaults().width(1080).height(230);
 
-        for(Storable current_lamp : Inventory.getInstance().get_list(Inventory.Type.LAMP)){
+        for(Storable current_lamp : Inventory.getInstance().get_list(Type.LAMP)){
 
             table.add(generate_item((Lamp)current_lamp));
             table.row();

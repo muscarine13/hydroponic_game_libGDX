@@ -34,9 +34,6 @@ public class Box {
         pot.second();
         plant.second();
     }
-    public static void setInstance(Box instance) {
-        Box.instance = instance;
-    }
 
     public Lamp getLamp() {
         return lamp;

@@ -5,6 +5,7 @@ import com.acidcarpet.hydroponist.fan.Fan;
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.storage.Inventory;
 import com.acidcarpet.hydroponist.storage.Storable;
+import com.acidcarpet.hydroponist.storage.Type;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -75,6 +76,7 @@ private static void update(){
 
         stage = new Stage(new ExtendViewport(1080, 1920));
 
+        FanResources.set_all();
         atlas = FanResources.getAtlas();
         skin = FanResources.getSkin();
         Gdx.input.setInputProcessor(stage);
@@ -142,6 +144,7 @@ private static void update(){
     @Override
     public void dispose() {
         stage.dispose();
+        FanResources.dispose_all();
     }
 
     private Group generate_fan_pane(){
@@ -252,7 +255,7 @@ private static void update(){
 
 
 
-        for(Storable current_fan : Inventory.getInstance().get_list(Inventory.Type.FAN)){
+        for(Storable current_fan : Inventory.getInstance().get_list(Type.FAN)){
 
             table.add(generate_item((Fan)current_fan));
             table.row();

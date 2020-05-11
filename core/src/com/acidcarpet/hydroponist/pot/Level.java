@@ -2,12 +2,7 @@ package com.acidcarpet.hydroponist.pot;
 
 public enum Level {
 
-    LVL_MAX(250, "MAX"),
-    LVL_15(200, "XV"),
-    LVL_14(175, "XIV"),
-    LVL_13(150, "XIII"),
-    LVL_12(115, "XII"),
-    LVL_11(100, "XI"),
+
     LVL_10(90, "X"),
     LVL_9(85, "IX"),
     LVL_8(65, "VIII"),
@@ -17,8 +12,8 @@ public enum Level {
     LVL_4(40, "IV"),
     LVL_3(35, "III"),
     LVL_2(25, "II"),
-    LVL_1(15, "I"),
-    LVL_MIN(10, "NG");
+    LVL_1(15, "I");
+
 
     int maximum_volume;
     String name;

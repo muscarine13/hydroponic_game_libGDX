@@ -7,6 +7,7 @@ import com.acidcarpet.hydroponist.pot.Pot;
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.storage.Inventory;
 import com.acidcarpet.hydroponist.storage.Storable;
+import com.acidcarpet.hydroponist.storage.Type;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -129,6 +130,8 @@ public class PotScreen implements Screen {
 
         stage = new Stage(new ExtendViewport(1080, 1920));
 
+        PotResources.set_all();
+
         atlas = PotResources.getAtlas();
         skin = PotResources.getSkin();
         Gdx.input.setInputProcessor(stage);
@@ -198,7 +201,8 @@ public class PotScreen implements Screen {
 
     @Override
     public void dispose() {
-
+stage.dispose();
+PotResources.dispose_all();
     }
 
     private Group generate_pot_pane(){
@@ -573,17 +577,17 @@ public class PotScreen implements Screen {
             case POT:
             table.defaults().width(1080).height(230);
 
-            for(Storable current_pot : Inventory.getInstance().get_list(Inventory.Type.POT)){
-                table.add(generate_item((Pot)current_pot));
-                table.row();
-            }
+//            for(Storable current_pot : Inventory.getInstance().get_list(Type.POT)){
+//                table.add(generate_item((Pot)current_pot));
+//                table.row();
+//            }
 
                 break;
 
             case BOTTLE:
             table.defaults().width(1080).height(300);
 
-            for(Storable current_bottle : Inventory.getInstance().get_list(Inventory.Type.BOTTLE)){
+            for(Storable current_bottle : Inventory.getInstance().get_list(Type.BOTTLE)){
                 table.add(generate_item((Bottle)current_bottle));
                 table.row();
             }

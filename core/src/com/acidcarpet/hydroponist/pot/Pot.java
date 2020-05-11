@@ -19,15 +19,15 @@ public class Pot {
     }
 
     Pot(){
-        atlas = ContentPack.getPot_atlas();
+        atlas = ContentPack.getAll_atlas();
         level = Level.LVL_1;
     }
     TextureAtlas atlas;
 
     private Level level;
     public synchronized void level_up(){
-        if(level==null) level = Level.LVL_MIN;
-        if(level==Level.LVL_MAX) return;
+        if(level==null) level = Level.LVL_1;
+        if(level==Level.LVL_10) return;
 
         for (int i  = 0; i<Level.values().length; i++){
             if(Level.values()[i] == level){
@@ -37,8 +37,8 @@ public class Pot {
 
     }
     public synchronized void level_down(){
-        if(level==null) level = Level.LVL_MIN;
-        if(level==Level.LVL_MIN) return;
+        if(level==null) level = Level.LVL_1;
+        if(level==Level.LVL_1) return;
 
         for (int i  = 0; i<Level.values().length; i++){
             if(Level.values()[i] == level){
@@ -229,7 +229,7 @@ public class Pot {
     }
 
     public Image get_image(){
-        return new Image(atlas.findRegion("pot_"+level.name));
+        return new Image(atlas.findRegion("pot_"+level.name+"_on"));
     }
     private int ppm_N;
     private int ppm_P;

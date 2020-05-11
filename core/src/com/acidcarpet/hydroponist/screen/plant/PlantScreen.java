@@ -48,6 +48,8 @@ public class PlantScreen extends InputAdapter implements Screen {
     public void show() {
         stage = new Stage(new ExtendViewport(1080, 1920));
 
+        PlantResources.set_all();
+
         atlas = PotResources.getAtlas();
         skin = PotResources.getSkin();
         Gdx.input.setInputProcessor(stage);
@@ -138,6 +140,8 @@ public class PlantScreen extends InputAdapter implements Screen {
     @Override
     public void dispose() {
 
+        stage.dispose();
+        PlantResources.dispose_all();
     }
 
     private Group generate_plant_pane(){

@@ -45,6 +45,8 @@ public class ShopScreen implements Screen {
     public void show() {
         stage = new Stage(new ExtendViewport(1080, 1920));
 
+        ShopResources.set_all();
+
         atlas = ShopResources.getAtlas();
         skin = ShopResources.getSkin();
         Gdx.input.setInputProcessor(stage);
@@ -115,6 +117,7 @@ public class ShopScreen implements Screen {
     @Override
     public void dispose() {
         stage.dispose();
+        ShopResources.dispose_all();
     }
 
     public Group generate_resources_pane(){

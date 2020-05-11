@@ -1,6 +1,7 @@
 package com.acidcarpet.hydroponist.screen.box;
 
 
+import com.acidcarpet.hydroponist.ContentPack;
 import com.acidcarpet.hydroponist.box.Box;
 import com.acidcarpet.hydroponist.screen.donat.DonatScreen;
 import com.acidcarpet.hydroponist.screen.fan.FanScreen;
@@ -51,6 +52,9 @@ public class BoxScreen implements Screen {
     public void show() {
         stage = new Stage(new ExtendViewport(1080, 1920));
 
+        BoxResources.set_all();
+        ContentPack.set_all();
+
         atlas = BoxResources.getAtlas();
         skin = BoxResources.getSkin();
 
@@ -79,8 +83,6 @@ public class BoxScreen implements Screen {
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("fan"));              }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().findActor("lamp").clear();                                  }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("lamp"));             }catch (Exception e){e.printStackTrace();}
-            try {   stage.getRoot().findActor("x3_button").clearListeners();                    }catch (Exception e){e.printStackTrace();}
-            try {   stage.getRoot().removeActor(stage.getRoot().findActor("x3_button"));        }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().findActor("shop_button").clearListeners();                  }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("shop_button"));      }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().findActor("storage_button").clearListeners();               }catch (Exception e){e.printStackTrace();}
@@ -89,19 +91,16 @@ public class BoxScreen implements Screen {
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("donation_button"));  }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().findActor("settings_button").clearListeners();              }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("settings_button"));  }catch (Exception e){e.printStackTrace();}
-            try {   stage.getRoot().findActor("room_button").clearListeners();                  }catch (Exception e){e.printStackTrace();}
-            try {   stage.getRoot().removeActor(stage.getRoot().findActor("room_button"));      }catch (Exception e){e.printStackTrace();}
 
             try {   stage.getRoot().addActor( generate_plant());                                       }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor( generate_pot());                                         }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor( generate_fan());                                         }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor( generate_lamp());                                        }catch (Exception e){e.printStackTrace();}
-            try {   stage.getRoot().addActor(generate_x3_button());                                    }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor(generate_shop_button());                                  }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor(generate_storage_button());                               }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor(generate_donation_button());                              }catch (Exception e){e.printStackTrace();}
             try {   stage.getRoot().addActor(generate_settings_button());                              }catch (Exception e){e.printStackTrace();}
-            try {   stage.getRoot().addActor(generate_room_button());                                  }catch (Exception e){e.printStackTrace();}
+
 
             refresh = false;
         }
@@ -134,6 +133,8 @@ public class BoxScreen implements Screen {
     @Override
     public void dispose() {
     stage.dispose();
+    BoxResources.dispose_all();
+    ContentPack.dispose_all();
     }
 
 
@@ -141,12 +142,9 @@ public class BoxScreen implements Screen {
     private void plant_click(){game.setScreen(new PlantScreen(game));}
     private void fan_click(){game.setScreen(new FanScreen(game));}
     private void pot_click(){game.setScreen(new PotScreen(game));}
-
     private void lamp_click(){game.setScreen(new LampScreen(game));}
 
-    private void x3_button_click(){
-        System.out.println("x3_button click!");
-    }
+
     private void shop_button_click(){
         game.setScreen(new ShopScreen(game));
     }
@@ -159,15 +157,12 @@ public class BoxScreen implements Screen {
     private void settings_button_click(){
         game.setScreen(new SettingsScreen(game));
     }
-    private void room_button_click(){
-        System.out.println("room_button click!");
-    }
+
     //
     public Group generate_lamp(){
         Group out = new Group();
 
         if(Box.getInstance().getLamp()==null) {
-
             return out;
         }
 
@@ -201,7 +196,6 @@ public class BoxScreen implements Screen {
                }
            });
            out.addActor(current_lamp);
-
 
        }
 
@@ -285,20 +279,7 @@ public class BoxScreen implements Screen {
     }
 
     //
-    public ImageButton generate_x3_button(){
-        ImageButton out = new ImageButton(skin, "x3_button");
 
-        out.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                x3_button_click();
-            }
-        });
-        out.setPosition(930+40, 1420);
-        out.setName("x3_button");
-
-        return out;
-    }
     public ImageButton generate_shop_button(){
         ImageButton out = new ImageButton(skin, "shop_button");
 
@@ -355,20 +336,7 @@ public class BoxScreen implements Screen {
 
         return out;
     }
-    public ImageButton generate_room_button(){
-        ImageButton out = new ImageButton(skin, "room_button");
 
-        out.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                room_button_click();
-            }
-        });
-        out.setPosition(0+40, 1100);
-        out.setName("room_button");
-
-        return out;
-    }
 
 
 }

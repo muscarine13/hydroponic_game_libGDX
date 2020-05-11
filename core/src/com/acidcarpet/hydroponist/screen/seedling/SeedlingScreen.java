@@ -44,6 +44,7 @@ public class SeedlingScreen implements Screen {
     public void show() {
         stage = new Stage(new ExtendViewport(1080, 1920));
 
+        SeedlingResources.set_all();
         atlas = SeedlingResources.getAtlas();
         skin = SeedlingResources.getSkin();
         Gdx.input.setInputProcessor(stage);
@@ -111,7 +112,8 @@ public class SeedlingScreen implements Screen {
 
     @Override
     public void dispose() {
-
+        stage.dispose();
+        SeedlingResources.dispose_all();
     }
 
     public Group generate_resources_pane(){

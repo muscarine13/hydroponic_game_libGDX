@@ -7,12 +7,11 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public class Lamp implements Storable {
-    private TextureAtlas atlas;
 
-    private com.acidcarpet.hydroponist.lamp.Type type;
+    private Type type;
     private Tier tier;
-    private com.acidcarpet.hydroponist.lamp.TemperatureQuality temperatureQuality;
-    private com.acidcarpet.hydroponist.lamp.EnergyQuality energyQuality;
+    private TemperatureQuality temperatureQuality;
+    private EnergyQuality energyQuality;
 
     private int energy_production;
     private double temperature;
@@ -26,7 +25,7 @@ public class Lamp implements Storable {
 
     protected Lamp(com.acidcarpet.hydroponist.lamp.Type type, Tier tier, com.acidcarpet.hydroponist.lamp.TemperatureQuality temperatureQuality, com.acidcarpet.hydroponist.lamp.EnergyQuality energyQuality) {
 
-atlas = ContentPack.getLamp_atlas();
+
         this.type = type;
         this.tier = tier;
         this.temperatureQuality = temperatureQuality;
@@ -84,13 +83,17 @@ atlas = ContentPack.getLamp_atlas();
     }
 
     public Image get_on_image(){
-        return new Image(atlas.findRegion(type.id+"_"+tier.name+"_on"));
+
+       return new Image(ContentPack.getAll_atlas().findRegion(type.id+"_"+tier.name+"_on"));
+
+
+
     }
     public Image get_off_image(){
-        return new Image(atlas.findRegion(type.id+"_"+tier.name+"_off"));
+        return new Image(ContentPack.getAll_atlas().findRegion(type.id+"_"+tier.name+"_off"));
     }
     public Image get_light_image(){
-        return new Image(atlas.findRegion(type.id+"_"+tier.name+"_light"));
+        return new Image(ContentPack.getAll_atlas().findRegion(type.id+"_"+tier.name+"_light"));
     }
 
     public Type getType() {
@@ -116,5 +119,10 @@ atlas = ContentPack.getLamp_atlas();
     }
     public boolean isOn() {
         return on;
+    }
+
+    @Override
+    public com.acidcarpet.hydroponist.storage.Type getStorableType() {
+        return com.acidcarpet.hydroponist.storage.Type.LAMP;
     }
 }
