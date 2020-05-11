@@ -163,7 +163,7 @@ public class ShopScreen implements Screen {
         out.addActor(diamond_label);
 
 
-        out.setPosition(40+0, 1920-150);
+        out.setPosition(0, 1920-150);
         out.setName("resources_pane");
 
         return out;
@@ -192,7 +192,7 @@ public class ShopScreen implements Screen {
         out.addActor(pane);
 
         out.setName("items_pane");
-        out.setPosition(0+40, 160);
+        out.setPosition(0, 160);
 
         return out;
     }
@@ -296,7 +296,7 @@ public class ShopScreen implements Screen {
         out.addActor(back_button);
 
         out.setName("buttons_pane");
-        out.setPosition(0+40, 0);
+        out.setPosition(0, 0);
         return out;
     }
 

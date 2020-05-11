@@ -430,7 +430,7 @@ public class Plant {
         return ((double)current_score/(double)maximum_score)*100;
     }
 
-    public Image get_image(){
+    public String get_image(){
         String genus;
         String stage_name;
 
@@ -450,7 +450,7 @@ public class Plant {
 
         }
 
-        return new Image(atlas.findRegion(genus+"_"+stage_name));
+        return genus+"_"+stage_name;
     }
     public String get_name(){
         return genusType.name+" "+visumType;

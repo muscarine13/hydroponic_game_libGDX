@@ -170,25 +170,27 @@ public class BoxScreen implements Screen {
         Image current_light;
 
        if(Box.getInstance().getLamp().isOn()){
-           current_lamp = Box.getInstance().getLamp().get_on_image();
-           current_lamp.setPosition(140, 1720);
-           current_lamp.addListener(new ClickListener() {
-               @Override
-               public void clicked(InputEvent event, float x, float y) {
-                   lamp_click();
-               }
-           });
-           out.addActor(current_lamp);
 
-           current_light = Box.getInstance().getLamp().get_light_image();
-           current_light.setBounds(-40, 0, stage.getWidth(), current_light.getHeight());
+
+           current_light = new Image(ContentPack.getAll_atlas().findRegion(Box.getInstance().getLamp().get_light_image()));
+           current_light.setBounds(0, 0, 1080, 1920);
            current_light.setTouchable(Touchable.disabled);
            out.addActor(current_light);
 
+           current_lamp = new Image(ContentPack.getAll_atlas().findRegion(Box.getInstance().getLamp().get_on_image()));
+           current_lamp.setBounds(140, 1720, 800, 200);
+           current_lamp.addListener(new ClickListener() {
+               @Override
+               public void clicked(InputEvent event, float x, float y) {
+                   lamp_click();
+               }
+           });
+           out.addActor(current_lamp);
+
        }
        else {
-           current_lamp = Box.getInstance().getLamp().get_off_image();
-           current_lamp.setPosition(140, 1720);
+           current_lamp = new Image(ContentPack.getAll_atlas().findRegion(Box.getInstance().getLamp().get_off_image()));
+           current_lamp.setBounds(140, stage.getHeight()-200, 800, 200);
            current_lamp.addListener(new ClickListener() {
                @Override
                public void clicked(InputEvent event, float x, float y) {
@@ -199,7 +201,7 @@ public class BoxScreen implements Screen {
 
        }
 
-        out.setPosition(0+40,0);
+        out.setPosition(0,0);
         out.setName("lamp");
 
         return out;
@@ -209,9 +211,9 @@ public class BoxScreen implements Screen {
 
         if(Box.getInstance().getFan()!=null){
             if(Box.getInstance().getFan().isOn()){
-                current_fan = Box.getInstance().getFan().get_on_image();
+                current_fan = new Image(ContentPack.getAll_atlas().findRegion(Box.getInstance().getFan().get_on_image()));
             }else{
-                current_fan = Box.getInstance().getFan().get_off_image();
+                current_fan = new Image(ContentPack.getAll_atlas().findRegion(Box.getInstance().getFan().get_off_image()));
             }
 
 
@@ -220,7 +222,7 @@ public class BoxScreen implements Screen {
 
         }
 
-        current_fan.setPosition(15+40, 1420);
+        current_fan.setBounds(15, 1420, 300, 300);
         current_fan.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
@@ -235,14 +237,14 @@ public class BoxScreen implements Screen {
         Image current_plant;
 
         if(Box.getInstance().getPlant()!=null){
-            current_plant = Box.getInstance().getPlant().get_image();
+            current_plant = new Image(ContentPack.getAll_atlas().findRegion(Box.getInstance().getPlant().get_image()));
 
         }else{
             current_plant = new Image(atlas.findRegion("plant_empty"));
 
         }
 
-        current_plant.setPosition(190+40, 500);
+        current_plant.setBounds(190, 500, 700, 1000);
         current_plant.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
@@ -258,14 +260,14 @@ public class BoxScreen implements Screen {
         Image current_pot;
 
         if(Box.getInstance().getPot()!=null){
-            current_pot = Box.getInstance().getPot().get_image();
+            current_pot  = new Image(ContentPack.getAll_atlas().findRegion(Box.getInstance().getPot().get_image()));
 
         }else{
             current_pot = new Image(atlas.findRegion("pot_empty"));
 
         }
 
-        current_pot.setPosition(190+40, 0);
+        current_pot.setBounds(190, 0, 700, 500);
         current_pot.addListener(new ClickListener() {
             @Override
             public void clicked(InputEvent event, float x, float y) {
@@ -289,7 +291,7 @@ public class BoxScreen implements Screen {
                 shop_button_click();
             }
         });
-        out.setPosition(930+40, 1260);
+        out.setPosition(930, 1260);
         out.setName("shop_button");
 
         return out;
@@ -303,7 +305,7 @@ public class BoxScreen implements Screen {
                 storage_button_click();
             }
         });
-        out.setPosition(930+40, 1100);
+        out.setPosition(930, 1100);
         out.setName("storage_button");
 
         return out;
@@ -317,7 +319,7 @@ public class BoxScreen implements Screen {
                 donation_button_click();
             }
         });
-        out.setPosition(930+40, 940);
+        out.setPosition(930, 940);
         out.setName("donation_button");
 
         return out;
@@ -331,7 +333,7 @@ public class BoxScreen implements Screen {
                 settings_button_click();
             }
         });
-        out.setPosition(0+40, 1260);
+        out.setPosition(0, 1260);
         out.setName("settings_button");
 
         return out;

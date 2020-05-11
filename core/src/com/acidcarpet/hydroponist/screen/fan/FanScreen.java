@@ -237,7 +237,7 @@ private static void update(){
         }
 
         out.setName("fan_pane");
-        out.setPosition(40, 1920-450);
+        out.setPosition(0, 1920-450);
 
         return out;
     }
@@ -268,7 +268,7 @@ private static void update(){
         out.addActor(pane);
 
         out.setName("items_pane");
-        out.setPosition(40, 1920-1310-450);
+        out.setPosition(0, 1920-1310-450);
 
         return out;
     }
@@ -354,7 +354,7 @@ private static void update(){
         out.addActor(back_button);
 
         out.setName("buttons_pane");
-        out.setPosition(40, 0);
+        out.setPosition(0, 0);
         return out;
     }
 

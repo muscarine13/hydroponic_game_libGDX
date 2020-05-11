@@ -36,7 +36,7 @@ public class PotScreen implements Screen {
 
     Game game;
 
-    PotScreens type;
+
 
     Skin skin;
     TextureAtlas atlas;
@@ -50,7 +50,6 @@ public class PotScreen implements Screen {
 
     public PotScreen(Game game){
         this.game = game;
-        type = PotScreens.BOTTLE;
     }
 
     public void take_off_button_click(){
@@ -78,16 +77,7 @@ public class PotScreen implements Screen {
         Box.getInstance().getPot().pro_help();
     }
 
-    public void pot_button_click(){
 
-        type = PotScreens.POT;
-
-    }
-    public void bottle_button_click(){
-
-        type = PotScreens.BOTTLE;
-
-    }
 
     public void bottle_fil_button_click(Bottle bottle){
         bottle.drain();
@@ -148,7 +138,7 @@ public class PotScreen implements Screen {
 
         stage.addActor(generate_pot_pane());
         stage.addActor(generate_items_pane());
-        stage.addActor(generate_tabs_pane());
+
         stage.addActor(generate_buttons_pane());
 
     }
@@ -165,12 +155,10 @@ public class PotScreen implements Screen {
 
             try {   stage.getRoot().findActor("items_pane").clearListeners();} catch (Exception e) { e.printStackTrace(); }
             try {   stage.getRoot().removeActor(stage.getRoot().findActor("items_pane")); } catch (Exception e) { e.printStackTrace(); }
-            try { stage.getRoot().findActor("tabs_pane").clearListeners(); } catch (Exception e) { e.printStackTrace(); }
-            try { stage.getRoot().removeActor(stage.getRoot().findActor("tabs_pane")); } catch (Exception e) { e.printStackTrace(); }
 
 
             try { stage.addActor(generate_items_pane()); } catch (Exception e) { e.printStackTrace(); }
-            try { stage.addActor(generate_tabs_pane()); } catch (Exception e) { e.printStackTrace(); }
+
 
             refresh = false;
         }
@@ -573,18 +561,7 @@ PotResources.dispose_all();
         Table table;
         table = new Table();
 
-        switch (type){
-            case POT:
-            table.defaults().width(1080).height(230);
 
-//            for(Storable current_pot : Inventory.getInstance().get_list(Type.POT)){
-//                table.add(generate_item((Pot)current_pot));
-//                table.row();
-//            }
-
-                break;
-
-            case BOTTLE:
             table.defaults().width(1080).height(300);
 
             for(Storable current_bottle : Inventory.getInstance().get_list(Type.BOTTLE)){
@@ -593,8 +570,8 @@ PotResources.dispose_all();
             }
 
 
-                break;
-        }
+
+
 
 
         ScrollPane pane = new ScrollPane(table);
@@ -849,43 +826,7 @@ PotResources.dispose_all();
         return out;
     }
 
-    private Group generate_tabs_pane(){
-        Group out = new Group();
 
-        Image background = new Image(atlas.findRegion("tabs_background"));
-        background.setPosition(0 , 0);
-        background.setName("tabs_background");
-        out.addActor(background);
-
-        ImageButton pot_button = new ImageButton(skin, "pot_button");
-        pot_button.setPosition(300, 15);
-        pot_button.setName("pot_button");
-        pot_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                pot_button_click();
-            }
-        });
-        if(type==PotScreens.POT) pot_button.setDisabled(true);
-        out.addActor(pot_button);
-
-
-        ImageButton bottle_button = new ImageButton(skin, "bottle_button");
-        bottle_button.setPosition(1080-300-170, 15);
-        bottle_button.setName("bottle_button");
-        bottle_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                bottle_button_click();
-            }
-        });
-        if(type==PotScreens.BOTTLE) bottle_button.setDisabled(true);
-        out.addActor(bottle_button);
-
-        out.setName("tabs_pane");
-        out.setPosition(40, 160);
-        return out;
-    }
 
     private Group generate_buttons_pane(){
         Group out = new Group();

@@ -1,6 +1,7 @@
 package com.acidcarpet.hydroponist.screen.plant;
 
 import com.acidcarpet.hydroponist.box.Box;
+import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.screen.pot.PotResources;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
@@ -50,8 +51,8 @@ public class PlantScreen extends InputAdapter implements Screen {
 
         PlantResources.set_all();
 
-        atlas = PotResources.getAtlas();
-        skin = PotResources.getSkin();
+        atlas = PlantResources.getAtlas();
+        skin = PlantResources.getSkin();
         Gdx.input.setInputProcessor(stage);
 
         alice_96_69AA35_stroke_5_2F5313 = PlantResources.getAlice_96_69AA35_stroke_5_2F5313();
@@ -61,24 +62,11 @@ public class PlantScreen extends InputAdapter implements Screen {
         Image background = new Image(atlas.findRegion("background"));
         background.setBounds(0, 0, stage.getWidth(), stage.getHeight());
         background.setName("background");
-        //stage.addActor(background);
+        stage.addActor(background);
 
         stage.addActor(generate_plant_pane());
 
-        Table table = new Table();
-
-        table.add(generate_flowers_pane());
-        table.row();
-        table.add(generate_leaves_pane());
-        table.row();
-        table.add(generate_roots_pane());
-        table.row();
-
-        ScrollPane pane = new ScrollPane(table);
-        pane.setScrollingDisabled(true, false);
-        pane.setBounds(0 ,160 ,1080 , 1100);
-
-        stage.addActor(pane);
+        stage.addActor(generate_scroll_pane());
 
         stage.addActor(generate_buttons_pane());
     }
@@ -93,19 +81,31 @@ public class PlantScreen extends InputAdapter implements Screen {
 
             try{    stage.addActor(generate_plant_pane());                                           } catch(Exception e){ e.printStackTrace();}
 
+            try{    stage.getRoot().findActor("scroll_pane").clearListeners();                 } catch(Exception e){ e.printStackTrace();}
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("scroll_pane"));     } catch(Exception e){ e.printStackTrace();}
 
-            for (Actor actor: stage.getActors()){
-                if(actor.getName().equals("flower_pane")){
-                    actor= generate_flowers_pane();
-                }
-                if(actor.getName().equals("leave_pane")){
-                    actor=generate_leaves_pane();
-                }
-                if(actor.getName().equals("root_pane")){
-                    actor=generate_roots_pane();
-                }
+            try{    stage.addActor(generate_scroll_pane());                                           } catch(Exception e){ e.printStackTrace();}
 
-            }
+
+//            for (Actor actor: stage.getActors()){
+//                if(actor.getName().equals("flower_pane")){
+//                    actor.clearListeners();
+//                    actor.clear();
+//                    actor= generate_flowers_pane();
+//                }
+//                if(actor.getName().equals("leave_pane")){
+//                    actor.clearListeners();
+//                    actor.clear();
+//                    actor=generate_leaves_pane();
+//                }
+//                if(actor.getName().equals("root_pane")){
+//                    actor.clearListeners();
+//                    actor.clear();
+//                    actor=generate_roots_pane();
+//                }
+//
+//            }
+
 
 
         }
@@ -147,6 +147,7 @@ public class PlantScreen extends InputAdapter implements Screen {
     private Group generate_plant_pane(){
         Group out = new Group();
         out.setName("plant_pane");
+        out.setPosition(0, stage.getHeight()-660);
 
         if(Box.getInstance().getPlant()==null){
             Image background = new Image(atlas.findRegion("plant_empty"));
@@ -357,9 +358,9 @@ public class PlantScreen extends InputAdapter implements Screen {
             hp_bar = new Image(atlas.findRegion("hp_0_bar"));
         }
 
-        day_bar.setName("plant_day_bar");
-        day_bar.setPosition(0, 660-100);
-        out.addActor(day_bar);
+        hp_bar.setName("plant_hp_bar");
+        hp_bar.setPosition(0, 660-100);
+        out.addActor(hp_bar);
 
         Image macro_primary;
         Image macro_secondary;
@@ -420,6 +421,7 @@ public class PlantScreen extends InputAdapter implements Screen {
     private Group generate_flowers_pane(){
         Group out = new Group();
         out.setName("flower_pane");
+        out.setPosition(0, 0);
 
         if(Box.getInstance().getPlant()==null||Box.getInstance().getPlant().getFlowers().isEmpty()){
             Image background = new Image(atlas.findRegion("flower_empty"));
@@ -540,6 +542,7 @@ public class PlantScreen extends InputAdapter implements Screen {
     private Group generate_leaves_pane(){
         Group out = new Group();
         out.setName("leave_pane");
+        out.setPosition(0, 0);
 
         if(Box.getInstance().getPlant()==null||Box.getInstance().getPlant().getLeaves().isEmpty()){
             Image background = new Image(atlas.findRegion("leave_empty"));
@@ -643,6 +646,7 @@ public class PlantScreen extends InputAdapter implements Screen {
     public Group generate_roots_pane(){
         Group out = new Group();
         out.setName("root_pane");
+        out.setPosition(0, 0);
 
         if(Box.getInstance().getPlant()==null||Box.getInstance().getPlant().getLeaves().isEmpty()){
             Image background = new Image(atlas.findRegion("root_empty"));
@@ -736,6 +740,30 @@ public class PlantScreen extends InputAdapter implements Screen {
         return out;
 
     }
+    private Group generate_scroll_pane(){
+        Group out = new Group();
+        out.setBounds(0, 160, 1080, 1100);
+        out.setName("scroll_pane");
+
+        if(Box.getInstance().getPlant()==null) return out;
+
+        Table table = new Table();
+        table.defaults().width(1080).height(500);
+
+        table.add(generate_flowers_pane());
+        table.row();
+        table.add(generate_leaves_pane());
+        table.row();
+        table.add(generate_roots_pane());
+        table.row();
+
+        ScrollPane pane = new ScrollPane(table);
+        pane.setScrollingDisabled(true, false);
+        pane.setBounds(0 ,0 ,1080 , 1100);
+        out.addActor(pane);
+
+        return out;
+    }
 
     private Group generate_buttons_pane(){
         Group out = new Group();
@@ -757,7 +785,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         out.addActor(back_button);
 
         out.setName("buttons_pane");
-        out.setPosition(40, 0);
+        out.setPosition(0, 0);
         return out;
     }
     private void kill_button_clicked(){
@@ -767,7 +795,7 @@ public class PlantScreen extends InputAdapter implements Screen {
 
     }
     private void back_button_click(){
-
+        game.setScreen(new BoxScreen(game));
     }
 
 }

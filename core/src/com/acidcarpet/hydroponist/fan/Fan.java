@@ -73,11 +73,11 @@ public class Fan implements Storable {
 
         return out;
     }
-    public Image get_on_image(){
-        return new Image(atlas.findRegion("fan_"+tier.name+"_on"));
+    public String get_on_image(){
+        return "fan_"+tier.name+"_on";
     }
-    public Image get_off_image(){
-        return new Image(atlas.findRegion("fan_"+tier.name+"_on"));
+    public String get_off_image(){
+        return "fan_"+tier.name+"_off";
     }
 
 

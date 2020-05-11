@@ -40,7 +40,7 @@ public class SettingsScreen implements Screen {
 
         stage = new Stage(new ExtendViewport(1080, 1920));
 
-        SeedlingResources.set_all();
+        SettingsResources.set_all();
         atlas = SettingsResources.getAtlas();
         skin = SettingsResources.getSkin();
         Gdx.input.setInputProcessor(stage);
@@ -98,7 +98,7 @@ public class SettingsScreen implements Screen {
     @Override
     public void dispose() {
 stage.dispose();
-SeedlingResources.dispose_all();
+SettingsResources.dispose_all();
     }
 
     public Group generate_items_pane(){
@@ -202,7 +202,7 @@ SeedlingResources.dispose_all();
         out.addActor(pane);
 
         out.setName("items_pane");
-        out.setPosition(0+40, 160);
+        out.setPosition(0, 160);
 
         return out;
     }
@@ -227,7 +227,7 @@ SeedlingResources.dispose_all();
         out.addActor(back_button);
 
         out.setName("buttons_pane");
-        out.setPosition(0+40, 0);
+        out.setPosition(0, 0);
         return out;
     }
 

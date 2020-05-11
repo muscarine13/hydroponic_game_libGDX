@@ -228,8 +228,8 @@ public class Pot {
         }
     }
 
-    public Image get_image(){
-        return new Image(atlas.findRegion("pot_"+level.name+"_on"));
+    public String get_image(){
+        return "pot_"+level.name+"_on";
     }
     private int ppm_N;
     private int ppm_P;

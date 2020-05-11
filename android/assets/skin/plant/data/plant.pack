@@ -1,481 +1,645 @@
 
 plant.png
-format: RGBA8888
+format: RGBA4444
 filter: Nearest,Nearest
 repeat: none
 background
   rotate: false
-  xy: 1, 103
+  xy: 2, 104
   size: 1080, 1920
   orig: 1080, 1920
   offset: 0, 0
   index: -1
 hp_100_bar
   rotate: false
-  xy: 1, 1
+  xy: 2, 2
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 back_button_disable
   rotate: false
-  xy: 1083, 1903
+  xy: 1084, 1904
   size: 560, 120
   orig: 560, 120
   offset: 0, 0
   index: -1
 back_button_pressed
   rotate: false
-  xy: 1083, 1781
+  xy: 1084, 1782
   size: 560, 120
   orig: 560, 120
   offset: 0, 0
   index: -1
 back_button_enable
   rotate: false
-  xy: 1083, 1659
+  xy: 1084, 1660
   size: 560, 120
   orig: 560, 120
   offset: 0, 0
   index: -1
+flower_day_60_bar
+  rotate: false
+  xy: 1646, 1874
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
+flower_day_70_bar
+  rotate: false
+  xy: 1084, 1508
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
+flower_day_40_bar
+  rotate: false
+  xy: 1646, 1722
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
+flower_day_10_bar
+  rotate: false
+  xy: 1084, 1356
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
+flower_day_90_bar
+  rotate: false
+  xy: 1084, 1204
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
+flower_day_20_bar
+  rotate: false
+  xy: 1084, 1052
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
+flower_day_30_bar
+  rotate: false
+  xy: 1084, 900
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
+flower_day_100_bar
+  rotate: false
+  xy: 1084, 748
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
+flower_day_50_bar
+  rotate: false
+  xy: 1084, 596
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
+flower_day_80_bar
+  rotate: false
+  xy: 1084, 444
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
+flower_day_0bar
+  rotate: false
+  xy: 1084, 292
+  size: 300, 150
+  orig: 300, 150
+  offset: 0, 0
+  index: -1
 kill_button_disable
   rotate: false
-  xy: 1645, 1943
+  xy: 1386, 1578
   size: 250, 80
   orig: 250, 80
   offset: 0, 0
   index: -1
-element_K
-  rotate: false
-  xy: 1897, 1923
-  size: 150, 100
-  orig: 150, 100
-  offset: 0, 0
-  index: -1
 kill_button_pressed
   rotate: false
-  xy: 1645, 1861
+  xy: 1084, 210
   size: 250, 80
   orig: 250, 80
   offset: 0, 0
   index: -1
 kill_button_enable
   rotate: false
-  xy: 1083, 1577
+  xy: 1386, 1496
   size: 250, 80
   orig: 250, 80
   offset: 0, 0
   index: -1
 harvest_button_enable
   rotate: false
-  xy: 1645, 1779
+  xy: 1084, 128
   size: 250, 80
   orig: 250, 80
   offset: 0, 0
   index: -1
-element_Empty
-  rotate: false
-  xy: 1897, 1821
-  size: 150, 100
-  orig: 150, 100
-  offset: 0, 0
-  index: -1
 harvest_button_disable
   rotate: false
-  xy: 1083, 1495
+  xy: 1386, 1414
   size: 250, 80
   orig: 250, 80
   offset: 0, 0
   index: -1
 harvest_button_pressed
   rotate: false
-  xy: 1335, 1577
+  xy: 1084, 46
   size: 250, 80
   orig: 250, 80
   offset: 0, 0
   index: -1
+element_K
+  rotate: false
+  xy: 1386, 1312
+  size: 150, 100
+  orig: 150, 100
+  offset: 0, 0
+  index: -1
+element_Empty
+  rotate: false
+  xy: 1386, 1210
+  size: 150, 100
+  orig: 150, 100
+  offset: 0, 0
+  index: -1
 element_Zn
   rotate: false
-  xy: 1897, 1719
+  xy: 1386, 1108
   size: 150, 100
   orig: 150, 100
   offset: 0, 0
   index: -1
 element_S
   rotate: false
-  xy: 1083, 1393
+  xy: 1386, 1006
   size: 150, 100
   orig: 150, 100
   offset: 0, 0
   index: -1
 element_alcaline
   rotate: false
-  xy: 1645, 1677
+  xy: 1386, 904
   size: 150, 100
   orig: 150, 100
   offset: 0, 0
   index: -1
 element_Fe
   rotate: false
-  xy: 1083, 1291
+  xy: 1386, 802
   size: 150, 100
   orig: 150, 100
   offset: 0, 0
   index: -1
 element_N
   rotate: false
-  xy: 1083, 1189
+  xy: 1386, 700
   size: 150, 100
   orig: 150, 100
   offset: 0, 0
   index: -1
 element_Mn
   rotate: false
-  xy: 1083, 1087
+  xy: 1386, 598
   size: 150, 100
   orig: 150, 100
   offset: 0, 0
   index: -1
 element_Mg
   rotate: false
-  xy: 1083, 985
+  xy: 1386, 496
   size: 150, 100
   orig: 150, 100
   offset: 0, 0
   index: -1
 element_Mo
   rotate: false
-  xy: 1083, 883
+  xy: 1386, 394
   size: 150, 100
   orig: 150, 100
   offset: 0, 0
   index: -1
 element_acid
   rotate: false
-  xy: 1083, 781
+  xy: 1386, 292
   size: 150, 100
   orig: 150, 100
   offset: 0, 0
   index: -1
 element_Cu
   rotate: false
-  xy: 1083, 679
+  xy: 1336, 190
   size: 150, 100
   orig: 150, 100
   offset: 0, 0
   index: -1
 element_P
   rotate: false
-  xy: 1083, 577
+  xy: 1336, 88
   size: 150, 100
   orig: 150, 100
   offset: 0, 0
   index: -1
 element_Ca
   rotate: false
-  xy: 1083, 475
+  xy: 1646, 1620
   size: 150, 100
   orig: 150, 100
   offset: 0, 0
   index: -1
 element_B
   rotate: false
-  xy: 1083, 373
+  xy: 1798, 1620
   size: 150, 100
   orig: 150, 100
   offset: 0, 0
   index: -1
 
 plant2.png
-format: RGBA8888
+format: RGBA4444
 filter: Nearest,Nearest
 repeat: none
 root_f_3_bar
   rotate: false
-  xy: 1, 1939
+  xy: 2, 1940
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 root_p_4_bar
   rotate: false
-  xy: 1, 1837
+  xy: 2, 1838
+  size: 1080, 100
+  orig: 1080, 100
+  offset: 0, 0
+  index: -1
+fructus_bar
+  rotate: false
+  xy: 2, 1736
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 hp_90_bar
   rotate: false
-  xy: 1, 1735
+  xy: 2, 1634
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 root_p_1_bar
   rotate: false
-  xy: 1, 1633
+  xy: 2, 1532
+  size: 1080, 100
+  orig: 1080, 100
+  offset: 0, 0
+  index: -1
+flos_bar
+  rotate: false
+  xy: 2, 1430
+  size: 1080, 100
+  orig: 1080, 100
+  offset: 0, 0
+  index: -1
+baca_bar
+  rotate: false
+  xy: 2, 1328
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 day_70_bar
   rotate: false
-  xy: 1, 1531
+  xy: 2, 1226
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 leave_very_long_bar
   rotate: false
-  xy: 1, 1429
+  xy: 2, 1124
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 root_p_0_bar
   rotate: false
-  xy: 1, 1327
+  xy: 2, 1022
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 hp_30_bar
   rotate: false
-  xy: 1, 1225
+  xy: 2, 920
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 hp_80_bar
   rotate: false
-  xy: 1, 1123
+  xy: 2, 818
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 day_30_bar
   rotate: false
-  xy: 1, 1021
+  xy: 2, 716
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 day_60_bar
   rotate: false
-  xy: 1, 919
+  xy: 2, 614
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 day_100_bar
   rotate: false
-  xy: 1, 817
+  xy: 2, 512
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 leave_wide_bar
   rotate: false
-  xy: 1, 715
+  xy: 2, 410
+  size: 1080, 100
+  orig: 1080, 100
+  offset: 0, 0
+  index: -1
+nut_bar
+  rotate: false
+  xy: 2, 308
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 hp_60_bar
   rotate: false
-  xy: 1, 613
+  xy: 2, 206
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 root_f_4_bar
   rotate: false
-  xy: 1, 511
+  xy: 2, 104
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 day_80_bar
   rotate: false
-  xy: 1, 409
-  size: 1080, 100
-  orig: 1080, 100
-  offset: 0, 0
-  index: -1
-leave_very_wide_bar
-  rotate: false
-  xy: 1, 307
-  size: 1080, 100
-  orig: 1080, 100
-  offset: 0, 0
-  index: -1
-day_20_bar
-  rotate: false
-  xy: 1, 205
-  size: 1080, 100
-  orig: 1080, 100
-  offset: 0, 0
-  index: -1
-day_90_bar
-  rotate: false
-  xy: 1, 103
-  size: 1080, 100
-  orig: 1080, 100
-  offset: 0, 0
-  index: -1
-hp_20_bar
-  rotate: false
-  xy: 1, 1
+  xy: 2, 2
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 
 plant3.png
-format: RGBA8888
+format: RGBA4444
 filter: Nearest,Nearest
 repeat: none
-plant_pane
+leave_very_wide_bar
   rotate: false
-  xy: 1, 1371
-  size: 1080, 660
-  orig: 1080, 660
+  xy: 2, 1940
+  size: 1080, 100
+  orig: 1080, 100
   offset: 0, 0
   index: -1
-leave_pane
+day_20_bar
   rotate: false
-  xy: 1, 869
-  size: 1080, 500
-  orig: 1080, 500
+  xy: 2, 1838
+  size: 1080, 100
+  orig: 1080, 100
   offset: 0, 0
   index: -1
-root_pane
+day_90_bar
   rotate: false
-  xy: 1, 367
-  size: 1080, 500
-  orig: 1080, 500
+  xy: 2, 1736
+  size: 1080, 100
+  orig: 1080, 100
   offset: 0, 0
   index: -1
-buttons_background
+hp_20_bar
   rotate: false
-  xy: 1, 205
-  size: 1080, 160
-  orig: 1080, 160
+  xy: 2, 1634
+  size: 1080, 100
+  orig: 1080, 100
   offset: 0, 0
   index: -1
 root_f_0_bar
   rotate: false
-  xy: 1, 103
+  xy: 2, 1532
+  size: 1080, 100
+  orig: 1080, 100
+  offset: 0, 0
+  index: -1
+root_p_0_bar-1
+  rotate: false
+  xy: 2, 1430
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 day_10_bar
   rotate: false
-  xy: 1, 1
+  xy: 2, 1328
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
-
-plant4.png
-format: RGBA8888
-filter: Nearest,Nearest
-repeat: none
 hp_40_bar
   rotate: false
-  xy: 1, 1327
+  xy: 2, 1226
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 root_p_3_bar
   rotate: false
-  xy: 1, 1225
+  xy: 2, 1124
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 hp_10_bar
   rotate: false
-  xy: 1, 1123
+  xy: 2, 1022
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 root_f_1_bar
   rotate: false
-  xy: 1, 1021
+  xy: 2, 920
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 hp_70_bar
   rotate: false
-  xy: 1, 919
+  xy: 2, 818
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 hp_50_bar
   rotate: false
-  xy: 1, 817
+  xy: 2, 716
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 leave_long_bar
   rotate: false
-  xy: 1, 715
+  xy: 2, 614
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 root_p_2_bar
   rotate: false
-  xy: 1, 613
+  xy: 2, 512
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 day_0_bar
   rotate: false
-  xy: 1, 511
+  xy: 2, 410
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 day_50_bar
   rotate: false
-  xy: 1, 409
+  xy: 2, 308
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 day_40_bar
   rotate: false
-  xy: 1, 307
+  xy: 2, 206
+  size: 1080, 100
+  orig: 1080, 100
+  offset: 0, 0
+  index: -1
+spinam_bar
+  rotate: false
+  xy: 2, 104
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 hp_0_bar
   rotate: false
-  xy: 1, 205
+  xy: 2, 2
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
+
+plant4.png
+format: RGBA4444
+filter: Nearest,Nearest
+repeat: none
+plant_pane
+  rotate: false
+  xy: 2, 1328
+  size: 1080, 660
+  orig: 1080, 660
+  offset: 0, 0
+  index: -1
+plant_empty
+  rotate: false
+  xy: 2, 666
+  size: 1080, 660
+  orig: 1080, 660
+  offset: 0, 0
+  index: -1
+leave_pane
+  rotate: false
+  xy: 2, 164
+  size: 1080, 500
+  orig: 1080, 500
+  offset: 0, 0
+  index: -1
+buttons_background
+  rotate: false
+  xy: 2, 2
+  size: 1080, 160
+  orig: 1080, 160
+  offset: 0, 0
+  index: -1
+
+plant5.png
+format: RGBA4444
+filter: Nearest,Nearest
+repeat: none
+root_empty
+  rotate: false
+  xy: 2, 1508
+  size: 1080, 500
+  orig: 1080, 500
+  offset: 0, 0
+  index: -1
+flower_pane
+  rotate: false
+  xy: 2, 1006
+  size: 1080, 500
+  orig: 1080, 500
+  offset: 0, 0
+  index: -1
+root_pane
+  rotate: false
+  xy: 2, 504
+  size: 1080, 500
+  orig: 1080, 500
+  offset: 0, 0
+  index: -1
+leave_empty
+  rotate: false
+  xy: 2, 2
+  size: 1080, 500
+  orig: 1080, 500
+  offset: 0, 0
+  index: -1
+
+plant6.png
+format: RGBA4444
+filter: Nearest,Nearest
+repeat: none
+flower_empty
+  rotate: false
+  xy: 2, 206
+  size: 1080, 500
+  orig: 1080, 500
+  offset: 0, 0
+  index: -1
 leave_middle_bar
   rotate: false
-  xy: 1, 103
+  xy: 2, 104
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0
   index: -1
 root_f_2_bar
   rotate: false
-  xy: 1, 1
+  xy: 2, 2
   size: 1080, 100
   orig: 1080, 100
   offset: 0, 0

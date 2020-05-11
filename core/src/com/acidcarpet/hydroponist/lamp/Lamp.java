@@ -82,18 +82,16 @@ public class Lamp implements Storable {
         return out;
     }
 
-    public Image get_on_image(){
+    public String get_on_image(){
 
-       return new Image(ContentPack.getAll_atlas().findRegion(type.id+"_"+tier.name+"_on"));
-
-
+       return type.id+"_"+tier.name+"_on";
 
     }
-    public Image get_off_image(){
-        return new Image(ContentPack.getAll_atlas().findRegion(type.id+"_"+tier.name+"_off"));
+    public String get_off_image(){
+        return type.id+"_"+tier.name+"_off";
     }
-    public Image get_light_image(){
-        return new Image(ContentPack.getAll_atlas().findRegion(type.id+"_"+tier.name+"_light"));
+    public String get_light_image(){
+        return type.id+"_"+tier.name+"_light";
     }
 
     public Type getType() {
