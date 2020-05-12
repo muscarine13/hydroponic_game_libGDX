@@ -8,6 +8,7 @@ import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Group;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -69,7 +70,7 @@ public class PlantScreen extends InputAdapter implements Screen {
 
         stage.addActor(generate_plant_pane());
 
-        stage.addActor(generate_scroll_pane());
+        stage.addActor(generate_scroll_pane(.0f));
 
         stage.addActor(generate_buttons_pane());
     }
@@ -78,37 +79,27 @@ public class PlantScreen extends InputAdapter implements Screen {
     public void render(float delta) {
 
         if(refresh){
+            float percent_y = 0.0f;
 
             try{    stage.getRoot().findActor("plant_pane").clearListeners();                 } catch(Exception e){ e.printStackTrace();}
             try{    stage.getRoot().removeActor(stage.getRoot().findActor("plant_pane"));     } catch(Exception e){ e.printStackTrace();}
 
             try{    stage.addActor(generate_plant_pane());                                           } catch(Exception e){ e.printStackTrace();}
 
-            try{    stage.getRoot().findActor("scroll_pane").clearListeners();                 } catch(Exception e){ e.printStackTrace();}
-            try{    stage.getRoot().removeActor(stage.getRoot().findActor("scroll_pane"));     } catch(Exception e){ e.printStackTrace();}
 
-            try{    stage.addActor(generate_scroll_pane());                                           } catch(Exception e){ e.printStackTrace();}
+            try{
+                ScrollPane bad_pane = (ScrollPane)stage.getRoot().findActor("scroll_pane");
+                percent_y = bad_pane.getVisualScrollPercentY();
+                stage.getRoot().findActor("scroll_pane_group").clearListeners();
 
+            } catch(Exception e){ e.printStackTrace();}
 
-//            for (Actor actor: stage.getActors()){
-//                if(actor.getName().equals("flower_pane")){
-//                    actor.clearListeners();
-//                    actor.clear();
-//                    actor= generate_flowers_pane();
-//                }
-//                if(actor.getName().equals("leave_pane")){
-//                    actor.clearListeners();
-//                    actor.clear();
-//                    actor=generate_leaves_pane();
-//                }
-//                if(actor.getName().equals("root_pane")){
-//                    actor.clearListeners();
-//                    actor.clear();
-//                    actor=generate_roots_pane();
-//                }
-//
-//            }
+            try{    stage.getRoot().removeActor(stage.getRoot().findActor("scroll_pane_group"));     } catch(Exception e){ e.printStackTrace();}
 
+            try{
+                stage.addActor(generate_scroll_pane(percent_y));
+
+            } catch(Exception e){ e.printStackTrace();}
 
 
         }
@@ -743,10 +734,10 @@ public class PlantScreen extends InputAdapter implements Screen {
         return out;
 
     }
-    private Group generate_scroll_pane(){
+    private Group generate_scroll_pane(float percent_y){
         Group out = new Group();
+        out.setName("scroll_pane_group");
         out.setBounds(0, 160, 1080, 1100);
-        out.setName("scroll_pane");
 
         if(Box.getInstance().getPlant()==null) return out;
 
@@ -762,7 +753,12 @@ public class PlantScreen extends InputAdapter implements Screen {
 
         ScrollPane pane = new ScrollPane(table);
         pane.setScrollingDisabled(true, false);
-        pane.setBounds(0 ,0 ,1080 , 1100);
+        pane.layout();
+        pane.setScrollPercentY(percent_y);
+        pane.updateVisualScroll();
+
+        pane.setBounds(0, 0, 1080, 1100);
+        pane.setName("scroll_pane");
         out.addActor(pane);
 
         return out;
@@ -793,6 +789,7 @@ public class PlantScreen extends InputAdapter implements Screen {
     }
     private void kill_button_clicked(){
 
+        Box.getInstance().setPlant(null);
     }
     private void harvest_button_clicked(){
 

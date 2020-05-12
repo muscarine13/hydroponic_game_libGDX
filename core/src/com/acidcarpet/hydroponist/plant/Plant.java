@@ -60,29 +60,30 @@ public class Plant {
 
         stage = Stages.SEED;
 
-//        seed_remain = (int)Stages.SEED.time_multiplier*lifetimeType.seconds;
-//        if(Wrench.try_percent(visumType.pre_vegetation_chance)){
-//            pre_vegetation_remain = (int)Stages.PRE_VEGETATION.time_multiplier*lifetimeType.seconds;
-//        }else{
-//            pre_vegetation_remain = 0;
-//        }
-//        vegetation_remain = (int)Stages.VEGETATION.time_multiplier*lifetimeType.seconds;
-//        if(Wrench.try_percent(visumType.post_vegetation_chance)){
-//            post_vegetation_remain = (int)Stages.POST_VEGETATION.time_multiplier*lifetimeType.seconds;
-//        }else{
-//            post_vegetation_remain = 0;
-//        }
-//        if(Wrench.try_percent(visumType.pre_bloom_chance)){
-//            pre_bloom_remain = (int)Stages.PRE_BLOOM.time_multiplier*lifetimeType.seconds;
-//        }else{
-//            pre_bloom_remain = 0;
-//        }
-//        bloom_remain = (int)Stages.BLOOM.time_multiplier*lifetimeType.seconds;
-//        if(Wrench.try_percent(visumType.post_bloom_chance)){
-//            post_bloom_remain = (int)Stages.POST_BLOOM.time_multiplier*lifetimeType.seconds;
-//        }else{
-//            post_bloom_remain = 0;
-//        }
+        seed_remain = (int)(Stages.SEED.time_multiplier*lifetimeType.seconds);
+        if(Wrench.try_percent(visumType.pre_vegetation_chance)){
+            pre_vegetation_remain = (int)Stages.PRE_VEGETATION.time_multiplier*lifetimeType.seconds;
+        }else{
+            pre_vegetation_remain = 0;
+        }
+        vegetation_remain = (int)Stages.VEGETATION.time_multiplier*lifetimeType.seconds;
+        if(Wrench.try_percent(visumType.post_vegetation_chance)){
+            post_vegetation_remain = (int)Stages.POST_VEGETATION.time_multiplier*lifetimeType.seconds;
+        }else{
+            post_vegetation_remain = 0;
+        }
+        if(Wrench.try_percent(visumType.pre_bloom_chance)){
+            pre_bloom_remain = (int)Stages.PRE_BLOOM.time_multiplier*lifetimeType.seconds;
+        }else{
+            pre_bloom_remain = 0;
+        }
+        bloom_remain = (int)Stages.BLOOM.time_multiplier*lifetimeType.seconds;
+        if(Wrench.try_percent(visumType.post_bloom_chance)){
+            post_bloom_remain = (int)Stages.POST_BLOOM.time_multiplier*lifetimeType.seconds;
+        }else{
+            post_bloom_remain = 0;
+        }
+        System.out.println("SEED_REMAIN:"+seed_remain);
 
         roots.add(new Root(rootsType));
 
@@ -380,97 +381,97 @@ public class Plant {
 
         if(stage==Stages.SEED){
 
-            if(Wrench.try_percent(2)) leaves.add(new Leave(leavesType));
-            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.2)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.2)) roots.add(new Root(rootsType));
 
         }
         if(stage==Stages.PRE_VEGETATION){
 
-            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
-            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
-            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.5)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.5)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.5)) leaves.add(new Leave(leavesType));
 
-            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
-            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
-            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.2)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.2)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.2)) roots.add(new Root(rootsType));
 
         }
         if(stage==Stages.VEGETATION){
 
-            if(Wrench.try_percent(10)) leaves.add(new Leave(leavesType));
-            if(Wrench.try_percent(10)) leaves.add(new Leave(leavesType));
-            if(Wrench.try_percent(10)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.10)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.10)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.10)) leaves.add(new Leave(leavesType));
 
-            if(Wrench.try_percent(5)) roots.add(new Root(rootsType));
-            if(Wrench.try_percent(5)) roots.add(new Root(rootsType));
-            if(Wrench.try_percent(5)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.5)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.5)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.5)) roots.add(new Root(rootsType));
 
         }
         if(stage==Stages.POST_VEGETATION){
 
-            if(Wrench.try_percent(10)) leaves.add(new Leave(leavesType));
-            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
-            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.10)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.5)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.5)) leaves.add(new Leave(leavesType));
 
-            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
-            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
-            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.1)) roots.add(new Root(rootsType));
 
         }
         if(stage==Stages.PRE_BLOOM){
 
-            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
-            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
-            if(Wrench.try_percent(5)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.5)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.5)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.5)) leaves.add(new Leave(leavesType));
 
-            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
-            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
-            if(Wrench.try_percent(2)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.2)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.2)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.2)) roots.add(new Root(rootsType));
 
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
 
         }
         if(stage==Stages.BLOOM){
 
-            if(Wrench.try_percent(4)) leaves.add(new Leave(leavesType));
-            if(Wrench.try_percent(3)) leaves.add(new Leave(leavesType));
-            if(Wrench.try_percent(2)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.4)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.3)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.2)) leaves.add(new Leave(leavesType));
 
-            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
-            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
-            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.1)) roots.add(new Root(rootsType));
 
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
 
         }
         if(stage==Stages.POST_BLOOM){
 
-            if(Wrench.try_percent(1)) leaves.add(new Leave(leavesType));
-            if(Wrench.try_percent(1)) leaves.add(new Leave(leavesType));
-            if(Wrench.try_percent(1)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.1)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.1)) leaves.add(new Leave(leavesType));
+            if(Wrench.try_percent(0.1)) leaves.add(new Leave(leavesType));
 
-            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
-            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
-            if(Wrench.try_percent(1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.1)) roots.add(new Root(rootsType));
+            if(Wrench.try_percent(0.1)) roots.add(new Root(rootsType));
 
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
-            if(Wrench.try_percent(2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
+            if(Wrench.try_percent(0.2)) flowers.add(new Flower(flowersType));
 
         }
 
@@ -479,10 +480,10 @@ public class Plant {
         Collections.shuffle(flowers);
 
         for(Leave leave : leaves){
-            if(Wrench.try_percent(5)) leave.grow();
+            if(Wrench.try_percent(0.5)) leave.grow();
         }
         for (Root root : roots){
-            if(Wrench.try_percent(5)) root.grow();
+            if(Wrench.try_percent(0.5)) root.grow();
         }
 
 
@@ -593,7 +594,7 @@ public class Plant {
         return genus+"_"+stage_name;
     }
     public String get_name(){
-        return genusType.name+" "+visumType;
+        return genusType.latin+" "+visumType.latin;
     }
 
     public int getSeed_remain() {

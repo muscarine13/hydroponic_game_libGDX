@@ -5,6 +5,9 @@ import com.acidcarpet.hydroponist.box.Box;
 
 import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 
+import com.acidcarpet.hydroponist.screen.fan.FanScreen;
+import com.acidcarpet.hydroponist.screen.plant.PlantScreen;
+import com.acidcarpet.hydroponist.screen.pot.PotScreen;
 import com.badlogic.gdx.Game;
 
 
@@ -25,6 +28,9 @@ public class GameEngine extends Game {
 
 						Box.getInstance().second();
 						BoxScreen.update();
+						PlantScreen.update();
+						PotScreen.update();
+
 						System.err.println("second");
 
 						try {

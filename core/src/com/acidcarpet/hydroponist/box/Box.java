@@ -26,27 +26,7 @@ public class Box {
         fan = FanGenerator.generate_random();
         plant = PlantGenerator.generate_random();
 
-//        if (seconds == null) {
-//            seconds = new Thread() {
-//                @Override
-//                public void run() {
-//                    while (true) {
-//
-//                            Box.getInstance().second();
-//                            BoxScreen.update();
-//                            System.err.println("second");
-//
-//                        try {
-//                            Thread.sleep(1000);
-//                        } catch (InterruptedException e) {
-//                            e.printStackTrace();
-//                        }
-//                    }
-//
-//                }
-//            };
-//            seconds.start();
-//        }
+
     }
 
     private Lamp lamp;
@@ -55,10 +35,11 @@ public class Box {
     private Plant plant;
 
     public synchronized void second(){
-        lamp.second();
-        fan.second();
-        pot.second();
-        plant.second();
+
+        if(plant!=null)lamp.second();
+        if(plant!=null)fan.second();
+        if(plant!=null)pot.second();
+        if(plant!=null)plant.second();
     }
 
 
