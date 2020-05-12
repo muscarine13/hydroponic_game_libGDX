@@ -117,7 +117,7 @@ public class Bottle implements Storable {
         this.microPrimaryType = microPrimaryType;
         this.microSecondaryType = microSecondaryType;
 
-        current_volume = volumeType.volume;
+        current_volume = getMaximum_volume();
 
         double macro_primary_percent = macroPrimaryType.volume;
         double macro_secondary_percent = macroSecondaryType.volume;
@@ -175,13 +175,14 @@ public class Bottle implements Storable {
     }
 
     private int current_volume;
+
     public boolean drain(){
         if(current_volume<=0) {
             current_volume = 0;
             return false;
         }
         else{
-            current_volume--;
+            current_volume-=1;
             return true;
         }
     }
@@ -213,27 +214,21 @@ public class Bottle implements Storable {
     public PH_TYPE getPh_type() {
         return ph_type;
     }
-
     public VolumeType getVolumeType() {
         return volumeType;
     }
-
     public PurityType getPurityType() {
         return purityType;
     }
-
     public MacroPrimaryType getMacroPrimaryType() {
         return macroPrimaryType;
     }
-
     public MacroSecondaryType getMacroSecondaryType() {
         return macroSecondaryType;
     }
-
     public MicroPrimaryType getMicroPrimaryType() {
         return microPrimaryType;
     }
-
     public MicroSecondaryType getMicroSecondaryType() {
         return microSecondaryType;
     }
@@ -241,55 +236,45 @@ public class Bottle implements Storable {
     public int getCurrent_volume() {
         return current_volume;
     }
-
+    public int getMaximum_volume(){
+        return volumeType.volume;
+    }
     public int getPpm_N() {
         return ppm_N;
     }
-
     public int getPpm_P() {
         return ppm_P;
     }
-
     public int getPpm_K() {
         return ppm_K;
     }
-
     public int getPpm_S() {
         return ppm_S;
     }
-
     public int getPpm_Mg() {
         return ppm_Mg;
     }
-
     public int getPpm_Ca() {
         return ppm_Ca;
     }
-
     public int getPpm_B() {
         return ppm_B;
     }
-
     public int getPpm_Cu() {
         return ppm_Cu;
     }
-
     public int getPpm_Fe() {
         return ppm_Fe;
     }
-
     public int getPpm_Mn() {
         return ppm_Mn;
     }
-
     public int getPpm_Mo() {
         return ppm_Mo;
     }
-
     public int getPpm_Zn() {
         return ppm_Zn;
     }
-
     public double getpH() {
         return pH;
     }

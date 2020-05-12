@@ -567,11 +567,11 @@ public class Plant {
         return (int)((double)bounty_diamond*((double)current_score/(double)maximum_score));
     }
 
-    public double get_percent_day(){
-        return ((double)light/((double)light+(double)dark))*100;
+    public int get_percent_day(){
+        return (int) (((double)light/((double)light+(double)dark))*(double)100);
     }
-    public double get_percent_hp(){
-        return ((double)current_score/(double)maximum_score)*100;
+    public int get_percent_hp(){
+        return (int) (((double)current_score/(double)maximum_score)*(double)100);
     }
 
     public String get_image(){

@@ -33,11 +33,7 @@ public class PotScreen implements Screen {
         refresh = true;
     }
 
-    Thread fil_thread;
-
     Game game;
-
-
 
     Skin skin;
     TextureAtlas atlas;
@@ -230,9 +226,9 @@ PotResources.dispose_all();
             Image pot_bar;
             int pot_volume_percent =
                     (int)
-                            ((Box.getInstance().getPot().get_current_volume()
+                            (((double)Box.getInstance().getPot().get_current_volume()
                             /
-                            Box.getInstance().getPot().get_maximum_volume())*100);
+                                    (double)Box.getInstance().getPot().get_maximum_volume())*(double)100);
 
             if(pot_volume_percent<=0){
                 pot_bar = new Image(atlas.findRegion("pot_0_bar"));
@@ -565,17 +561,12 @@ PotResources.dispose_all();
         table = new Table();
 
 
-            table.defaults().width(1080).height(300);
+        table.defaults().width(1080).height(300);
 
-            for(Storable current_bottle : Inventory.getInstance().get_list(Type.BOTTLE)){
-                table.add(generate_item((Bottle)current_bottle));
-                table.row();
-            }
-
-
-
-
-
+        for(Storable current_bottle : Inventory.getInstance().get_list(Type.BOTTLE)){
+            table.add(generate_item((Bottle)current_bottle));
+            table.row();
+        }
 
         ScrollPane pane = new ScrollPane(table);
         pane.setScrollingDisabled(true, false);
@@ -631,11 +622,12 @@ PotResources.dispose_all();
         out.addActor(bottle_fil_button);
 
         Image bottle_bar;
-        double percent = (bottle.getCurrent_volume()/bottle.getVolumeType().getVolume())*100;
+        int percent = (int)(((double)bottle.getCurrent_volume()/(double)bottle.getMaximum_volume())*(double)100);
+        System.out.println("percent^^^^^^"+percent);
 
         if(percent<=0){
             bottle_bar = new Image(atlas.findRegion("bottle_0_bar"));
-        }else if(percent>0&&percent<=10){
+        }else if(percent>0&&percent<=0.10){
             bottle_bar = new Image(atlas.findRegion("bottle_10_bar"));
         }else if(percent>10&&percent<=20){
             bottle_bar = new Image(atlas.findRegion("bottle_20_bar"));
@@ -748,8 +740,6 @@ PotResources.dispose_all();
         out.addActor(micro_secondary);
         return out;
     }
-
-
 
     private Group generate_buttons_pane(){
         Group out = new Group();

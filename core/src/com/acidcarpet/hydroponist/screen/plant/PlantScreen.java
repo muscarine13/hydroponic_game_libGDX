@@ -156,7 +156,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         out.addActor(background);
 
         Image day_bar;
-        if(Box.getInstance().getPlant().get_percent_day()>10){
+        if(Box.getInstance().getPlant().get_percent_day()<10){
             day_bar = new Image(atlas.findRegion("day_0_bar"));
         }else if(Box.getInstance().getPlant().get_percent_day()>=10&&Box.getInstance().getPlant().get_percent_day()<20){
             day_bar = new Image(atlas.findRegion("day_10_bar"));
@@ -181,7 +181,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         }else{
             day_bar = new Image(atlas.findRegion("day_0_bar"));
         }
-
+        System.out.println("day_percent::::::::::::::::::"+Box.getInstance().getPlant().get_percent_day());
         day_bar.setName("plant_day_bar");
         day_bar.setPosition(0, 0);
         out.addActor(day_bar);
@@ -326,7 +326,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         out.addActor(harvest_button);
 
         Image hp_bar;
-        if(Box.getInstance().getPlant().get_percent_hp()>10){
+        if(Box.getInstance().getPlant().get_percent_hp()<10){
             hp_bar = new Image(atlas.findRegion("hp_0_bar"));
         }else if(Box.getInstance().getPlant().get_percent_hp()>=10&&Box.getInstance().getPlant().get_percent_hp()<20){
             hp_bar = new Image(atlas.findRegion("hp_10_bar"));
@@ -352,6 +352,7 @@ public class PlantScreen extends InputAdapter implements Screen {
             hp_bar = new Image(atlas.findRegion("hp_0_bar"));
         }
 
+        System.out.println("hp_percent::::::::::::::::::"+Box.getInstance().getPlant().get_percent_hp());
         hp_bar.setName("plant_hp_bar");
         hp_bar.setPosition(0, 660-100);
         out.addActor(hp_bar);
