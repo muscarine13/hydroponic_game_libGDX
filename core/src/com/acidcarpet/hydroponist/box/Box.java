@@ -7,8 +7,12 @@ import com.acidcarpet.hydroponist.lamp.LampGenerator;
 import com.acidcarpet.hydroponist.plant.Plant;
 import com.acidcarpet.hydroponist.plant.PlantGenerator;
 import com.acidcarpet.hydroponist.pot.Pot;
+import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 
 public class Box {
+
+    public static Thread seconds;
+
     public static final int temperature = 25;
     private static Box instance;
     public static Box getInstance(){
@@ -21,6 +25,28 @@ public class Box {
         pot = Pot.getInstance();
         fan = FanGenerator.generate_random();
         plant = PlantGenerator.generate_random();
+
+//        if (seconds == null) {
+//            seconds = new Thread() {
+//                @Override
+//                public void run() {
+//                    while (true) {
+//
+//                            Box.getInstance().second();
+//                            BoxScreen.update();
+//                            System.err.println("second");
+//
+//                        try {
+//                            Thread.sleep(1000);
+//                        } catch (InterruptedException e) {
+//                            e.printStackTrace();
+//                        }
+//                    }
+//
+//                }
+//            };
+//            seconds.start();
+//        }
     }
 
     private Lamp lamp;
@@ -34,6 +60,8 @@ public class Box {
         pot.second();
         plant.second();
     }
+
+
 
     public Lamp getLamp() {
         return lamp;

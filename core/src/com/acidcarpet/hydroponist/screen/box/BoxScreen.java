@@ -28,6 +28,7 @@ import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import java.util.Date;
 
 public class BoxScreen implements Screen {
+
     private static boolean refresh;
     public static void update(){
         refresh = true;
@@ -50,6 +51,7 @@ public class BoxScreen implements Screen {
 
     @Override
     public void show() {
+
         stage = new Stage(new ExtendViewport(1080, 1920));
 
         BoxResources.set_all();

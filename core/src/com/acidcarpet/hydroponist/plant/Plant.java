@@ -4,6 +4,8 @@ import com.acidcarpet.hydroponist.ContentPack;
 import com.acidcarpet.hydroponist.Elements;
 import com.acidcarpet.hydroponist.Wrench;
 import com.acidcarpet.hydroponist.box.Box;
+import com.acidcarpet.hydroponist.log.LogManager;
+import com.acidcarpet.hydroponist.log.LogMessage;
 import com.acidcarpet.hydroponist.plant.flower.Flower;
 import com.acidcarpet.hydroponist.plant.flower.FlowersType;
 import com.acidcarpet.hydroponist.plant.leave.Leave;
@@ -17,8 +19,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class Plant {
-
-    TextureAtlas atlas;
 
     LifetimeType lifetimeType;
     GenusType genusType;
@@ -37,6 +37,11 @@ public class Plant {
 
 
     public Plant(LifetimeType lifetimeType, GenusType genusType, VisumType visumType, LeavesType leavesType, RootsType rootsType, FlowersType flowersType, SeedType seedType, PreVegetationType preVegetationType, PostVegetationType postVegetationType, PreBloomType preBloomType, PostBloomType postBloomType) {
+        LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                "Создание растения",
+                Thread.currentThread().getName(), this.getClass().getSimpleName()
+        );
+
         this.lifetimeType = lifetimeType;
         this.genusType = genusType;
         this.visumType = visumType;
@@ -52,12 +57,38 @@ public class Plant {
         leaves = new ArrayList<>();
         roots = new ArrayList<>();
         flowers = new ArrayList<>();
+
         stage = Stages.SEED;
+
+//        seed_remain = (int)Stages.SEED.time_multiplier*lifetimeType.seconds;
+//        if(Wrench.try_percent(visumType.pre_vegetation_chance)){
+//            pre_vegetation_remain = (int)Stages.PRE_VEGETATION.time_multiplier*lifetimeType.seconds;
+//        }else{
+//            pre_vegetation_remain = 0;
+//        }
+//        vegetation_remain = (int)Stages.VEGETATION.time_multiplier*lifetimeType.seconds;
+//        if(Wrench.try_percent(visumType.post_vegetation_chance)){
+//            post_vegetation_remain = (int)Stages.POST_VEGETATION.time_multiplier*lifetimeType.seconds;
+//        }else{
+//            post_vegetation_remain = 0;
+//        }
+//        if(Wrench.try_percent(visumType.pre_bloom_chance)){
+//            pre_bloom_remain = (int)Stages.PRE_BLOOM.time_multiplier*lifetimeType.seconds;
+//        }else{
+//            pre_bloom_remain = 0;
+//        }
+//        bloom_remain = (int)Stages.BLOOM.time_multiplier*lifetimeType.seconds;
+//        if(Wrench.try_percent(visumType.post_bloom_chance)){
+//            post_bloom_remain = (int)Stages.POST_BLOOM.time_multiplier*lifetimeType.seconds;
+//        }else{
+//            post_bloom_remain = 0;
+//        }
+
+        roots.add(new Root(rootsType));
 
         bounty_coin = Wrench.random_int(lifetimeType.coin_minimum, lifetimeType.coin_maximum);
         bounty_diamond = Wrench.random_int(lifetimeType.diamond_minimum, lifetimeType.diamond_maximum);
 
-        atlas = ContentPack.getAll_atlas();
     }
 
     private Stages stage;
@@ -122,7 +153,6 @@ public class Plant {
                 return Elements.EMPTY;
         }
     }
-
     public Elements current_micro_primary(){
         return visumType.micro_primary;
     }
@@ -131,19 +161,48 @@ public class Plant {
     }
 
     private void roots_action(){
-        if(stage==Stages.HARVEST) return;
+        if(stage==Stages.HARVEST){
+            LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                    "Корни отказываются работать из-за стадии урожая",
+                    Thread.currentThread().getName(), this.getClass().getSimpleName()
+            );
+            return;
+        }
 
         for(Root root: roots){
+            LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                    "Корень пытается пить",
+                    Thread.currentThread().getName(), this.getClass().getSimpleName()
+            );
             maximum_score+=3;
 
             if(Box.getInstance().getPot().getpH()>root.min_pH()&& Box.getInstance().getPot().getpH()<root.max_pH()){
                 current_score++;
+                LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                        "pH в порядке",
+                        Thread.currentThread().getName(), this.getClass().getSimpleName()
+                );
+            }else {
+                LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                        "pH не в порядке",
+                        Thread.currentThread().getName(), this.getClass().getSimpleName()
+                );
             }
             if(Box.getInstance().getPot().drain(root.water_production())){
                 water+=root.water_production();
                 current_score++;
+                LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                        "вода в порядке, выпили воды: "+root.water_production(),
+                        Thread.currentThread().getName(), this.getClass().getSimpleName()
+                );
+            }else{
+                LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                        "вода не в порядке, должны были пить: "+root.water_production(),
+                        Thread.currentThread().getName(), this.getClass().getSimpleName()
+                );
             }
             if(Box.getInstance().getPot().get_all_ppm()>stage.minimum_ppm&& Box.getInstance().getPot().get_all_ppm()<stage.maximum_ppm){
+
                 current_score++;
 
                 double macro_primary_percent = (double)Box.getInstance().getPot().get_macro_primary_ppm()/(double)Box.getInstance().getPot().get_all_ppm();
@@ -156,6 +215,18 @@ public class Plant {
                 if(macro_secondary_percent>0.2&&macro_secondary_percent<0.4) current_score++;
                 if((micro_primary_percent>0.05&&micro_primary_percent<0.15)||micro_primary_percent==0) current_score++;
                 if((micro_secondary_percent>0.05&&micro_secondary_percent<0.15)||micro_secondary_percent==0) current_score++;
+
+
+                LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                        "ppm в порядке. проценты: mp:"+macro_primary_percent+", ms:"+macro_secondary_percent+", mip:"+micro_primary_percent+", mis"+micro_secondary_percent+"\n"+
+                        "количество: mp"+(macro_primary_percent>0.4&&macro_primary_percent<0.6)+", ms:"+(macro_secondary_percent>0.2&&macro_secondary_percent<0.4)+", mip:"+((micro_primary_percent>0.05&&micro_primary_percent<0.15)||micro_primary_percent==0)+", mis"+((micro_secondary_percent>0.05&&micro_secondary_percent<0.15)||micro_secondary_percent==0),
+                        Thread.currentThread().getName(), this.getClass().getSimpleName()
+                );
+            }else{
+                LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                        "ppm не в порядке",
+                        Thread.currentThread().getName(), this.getClass().getSimpleName()
+                );
             }
 
             maximum_score+=4;
@@ -164,16 +235,35 @@ public class Plant {
             if(Box.getInstance().getPot().micro_main()==current_micro_primary()) current_score++;
             if(Box.getInstance().getPot().micro_secondary()==current_micro_secondary()) current_score++;
 
+            LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                    "Совпадения элементов: mp:"+(Box.getInstance().getPot().macro_main()==current_macro_primary())+", ms:"+(Box.getInstance().getPot().macro_secondary()==current_macro_secondary())+", mip:"+(Box.getInstance().getPot().micro_main()==current_micro_primary())+", mis"+(Box.getInstance().getPot().micro_secondary()==current_micro_secondary()),
+                    Thread.currentThread().getName(), this.getClass().getSimpleName()
+            );
 
         }
+        LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                "Все корни закончили пить",
+                Thread.currentThread().getName(), this.getClass().getSimpleName()
+        );
 
     }
     private void leaves_action(){
-        if(stage==Stages.HARVEST) return;
+        if(stage==Stages.HARVEST) {
+            LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                    "Листья отказываются работать из-за урожая",
+                    Thread.currentThread().getName(), this.getClass().getSimpleName()
+            );
+            return;
+        }
 
         maximum_score+=4;
 
         for(Leave leave : leaves){
+            LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                    "Лист пытается работать",
+                    Thread.currentThread().getName(), this.getClass().getSimpleName()
+            );
+
             int temperature =(int) (
                     Box.temperature
                             -
@@ -182,10 +272,28 @@ public class Plant {
                             Box.getInstance().getLamp().getTemperature());
             if(temperature>leave.minimum_temperature()&&temperature<leave.maximum_temperature()){
                 current_score++;
+                LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                        "Температура ок. температура: "+temperature,
+                        Thread.currentThread().getName(), this.getClass().getSimpleName()
+                );
+            }else{
+                LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                        "Температура не ок. температура: "+temperature,
+                        Thread.currentThread().getName(), this.getClass().getSimpleName()
+                );
             }
 
             if(Box.getInstance().getFan().consume(leave.oxygen_consumption())){
                 current_score++;
+                LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                        "Кислород ок. кислорода потребили: "+leave.oxygen_consumption(),
+                        Thread.currentThread().getName(), this.getClass().getSimpleName()
+                );
+            }else{
+                LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                        "Кислород не ок. кислорода хотели потребить: "+leave.oxygen_consumption(),
+                        Thread.currentThread().getName(), this.getClass().getSimpleName()
+                );
             }
 
 
@@ -199,9 +307,19 @@ public class Plant {
                     dark_energy+=leave.dark_energy();
                     dark++;
                 }
+
+
                 double percent_day = light/(light+dark);
                 double percent_leave = genusType.percent_day;
                 double difference = percent_leave - percent_day;
+
+                LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                        "Удалось потребить свет. лампа: "+(Box.getInstance().getLamp().isOn())+"\n"+
+                                "процент дня:"+percent_day+"\n"+
+                                "процент дня листа"+percent_leave
+                        ,
+                        Thread.currentThread().getName(), this.getClass().getSimpleName()
+                );
 
                 if(difference<0.2&&difference>-0.2){
                     current_score++;
@@ -210,7 +328,18 @@ public class Plant {
                 if(water>=leave.water_consumption()){
                     water-=leave.water_consumption();
                     current_score++;
+                    LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                            "Вода ок. воды потребили: "+leave.water_consumption(),
+                            Thread.currentThread().getName(), this.getClass().getSimpleName()
+                    );
+                }else {
+                    LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                            "Вода не ок. воды хотели потребить: "+leave.water_consumption(),
+                            Thread.currentThread().getName(), this.getClass().getSimpleName()
+                    );
                 }
+
+
             }
         }
 
@@ -218,14 +347,28 @@ public class Plant {
 
     }
     private void flowers_action(){
-        if(stage==Stages.HARVEST) return;
+        if(stage==Stages.HARVEST){
+            LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                    "Цветы отказываются работать из-за урожая",
+                    Thread.currentThread().getName(), this.getClass().getSimpleName()
+            );
+            return;
+        }
 
         if(flowers.isEmpty()) {
             for (Flower flower : flowers){
+                LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                        "Вода не ок. воды хотели потребить: ",
+                        Thread.currentThread().getName(), this.getClass().getSimpleName()
+                );
                 if(flower.light_energy_consumption()<=light_energy&&
                 flower.dark_energy_consumption()<=dark_energy){
                     light_energy-=flower.light_energy_consumption();
                     dark_energy-=flower.dark_energy_consumption();
+                    LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                            "Получилось потребить энергию. le:"+flower.light_energy_consumption()+", de:"+flower.dark_energy_consumption(),
+                            Thread.currentThread().getName(), this.getClass().getSimpleName()
+                    );
                     flower.grow();
                 }
             }
@@ -520,11 +663,22 @@ public class Plant {
     }
 
     public synchronized void second(){
+
+        LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                "Зашли в секунду",
+                Thread.currentThread().getName(), this.getClass().getSimpleName()
+        );
+
             roots_action();
             leaves_action();
             flowers_action();
             grow();
             change_stage();
+
+        LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                "Вышли из секунды",
+                Thread.currentThread().getName(), this.getClass().getSimpleName()
+        );
 
 
     }

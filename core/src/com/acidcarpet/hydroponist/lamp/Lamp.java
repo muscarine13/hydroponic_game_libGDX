@@ -41,6 +41,7 @@ public class Lamp implements Storable {
                         *
                         Wrench.random_double(temperatureQuality.minPercent, temperatureQuality.maxPercent));
         if(temperature == 0) temperature = 1;
+        on = true;
     }
 
     public synchronized boolean consume(double energy){

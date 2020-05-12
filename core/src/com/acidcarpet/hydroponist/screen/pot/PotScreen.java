@@ -215,7 +215,7 @@ PotResources.dispose_all();
             Label.LabelStyle title_style = new Label.LabelStyle();
             title_style.font = alice_72_8F51F5;
             Label name_label = new Label(
-                      "ТЕКСТ КАКОЙ ТО",
+                      "Ведро уровня "+Box.getInstance().getPot().getLevel().name(),
                     title_style
             );
             name_label.setAlignment(Align.center);
@@ -230,7 +230,7 @@ PotResources.dispose_all();
                     (int)
                             ((Box.getInstance().getPot().get_current_volume()
                             /
-                            Box.getInstance().getPot().get_maximum_volume())*100);
+                            Box.getInstance().getPot().getLevel().getMaximum_volume())*100);
 
             if(pot_volume_percent<=0){
                 pot_bar = new Image(atlas.findRegion("pot_0_bar"));
@@ -266,7 +266,7 @@ PotResources.dispose_all();
             Label.LabelStyle elements_style = new Label.LabelStyle();
             elements_style.font = alice_72_30155B;
 
-            Label maximum_label = new Label((int)(Box.getInstance().getPot().get_maximum_volume()*1000)+" ml",
+            Label maximum_label = new Label((int)(Box.getInstance().getPot().getLevel().getMaximum_volume()*1000)+" ml",
                     elements_style);
             maximum_label.setAlignment(Align.center);
             maximum_label.setName("maximum_label");
@@ -582,86 +582,6 @@ PotResources.dispose_all();
 
         out.setName("items_pane");
         out.setPosition(40, 1920-530-1080);
-        return out;
-    }
-    private Group generate_item(final Pot pot){
-        Group out = new Group();
-
-
-
-        Image background = new Image(atlas.findRegion("sub_pot_pane"));
-        background.setPosition(0, 0);
-        background.setName("sub_pot_pane");
-        out.addActor(background);
-
-        Label.LabelStyle title_style = new Label.LabelStyle();
-        title_style.font = alice_62_797E55;
-        Label name_label = new Label(
-                "YTGJYZNYSQ NYTRCN 2",
-                title_style
-        );
-        name_label.setAlignment(Align.center);
-        name_label.setName("title_label");
-        name_label.setWrap(true);
-        name_label.setBounds(0, 230-120, 1080, 120);
-        out.addActor(name_label);
-
-        ImageButton delete_button = new ImageButton(skin, "delete_button");
-        delete_button.setPosition(15, 15);
-        delete_button.setName("delete_button");
-        delete_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                delete_button_clicked(pot);
-            }
-        });
-        out.addActor(delete_button);
-
-        ImageButton equip_button = new ImageButton(skin, "equip_button");
-        equip_button.setPosition(1080-15-200, 15);
-        equip_button.setName("equip_button");
-        equip_button.addListener(new ClickListener() {
-            @Override
-            public void clicked(InputEvent event, float x, float y) {
-                equip_button_clicked(pot);
-            }
-        });
-        out.addActor(equip_button);
-
-        Image pot_bar;
-        double percent = ((double)pot.get_current_volume()/pot.get_maximum_volume())*100;
-
-        if(percent<=0){
-            pot_bar = new Image(atlas.findRegion("sub_pot_0_bar"));
-        }else if(percent>0&&percent<=10){
-            pot_bar = new Image(atlas.findRegion("sub_pot_10_bar"));
-        }else if(percent>10&&percent<=20){
-            pot_bar = new Image(atlas.findRegion("sub_pot_20_bar"));
-        }else if(percent>20&&percent<=30){
-            pot_bar = new Image(atlas.findRegion("sub_pot_30_bar"));
-        }else if(percent>30&&percent<=40){
-            pot_bar = new Image(atlas.findRegion("sub_pot_40_bar"));
-        }else if(percent>40&&percent<=50){
-            pot_bar = new Image(atlas.findRegion("sub_pot_50_bar"));
-        }else if(percent>50&&percent<=60){
-            pot_bar = new Image(atlas.findRegion("sub_pot_60_bar"));
-        }else if(percent>60&&percent<=70){
-            pot_bar = new Image(atlas.findRegion("sub_pot_70_bar"));
-        }else if(percent>70&&percent<=80){
-            pot_bar = new Image(atlas.findRegion("sub_pot_80_bar"));
-        }else if(percent>80&&percent<=90){
-            pot_bar = new Image(atlas.findRegion("sub_pot_90_bar"));
-        }else if(percent>90&&percent<=100){
-            pot_bar = new Image(atlas.findRegion("sub_pot_100_bar"));
-        }else
-            {
-            pot_bar = new Image(atlas.findRegion("sub_pot_100_bar"));
-        }
-
-        pot_bar.setPosition(15+200, 15);
-        pot_bar.setName("pot_bar");
-        out.addActor(pot_bar);
-
         return out;
     }
     private Group generate_item(final Bottle bottle){

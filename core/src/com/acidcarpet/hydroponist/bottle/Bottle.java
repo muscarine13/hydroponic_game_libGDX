@@ -1,7 +1,8 @@
 package com.acidcarpet.hydroponist.bottle;
 
-import android.util.Log;
 
+import com.acidcarpet.hydroponist.log.LogManager;
+import com.acidcarpet.hydroponist.log.LogMessage;
 import com.acidcarpet.hydroponist.storage.Storable;
 import com.acidcarpet.hydroponist.storage.Type;
 
@@ -103,7 +104,12 @@ public class Bottle implements Storable {
     private MicroSecondaryType microSecondaryType;
 
     public Bottle(VolumeType volumeType, PurityType purityType, MacroPrimaryType macroPrimaryType, MacroSecondaryType macroSecondaryType, MicroPrimaryType microPrimaryType, MicroSecondaryType microSecondaryType) {
-        Log.i(TAG, "");
+
+        LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                "Start create bottle",
+                Thread.currentThread().getName(), this.getClass().getSimpleName()
+        );
+
         this.volumeType = volumeType;
         this.purityType = purityType;
         this.macroPrimaryType = macroPrimaryType;

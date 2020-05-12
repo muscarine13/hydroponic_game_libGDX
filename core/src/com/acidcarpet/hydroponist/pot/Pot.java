@@ -7,6 +7,8 @@ import com.acidcarpet.hydroponist.bottle.MacroSecondaryType;
 import com.acidcarpet.hydroponist.bottle.MicroPrimaryType;
 import com.acidcarpet.hydroponist.bottle.MicroSecondaryType;
 import com.acidcarpet.hydroponist.box.Box;
+import com.acidcarpet.hydroponist.log.LogManager;
+import com.acidcarpet.hydroponist.log.LogMessage;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
 public class Pot {
@@ -17,10 +19,12 @@ public class Pot {
     }
 
     Pot(){
-        atlas = ContentPack.getAll_atlas();
+
         level = Level.LVL_1;
+
+
     }
-    TextureAtlas atlas;
+
 
     private Level level;
     public synchronized void level_up(){
@@ -95,9 +99,23 @@ public class Pot {
         fil(1, 6.6,0,0,0,0,0,0,0,0,0,0,0,0);
     }
     public synchronized void pro_help(){
+        LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                "Зашли в помощь профессионала",
+                Thread.currentThread().getName(), this.getClass().getSimpleName()
+        );
 
-
-        if(Box.getInstance().getPlant()==null) return;
+        if(Box.getInstance().getPlant()==null){
+            LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                    "Растения нет, профессионал отказывается работать",
+                    Thread.currentThread().getName(), this.getClass().getSimpleName()
+            );
+            return;
+        }else{
+            LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                    "Растение есть. профессионал согласен работать",
+                    Thread.currentThread().getName(), this.getClass().getSimpleName()
+            );
+        }
 
         int stage_ppm = Box.getInstance().getPlant().getStage().getMinimum_ppm()+
                 (Box.getInstance().getPlant().getStage().getMaximum_ppm()-Box.getInstance().getPlant().getStage().getMinimum_ppm());
@@ -186,12 +204,33 @@ public class Pot {
         Mo=(int)(micro_secondary_ppm*micro_secondary_type.getMo_percent());
         Zn=(int)(micro_secondary_ppm*micro_secondary_type.getZn_percent());
 
+        LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                "Элементы: \n"+
+                "N:"+N+"\n"+
+                        "P:"+P+"\n"+
+                        "K:"+K+"\n"+
+                        "S:"+S+"\n"+
+                        "Mg:"+Mg+"\n"+
+                        "Ca:"+Ca+"\n"+
+                        "B:"+B+"\n"+
+                        "Cu:"+Cu+"\n"+
+                        "Fe:"+Fe+"\n"+
+                        "Mn:"+Mn+"\n"+
+                        "Mo:"+Mo+"\n"+
+                        "Zn:"+Zn+"\n",
+                Thread.currentThread().getName(), this.getClass().getSimpleName()
+        );
         double pH;
-        pH = Box.getInstance().getPlant().getRootsType().getPh_min()+(Box.getInstance().getPlant().getRootsType().getPh_max()-Box.getInstance().getPlant().getRootsType().getPh_min());
+        pH = Box.getInstance().getPlant().getRootsType().getPh_min()+((Box.getInstance().getPlant().getRootsType().getPh_max()-Box.getInstance().getPlant().getRootsType().getPh_min())/2);
 
 
         this.volume = this.level.maximum_volume;
         this.pH = pH;
+
+        LogManager.getInstance().add(LogMessage.Type.NORMAL,
+                "Объем и ph:"+volume+"-"+pH,
+                Thread.currentThread().getName(), this.getClass().getSimpleName()
+        );
 
         this.ppm_N = N;
         this.ppm_P = P;
