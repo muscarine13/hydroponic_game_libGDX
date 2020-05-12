@@ -58,13 +58,16 @@ public class PotScreen implements Screen {
 
     }
     public void pot_fil_button_click(ImageButton button){
+        Box.getInstance().getPot().fil(
 
+        );
 
 
 
     }
     public void pot_drop_button_click(ImageButton button){
 
+        Box.getInstance().getPot().drain();
 
 
     }
@@ -73,7 +76,6 @@ public class PotScreen implements Screen {
         if(Box.getInstance().getPot()==null)return;
         if(Box.getInstance().getPlant()==null) return;
 
-        Box.getInstance().getPot().drain(Box.getInstance().getPot().get_current_volume());
 
         Box.getInstance().getPot().pro_help();
     }
@@ -230,7 +232,7 @@ PotResources.dispose_all();
                     (int)
                             ((Box.getInstance().getPot().get_current_volume()
                             /
-                            Box.getInstance().getPot().getLevel().getMaximum_volume())*100);
+                            Box.getInstance().getPot().get_maximum_volume())*100);
 
             if(pot_volume_percent<=0){
                 pot_bar = new Image(atlas.findRegion("pot_0_bar"));
@@ -266,7 +268,7 @@ PotResources.dispose_all();
             Label.LabelStyle elements_style = new Label.LabelStyle();
             elements_style.font = alice_72_30155B;
 
-            Label maximum_label = new Label((int)(Box.getInstance().getPot().getLevel().getMaximum_volume()*1000)+" ml",
+            Label maximum_label = new Label((Box.getInstance().getPot().get_maximum_volume())+" ml",
                     elements_style);
             maximum_label.setAlignment(Align.center);
             maximum_label.setName("maximum_label");
@@ -274,7 +276,7 @@ PotResources.dispose_all();
             maximum_label.setBounds(15, 15+350-80-80, 350, 80);
             out.addActor(maximum_label);
 
-            Label current_label = new Label((int)(Box.getInstance().getPot().get_current_volume()*1000)+" ml",
+            Label current_label = new Label((Box.getInstance().getPot().get_current_volume())+" ml",
                     elements_style);
             current_label.setAlignment(Align.center);
             current_label.setName("current_label");
@@ -546,7 +548,7 @@ PotResources.dispose_all();
         }
 
         out.setName("pot_pane");
-        out.setPosition(0+40, 1920-530);
+        out.setPosition(0, 1920-530);
         return out;
     }
 
@@ -581,7 +583,7 @@ PotResources.dispose_all();
         out.addActor(pane);
 
         out.setName("items_pane");
-        out.setPosition(40, 1920-530-1080);
+        out.setPosition(0, 1920-530-1080);
         return out;
     }
     private Group generate_item(final Bottle bottle){
@@ -769,7 +771,7 @@ PotResources.dispose_all();
         out.addActor(back_button);
 
         out.setName("buttons_pane");
-        out.setPosition(40, 0);
+        out.setPosition(0, 0);
         return out;
     }
 

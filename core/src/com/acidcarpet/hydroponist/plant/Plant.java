@@ -20,20 +20,20 @@ import java.util.List;
 
 public class Plant {
 
-    LifetimeType lifetimeType;
-    GenusType genusType;
-    VisumType visumType;
+    private LifetimeType lifetimeType;
+    private GenusType genusType;
+    private VisumType visumType;
 
-    LeavesType leavesType;
-    RootsType rootsType;
-    FlowersType flowersType;
+    private LeavesType leavesType;
+    private RootsType rootsType;
+    private FlowersType flowersType;
 
-    SeedType seedType;
-    PreVegetationType preVegetationType;
-    PostVegetationType postVegetationType;
+    private SeedType seedType;
+    private PreVegetationType preVegetationType;
+    private PostVegetationType postVegetationType;
 
-    PreBloomType preBloomType;
-    PostBloomType postBloomType;
+    private PreBloomType preBloomType;
+    private PostBloomType postBloomType;
 
 
     public Plant(LifetimeType lifetimeType, GenusType genusType, VisumType visumType, LeavesType leavesType, RootsType rootsType, FlowersType flowersType, SeedType seedType, PreVegetationType preVegetationType, PostVegetationType postVegetationType, PreBloomType preBloomType, PostBloomType postBloomType) {
@@ -62,30 +62,33 @@ public class Plant {
 
         seed_remain = (int)(Stages.SEED.time_multiplier*lifetimeType.seconds);
         if(Wrench.try_percent(visumType.pre_vegetation_chance)){
-            pre_vegetation_remain = (int)Stages.PRE_VEGETATION.time_multiplier*lifetimeType.seconds;
+            pre_vegetation_remain = (int)(Stages.PRE_VEGETATION.time_multiplier*lifetimeType.seconds);
         }else{
             pre_vegetation_remain = 0;
         }
-        vegetation_remain = (int)Stages.VEGETATION.time_multiplier*lifetimeType.seconds;
+        vegetation_remain = (int)(Stages.VEGETATION.time_multiplier*lifetimeType.seconds);
         if(Wrench.try_percent(visumType.post_vegetation_chance)){
-            post_vegetation_remain = (int)Stages.POST_VEGETATION.time_multiplier*lifetimeType.seconds;
+            post_vegetation_remain = (int)(Stages.POST_VEGETATION.time_multiplier*lifetimeType.seconds);
         }else{
             post_vegetation_remain = 0;
         }
         if(Wrench.try_percent(visumType.pre_bloom_chance)){
-            pre_bloom_remain = (int)Stages.PRE_BLOOM.time_multiplier*lifetimeType.seconds;
+            pre_bloom_remain = (int)(Stages.PRE_BLOOM.time_multiplier*lifetimeType.seconds);
         }else{
             pre_bloom_remain = 0;
         }
-        bloom_remain = (int)Stages.BLOOM.time_multiplier*lifetimeType.seconds;
+        bloom_remain = (int)(Stages.BLOOM.time_multiplier*lifetimeType.seconds);
         if(Wrench.try_percent(visumType.post_bloom_chance)){
-            post_bloom_remain = (int)Stages.POST_BLOOM.time_multiplier*lifetimeType.seconds;
+            post_bloom_remain = (int)(Stages.POST_BLOOM.time_multiplier*lifetimeType.seconds);
         }else{
             post_bloom_remain = 0;
         }
-        System.out.println("SEED_REMAIN:"+seed_remain);
+
+        dark=100;
+        light=100;
 
         roots.add(new Root(rootsType));
+        leaves.add(new Leave(leavesType));
 
         bounty_coin = Wrench.random_int(lifetimeType.coin_minimum, lifetimeType.coin_maximum);
         bounty_diamond = Wrench.random_int(lifetimeType.diamond_minimum, lifetimeType.diamond_maximum);

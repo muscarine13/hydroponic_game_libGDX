@@ -15,7 +15,7 @@ public class Wrench {
     }
 
     public static boolean try_percent(double percent){
-        if(percent<=random_double(0.0, 100.0))return true;
+        if(random_double(0.0, 100.0)<=percent)return true;
         else return false;
     }
 

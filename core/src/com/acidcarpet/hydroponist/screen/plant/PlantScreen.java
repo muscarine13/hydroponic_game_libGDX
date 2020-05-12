@@ -194,7 +194,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         );
         seed_stage_label.setAlignment(Align.center);
         seed_stage_label.setName("seed_stage_label");
-        seed_stage_label.setWrap(true);
+        seed_stage_label.setWrap(false);
         seed_stage_label.setBounds(0, 100, 135, 100);
         out.addActor(seed_stage_label);
 
@@ -206,7 +206,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         );
         pre_vegetation_stage_label.setAlignment(Align.center);
         pre_vegetation_stage_label.setName("pre_vegetation_stage_label");
-        pre_vegetation_stage_label.setWrap(true);
+        pre_vegetation_stage_label.setWrap(false);
         pre_vegetation_stage_label.setBounds(0+(135*1), 100, 135, 100);
         out.addActor(pre_vegetation_stage_label);
 
@@ -218,7 +218,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         );
         vegetation_stage_label.setAlignment(Align.center);
         vegetation_stage_label.setName("vegetation_stage_label");
-        vegetation_stage_label.setWrap(true);
+        vegetation_stage_label.setWrap(false);
         vegetation_stage_label.setBounds(0+(135*2), 100, 135, 100);
         out.addActor(vegetation_stage_label);
 
@@ -230,7 +230,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         );
         post_vegetation_stage_label.setAlignment(Align.center);
         post_vegetation_stage_label.setName("post_vegetation_stage_label");
-        post_vegetation_stage_label.setWrap(true);
+        post_vegetation_stage_label.setWrap(false);
         post_vegetation_stage_label.setBounds(0+(135*3), 100, 135, 100);
         out.addActor(post_vegetation_stage_label);
 
@@ -242,7 +242,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         );
         pre_bloom_stage_label.setAlignment(Align.center);
         pre_bloom_stage_label.setName("pre_bloom_stage_label");
-        pre_bloom_stage_label.setWrap(true);
+        pre_bloom_stage_label.setWrap(false);
         pre_bloom_stage_label.setBounds(0+(135*4), 100, 135, 100);
         out.addActor(pre_bloom_stage_label);
 
@@ -254,7 +254,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         );
         bloom_stage_label.setAlignment(Align.center);
         bloom_stage_label.setName("bloom_stage_label");
-        bloom_stage_label.setWrap(true);
+        bloom_stage_label.setWrap(false);
         bloom_stage_label.setBounds(0+(135*5), 100, 135, 100);
         out.addActor(bloom_stage_label);
 
@@ -266,7 +266,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         );
         post_bloom_stage_label.setAlignment(Align.center);
         post_bloom_stage_label.setName("post_bloom_stage_label");
-        post_bloom_stage_label.setWrap(true);
+        post_bloom_stage_label.setWrap(false);
         post_bloom_stage_label.setBounds(0+(135*6), 100, 135, 100);
         out.addActor(post_bloom_stage_label);
 
@@ -294,7 +294,7 @@ public class PlantScreen extends InputAdapter implements Screen {
         );
         all_stages_label.setAlignment(Align.center);
         all_stages_label.setName("all_stages_label");
-        all_stages_label.setWrap(true);
+        all_stages_label.setWrap(false);
         all_stages_label.setBounds(0+(135*7), 100, 135, 100);
         out.addActor(all_stages_label);
 
@@ -362,28 +362,28 @@ public class PlantScreen extends InputAdapter implements Screen {
         Image micro_secondary;
 
         switch (Box.getInstance().getPlant().current_macro_primary()){
-            case N: macro_primary =  new Image(atlas.findRegion("element_N"));
-            case P: macro_primary =  new Image(atlas.findRegion("element_P"));
-            case K: macro_primary =  new Image(atlas.findRegion("element_K"));
-            default: macro_primary =  new Image(atlas.findRegion("element_Empty"));
+            case N: macro_primary =  new Image(atlas.findRegion("element_N")); break;
+            case P: macro_primary =  new Image(atlas.findRegion("element_P"));break;
+            case K: macro_primary =  new Image(atlas.findRegion("element_K"));break;
+            default: macro_primary =  new Image(atlas.findRegion("element_Empty"));break;
         }
         switch (Box.getInstance().getPlant().current_macro_secondary()){
-            case S: macro_secondary =  new Image(atlas.findRegion("element_S"));
-            case Mg: macro_secondary =  new Image(atlas.findRegion("element_Mg"));
-            case Ca: macro_secondary =  new Image(atlas.findRegion("element_Ca"));
-            default: macro_secondary =  new Image(atlas.findRegion("element_Empty"));
+            case S: macro_secondary =  new Image(atlas.findRegion("element_S"));break;
+            case Mg: macro_secondary =  new Image(atlas.findRegion("element_Mg"));break;
+            case Ca: macro_secondary =  new Image(atlas.findRegion("element_Ca"));break;
+            default: macro_secondary =  new Image(atlas.findRegion("element_Empty"));break;
         }
         switch (Box.getInstance().getPlant().current_micro_primary()){
-            case B: micro_primary =  new Image(atlas.findRegion("element_B"));
-            case Cu: micro_primary =  new Image(atlas.findRegion("element_Cu"));
-            case Fe: micro_primary =  new Image(atlas.findRegion("element_Fe"));
-            default: micro_primary =  new Image(atlas.findRegion("element_acid"));
+            case B: micro_primary =  new Image(atlas.findRegion("element_B"));break;
+            case Cu: micro_primary =  new Image(atlas.findRegion("element_Cu"));break;
+            case Fe: micro_primary =  new Image(atlas.findRegion("element_Fe"));break;
+            default: micro_primary =  new Image(atlas.findRegion("element_acid"));break;
         }
         switch (Box.getInstance().getPlant().current_micro_secondary()){
-            case Mn: micro_secondary =  new Image(atlas.findRegion("element_Mn"));
-            case Mo: micro_secondary =  new Image(atlas.findRegion("element_Mo"));
-            case Zn: micro_secondary =  new Image(atlas.findRegion("element_Zn"));
-            default: micro_secondary =  new Image(atlas.findRegion("element_alcaline"));
+            case Mn: micro_secondary =  new Image(atlas.findRegion("element_Mn"));break;
+            case Mo: micro_secondary =  new Image(atlas.findRegion("element_Mo"));break;
+            case Zn: micro_secondary =  new Image(atlas.findRegion("element_Zn"));break;
+            default: micro_secondary =  new Image(atlas.findRegion("element_alcaline"));break;
         }
 
         macro_primary.setPosition((1080/2)-300, 660-100-100);
