@@ -1,9 +1,16 @@
 package com.acidcarpet.hydroponist.bottle;
 
+import android.util.Log;
+
 import com.acidcarpet.hydroponist.storage.Storable;
 import com.acidcarpet.hydroponist.storage.Type;
 
+
+
+
 public class Bottle implements Storable {
+
+    private static String TAG;
 
 
     PH_TYPE ph_type;
@@ -12,12 +19,12 @@ public class Bottle implements Storable {
 
         String out;
 
+        TAG = this.getClass().getSimpleName();
         out = volumeType.latin+" "+macroSecondaryType.latin+" "+macroPrimaryType.latin+" continet "+microPrimaryType.latin+" "+microSecondaryType.latin+" ("+purityType.latin+")";
 
         return out;
 
     }
-
     public String description(){
 
         String out = "";
@@ -96,6 +103,7 @@ public class Bottle implements Storable {
     private MicroSecondaryType microSecondaryType;
 
     public Bottle(VolumeType volumeType, PurityType purityType, MacroPrimaryType macroPrimaryType, MacroSecondaryType macroSecondaryType, MicroPrimaryType microPrimaryType, MicroSecondaryType microSecondaryType) {
+        Log.i(TAG, "");
         this.volumeType = volumeType;
         this.purityType = purityType;
         this.macroPrimaryType = macroPrimaryType;

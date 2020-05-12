@@ -1,7 +1,5 @@
 package com.acidcarpet.hydroponist.screen.donat;
 
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
-
 public abstract class DonatOffer {
 
     public DonatOffer(

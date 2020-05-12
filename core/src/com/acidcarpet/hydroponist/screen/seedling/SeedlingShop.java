@@ -3,7 +3,6 @@ package com.acidcarpet.hydroponist.screen.seedling;
 import com.acidcarpet.hydroponist.plant.Plant;
 import com.acidcarpet.hydroponist.plant.PlantGenerator;
 
-
 import java.util.ArrayList;
 import java.util.List;
 

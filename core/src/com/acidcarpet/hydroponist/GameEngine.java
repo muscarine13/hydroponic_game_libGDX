@@ -2,19 +2,16 @@ package com.acidcarpet.hydroponist;
 
 
 import com.acidcarpet.hydroponist.box.Box;
+import com.acidcarpet.hydroponist.screen.box.BoxResources;
+import com.acidcarpet.hydroponist.screen.box.BoxScreen;
 import com.acidcarpet.hydroponist.screen.donat.DonatResources;
+import com.acidcarpet.hydroponist.screen.fan.FanResources;
+import com.acidcarpet.hydroponist.screen.lamp.LampResources;
 import com.acidcarpet.hydroponist.screen.plant.PlantResources;
+import com.acidcarpet.hydroponist.screen.pot.PotResources;
 import com.acidcarpet.hydroponist.screen.seedling.SeedlingResources;
 import com.acidcarpet.hydroponist.screen.settings.SettingsResources;
 import com.acidcarpet.hydroponist.screen.shop.ShopResources;
-
-import com.acidcarpet.hydroponist.screen.box.BoxResources;
-import com.acidcarpet.hydroponist.screen.box.BoxScreen;
-import com.acidcarpet.hydroponist.screen.fan.FanResources;
-import com.acidcarpet.hydroponist.screen.lamp.LampResources;
-
-import com.acidcarpet.hydroponist.screen.pot.PotResources;
-
 import com.badlogic.gdx.Game;
 
 

@@ -4,9 +4,6 @@ package com.acidcarpet.hydroponist.screen.seedling;
 import com.acidcarpet.hydroponist.box.Box;
 import com.acidcarpet.hydroponist.plant.Plant;
 import com.acidcarpet.hydroponist.storage.Inventory;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
-
-import java.util.List;
 
 public abstract class SeedlingOffer {
     public SeedlingOffer(String title,

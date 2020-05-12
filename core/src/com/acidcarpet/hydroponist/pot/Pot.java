@@ -7,9 +7,7 @@ import com.acidcarpet.hydroponist.bottle.MacroSecondaryType;
 import com.acidcarpet.hydroponist.bottle.MicroPrimaryType;
 import com.acidcarpet.hydroponist.bottle.MicroSecondaryType;
 import com.acidcarpet.hydroponist.box.Box;
-import com.acidcarpet.hydroponist.plant.Plant;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public class Pot {
     private static Pot instance;

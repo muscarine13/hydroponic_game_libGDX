@@ -1,10 +1,7 @@
 package com.acidcarpet.hydroponist.lamp;
 
-import com.acidcarpet.hydroponist.ContentPack;
 import com.acidcarpet.hydroponist.Wrench;
 import com.acidcarpet.hydroponist.storage.Storable;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public class Lamp implements Storable {
 

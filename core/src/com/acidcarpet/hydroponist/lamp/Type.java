@@ -1,7 +1,5 @@
 package com.acidcarpet.hydroponist.lamp;
 
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
-
 public enum Type {
     LED_RED(2.5, 1.9, 1.1, "красная LED лампа", "led_red"),
     DNaT(7.5, 1.8, 1.2, "лампа ДНаТ", "dnat"),

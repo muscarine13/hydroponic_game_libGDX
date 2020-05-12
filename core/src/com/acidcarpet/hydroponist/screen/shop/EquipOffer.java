@@ -2,7 +2,6 @@ package com.acidcarpet.hydroponist.screen.shop;
 
 import com.acidcarpet.hydroponist.storage.Inventory;
 import com.acidcarpet.hydroponist.storage.Storable;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 import java.util.List;
 

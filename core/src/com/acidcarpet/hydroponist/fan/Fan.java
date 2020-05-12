@@ -1,10 +1,10 @@
 package com.acidcarpet.hydroponist.fan;
+
 import com.acidcarpet.hydroponist.ContentPack;
 import com.acidcarpet.hydroponist.Wrench;
 import com.acidcarpet.hydroponist.storage.Storable;
 import com.acidcarpet.hydroponist.storage.Type;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public class Fan implements Storable {
     private TextureAtlas atlas;

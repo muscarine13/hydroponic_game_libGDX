@@ -3,8 +3,6 @@ package com.acidcarpet.hydroponist.plant;
 import com.acidcarpet.hydroponist.ContentPack;
 import com.acidcarpet.hydroponist.Elements;
 import com.acidcarpet.hydroponist.Wrench;
-
-
 import com.acidcarpet.hydroponist.box.Box;
 import com.acidcarpet.hydroponist.plant.flower.Flower;
 import com.acidcarpet.hydroponist.plant.flower.FlowersType;
@@ -13,7 +11,6 @@ import com.acidcarpet.hydroponist.plant.leave.LeavesType;
 import com.acidcarpet.hydroponist.plant.root.Root;
 import com.acidcarpet.hydroponist.plant.root.RootsType;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 import java.util.ArrayList;
 import java.util.Collections;

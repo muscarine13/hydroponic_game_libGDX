@@ -1,11 +1,11 @@
 package com.acidcarpet.hydroponist.screen.shop;
 
 
-
 import com.acidcarpet.hydroponist.lamp.LampGenerator;
 import com.acidcarpet.hydroponist.storage.Storable;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EquipShop {
 
