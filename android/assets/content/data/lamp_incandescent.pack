@@ -1,0 +1,215 @@
+
+lamp_incandescent.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+incandescent_III_light
+  rotate: false
+  xy: 1, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+incandescent_II_light
+  rotate: false
+  xy: 1, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+incandescent_IV_light
+  rotate: false
+  xy: 276, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+incandescent_IX_light
+  rotate: false
+  xy: 276, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+incandescent_VII_light
+  rotate: false
+  xy: 551, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+incandescent_VI_light
+  rotate: false
+  xy: 551, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+incandescent_X_light
+  rotate: false
+  xy: 826, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+incandescent_I_light
+  rotate: false
+  xy: 826, 2
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+incandescent_VIII_light
+  rotate: false
+  xy: 1101, 490
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+incandescent_V_light
+  rotate: false
+  xy: 1101, 3
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+incandescent_III_on
+  rotate: false
+  xy: 1376, 923
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_II_off
+  rotate: false
+  xy: 1376, 869
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_IV_on
+  rotate: false
+  xy: 1581, 923
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_IX_off
+  rotate: false
+  xy: 1376, 815
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_VIII_off
+  rotate: false
+  xy: 1581, 869
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_VII_on
+  rotate: false
+  xy: 1786, 923
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_VI_on
+  rotate: false
+  xy: 1376, 761
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_V_off
+  rotate: false
+  xy: 1581, 815
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_X_on
+  rotate: false
+  xy: 1786, 869
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_III_off
+  rotate: false
+  xy: 1376, 708
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_II_on
+  rotate: false
+  xy: 1581, 762
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_IV_off
+  rotate: false
+  xy: 1786, 816
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_IX_on
+  rotate: false
+  xy: 1376, 655
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_I_off
+  rotate: false
+  xy: 1581, 709
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_I_on
+  rotate: false
+  xy: 1786, 763
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_VIII_on
+  rotate: false
+  xy: 1376, 602
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_VII_off
+  rotate: false
+  xy: 1581, 656
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_VI_off
+  rotate: false
+  xy: 1786, 710
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_V_on
+  rotate: false
+  xy: 1376, 549
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_X_off
+  rotate: false
+  xy: 1581, 603
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1

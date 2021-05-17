@@ -1,0 +1,145 @@
+
+fan.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+fan_IX_on
+  rotate: false
+  xy: 1, 129
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+fan_VIII_on
+  rotate: false
+  xy: 1, 1
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+fan_VII_on
+  rotate: false
+  xy: 129, 129
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+fan_VI_on
+  rotate: false
+  xy: 129, 1
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+fan_X_on
+  rotate: false
+  xy: 257, 129
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+fan_IX_off
+  rotate: false
+  xy: 257, 1
+  size: 125, 126
+  orig: 125, 126
+  offset: 0, 0
+  index: -1
+fan_VIII_off
+  rotate: false
+  xy: 384, 1
+  size: 125, 126
+  orig: 125, 126
+  offset: 0, 0
+  index: -1
+fan_VII_off
+  rotate: false
+  xy: 385, 129
+  size: 125, 126
+  orig: 125, 126
+  offset: 0, 0
+  index: -1
+fan_VI_off
+  rotate: false
+  xy: 511, 1
+  size: 125, 126
+  orig: 125, 126
+  offset: 0, 0
+  index: -1
+fan_X_off
+  rotate: false
+  xy: 512, 129
+  size: 125, 126
+  orig: 125, 126
+  offset: 0, 0
+  index: -1
+fan_III_on
+  rotate: false
+  xy: 639, 130
+  size: 126, 125
+  orig: 126, 125
+  offset: 0, 0
+  index: -1
+fan_II_on
+  rotate: false
+  xy: 767, 130
+  size: 126, 125
+  orig: 126, 125
+  offset: 0, 0
+  index: -1
+fan_IV_on
+  rotate: false
+  xy: 895, 130
+  size: 126, 125
+  orig: 126, 125
+  offset: 0, 0
+  index: -1
+fan_I_on
+  rotate: false
+  xy: 1023, 130
+  size: 126, 125
+  orig: 126, 125
+  offset: 0, 0
+  index: -1
+fan_V_on
+  rotate: false
+  xy: 1151, 130
+  size: 126, 125
+  orig: 126, 125
+  offset: 0, 0
+  index: -1
+fan_III_off
+  rotate: false
+  xy: 1279, 130
+  size: 125, 125
+  orig: 125, 125
+  offset: 0, 0
+  index: -1
+fan_II_off
+  rotate: false
+  xy: 1406, 130
+  size: 125, 125
+  orig: 125, 125
+  offset: 0, 0
+  index: -1
+fan_IV_off
+  rotate: false
+  xy: 1533, 130
+  size: 125, 125
+  orig: 125, 125
+  offset: 0, 0
+  index: -1
+fan_I_off
+  rotate: false
+  xy: 1660, 130
+  size: 125, 125
+  orig: 125, 125
+  offset: 0, 0
+  index: -1
+fan_V_off
+  rotate: false
+  xy: 1787, 130
+  size: 125, 125
+  orig: 125, 125
+  offset: 0, 0
+  index: -1

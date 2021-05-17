@@ -1,0 +1,75 @@
+
+pot.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+pot_IX_on
+  rotate: false
+  xy: 1, 1
+  size: 158, 114
+  orig: 158, 114
+  offset: 0, 0
+  index: -1
+pot_III_on
+  rotate: false
+  xy: 161, 2
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+pot_II_on
+  rotate: false
+  xy: 321, 2
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+pot_IV_on
+  rotate: false
+  xy: 481, 2
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+pot_I_on
+  rotate: false
+  xy: 641, 2
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+pot_VIII_on
+  rotate: false
+  xy: 801, 2
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+pot_VII_on
+  rotate: false
+  xy: 961, 2
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+pot_VI_on
+  rotate: false
+  xy: 1121, 2
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+pot_V_on
+  rotate: false
+  xy: 1281, 2
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+pot_X_on
+  rotate: false
+  xy: 1441, 2
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
