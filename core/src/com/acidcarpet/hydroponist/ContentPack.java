@@ -11,7 +11,7 @@ public class ContentPack {
 
         try{
 
-            all_atlas = new TextureAtlas(Gdx.files.internal("content/data_all/content_all.pack"));
+            all_atlas = new TextureAtlas(Gdx.files.internal("content/data/all.atlas"));
             System.out.println("TRUE");
 
             return true;

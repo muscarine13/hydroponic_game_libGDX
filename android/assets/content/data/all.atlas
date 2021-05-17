@@ -1,0 +1,2699 @@
+
+all.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+daylight_III_off
+  rotate: false
+  xy: 1, 955
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+daylight_II_on
+  rotate: false
+  xy: 206, 955
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+daylight_IV_off
+  rotate: false
+  xy: 411, 955
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+daylight_IX_on
+  rotate: false
+  xy: 616, 955
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+daylight_I_off
+  rotate: false
+  xy: 1, 902
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+daylight_I_on
+  rotate: false
+  xy: 206, 902
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+daylight_VIII_on
+  rotate: false
+  xy: 411, 902
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+daylight_VII_off
+  rotate: false
+  xy: 616, 902
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+pot_III_on
+  rotate: false
+  xy: 821, 893
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+daylight_VI_off
+  rotate: false
+  xy: 1, 849
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+daylight_V_on
+  rotate: false
+  xy: 206, 849
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+daylight_X_off
+  rotate: false
+  xy: 411, 849
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+dnat_III_off
+  rotate: false
+  xy: 616, 849
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+dnat_II_on
+  rotate: false
+  xy: 1, 796
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+dnat_IV_off
+  rotate: false
+  xy: 206, 796
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+dnat_IX_on
+  rotate: false
+  xy: 411, 796
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+dnat_I_off
+  rotate: false
+  xy: 616, 796
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+pot_II_on
+  rotate: false
+  xy: 821, 778
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+dnat_I_on
+  rotate: false
+  xy: 1, 743
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+dnat_VIII_on
+  rotate: false
+  xy: 206, 743
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+dnat_VII_off
+  rotate: false
+  xy: 411, 743
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+dnat_VI_off
+  rotate: false
+  xy: 616, 743
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+dnat_V_on
+  rotate: false
+  xy: 1, 690
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+dnat_X_off
+  rotate: false
+  xy: 206, 690
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+fluorescent_III_off
+  rotate: false
+  xy: 411, 690
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+fluorescent_II_on
+  rotate: false
+  xy: 616, 690
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+pot_IV_on
+  rotate: false
+  xy: 821, 663
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+fluorescent_IV_off
+  rotate: false
+  xy: 1, 637
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+fluorescent_IX_on
+  rotate: false
+  xy: 206, 637
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+fluorescent_I_off
+  rotate: false
+  xy: 411, 637
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+fluorescent_I_on
+  rotate: false
+  xy: 616, 637
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+fluorescent_VIII_on
+  rotate: false
+  xy: 1, 584
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+fluorescent_VII_off
+  rotate: false
+  xy: 206, 584
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+fluorescent_VI_off
+  rotate: false
+  xy: 411, 584
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+fluorescent_V_on
+  rotate: false
+  xy: 616, 584
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+pot_I_on
+  rotate: false
+  xy: 821, 548
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+fluorescent_X_off
+  rotate: false
+  xy: 1, 531
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+halide_III_off
+  rotate: false
+  xy: 206, 531
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+halide_II_on
+  rotate: false
+  xy: 411, 531
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+halide_IV_off
+  rotate: false
+  xy: 616, 531
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+halide_IX_on
+  rotate: false
+  xy: 1, 478
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+halide_I_off
+  rotate: false
+  xy: 206, 478
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+halide_I_on
+  rotate: false
+  xy: 411, 478
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+halide_VIII_on
+  rotate: false
+  xy: 616, 478
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+pot_VIII_on
+  rotate: false
+  xy: 821, 433
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+halide_VII_off
+  rotate: false
+  xy: 1, 425
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+halide_VI_off
+  rotate: false
+  xy: 206, 425
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+halide_V_on
+  rotate: false
+  xy: 411, 425
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+halide_X_off
+  rotate: false
+  xy: 616, 425
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_III_off
+  rotate: false
+  xy: 1, 372
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_II_on
+  rotate: false
+  xy: 206, 372
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_IV_off
+  rotate: false
+  xy: 411, 372
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_IX_on
+  rotate: false
+  xy: 616, 372
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_I_off
+  rotate: false
+  xy: 1, 319
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_I_on
+  rotate: false
+  xy: 206, 319
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_VIII_on
+  rotate: false
+  xy: 411, 319
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_VII_off
+  rotate: false
+  xy: 616, 319
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+pot_VII_on
+  rotate: false
+  xy: 821, 318
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+incandescent_VI_off
+  rotate: false
+  xy: 1, 266
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_V_on
+  rotate: false
+  xy: 206, 266
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+incandescent_X_off
+  rotate: false
+  xy: 411, 266
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_blue_III_off
+  rotate: false
+  xy: 616, 266
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_blue_II_on
+  rotate: false
+  xy: 1, 213
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_blue_IV_off
+  rotate: false
+  xy: 206, 213
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_blue_IX_on
+  rotate: false
+  xy: 411, 213
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_blue_I_off
+  rotate: false
+  xy: 616, 213
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+pot_VI_on
+  rotate: false
+  xy: 821, 203
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+led_blue_I_on
+  rotate: false
+  xy: 1, 160
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_blue_VIII_on
+  rotate: false
+  xy: 206, 160
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_blue_VII_off
+  rotate: false
+  xy: 411, 160
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_blue_VI_off
+  rotate: false
+  xy: 616, 160
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_blue_V_on
+  rotate: false
+  xy: 1, 107
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_blue_X_off
+  rotate: false
+  xy: 206, 107
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_full_III_off
+  rotate: false
+  xy: 411, 107
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_full_II_on
+  rotate: false
+  xy: 616, 107
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+pot_V_on
+  rotate: false
+  xy: 821, 88
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+led_full_IV_off
+  rotate: false
+  xy: 1, 54
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_full_IX_on
+  rotate: false
+  xy: 206, 54
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_full_I_off
+  rotate: false
+  xy: 411, 54
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_full_I_on
+  rotate: false
+  xy: 616, 54
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_full_VIII_on
+  rotate: false
+  xy: 1, 1
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_full_VII_off
+  rotate: false
+  xy: 206, 1
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_full_VI_off
+  rotate: false
+  xy: 411, 1
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_full_V_on
+  rotate: false
+  xy: 616, 1
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+
+all2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+led_full_X_off
+  rotate: false
+  xy: 1, 969
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_red_III_off
+  rotate: false
+  xy: 206, 969
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_red_II_on
+  rotate: false
+  xy: 411, 969
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_red_IV_off
+  rotate: false
+  xy: 616, 969
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_red_IX_on
+  rotate: false
+  xy: 1, 916
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_red_I_off
+  rotate: false
+  xy: 206, 916
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_red_I_on
+  rotate: false
+  xy: 411, 916
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_red_VIII_on
+  rotate: false
+  xy: 616, 916
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+pot_X_on
+  rotate: false
+  xy: 821, 907
+  size: 158, 113
+  orig: 158, 113
+  offset: 0, 0
+  index: -1
+led_red_VII_off
+  rotate: false
+  xy: 1, 863
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_red_VI_off
+  rotate: false
+  xy: 206, 863
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_red_V_on
+  rotate: false
+  xy: 411, 863
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+led_red_X_off
+  rotate: false
+  xy: 616, 863
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+metal_halide_III_off
+  rotate: false
+  xy: 1, 810
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+metal_halide_II_on
+  rotate: false
+  xy: 206, 810
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+metal_halide_IV_off
+  rotate: false
+  xy: 411, 810
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+metal_halide_IX_on
+  rotate: false
+  xy: 616, 810
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+pot_IX_on
+  rotate: false
+  xy: 821, 791
+  size: 158, 114
+  orig: 158, 114
+  offset: 0, 0
+  index: -1
+metal_halide_I_off
+  rotate: false
+  xy: 1, 757
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+metal_halide_I_on
+  rotate: false
+  xy: 206, 757
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+metal_halide_VIII_on
+  rotate: false
+  xy: 411, 757
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+metal_halide_VII_off
+  rotate: false
+  xy: 616, 757
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+metal_halide_VI_off
+  rotate: false
+  xy: 1, 704
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+metal_halide_V_on
+  rotate: false
+  xy: 206, 704
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+metal_halide_X_off
+  rotate: false
+  xy: 411, 704
+  size: 203, 51
+  orig: 203, 51
+  offset: 0, 0
+  index: -1
+daylight_III_on
+  rotate: false
+  xy: 616, 703
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fan_III_off
+  rotate: false
+  xy: 821, 664
+  size: 125, 125
+  orig: 125, 125
+  offset: 0, 0
+  index: -1
+daylight_II_off
+  rotate: false
+  xy: 1, 650
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+daylight_IV_on
+  rotate: false
+  xy: 206, 650
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+daylight_IX_off
+  rotate: false
+  xy: 411, 650
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+daylight_VIII_off
+  rotate: false
+  xy: 616, 649
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+daylight_VII_on
+  rotate: false
+  xy: 1, 596
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+daylight_VI_on
+  rotate: false
+  xy: 206, 596
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+daylight_V_off
+  rotate: false
+  xy: 411, 596
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+daylight_X_on
+  rotate: false
+  xy: 616, 595
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+dnat_III_on
+  rotate: false
+  xy: 1, 542
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+dnat_II_off
+  rotate: false
+  xy: 206, 542
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+dnat_IV_on
+  rotate: false
+  xy: 411, 542
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+dnat_IX_off
+  rotate: false
+  xy: 616, 541
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fan_III_on
+  rotate: false
+  xy: 821, 537
+  size: 126, 125
+  orig: 126, 125
+  offset: 0, 0
+  index: -1
+dnat_VIII_off
+  rotate: false
+  xy: 1, 488
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+dnat_VII_on
+  rotate: false
+  xy: 206, 488
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+dnat_VI_on
+  rotate: false
+  xy: 411, 488
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+dnat_V_off
+  rotate: false
+  xy: 616, 487
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+dnat_X_on
+  rotate: false
+  xy: 1, 434
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fluorescent_III_on
+  rotate: false
+  xy: 206, 434
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fluorescent_II_off
+  rotate: false
+  xy: 411, 434
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fluorescent_IV_on
+  rotate: false
+  xy: 616, 433
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fan_II_off
+  rotate: false
+  xy: 821, 410
+  size: 125, 125
+  orig: 125, 125
+  offset: 0, 0
+  index: -1
+fluorescent_IX_off
+  rotate: false
+  xy: 1, 380
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fluorescent_VIII_off
+  rotate: false
+  xy: 206, 380
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fluorescent_VII_on
+  rotate: false
+  xy: 411, 380
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fluorescent_VI_on
+  rotate: false
+  xy: 616, 379
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fluorescent_V_off
+  rotate: false
+  xy: 1, 326
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fluorescent_X_on
+  rotate: false
+  xy: 206, 326
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+halide_III_on
+  rotate: false
+  xy: 411, 326
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+halide_II_off
+  rotate: false
+  xy: 616, 325
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fan_II_on
+  rotate: false
+  xy: 821, 283
+  size: 126, 125
+  orig: 126, 125
+  offset: 0, 0
+  index: -1
+halide_IV_on
+  rotate: false
+  xy: 1, 272
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+halide_IX_off
+  rotate: false
+  xy: 206, 272
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+halide_VIII_off
+  rotate: false
+  xy: 411, 272
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+halide_VII_on
+  rotate: false
+  xy: 616, 271
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+halide_VI_on
+  rotate: false
+  xy: 1, 218
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+halide_V_off
+  rotate: false
+  xy: 206, 218
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+halide_X_on
+  rotate: false
+  xy: 411, 218
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_III_on
+  rotate: false
+  xy: 616, 217
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_II_off
+  rotate: false
+  xy: 1, 164
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_IV_on
+  rotate: false
+  xy: 206, 164
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_IX_off
+  rotate: false
+  xy: 411, 164
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_VIII_off
+  rotate: false
+  xy: 616, 163
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fan_IV_off
+  rotate: false
+  xy: 821, 156
+  size: 125, 125
+  orig: 125, 125
+  offset: 0, 0
+  index: -1
+incandescent_VII_on
+  rotate: false
+  xy: 1, 110
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_VI_on
+  rotate: false
+  xy: 206, 110
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_V_off
+  rotate: false
+  xy: 411, 110
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+incandescent_X_on
+  rotate: false
+  xy: 616, 109
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_blue_III_on
+  rotate: false
+  xy: 1, 56
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_blue_II_off
+  rotate: false
+  xy: 206, 56
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_blue_IV_on
+  rotate: false
+  xy: 411, 56
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_blue_IX_off
+  rotate: false
+  xy: 616, 55
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fan_IV_on
+  rotate: false
+  xy: 821, 29
+  size: 126, 125
+  orig: 126, 125
+  offset: 0, 0
+  index: -1
+led_blue_VIII_off
+  rotate: false
+  xy: 1, 2
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_blue_VII_on
+  rotate: false
+  xy: 206, 2
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_blue_VI_on
+  rotate: false
+  xy: 411, 2
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_blue_V_off
+  rotate: false
+  xy: 616, 1
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+
+all3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+dnat_III_light
+  rotate: false
+  xy: 1, 513
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+fan_IX_on
+  rotate: false
+  xy: 1, 385
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+Mg_Ca_bloom
+  rotate: false
+  xy: 129, 282
+  size: 161, 229
+  orig: 161, 229
+  offset: 0, 0
+  index: -1
+fan_VIII_on
+  rotate: false
+  xy: 1, 257
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+dnat_II_light
+  rotate: false
+  xy: 277, 513
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+dnat_IV_light
+  rotate: false
+  xy: 292, 25
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+Mg_Ca_post_vegetation
+  rotate: false
+  xy: 129, 51
+  size: 161, 229
+  orig: 161, 229
+  offset: 0, 0
+  index: -1
+fan_VII_on
+  rotate: false
+  xy: 1, 129
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+fan_VI_on
+  rotate: false
+  xy: 1, 1
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+dnat_IX_light
+  rotate: false
+  xy: 553, 513
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+dnat_VII_light
+  rotate: false
+  xy: 568, 25
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+Mg_Mg_post_bloom
+  rotate: false
+  xy: 829, 770
+  size: 161, 229
+  orig: 161, 229
+  offset: 0, 0
+  index: -1
+Mg_S_pre_bloom
+  rotate: false
+  xy: 829, 539
+  size: 161, 229
+  orig: 161, 229
+  offset: 0, 0
+  index: -1
+S_Ca_bloom
+  rotate: false
+  xy: 844, 308
+  size: 161, 229
+  orig: 161, 229
+  offset: 0, 0
+  index: -1
+S_Ca_pre_bloom
+  rotate: false
+  xy: 844, 77
+  size: 161, 229
+  orig: 161, 229
+  offset: 0, 0
+  index: -1
+
+all4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+dnat_VI_light
+  rotate: false
+  xy: 1, 511
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+fan_X_on
+  rotate: false
+  xy: 1, 383
+  size: 126, 126
+  orig: 126, 126
+  offset: 0, 0
+  index: -1
+S_Mg_post_bloom
+  rotate: false
+  xy: 129, 280
+  size: 161, 229
+  orig: 161, 229
+  offset: 0, 0
+  index: -1
+fan_I_on
+  rotate: false
+  xy: 1, 256
+  size: 126, 125
+  orig: 126, 125
+  offset: 0, 0
+  index: -1
+dnat_X_light
+  rotate: false
+  xy: 277, 511
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+fluorescent_III_light
+  rotate: false
+  xy: 292, 23
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+Ca_Ca_pre_vegetation
+  rotate: false
+  xy: 129, 50
+  size: 161, 228
+  orig: 161, 228
+  offset: 0, 0
+  index: -1
+fan_V_on
+  rotate: false
+  xy: 1, 129
+  size: 126, 125
+  orig: 126, 125
+  offset: 0, 0
+  index: -1
+fluorescent_II_light
+  rotate: false
+  xy: 553, 511
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+fan_IX_off
+  rotate: false
+  xy: 1, 1
+  size: 125, 126
+  orig: 125, 126
+  offset: 0, 0
+  index: -1
+fluorescent_IV_light
+  rotate: false
+  xy: 568, 23
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+Ca_Mg_bloom
+  rotate: false
+  xy: 829, 769
+  size: 161, 228
+  orig: 161, 228
+  offset: 0, 0
+  index: -1
+Mg_Ca_harvest
+  rotate: false
+  xy: 829, 538
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+Ca_Mg_pre_bloom
+  rotate: false
+  xy: 844, 308
+  size: 161, 228
+  orig: 161, 228
+  offset: 0, 0
+  index: -1
+Ca_S_bloom
+  rotate: false
+  xy: 844, 78
+  size: 161, 228
+  orig: 161, 228
+  offset: 0, 0
+  index: -1
+
+all5.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+fluorescent_IX_light
+  rotate: false
+  xy: 1, 512
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+fan_I_off
+  rotate: false
+  xy: 1, 385
+  size: 125, 125
+  orig: 125, 125
+  offset: 0, 0
+  index: -1
+Mg_Ca_post_bloom
+  rotate: false
+  xy: 128, 281
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+fan_VIII_off
+  rotate: false
+  xy: 1, 257
+  size: 125, 126
+  orig: 125, 126
+  offset: 0, 0
+  index: -1
+fluorescent_VII_light
+  rotate: false
+  xy: 277, 512
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+fluorescent_VI_light
+  rotate: false
+  xy: 290, 24
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+Mg_Ca_pre_bloom
+  rotate: false
+  xy: 128, 50
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+fan_VII_off
+  rotate: false
+  xy: 1, 129
+  size: 125, 126
+  orig: 125, 126
+  offset: 0, 0
+  index: -1
+fan_VI_off
+  rotate: false
+  xy: 1, 1
+  size: 125, 126
+  orig: 125, 126
+  offset: 0, 0
+  index: -1
+fluorescent_X_light
+  rotate: false
+  xy: 553, 512
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+halide_III_light
+  rotate: false
+  xy: 566, 24
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+Ca_S_pre_bloom
+  rotate: false
+  xy: 829, 770
+  size: 161, 228
+  orig: 161, 228
+  offset: 0, 0
+  index: -1
+Mg_Ca_pre_vegetation
+  rotate: false
+  xy: 829, 539
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+S_S_post_bloom
+  rotate: false
+  xy: 842, 309
+  size: 161, 228
+  orig: 161, 228
+  offset: 0, 0
+  index: -1
+Mg_Ca_seed
+  rotate: false
+  xy: 842, 78
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+
+all6.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+halide_II_light
+  rotate: false
+  xy: 1, 489
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+halide_IV_light
+  rotate: false
+  xy: 1, 1
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+halide_IX_light
+  rotate: false
+  xy: 277, 489
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+halide_VII_light
+  rotate: false
+  xy: 277, 1
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+halide_VI_light
+  rotate: false
+  xy: 553, 489
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+halide_X_light
+  rotate: false
+  xy: 553, 1
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+Mg_Ca_vegetation
+  rotate: false
+  xy: 829, 746
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+Mg_Mg_bloom
+  rotate: false
+  xy: 829, 515
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+Mg_Mg_harvest
+  rotate: false
+  xy: 829, 284
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+Mg_Mg_post_vegetation
+  rotate: false
+  xy: 829, 53
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+
+all7.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+led_blue_III_light
+  rotate: false
+  xy: 1, 489
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+led_blue_II_light
+  rotate: false
+  xy: 1, 1
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+led_blue_IV_light
+  rotate: false
+  xy: 277, 489
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+led_blue_IX_light
+  rotate: false
+  xy: 277, 1
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+led_blue_VII_light
+  rotate: false
+  xy: 553, 489
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+led_blue_VI_light
+  rotate: false
+  xy: 553, 1
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+Mg_Mg_pre_bloom
+  rotate: false
+  xy: 829, 746
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+Mg_Mg_pre_vegetation
+  rotate: false
+  xy: 829, 515
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+Mg_Mg_seed
+  rotate: false
+  xy: 829, 284
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+Mg_Mg_vegetation
+  rotate: false
+  xy: 829, 53
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+
+all8.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+led_blue_X_light
+  rotate: false
+  xy: 1, 489
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+led_full_III_light
+  rotate: false
+  xy: 1, 1
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+led_full_II_light
+  rotate: false
+  xy: 277, 489
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+led_full_IV_light
+  rotate: false
+  xy: 277, 1
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+led_full_IX_light
+  rotate: false
+  xy: 553, 489
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+led_full_VII_light
+  rotate: false
+  xy: 553, 1
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+Mg_S_bloom
+  rotate: false
+  xy: 829, 746
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+Mg_S_harvest
+  rotate: false
+  xy: 829, 515
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+Mg_S_post_bloom
+  rotate: false
+  xy: 829, 284
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+Mg_S_post_vegetation
+  rotate: false
+  xy: 829, 53
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+
+all9.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+led_full_VI_light
+  rotate: false
+  xy: 1, 489
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+led_full_X_light
+  rotate: false
+  xy: 1, 1
+  size: 274, 486
+  orig: 274, 486
+  offset: 0, 0
+  index: -1
+dnat_I_light
+  rotate: false
+  xy: 277, 490
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+dnat_VIII_light
+  rotate: false
+  xy: 277, 3
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+dnat_V_light
+  rotate: false
+  xy: 553, 490
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+fluorescent_I_light
+  rotate: false
+  xy: 553, 3
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+Mg_S_pre_vegetation
+  rotate: false
+  xy: 829, 746
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+Mg_S_seed
+  rotate: false
+  xy: 829, 515
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+Mg_S_vegetation
+  rotate: false
+  xy: 829, 284
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+S_Ca_harvest
+  rotate: false
+  xy: 829, 53
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+
+all10.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+fluorescent_VIII_light
+  rotate: false
+  xy: 1, 488
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+fluorescent_V_light
+  rotate: false
+  xy: 1, 1
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+halide_I_light
+  rotate: false
+  xy: 277, 488
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+halide_VIII_light
+  rotate: false
+  xy: 277, 1
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+halide_V_light
+  rotate: false
+  xy: 553, 488
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+led_blue_I_light
+  rotate: false
+  xy: 553, 1
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+S_Ca_post_bloom
+  rotate: false
+  xy: 829, 744
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+S_Ca_post_vegetation
+  rotate: false
+  xy: 829, 513
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+S_Ca_pre_vegetation
+  rotate: false
+  xy: 829, 282
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+S_Ca_seed
+  rotate: false
+  xy: 829, 51
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+
+all11.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+led_blue_VIII_light
+  rotate: false
+  xy: 1, 489
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+led_blue_V_light
+  rotate: false
+  xy: 1, 2
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+led_full_I_light
+  rotate: false
+  xy: 277, 489
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+led_full_VIII_light
+  rotate: false
+  xy: 277, 2
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+led_full_V_light
+  rotate: false
+  xy: 553, 489
+  size: 274, 485
+  orig: 274, 485
+  offset: 0, 0
+  index: -1
+daylight_III_light
+  rotate: false
+  xy: 553, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+S_Ca_vegetation
+  rotate: false
+  xy: 828, 258
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+S_Mg_bloom
+  rotate: false
+  xy: 828, 27
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+S_Mg_harvest
+  rotate: false
+  xy: 829, 745
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+S_Mg_post_vegetation
+  rotate: false
+  xy: 829, 514
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+
+all12.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+daylight_II_light
+  rotate: false
+  xy: 1, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+daylight_IV_light
+  rotate: false
+  xy: 1, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+daylight_IX_light
+  rotate: false
+  xy: 276, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+daylight_VII_light
+  rotate: false
+  xy: 276, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+daylight_VI_light
+  rotate: false
+  xy: 551, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+daylight_X_light
+  rotate: false
+  xy: 551, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+S_Mg_pre_bloom
+  rotate: false
+  xy: 826, 746
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+S_Mg_pre_vegetation
+  rotate: false
+  xy: 826, 515
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+S_Mg_seed
+  rotate: false
+  xy: 826, 284
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+S_Mg_vegetation
+  rotate: false
+  xy: 826, 53
+  size: 160, 229
+  orig: 160, 229
+  offset: 0, 0
+  index: -1
+
+all13.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+incandescent_III_light
+  rotate: false
+  xy: 1, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+incandescent_II_light
+  rotate: false
+  xy: 1, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+incandescent_IV_light
+  rotate: false
+  xy: 276, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+incandescent_IX_light
+  rotate: false
+  xy: 276, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+incandescent_VII_light
+  rotate: false
+  xy: 551, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+incandescent_VI_light
+  rotate: false
+  xy: 551, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+Ca_Ca_bloom
+  rotate: false
+  xy: 826, 747
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_Ca_harvest
+  rotate: false
+  xy: 826, 517
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_Ca_post_bloom
+  rotate: false
+  xy: 826, 287
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_Ca_post_vegetation
+  rotate: false
+  xy: 826, 57
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+
+all14.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+incandescent_X_light
+  rotate: false
+  xy: 1, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+led_red_III_light
+  rotate: false
+  xy: 1, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+led_red_II_light
+  rotate: false
+  xy: 276, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+led_red_IV_light
+  rotate: false
+  xy: 276, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+led_red_IX_light
+  rotate: false
+  xy: 551, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+led_red_VII_light
+  rotate: false
+  xy: 551, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+Ca_Ca_pre_bloom
+  rotate: false
+  xy: 826, 747
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_Ca_seed
+  rotate: false
+  xy: 826, 517
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_Ca_vegetation
+  rotate: false
+  xy: 826, 287
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_Mg_harvest
+  rotate: false
+  xy: 826, 57
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+
+all15.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+led_red_VI_light
+  rotate: false
+  xy: 1, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+led_red_X_light
+  rotate: false
+  xy: 1, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+metal_halide_III_light
+  rotate: false
+  xy: 276, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+metal_halide_II_light
+  rotate: false
+  xy: 276, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+metal_halide_IV_light
+  rotate: false
+  xy: 551, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+metal_halide_IX_light
+  rotate: false
+  xy: 551, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+Ca_Mg_post_bloom
+  rotate: false
+  xy: 826, 747
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_Mg_post_vegetation
+  rotate: false
+  xy: 826, 517
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_Mg_pre_vegetation
+  rotate: false
+  xy: 826, 287
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_Mg_seed
+  rotate: false
+  xy: 826, 57
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+
+all16.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+metal_halide_VII_light
+  rotate: false
+  xy: 1, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+metal_halide_VI_light
+  rotate: false
+  xy: 1, 1
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+metal_halide_X_light
+  rotate: false
+  xy: 276, 489
+  size: 273, 486
+  orig: 273, 486
+  offset: 0, 0
+  index: -1
+daylight_I_light
+  rotate: false
+  xy: 276, 2
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+daylight_VIII_light
+  rotate: false
+  xy: 551, 490
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+daylight_V_light
+  rotate: false
+  xy: 551, 3
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+Ca_Mg_vegetation
+  rotate: false
+  xy: 826, 747
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_S_harvest
+  rotate: false
+  xy: 826, 517
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_S_post_bloom
+  rotate: false
+  xy: 826, 287
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_S_post_vegetation
+  rotate: false
+  xy: 826, 57
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+
+all17.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+incandescent_I_light
+  rotate: false
+  xy: 1, 488
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+incandescent_VIII_light
+  rotate: false
+  xy: 1, 1
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+incandescent_V_light
+  rotate: false
+  xy: 276, 488
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+led_red_I_light
+  rotate: false
+  xy: 276, 1
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+led_red_VIII_light
+  rotate: false
+  xy: 551, 488
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+led_red_V_light
+  rotate: false
+  xy: 551, 1
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+Ca_S_pre_vegetation
+  rotate: false
+  xy: 826, 745
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_S_seed
+  rotate: false
+  xy: 826, 515
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+Ca_S_vegetation
+  rotate: false
+  xy: 826, 285
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+S_S_bloom
+  rotate: false
+  xy: 826, 55
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+
+all18.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+metal_halide_I_light
+  rotate: false
+  xy: 1, 515
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+metal_halide_VIII_light
+  rotate: false
+  xy: 1, 28
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+metal_halide_V_light
+  rotate: false
+  xy: 276, 515
+  size: 273, 485
+  orig: 273, 485
+  offset: 0, 0
+  index: -1
+led_blue_X_on
+  rotate: false
+  xy: 551, 948
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_full_III_on
+  rotate: false
+  xy: 756, 948
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_full_II_off
+  rotate: false
+  xy: 551, 894
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_full_IV_on
+  rotate: false
+  xy: 756, 894
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_full_IX_off
+  rotate: false
+  xy: 551, 840
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_full_VIII_off
+  rotate: false
+  xy: 756, 840
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_full_VII_on
+  rotate: false
+  xy: 551, 786
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_full_VI_on
+  rotate: false
+  xy: 756, 786
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_full_V_off
+  rotate: false
+  xy: 551, 732
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_full_X_on
+  rotate: false
+  xy: 756, 732
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_red_III_on
+  rotate: false
+  xy: 551, 678
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_red_II_off
+  rotate: false
+  xy: 756, 678
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_red_IV_on
+  rotate: false
+  xy: 551, 624
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_red_IX_off
+  rotate: false
+  xy: 756, 624
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_red_VIII_off
+  rotate: false
+  xy: 551, 570
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_red_VII_on
+  rotate: false
+  xy: 756, 570
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_red_VI_on
+  rotate: false
+  xy: 551, 516
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_red_V_off
+  rotate: false
+  xy: 756, 516
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+led_red_X_on
+  rotate: false
+  xy: 551, 462
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+metal_halide_III_on
+  rotate: false
+  xy: 756, 462
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+metal_halide_II_off
+  rotate: false
+  xy: 276, 461
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+S_S_harvest
+  rotate: false
+  xy: 276, 231
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+S_S_post_vegetation
+  rotate: false
+  xy: 276, 1
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+S_S_pre_bloom
+  rotate: false
+  xy: 438, 231
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+S_S_pre_vegetation
+  rotate: false
+  xy: 438, 1
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+metal_halide_IV_on
+  rotate: false
+  xy: 600, 408
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+metal_halide_IX_off
+  rotate: false
+  xy: 805, 408
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+S_S_seed
+  rotate: false
+  xy: 600, 178
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+metal_halide_VIII_off
+  rotate: false
+  xy: 762, 354
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+metal_halide_VII_on
+  rotate: false
+  xy: 762, 300
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+metal_halide_VI_on
+  rotate: false
+  xy: 762, 246
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+S_S_vegetation
+  rotate: false
+  xy: 762, 16
+  size: 160, 228
+  orig: 160, 228
+  offset: 0, 0
+  index: -1
+fan_X_off
+  rotate: false
+  xy: 600, 50
+  size: 125, 126
+  orig: 125, 126
+  offset: 0, 0
+  index: -1
+
+all19.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+metal_halide_V_off
+  rotate: false
+  xy: 1, 74
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+metal_halide_X_on
+  rotate: false
+  xy: 1, 20
+  size: 203, 52
+  orig: 203, 52
+  offset: 0, 0
+  index: -1
+fan_V_off
+  rotate: false
+  xy: 206, 1
+  size: 125, 125
+  orig: 125, 125
+  offset: 0, 0
+  index: -1

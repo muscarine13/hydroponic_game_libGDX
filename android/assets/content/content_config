@@ -1,9 +1,9 @@
 name=plant
 filename=
-input=png/plant_png
+input=png\plant_png
 output=data
 
-alias=false
+alias=true
 alphaThreshold=0
 debug=false
 duplicatePadding=true
@@ -32,10 +32,10 @@ wrapY=ClampToEdge
 
 name=fan
 filename=
-input=png/fan_png
+input=png\fan_png
 output=data
 
-alias=false
+alias=true
 alphaThreshold=0
 debug=false
 duplicatePadding=true
@@ -64,10 +64,10 @@ wrapY=ClampToEdge
 
 name=pot
 filename=
-input=png/pot_png
+input=png\pot_png
 output=data
 
-alias=false
+alias=true
 alphaThreshold=0
 debug=false
 duplicatePadding=true
@@ -96,10 +96,10 @@ wrapY=ClampToEdge
 
 name=lamp_daylight
 filename=lamp_daylight.pack
-input=png/lamp_png/daylight
+input=png\lamp_png\daylight
 output=data
 
-alias=false
+alias=true
 alphaThreshold=0
 debug=false
 duplicatePadding=true
@@ -128,10 +128,10 @@ wrapY=ClampToEdge
 
 name=lamp_dnat
 filename=lamp_dnat.pack
-input=png/lamp_png/dnat
+input=png\lamp_png\dnat
 output=data
 
-alias=false
+alias=true
 alphaThreshold=0
 debug=false
 duplicatePadding=true
@@ -160,10 +160,10 @@ wrapY=ClampToEdge
 
 name=lamp_fluorescent
 filename=lamp_fluorescent.pack
-input=png/lamp_png/fluorescent
+input=png\lamp_png\fluorescent
 output=data
 
-alias=false
+alias=true
 alphaThreshold=0
 debug=false
 duplicatePadding=true
@@ -192,10 +192,10 @@ wrapY=ClampToEdge
 
 name=lamp_halide
 filename=lamp_halide.pack
-input=png/lamp_png/halide
+input=png\lamp_png\halide
 output=data
 
-alias=false
+alias=true
 alphaThreshold=0
 debug=false
 duplicatePadding=true
@@ -224,10 +224,10 @@ wrapY=ClampToEdge
 
 name=lamp_incandescent
 filename=lamp_incandescent.pack
-input=png/lamp_png/incandescent
+input=png\lamp_png\incandescent
 output=data
 
-alias=false
+alias=true
 alphaThreshold=0
 debug=false
 duplicatePadding=true
@@ -256,10 +256,10 @@ wrapY=ClampToEdge
 
 name=lamp_led_blue
 filename=lamp_led_blue.pack
-input=png/lamp_png/led_blue
+input=png\lamp_png\led_blue
 output=data
 
-alias=false
+alias=true
 alphaThreshold=0
 debug=false
 duplicatePadding=true
@@ -288,10 +288,10 @@ wrapY=ClampToEdge
 
 name=lamp_led_full
 filename=lamp_led_full.pack
-input=png/lamp_png/led_full
+input=png\lamp_png\led_full
 output=data
 
-alias=false
+alias=true
 alphaThreshold=0
 debug=false
 duplicatePadding=true
@@ -320,10 +320,10 @@ wrapY=ClampToEdge
 
 name=lamp_led_red
 filename=lamp_led_red.pack
-input=png/lamp_png/led_red
+input=png\lamp_png\led_red
 output=data
 
-alias=false
+alias=true
 alphaThreshold=0
 debug=false
 duplicatePadding=true
@@ -352,10 +352,10 @@ wrapY=ClampToEdge
 
 name=lamp_metal_halide
 filename=lamp_metal_halide.pack
-input=png/lamp_png/metal_halide
+input=png\lamp_png\metal_halide
 output=data
 
-alias=false
+alias=true
 alphaThreshold=0
 debug=false
 duplicatePadding=true
@@ -368,6 +368,38 @@ ignoreBlankImages=false
 jpegQuality=0.9
 maxHeight=2048
 maxWidth=2048
+minHeight=16
+minWidth=16
+outputFormat=png
+paddingX=2
+paddingY=2
+pot=true
+rotation=false
+stripWhitespaceX=false
+stripWhitespaceY=false
+wrapX=ClampToEdge
+wrapY=ClampToEdge
+
+---
+
+name=all
+filename=all
+input=png
+output=data
+
+alias=true
+alphaThreshold=0
+debug=false
+duplicatePadding=true
+edgePadding=true
+fast=false
+filterMag=Nearest
+filterMin=Nearest
+format=RGBA8888
+ignoreBlankImages=true
+jpegQuality=0.9
+maxHeight=1024
+maxWidth=1024
 minHeight=16
 minWidth=16
 outputFormat=png
